@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CochainComplex}
+\pmcreated{2013-03-22 19:03:52}
+\pmmodified{2013-03-22 19:03:52}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{cochain complex}
+\pmrecord{5}{41948}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmclassification{msc}{16E05}
+\pmdefines{cocycle}
+\pmdefines{coboundary}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\DeclareMathOperator{\im}{im}
+\begin{document}
+\PMlinkescapeword{adjacent}
+\PMlinkescapeword{complex}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{satisfies}
+
+Let $R$ be a ring.
+A sequence of \PMlinkname{$R$-modules}{Module} and homomorphisms
+\[
+ \cdots \rightarrow
+ A^{n-1} \xrightarrow{d_{n-1}} A^n \xrightarrow{d_n} A^{n+1} \xrightarrow{d_{n+1}}
+ \cdots
+\]
+is said to be a \emph{cochain complex}
+(or \emph{$R$-complex}, or just \emph{complex})
+if each pair of adjacent homomorphisms $(d_{n-1}, d_n)$
+satisfies the relation $d_n\circ d_{n-1} = 0$.
+This is equivalent to saying that
+$\im d_{n-1} \subseteq \ker d_n$.
+We often denote such a complex by $(\mathcal{A}, d)$, or simply $\mathcal{A}$.
+
+Compare this to the notion of an exact sequence,
+which requires $\im d_{n-1} = \ker d_n$. Compare also to the notion of a chain complex, in which the arrows go in the opposite direction.
+
+The homomorphisms $d_n$ in the chain complex
+are called \emph{coboundary operators}, or \emph{coboundary maps}. Elements of $\ker d_n$ are known as \emph{cocycles}; elements of $\im d_{n-1}$ as \emph{coboundaries}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteCategory}
+\pmcreated{2013-03-22 16:15:50}
+\pmmodified{2013-03-22 16:15:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complete category}
+\pmrecord{9}{38373}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A35}
+\pmsynonym{finitely complete}{CompleteCategory}
+\pmsynonym{finitely cocomplete}{CompleteCategory}
+\pmsynonym{cocomplete}{CompleteCategory}
+\pmrelated{ExponentialObject}
+\pmrelated{CartesianClosedCategory}
+\pmdefines{finitely complete category}
+\pmdefines{cocomplete category}
+\pmdefines{finitely cocomplete category}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A category $\mathcal{C}$ is said to be a \emph{complete category} if every small diagram has a limit, that is, a limiting cone exists over every small diagram (diagram such that collections of objects and morphisms are sets).
+
+Of course, in a complete category, a product exists for any given set of objects.  Also, a set of morphisms with common domain and codomain has an equalizer.  Conversely, we have
+\begin{quote}
+in a category $\mathcal{C}$, if the product exists for an arbitrary set of objects, and the equalizer exists for any pair of morphisms with common domain and codomain, then $\mathcal{C}$ is complete.
+\end{quote}
+
+\textbf{Examples}
+\begin{itemize}
+\item \textbf{Set} is complete.
+\item \textbf{Group} is complete.
+\item \textbf{Vector Space} is complete
+\item \textbf{R-module} is complete for a given unital ring $R$.
+\item \textbf{Topological Space} is complete.
+\end{itemize}
+
+A category $\mathcal{C}$ is said to be \emph{finitely complete} if every finite diagram (sets of objects and morphisms are finite) has a limit.
+
+A similar sufficient condition for a category $\mathcal{C}$ to be finitely complete is for $\mathcal{C}$ to possess a terminal object and that a pullback exists for every pair of morphisms with common codomain.
+
+\textbf{Examples}
+\begin{itemize}
+\item Any complete category is clearly finitely complete.
+\item The subcategories of the above examples consisting of all objects with finite cardinality are finitely complete (but not complete).
+\end{itemize}
+
+\textbf{Remark}.  The dual notion of a complete category is that of a \emph{cocomplete category}, and the dual of a finitely complete category is called a \emph{finitely cocomplete category}.
+%%%%%
+%%%%%
+\end{document}

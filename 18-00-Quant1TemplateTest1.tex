@@ -1,0 +1,436 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Quant1TemplateTest1}
+\pmcreated{2013-03-22 19:32:18}
+\pmmodified{2013-03-22 19:32:18}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Quant1 template test}
+\pmrecord{4}{42517}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+
+%%% LaTeX Template: Two column article
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
+%%% Date: February 2011
+
+%%% Preamble
+\documentclass[DIV=calc,%
+                                                        paper=a4,%
+                                                        fontsize=11pt,%
+                                                        twocolumn]{scrartcl}                                            % KOMA-article class
+
+\usepackage[english]{babel}                                                                             % English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}                          % Better typography
+\usepackage{amsmath,amsfonts,amsthm}                                    % Math packages
+\usepackage[final]{graphicx}                                                                    % Enable pdflatex
+\usepackage{xcolor}                                                                     % Enabling colors by their 'svgnames'
+\usepackage[small,labelfont=bf,up,textfont=it,up]{caption}      % Custom captions under/above floats
+\usepackage{epstopdf}                                                                                           % Converts .eps to .pdf
+\usepackage{subfig}                                                                                                     % Subfigures
+\usepackage{booktabs}                                                                                           % Nicer tables
+\usepackage{fix-cm}                                                                                                     % Custom fontsizes
+\usepackage{amssymb,amsfonts}       % AMS Fonts Family
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[perpage,symbol*]{footmisc}
+\usepackage{pstricks}
+\usepackage[varg]{txfonts}
+\usepackage{cite}
+\usepackage{fancyhdr}   
+\usepackage{hyperref}
+
+
+\setcounter{section}{0}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{page}{11}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty}                                                                                                    % Custom sectioning (see below)
+\allsectionsfont{%                                                                                                                      % Change font of al section commands
+        \color[HTML]{31ADF3}\usefont{OT1}{phv}{b}{n}%                                                                           % bch-b-n: CharterBT-Bold font
+        }
+
+\sectionfont{%                                                                                                                          % Change font of \section command
+        \color[HTML]{31ADF3}\usefont{OT1}{phv}{b}{n}%                                                                           % bch-b-n: CharterBT-Bold font
+        }
+
+
+
+%%% Headers and footers
+\usepackage{fancyhdr}                                                                                           % Needed to define custom headers/footers
+\pagestyle{fancy}                                                                                                               % Enabling the custom headers/footers
+
+% Header (empty)
+\lhead{}
+\chead{}
+\rhead{}
+% Footer (you may change this to your own needs)
+
+\lfoot[\thepage]{}% Entries on left-side (even) pages in []
+\cfoot{}
+\rfoot[]{\thepage}% Entries on right-side (odd) pages in {}
+
+
+\renewcommand{\footrulewidth}{0.0pt}
+\renewcommand{\headrulewidth}{0.0pt}
+
+
+
+%%% Creating an initial of the very first character of the content
+\usepackage{lettrine}
+\newcommand{\initial}[1]{%
+     \lettrine[lines=3,lhang=0.3,nindent=0em]{
+                                \color[HTML]{31ADF3}
+                                {\textsf{#1}}}{}}
+
+
+%%% Title, author and date metadata
+\usepackage{titling}                                                                                                                    % For custom titles
+
+\newcommand{\HorRule}{\color[HTML]{31ADF3}%                     % Creating a horizontal rule
+                                                                                \rule{\linewidth}{1pt}%
+                                                                                }
+
+\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule 
+                                \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color[HTML]{31ADF3} \selectfont 
+                                }
+\title{This is the title of the template article}                                       % Title of your article goes here
+\posttitle{\par\end{flushleft}\vskip 0.5em}
+
+\preauthor{\begin{flushleft}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color[HTML]{31ADF3}}
+\author{John W. Smith$^{1}$ \& Smith M. John$^{2}$\\[12pt]}                                                                                 % Author names go here
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color[HTML]{000000} 
+                                        $^{1}$ Department of Mathematics, University of Examples, Japan\\
+                                        $^{2}$ Department of Sociology, University of Examples, Korea                                                   % Institutions of authors
+                                        \par\end{flushleft}\HorRule}
+
+
+\date{}                                                                                                                                                         % No date
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}                   % Enabling the custom headers/footers for the first page 
+% The first character should be within \initial{}
+\initial{H}\textbf{ere is some sample text to show the initial in the introductory paragraph of this template article. The color and lineheight of the initial can be modified in the preamble of this document.\\ \textbf{\emph{Quanta 2012; 5(2): 12-17.}}}
+
+\section*{Heading on level 1}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
+
+\begin{lemma} Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+\end{lemma}
+
+\begin{theorem} Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+\end{theorem}
+
+\begin{proof}[Proof of the Main Theorem] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+\begin{equation}G(t)=L\gamma!\,t^{-\gamma}+t^{-\delta}\eta(t) \end{equation}
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+\begin{equation}G(t)=L\gamma!\,t^{-\gamma}+t^{-\delta}\eta(t) \end{equation}
+\end{proof}
+
+Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies 
+\begin{align}
+        A = 
+        \begin{bmatrix}
+        A_{11} & A_{21} \\
+        A_{21} & A_{22}
+        \end{bmatrix}
+\end{align}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies 
+
+\subsection*{Heading on level 2}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+\begin{itemize}
+        \item First item in a list 
+        \item Second item in a list 
+        \item Third item in a list
+\end{itemize}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+
+Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies 
+
+\section*{Heading on level 1 again}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies 
+
+\begin{table}
+\caption{Random table}
+\centering
+        \begin{tabular}{llr}
+                \toprule
+                \multicolumn{2}{c}{Name} \\
+                \cmidrule(r){1-2}
+                        First name & Last Name & Grade \\
+                \midrule
+                        John & Doe & $7.5$ \\
+                        Richard & Miles & $2$ \\
+                \bottomrule
+        \end{tabular}
+\end{table}
+
+\subsection*{Heading on level 2}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+\begin{description}
+        \item[First] This is the first item
+        \item[Last] This is the last item
+\end{description}
+Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies ...
+
+\section*{Citations}
+
+A single citation is here: \cite{eddy}. Multiple citations are as follows \cite{bondi,Pez,La2}. A citation containing a comment is \cite[see p.\,5]{eddy}
+
+%%%%%%%% the \cite{eddy} command generates citation number proceeded from
+%%%%%%%% the label \bibitem{eddy} in the bibliography list
+
+
+\section*{Equations}
+
+All displayed equations will be numbered automatically. Do not number equations manually.
+\begin{equation}
+r\,= \sqrt{dx^{2} + dy^{2} + dz^{2}}.
+\end{equation}
+
+Please do not use unnumbered equations. Unnumbered equations should be inline.
+$$
+r\,= \sqrt{dx^{2} + dy^{2} + dz^{2}}.
+$$
+
+
+Here is a double-line equation, typeset to the left side
+$$
+\begin{array}{ll}
+%
+\displaystyle
+ds^{2}\,= L(r)dt^{2} - M(r)(dx^{2} + dy^{2} + dz^{2}) -\\[+8pt]  % 1st row
+%
+\displaystyle
+- N(r)(xdx + ydy + zdz)^{2}, \\% 2nd row
+\end{array}
+$$
+
+
+Here are automatic-designed brackets
+\begin{equation}
+\left( \frac{\mathrm{D} N^\alpha}{ds}\right),\quad
+\left[ \frac{\mathrm{D} N^\alpha}{ds}\right],\quad
+\left\{ \frac{\mathrm{D} N^\alpha}{ds}\right\},
+\end{equation}
+where you need in an ``empty'' bracket, if you feel to insert one-side brackets. For instance: $\left( \right.$.
+
+
+
+Here are hand-designed brackets
+\begin{equation}
+\bigl( \frac{\mathrm{D} N^\alpha}{ds}\bigr),\quad
+\Bigl( \frac{\mathrm{D} N^\alpha}{ds}\Bigr),\quad
+\biggl( \frac{\mathrm{D} N^\alpha}{ds}\biggr) , 
+\label{gensol}
+\end{equation}
+where is no need to insert an ``empty'' bracket, so you can mere type
+\begin{equation}
+\frac{\mathrm{D} N^\alpha}{ds} =
+\Bigl\{ K^\alpha ; 0.
+\end{equation}
+
+
+%%%%%%%% [+8pt] is intendation following after the row
+%%%%%%%% \displaystyle is normalsize in the fractions
+
+%%%%%%%% this equation will be typeset to right, if use
+%%%%%%%% {rr} argument istead {ll} in the preamble of the array
+
+%%%%%%%% there is so many rows available as you feel
+
+\section*{Formulae in text}
+
+Take operators in the brackets in the inline formulae, for compact typing: \,{=}\, gives $w \,{=}\, c^2 $. Write down \dots \ instead of ...
+
+
+\section*{Items}
+
+
+An unnumbered item containing bullets is:
+\begin{itemize}
+\item The most general metric
+\item The most general metric
+\item The most general metric
+\end{itemize}
+
+
+Here is an unnumbered item:
+\begin{itemize}
+\item [] The most general metric
+\item [] The most general metric
+\item [] The most general metric
+\end{itemize}
+
+
+An Arabic-numbered item:
+\begin{enumerate}
+\item The most general metric
+\item The most general metric
+\item The most general metric
+\end{enumerate}
+
+
+A your-style numbered item:
+\begin{itemize}
+\item [A1] The most general metric
+\item [A2] The most general metric
+\end{itemize}
+
+A double-level item (it is numbered, a sample):
+\begin{enumerate}
+\item The most general metric
+  \begin{enumerate}
+  \item The most general metric
+  \item The most general metric
+  \end{enumerate}
+\item The most general metric
+\item The most general metric
+\end{enumerate}
+
+% Figure within one collumn only
+\begin{figure}
+\centering
+\includegraphics{mouse}
+\caption{This is a figure that spans only one collumn of the article. If you need to insert a figure spanning two collumns please check the next example.}
+\end{figure}
+
+% Figure spanning two-collumns
+\begin{figure*}
+\centering
+\includegraphics{mouse}
+\caption{This is a figure that spans two collumns in the article.}
+\end{figure*}
+
+\section*{References to text pages}
+
+If you like to refer a numbered formula in the {equation} environment, input \label{nickname-of-the-formula} into the formula, so you will need to type (\ref{nickname-of-the-formula}) in the text instead of (12), for instance. Such reference will automatically be changed keeping the real number of the reference, if you reorder/remove/add formulae.
+
+It works in only the {equation} environment.
+
+\section*{Cross-references}
+
+Insert \label{myidea} in your text, then you have that page number where your label \pageref{myidea} appeared. For instance:
+
+The general equation, see formula (\ref{gensol}) in page~\pageref{gensol}, is very good.
+
+Don't use two or more same labels in the same document!
+
+
+\section*{Brackets, dividing paragraphs, etc.}
+
+The commands `` and '' produce open-closed brackets: ``notation''.
+
+Instead of \par one uses empty space(s) between paragraphs, because it is more visible.
+
+Any sequence following a formula starts new paragraph.
+
+If a paragraph ends by a formula, the next paragraph starts from the first line indented.
+
+Text and space in formulae:
+$$
+\mbox{here is a text in this formula}\quad
+\mbox{small space}\qquad \mbox{big space}
+$$
+
+
+\section*{Spaces and dashes}
+
+Einstein-Infeld, space-like, Bohr-like include single dash.
+
+Page numbers 3--27 include double dash.
+
+Thin spaces in text: v.\,13, no.\,24.
+
+American long dash is---like this case.
+
+British long dash is --- like this one.
+
+We assumed the British case in our Journal.
+
+
+\section*{Normal size inside fractions}
+
+
+You may isert ``displaystyle'' command before every line to enhance visibility:
+
+\begin{equation}
+\begin{array}{cc}
+\displaystyle\tilde{\psi}(t_{2})=-\frac{1}{\sqrt{32}}[|A_{4}\rangle|A_{5}\rangle+|A_{5}\rangle|A_{4}\rangle \\
+\displaystyle+|B_{4}\rangle|B_{5}\rangle+|B_{5}\rangle|B_{4}\rangle \\
+\displaystyle+\imath|A_{4}\rangle|B_{5}\rangle+\imath|B_{5}\rangle|A_{4}\rangle \\
+\displaystyle+\imath|A_{5}\rangle|B_{4}\rangle+\imath|B_{4}\rangle|A_{5}\rangle \\
+\displaystyle+|A_{5}\rangle|B_{5}\rangle+|B_{5}\rangle|A_{5}\rangle \\
+\displaystyle+2\imath|A_{4}\rangle|A_{4}\rangle+2\imath|B_{4}\rangle|B_{4}\rangle]
+\end{array}
+\end{equation}
+
+Compare it with:
+
+\begin{equation}
+\begin{array}{cc}
+\tilde{\psi}(t_{2})=-\frac{1}{\sqrt{32}}[|A_{4}\rangle|A_{5}\rangle+|A_{5}\rangle|A_{4}\rangle\\
++|B_{4}\rangle|B_{5}\rangle+|B_{5}\rangle|B_{4}\rangle\\
++\imath|A_{4}\rangle|B_{5}\rangle+\imath|B_{5}\rangle|A_{4}\rangle\\
++\imath|A_{5}\rangle|B_{4}\rangle+\imath|B_{4}\rangle|A_{5}\rangle\\
++|A_{5}\rangle|B_{5}\rangle+|B_{5}\rangle|A_{5}\rangle\\
++2\imath|A_{4}\rangle|A_{4}\rangle+2\imath|B_{4}\rangle|B_{4}\rangle]
+\end{array}
+\end{equation}
+
+\section*{Acknowledgements}
+
+Here are your acknowledgements.
+
+\begin{flushleft}
+\footnotesize Submitted on April 19, 2012 \\
+\footnotesize Accepted on January 19, 2019 \\
+\footnotesize Academic Editor: John W. Smith
+\end{flushleft}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{eddy} Eddington AS. The Mathematical
+Theory of Relativity. Cambridge University Press,
+Cambridge, 1924. % Here is referred book
+
+\bibitem{bondi}  Bondi H. Negative mass in general 
+relativity. \textit{Review of Modern Physics} 1957; 
+29 (3): 423--428. % Here is referred article
+
+\bibitem{Pez} Pezzaglia W. Physical applications of 
+generalized Clifford calculus: Papatetrou equations 
+and metamorphic curvature. \url{http://arxiv.org/abs/gr-qc/9710027}. 
+% Here is referred electronic publication
+
+\bibitem{La2}  Lambiase G, Papini G,  Scarpetta G. 
+Maximal acceleration corrections to the Lamb shift
+of one electron atoms. \textit{Nuovo Cimento B} 1997; 
+112 (7): 1003--1012. \url{http://arxiv.org/abs/hep-th/9702130}.
+% Here is double paper-electronic published article
+
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

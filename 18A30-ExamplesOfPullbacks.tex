@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPullbacks}
+\pmcreated{2013-03-22 18:28:24}
+\pmmodified{2013-03-22 18:28:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{examples of pullbacks}
+\pmrecord{6}{41145}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry shows some examples of categorical pullbacks.
+
+\begin{enumerate}
+\item In the category of sets, the pullback of a pair of functions $f:A\to C$ and $g:B\to C$ is given by the set $D:= \lbrace (a,b)\in A\times B \mid f(a)=g(b)\rbrace$, along with the projections $r:D\to A$ and $s:D\to B$.  Here's a sketch of the proof: first, $f\circ r=g\circ s$, and if there are functions $u:E\to A$ and $v:E\to B$ with $f\circ u=g\circ v$, then define a function $w:E\to D$ by $w(e)=(u(e),v(e))$.  As $f(u(e))=g(v(e))$, we have that $(u(e),v(e))\in D$, so that $w$ is a well-defined function.  Furthermore, $r\circ w(e)=r(u(e),v(e))=u(e)$ and $s\circ w(e)=s(u(e),v(e))=v(e)$.  Finally, this $w$ is easily seen to be unique.  Therefore, $(D,r:D\to A, s:D\to B)$ is the pullback of $f$ and $g$.
+\item In the category of groups, the pullback of a pair of group homomorphisms $f:A\to C$ and $g:B\to C$ is again the group $D=\lbrace (a,b)\in A\times B \mid f(a)=g(b)\rbrace$, where the product is defined componentwise, along with the usual projections.  The verification that this is indeed the pullback of $f$ and $g$ is almost like the one above.  The only thing that needs to be verified is that $D$ is indeed a group.  If $(a,b),(c,d)\in D$, then $f(ac)=f(a)f(c)=g(b)g(d) = g(bd)$, so that $(ac,bd)\in D$.  Also, $f(1_A)=1_C=g(1_B)$, so that $(1_A,1_B)\in D$.  Finally, if $(x,y)\in D$, then $f(x^{-1})=f(x)^{-1}=g(y)^{-1}=g(y^{-1})$, or $(x^{-1},y^{-1})\in D$.  Therefore, $D$ is a group (a subgroup of $A\times B$).
+\item In fact, both of the examples above can be obtained by finding the equalizer of $f\circ p_A$ and $g\circ p_B$, where $p_A$ and $p_B$ are projections from $A\times B$ to $A$ and $B$ respectively.  This is the consequence of the fact that a category with finite products and equalizers also has pullbacks, and the pullbacks are obtained in the manner just described (see proof \PMlinkname{here}{PropertiesOfPullback}).
+\item The category of small categories has pullbacks.  Given small categories $\mathcal{A}, \mathcal{B}$, and $\mathcal{C}$, and functors $F:\mathcal{A}\to \mathcal{C}$ and $G:\mathcal{B}\to \mathcal{C}$, consider the subcategory $\mathcal{D}$ of the comma category $(F\downarrow G)$, where 
+\begin{itemize}
+\item objects are $(A,B,f)$ where $F(A)=G(B)$ and $f=1_{F(A)}$, and 
+\item morphisms are $(x,y):(A,B,1_{F(A)})\to (C,D,1_{F(C)})$ where $F(x)=G(y)$.
+\end{itemize}
+Then it can be shown that $\mathcal{D}$, along with the the functors 
+\begin{itemize}
+\item $H_{\mathcal{A}}: \mathcal{D}\to \mathcal{A}$ with $H_{\mathcal{A}}(A,B,f)=A$ and $H_{\mathcal{A}}(x,y)=x$, and \item $H_{\mathcal{B}}: \mathcal{D}\to \mathcal{B}$ with $H_{\mathcal{B}}(A,B,f)=B$ and $H_{\mathcal{B}}(x,y)=y$ 
+\end{itemize}
+is the pullback of $F$ and $G$.  The proof is similar to the proof on the \PMlinkname{universal property of a comma category}{PropertiesOfACommaCategory}.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

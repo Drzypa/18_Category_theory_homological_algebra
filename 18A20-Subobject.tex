@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subobject}
+\pmcreated{2013-03-22 14:45:29}
+\pmmodified{2013-03-22 14:45:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subobject}
+\pmrecord{20}{36399}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmsynonym{monomorphism equivalence}{Subobject}
+\pmsynonym{epimorphism equivalence}{Subobject}
+\pmrelated{PowerObject}
+\pmrelated{WellPoweredCategory}
+\pmrelated{WellpoweredCategory}
+\pmdefines{subobject}
+\pmdefines{quotient object}
+\pmdefines{equivalent monomorphisms}
+\pmdefines{equivalent epimorphisms}
+\pmdefines{subobject functor}
+\pmdefines{quotient object functor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Sub}{{\mathrm{Sub}}}
+\newcommand{\Quo}{{\mathrm{Quo}}}
+\begin{document}
+Let $\mathcal{C}$ be a category.
+
+\subsubsection*{Equivalent Monomorphisms and Subobjects}
+
+Let $\operatorname{Mono}(-,B)$ be the class of all monomorphisms into object $B$ in $\mathcal{C}$.  Two elements $f\colon A_1\to B$ and $g\colon A_2\to B$ in $\operatorname{Mono}(-,B)$ are \PMlinkescapetext{equivalent} if there exist two morphisms $r:A_1\rightarrow A_2$ and $s:A_2\rightarrow A_1$ such that we have the following two commutative diagrams:
+\begin{center}
+$
+\xymatrix@R-=2pt{
+A_1\ar[dr]^f\ar[dd]_r\\
+&B\\
+A_2\ar[ur]_g
+}
+\xymatrix@R-=2pt{
+&&\\
+&and&\\
+&&
+}
+\xymatrix@R-=2pt{
+A_1\ar[dr]^f\\
+&B\\
+A_2\ar[ur]_g\ar[uu]^s
+}
+$
+\end{center}
+It is easy to see that both $r$ and $s$ are monomorphic.  In fact, $A_1$ and $A_2$ are isomorphic objects, as $f=g\circ r$ and $g=f\circ s$, so that $f=(f\circ s)\circ r$, or $1_{A_1}=s\circ r$, since $s\circ r$ is monomorphic.  Similarly $1_{A_2}=r\circ s$.  Monomorphism equivalence is an equivalence relation on $\operatorname{Mono}(-,B)$.
+
+
+\textbf{Definition}.  A \emph{subobject} of an object $X$ in $\mathcal{C}$ is an equivalence class in $\operatorname{Mono}(-,X)$.  Let's write $$[A\to X]$$ for a subobject of $X$, and a monomorphism $f:A\to X$ a representative of $[A\to X]$.  If there is no danger of confusion, it is often easier to identify a subobject $[A\to X]$ by $A$, and simply write $$A\subseteq X,$$ as long as we keep in mind that, along with the object $A$, there is a monomorphism from $A$ to $X$.  The class of subobjects of $X$ shall be denoted by $$\Sub(X):=\lbrace A\mid A\subseteq X\rbrace.$$
+\textbf{Definition}.  A category $\mathcal{C}$ is said to be \emph{well-powered} or \emph{locally small} if for every object $X$ in $\mathcal{C}$, the class $\Sub(X)$ is a set.  Most common categories are locally small.
+
+Suppose now that $\mathcal{C}$ is well-powered and has pullbacks (a pullback exists for every pair of morphisms into the same object).  We shall turn $\Sub$ into a functor from $\mathcal{C}$ to \textbf{Set}.  For every morphism $\alpha: X\to Y$, define $\Sub(\alpha)$ as follows: 
+\begin{quote} take a representative $g\in[B\to Y]$, consider the pullback of $\alpha$ and $g$ indicated in the commutative diagram below:
+\begin{center}
+$\xymatrix@C+=30pt@R+=40pt{
+A\ar[d]_f \ar[r]^{\beta} & B\ar[d]^g \\
+X\ar[r]^{\alpha} & Y.
+}
+$
+\end{center}
+Since $g$ is monomorphism, so is $f:A\to X$, and hence $A$ is a subobject of $X$.  We set $\Sub(\alpha)([g]):=[f]$.  
+\end{quote}
+Because the diagram is a pullback, $\Sub(\alpha)([g])$ gives a unique value, and thus $$\Sub(\alpha):\Sub(Y)\to\Sub(X)$$ is a well-defined morphism.  Furthermore, it is easily verified that $\Sub(1_X)=1_{\Sub(X)}$ and $\Sub(\alpha\circ\beta)= \Sub(\beta)\circ\Sub(\alpha)$.  Thus, $\Sub$ is a contravariant functor from $\mathcal{C}$ to $\textbf{Set}$ (or a covariant functor $\mathcal{C}^{op}\to \textbf{Set}$), and is called the \emph{subobject functor} of $\mathcal{C}$. 
+
+\subsubsection*{Equivalent Epimorphisms and Quotient Objects}
+
+\par
+Dually, given an object $A$ in a category $\mathcal{C}$, we can define an equivalence relation on $\operatorname{Epi}(A,-)$, the class of all epimorphisms from $A$, by reversing all arrows in the previous paragraph.  Specifically, two elements $f\colon A \to B_1$ and $g\colon A \to B_2$ in $\operatorname{Epi}(A,-)$ are \PMlinkescapetext{equivalent} if there exist two morphisms $B_1\rightarrow B_2$ and $B_2\rightarrow B_1$ such that the following two diagrams commute:
+\begin{center}
+$
+\xymatrix@R-=2pt{
+&B_1\ar[dd]\\
+A\ar[ur]\ar[dr]\\
+&B_2
+}
+\xymatrix@R-=2pt{
+&&\\
+&and&\\
+&&
+}
+\xymatrix@R-=2pt{
+&B_1\\
+A\ar[ur]\ar[dr]\\
+&B_2\ar[uu]
+}
+$
+\end{center}
+\par
+
+\textbf{Definition}.  A \emph{quotient object} of $X$ is an equivalence class in $\operatorname{Epi}(X,-)$.  A typical quotient object is denoted by $\lbrack X\to B \rbrack$.  If $\mathcal{C}$ is a small category and has pushouts, then there is a covariant functor $\Quo:\mathcal{C}\to \textbf{Set}$ taking each object of $\mathcal{C}$ to its set of quotient objects and each morphism between two objects to a morphism between the sets of their quotient objects.  $\Quo$ is called the \emph{quotient object functor} of $\mathcal{C}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmallSiteOnAScheme}
+\pmcreated{2013-03-22 14:08:43}
+\pmmodified{2013-03-22 14:08:43}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{small site on a scheme}
+\pmrecord{7}{35560}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18F20}
+\pmclassification{msc}{18F10}
+\pmclassification{msc}{14F20}
+%\pmkeywords{\'etale cohomology}
+\pmrelated{EtaleCohomology}
+\pmdefines{\'etale site}
+\pmdefines{Zariski site}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{fix}
+
+As an example of a site, fix a scheme $X$ and a class of morphisms $E$. Then take the category of schemes over $X$ whose structure morphism is in $E$. Let $\left\{U_\alpha\to U\right\}$ be a covering if all the morphisms are in $E$ and the induced map $\prod U_\alpha \to U$ is universally surjective (if the maps are open, then this is equivalent to being surjective). This is called the small $E$-site over $X$.
+ 
+Concretely, take $E$ to be open immersions; then one obtains exactly the Zariski site, in which open sets, presheaves, sheaves, and sheaf cohomology have the usual meaning. 
+
+If we take $E$ to be \'etale morphisms, then one obtains the small \'etale site on $X$. Here the open sets are \'etale morphisms to $X$. Since an \'etale morphism is open, one can view them as open subsets with a ``twisted'' embedding. This nontrivial embedding yields new behaviour from sheaves and presheaves, and the cohomology theory obtained by taking the right derived functors of the global sections functor gives \'etale cohomology. In particular, one can now take the cohomology of the constant sheaves $\mathbb{Z}/l^n\mathbb{Z}$ and obtain nonzero answers.
+%%%%%
+%%%%%
+\end{document}

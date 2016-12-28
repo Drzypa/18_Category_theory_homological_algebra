@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalGroupoid}
+\pmcreated{2013-03-22 14:35:11}
+\pmmodified{2013-03-22 14:35:11}
+\pmowner{HkBst}{6197}
+\pmmodifier{HkBst}{6197}
+\pmtitle{topological groupoid}
+\pmrecord{20}{36149}
+\pmprivacy{1}
+\pmauthor{HkBst}{6197}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B40}
+\pmclassification{msc}{20L05}
+\pmclassification{msc}{54H13}
+\pmclassification{msc}{54H11}
+\pmrelated{Groupoids}
+\pmrelated{LocallyCompactGroupoids}
+\pmdefines{groupoid}
+\pmdefines{transitive groupoid}
+\pmdefines{principal groupoid}
+\pmdefines{isotropy group}
+\pmdefines{topological groupoid}
+\pmdefines{domain map}
+\pmdefines{range map}
+\pmdefines{unit space}
+\pmdefines{isotropy group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+%\begin{definition}[Groupoid]
+A \emph{groupoid} is a set $G$ together with a subset $G_2 \subset G^2$ of composable pairs, a \emph{multiplication} $\mu : G_2 \to G : (a, b) \mapsto ab$ and an \emph{inversion} $\cdot ^{-1} : G \to G : a \mapsto a^{-1}$ such that
+
+\begin{enumerate}
+\item $\cdot^{-1} \circ \cdot^{-1} = \mathrm{id}_G$,
+\item if $\{(a, b), (b, c)\} \subset G_2$ then $\{(ab, c), (a, bc)\} \subset G_2$ and $(ab)c = a(bc)$,
+\item $(b, b^{-1}) \in G_2$ and if $(a, b) \in G_2$ then $abb^{-1} = a$ and
+\item $(b^{-1}, b) \in G_2$ and if $(b, c) \in G_2$ then $b^{-1}bc = c$.
+\end{enumerate}
+%\end{definition}
+
+Furthermore we have the \emph{source} or \emph{domain map} $\sigma : G \to G : a \mapsto a^{-1}a$ and the \emph{target} or \emph{range map} $\tau : G \to G : a \mapsto aa^{-1}$. The image of these maps is called the \emph{unit space} and denoted $G_0$. If the unit space is a singleton than we regain the notion of a group.
+
+We also define $G_a := \sigma^{-1}(\{a\})$, $G^b := \tau^{-1}(\{b\})$ and $G_a^b := G_a \cap G^b$. It is not hard to see that $G_a^a$ is a group, which is called the \emph{isotropy group} at $a$.
+
+We say that a groupoid $G$ is \emph{principal} and \emph{transitive}, if the map $(\sigma, \tau) : G \to G_0 \times G_0$ is injective and surjective, respectively.
+
+A groupoid can be more abstractly and more succinctly defined as a category whose morphisms are all isomorphisms.
+
+%\begin{definition}[Topological Groupoid]
+A \emph{topological groupoid} is a groupoid $G$ which is also a topological space, such that the multiplication and inversion are continuous when $G_2$ is endowed with the induced product topology from $G^2$. Consequently also $\sigma$ and $\tau$ are continuous.
+%\end{definition}
+
+%msc:54H13, msc:18B40, msc:20L05, msc:54H11
+\begin{thebibliography}{9}
+\bibitem{Hi} P.J. Higgins, {\it Categories and groupoids}, van Nostrand original, 1971; Reprint 
+Theory and Applications of Categories,  7 (2005) pp 1-195. 
+
+\bibitem{Btg} R. Brown, {\it Topology and groupoids}, xxv+512pp, Booksurge 2006. 
+
+\bibitem{B} R. Brown,  `Three themes in the work of Charles Ehresmann:
+Local-to-global; Groupoids; Higher dimensions', {\it Proceedings of the
+7th Conference on the Geometry and Topology of Manifolds: The
+Mathematical Legacy of Charles   Ehresmann, Bedlewo (Poland)
+8.05.2005-15.05.2005}, Banach Centre Publications 76, Institute of
+Mathematics Polish Academy of Sciences, Warsaw, (2007) 51-63.
+(math.DG/0602499).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

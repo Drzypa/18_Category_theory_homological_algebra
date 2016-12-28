@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryWithArbitraryProductsAndPullbacksIsComplete}
+\pmcreated{2013-03-22 18:42:44}
+\pmmodified{2013-03-22 18:42:44}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{category with arbitrary products and pullbacks is complete}
+\pmrecord{4}{41478}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A35}
+\pmrelated{RelationBetweenPullbacksAndOtherCategoricalLimits}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[curve]{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+\newtheorem{lem}{Lemma}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, it is stated that a complete category can be characterized as being a category with arbitrary products and equalizers.  In this entry, we show, as a corollary, that every category with arbitrary products and pullbacks is complete.  We begin with the following observation:
+
+\begin{lem} If a category has finite products and pullbacks, it has equalizers. \end{lem}
+\begin{proof}
+Suppose we have a pair of morphisms $f,g: A\to B$.  Given the product $A\times B$, there are unique morphisms $f', g': A\to A\times B$ with the following commutative diagrams
+\[
+\xymatrix@+=1.5cm{
+& A \ar[dr]^f \ar[d]_{f'} \ar[dl]_{1_A} & \\
+A & A\times B \ar[l]^-{\pi_A} \ar[r]_-{\pi_B} & B
+}
+\qquad\quad
+\xymatrix@+=1.5cm{
+& A \ar[dr]^g \ar[d]_{g'} \ar[dl]_{1_A} & \\
+A & A\times B \ar[l]^-{\pi_A} \ar[r]_-{\pi_B} & B
+}
+\]
+For the pair $f',g': A\to A\times B$, let
+\[
+\xymatrix@+=2cm{
+P\ar[d]_p \ar[r]^q & A\ar[d]^{g'} \\
+A\ar[r]_-{f'}       & A\times B
+}
+\]
+be the pullback diagram, which, after combining with the two small commutative triangles containing the edge $\pi_A$ above, produces the following commutative diagram
+\[
+\xymatrix@+=1.5cm{
+P\ar[d]_p \ar[r]^q & A\ar[d]_-{g'} \ar@/^1ex/[ddr]^{1_A} & \\
+A\ar[r]^-{f'} \ar@/_1ex/[drr]_{1_A} & A\times B \ar[dr]|-{\pi_A} & \\
+& & A
+}
+\]
+This implies that $p=q$.  This result, together with the pullback diagram combined with the remaining commutative triangles (containing the edge $\pi_B$)
+\[
+\xymatrix@+=1.5cm{
+P\ar[d]_p \ar[r]^p & A\ar[d]_-{g'} \ar@/^1ex/[ddr]^{g} & \\
+A\ar[r]^-{f'} \ar@/_1ex/[drr]_{f} & A\times B \ar[dr]|-{\pi_B} & \\
+& & B
+}
+\]
+we see that $p$ equalizes $f$ and $g$.  Suppose now that $r:R\to A$ also equalizes $f$ and $g$: $f\circ r = g\circ r$.  Then we get two commutative diagrams
+\[
+\xymatrix@+=1.5cm{
+R\ar[d]_r \ar[r]^r & A\ar[d]_-{g'} \ar@/^1ex/[ddr]^{g} & \\
+A\ar[r]^-{f'} \ar@/_1ex/[drr]_{f} & A\times B \ar[dr]|-{\pi_B} & \\
+& & B
+}
+\qquad
+\xymatrix@+=1.5cm{
+R\ar[d]_r \ar[r]^r & A\ar[d]_-{g'} \ar@/^1ex/[ddr]^{1_A} & \\
+A\ar[r]^-{f'} \ar@/_1ex/[drr]_{1_A} & A\times B \ar[dr]|-{\pi_A} & \\
+& & A
+}
+\]
+first of which comes from the equation $f\circ r = g\circ r$ and the second one is obvious.  By the universality of the product $A\times B$, we have the commutative diagram
+\[
+\xymatrix@+=2cm{
+R\ar[d]_r \ar[r]^r & A\ar[d]^{g'} \\
+A\ar[r]_-{f'}       & A\times B
+}
+\]
+By the universality of the pullback diagram, there is a unique morphism $s: R\to P$ so that $r = p\circ s$, which implies that $p$ is the equalizer of $f$ and $g$.
+\end{proof}
+
+The following corollary is now immediate:
+
+\begin{cor} A category $\mathcal{C}$ with arbitrary products and pullbacks is a complete category.  \end{cor}
+
+
+%%%%%
+%%%%%
+\end{document}

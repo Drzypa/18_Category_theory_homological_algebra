@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReflectiveSubcategory}
+\pmcreated{2013-03-22 17:12:15}
+\pmmodified{2013-03-22 17:12:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{reflective subcategory}
+\pmrecord{4}{39524}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A40}
+\pmdefines{reflection functor}
+\pmdefines{reflection}
+\pmdefines{coreflective}
+\pmdefines{coreflection}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category and $\mathcal{D}$ a subcategory of $\mathcal{C}$.  $\mathcal{D}$ is called a \emph{reflective subcategory} of $\mathcal{C}$ if the inclusion functor $\operatorname{Inc}:\mathcal{D}\to \mathcal{C}$ has a left adjoint.  More explicitly, $\mathcal{D}$ in $\mathcal{C}$ is reflective iff for every object $A$ in $\mathcal{C}$, there is an object $B$ in $\mathcal{D}$ and a morphism $f:A\to B$ such that any morphism $g:A\to C$ can be uniquely factored through $f$; that is, there is a unique morphism $h:B\to C$ such that $g=h\circ f$.
+
+The left adjoint is called the \emph{reflection functor} and the mapped objects and morphisms are called the \emph{reflections} (of the objects and morphisms being mapped by the reflection functor).
+
+Some of the most common reflective subcategories are
+\begin{itemize}
+\item The subcategory of abelian groups in the category of groups.  The reflection functor is the abelianization functor.
+\item The subcategory of fields in the category of integral domains.  The reflection of an integral domain is its field of fractions.
+\item The subcategory of complete lattices in the category of lattices.  The reflection of a lattice is its lattice of ideals.
+\end{itemize}
+
+\textbf{Remark}.  If the inclusion functor has a right adjoint, then the subcategory is said to be \emph{coreflective}.  In other words, $\mathcal{D}$ in $\mathcal{C}$ is coreflective iff for any object $A\in \mathcal{C}$, there is an object $B\in \mathcal{D}$ and a morphism $f:B\to A$ such that any morphism $g:C\to A$ can be uniquely factored through $f$ (by a unique morphism $f:C\to B$).  For example, the subcategory of torsion abelian groups in the category of abelian groups is coreflective.  The coreflection of an abelian group is its torsion subgroup.
+%%%%%
+%%%%%
+\end{document}

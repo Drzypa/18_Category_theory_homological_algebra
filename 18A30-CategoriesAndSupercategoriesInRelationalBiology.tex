@@ -1,0 +1,243 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoriesAndSupercategoriesInRelationalBiology}
+\pmcreated{2013-03-22 18:10:14}
+\pmmodified{2013-03-22 18:10:14}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{categories and supercategories in relational biology}
+\pmrecord{116}{40732}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{18A40}
+\pmclassification{msc}{18C99}
+\pmclassification{msc}{18A25}
+\pmclassification{msc}{92B05}
+\pmsynonym{supercategories in abstract relational biology}{CategoriesAndSupercategoriesInRelationalBiology}
+%\pmkeywords{higher dimensional algebra}
+%\pmkeywords{categories}
+%\pmkeywords{functors}
+%\pmkeywords{natural transformations}
+%\pmkeywords{adjoint functors}
+%\pmkeywords{relational models in biology}
+%\pmkeywords{quantum automata. quantum relational biology}
+%\pmkeywords{biogroupoids}
+\pmrelated{OrganismicSupercategoriesAndComplexSystemsBiodynamics}
+\pmrelated{GeneticNetsOrNetworks}
+\pmrelated{Biogroupoids}
+\pmrelated{MolecularSetTheory}
+\pmrelated{FunctionalBiology}
+\pmrelated{RosettaGroupoids}
+\pmrelated{FunctorCategories}
+\pmrelated{Supercategory}
+\pmrelated{Supercategories3}
+\pmrelated{MolecularSetVariable}
+\pmrelated{NaturalTransformationsOfOrganism}
+\pmdefines{organismic supercategory}
+\pmdefines{QDS}
+\pmdefines{qualitative dynamics}
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd,  enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+This topic entry introduces one of the most general mathematical models of living organisms
+called `organismic supercategories' (OS) which can be axiomatically defined to include both 
+complete self-reproduction of logically defined $\pi$-entities founded in Quine's logic
+and dynamic system diagrams subject to both algebraic and topological transformations.
+
+\subsection{Organismic supercategories (OS)} 
+ \emph{OS} mathematical models were introduced as structures in higher dimensional algebra that are mathematical interpretations of the axioms in ETAS- a natural extension of Lawvere's $elementary\; theory\; of \; abstract \; categories$ (ETAC) to non-Abelian structures and heterofunctors.
+
+ When regarded as categorical models of supercomplex dynamics in living organisms OS provide a unified conceptual framework for relational biology that utilizes flexible, algebraic and topological structures which transform naturally under heteromorphisms or heterofunctors. One of the advantages of the ETAS axiomatic approach, which was inspired by the work of Lawvere (1963, 1966), is that ETAS avoids all the antimonies/paradoxes previously reported for sets (Russell and Whitehead, 1925, and Russell, 1937). ETAS also provides an axiomatic approach to recent higher
+dimensional algebra applications to complex systems biology (\cite{Bgg2}, \cite{BBGG1} and references cited therein.)
+
+
+\subsection{Examples of OS applications to relational and complex systems biology}
+
+Whereas super-categories are usually defined as n-categories or in higher dimensional algebra, organismic supercategories have flexible, algebraic and topological structures that transform naturally under heteromorphisms or heterofunctors. Different approaches to relational biology and biodynamics, developed by Nicolas Rashevsky, Robert Rosen and by the author, are compared with the classical approach to qualitative dynamics of systems (QDS). Natural transformations of heterofunctors in organismic supercategories lead to specific modular models of a variety of specific life processes involving dynamics of genetic systems, ontogenetic development, fertilization, regeneration, neoplasia and oncogenesis. Axiomatic definitions of categories and supercategories of complex biological systems allow for dynamic computations of cell transformations, neoplasia and cancer.
+
+\begin{thebibliography}{99}
+
+\bibitem{BJ85}
+Bacon, John, 1985, ``The completeness of a predicate--functor logic,'' Journal of Symbolic Logic 50: 903--926. 
+
+\bibitem{BP59}
+Paul Bernays, 1959, ``Uber eine naturliche Erweiterung des Relationenkalkuls.'' in Heyting, A., ed., Constructivity in Mathematics. North Holland: 1--14.
+
+\bibitem{ICB71}
+References \PMlinkname{[14] to [34] in the ``bibliography of category theory and algebraic topology''}{CategoricalOntologyABibliographyOfCategoryTheory}
+
+\bibitem{BGB06}
+I. C. Baianu, J. F. Glazebrook, R. Brown and G. Georgescu.: Complex Nonlinear Biodynamics in Categories, Higher dimensional Algebra and \L ukasiewicz-Moisil Topos: Transformation of Neural, Genetic and Neoplastic Networks, Axiomathes,16: 65--122(2006).
+
+
+\bibitem{ICBm2}
+Baianu, I.C. and M. Marinescu: 1974, A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Mathematiques Pures et Appliquees} \textbf{19}: 388-391.
+
+\bibitem{ICB6}
+Baianu, I.C.: 1977, A Logical Model of Genetic Activities in \L ukasiewicz
+Algebras: The Non-linear Theory. \emph{Bulletin of Mathematical Biophysics},
+\textbf{39}: 249-258.
+
+\bibitem{ICB80}
+Baianu, I.C.: 1980, Natural Transformations of Organismic
+Structures. \emph{Bulletin of Mathematical Biophysics}
+\textbf{42}: 431-446
+
+
+\bibitem{ICB87a}
+Baianu, I. C.: 1987a, Computer Models and Automata Theory in
+Biology and Medicine.,  in M. Witten (ed.), \emph{Mathematical
+Models in Medicine}, vol. 7., Pergamon Press, New York, 1513-1577; 
+\PMlinkexternal{CERN Preprint No. EXT-2004-072}{http://doe.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf}
+
+
+\bibitem{ICB10}
+Baianu, I. C.: 2006, Robert Rosen's Work and Complex Systems
+Biology, \emph{Axiomathes} \textbf{16} (1--2): 25--34.
+
+\bibitem{Bgg2}
+Baianu, I. C., Glazebrook, J. F. and G. Georgescu: 2004,
+Categories of Quantum Automata and N-Valued \L ukasiewicz Algebras
+in Relation to Dynamic Bionetworks, \textbf{(M,R)}--Systems and
+Their Higher Dimensional Algebra; 
+\PMlinkexternal{PDF of Abstract and Preprint of Report}{http://fs512.fshn.uiuc.edu/QAuto.pdf} 
+
+
+\bibitem{BBGG1}
+Baianu I. C., Brown R., Georgescu G. and J. F. Glazebrook: 2006,
+Complex Nonlinear Biodynamics in Categories, Higher Dimensional
+Algebra and \L ukasiewicz--Moisil Topos: Transformations of
+Neuronal, Genetic and Neoplastic networks, \emph{Axiomathes}
+\textbf{16} Nos. 1--2, 65--122.
+
+\bibitem{KST83} 
+Kuhn, Stephen T., 1983, ``An Axiomatization of Predicate Functor Logic.'', Notre Dame Journal of Formal Logic 24: 
+233--41. 
+
+\bibitem{QW76}
+Willard Quine. 1976. ``Algebraic Logic and Predicate Functors.'' in {\em Ways of Paradox and Other Essays}, enlarged ed. Harvard Univ. Press: 283--307.
+
+\bibitem{QW82} 
+Willard Quine. 1982. {\em Methods of Logic}, 4th ed. Harvard Univ. Press. Chpt. 45. 
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

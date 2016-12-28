@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularMonomorphism}
+\pmcreated{2013-03-22 18:23:21}
+\pmmodified{2013-03-22 18:23:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regular monomorphism}
+\pmrecord{12}{41034}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18-00}
+\pmsynonym{regular monic}{RegularMonomorphism}
+\pmsynonym{regular epi}{RegularMonomorphism}
+\pmsynonym{regular epic}{RegularMonomorphism}
+\pmrelated{PropertiesOfRegularAndExtremalMonomorphisms}
+\pmdefines{regular epimorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category.  Recall that the equalizer of a pair of morphisms is monomorphic.  Call a monomorphism $f:A\to B$ a \emph{regular monomorphism} if it is the equalizer of a pair of morphisms.
+
+The dual notion of this is that of a \emph{regular epimorphism}: a morphism that is the coequalizer of a pair of morphisms.  As above, a regular epimorphism is an epimorphism.
+
+For example, in \textbf{Set}, the category of sets, every monomorphism (epimorphism) is regular.
+
+\begin{prop} Every split monomorphism is regular. \end{prop}
+\begin{proof}  If the monomorphism $f:A\to B$ is split, then there is a morphism $g:B\to A$ such that
+$$\xymatrix@1{A\ar[r]^f & B\ar[r]^g & A}=\xymatrix@1{A\ar[r]^{1_A} & A}.$$
+Then $f$ is the equalizer of $f\circ g, 1_B:B\to B$.  First, $f$ equalizes $f\circ g$ and $1_B$:
+$$\xymatrix@1{A\ar[r]^f & B\ar[r]^g & A\ar[r]^f & B}=\xymatrix@1{A\ar[r]^{1_A} & A \ar[r]^f & B}=\xymatrix@1{A \ar[r]^f & B}=\xymatrix@1{A\ar[r]^f & B \ar[r]^{1_B} & B}.$$
+Furthermore, if $h:C\to B$ also equalizes $f\circ g$ and $1_B$:
+$$\xymatrix@1{C\ar[r]^h & B\ar[r]^g & A\ar[r]^f & B}=\xymatrix@1{C\ar[r]^h & B \ar[r]^{1_B} & B},$$
+then by defining $x: C\to A$ by $x:=g\circ h$, we see that $h=(f\circ g)\circ h = f\circ x$, or $h$ factors through $f$.  Furthermore, $x$ is uniquely determined by $g$ and $h$, showing that $f$ is indeed the equalizer of $f\circ g$ and $1_B$.
+\end{proof}
+
+\begin{prop} Every regular monomorphism is strong. \end{prop}
+\begin{proof}  Suppose $f:A\to B$ is the equalizer of $s,t:B\to E$, and we have the following commutative diagram with $g$ epimorphic:
+$$\xymatrix@+=3pc{
+{C}\ar[r]^{g}\ar[d]_{x}&{D}\ar[d]^{y}\\
+{A}\ar[r]_{f}&{B} \ar@<0.5ex>[r]^s \ar@<-0.5ex>[r]_t & E
+}
+$$
+Now we do some diagram chasing.  Since $s\circ f = t\circ f$, we have $s\circ f\circ x=t\circ f\circ x$.  But $f\circ x = y\circ g$, we get $s\circ y\circ g = t\circ y\circ g$.  Since $g$ is epimorphic, $s\circ y=t\circ y$.  Since $f$ is the equalizer of $s$ and $t$, there is a unique morphism $u:D\to A$ such that the following triangle is commutative:
+$$\xymatrix@+=3pc{& D \ar[d]^y \ar@{.>}[dl]_u \\ A \ar[r]_f & B}$$
+As a result, $f\circ x = y\circ g= f\circ u \circ g$.  Since $f$ is monomorphic, $x=u\circ g$, yielding the following commutative diagram:
+$$\xymatrix@+=3pc{
+{C}\ar[r]^{g}\ar[d]_{x}&{D}\ar[d]^{y} \ar[dl]_u \\
+{A}\ar[r]_{f}&{B} 
+}
+$$
+which is the precise statement that $f$ is strong.
+\end{proof}
+
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

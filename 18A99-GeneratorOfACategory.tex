@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratorOfACategory}
+\pmcreated{2013-03-22 18:21:04}
+\pmmodified{2013-03-22 18:21:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generator of a category}
+\pmrecord{10}{40987}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A99}
+\pmrelated{GrothendieckCategory}
+\pmdefines{generator}
+\pmdefines{generating set}
+\pmdefines{progenerator}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category, and $f,g:A\to B$ a pair of distinct morphisms.  A morphism $h:X\to A$ is said to \emph{distinguish} or \emph{separate} $f$ and $g$ if $f\circ h\ne g\circ h$.  For example, if $f\ne g:A\to B$, then $1_A$ on $A$ distinguishes $f$ and $g$.
+
+A set $S=\lbrace X_i\mid i\in I\rbrace$ of objects (indexed by a set $I$) is called a \emph{generating set} of $\mathcal{C}$ if any pair of distinct morphisms $f,g:A\to B$ can be distinguished by a morphism with domain in $S$ and codomain $A$.  In other words, there is $h:X_i\to A$ for some $i\in I$, such that $f\circ h\ne g\circ h$.  If $\lbrace X\rbrace$ is a generating family of $\mathcal{C}$, then $X$ is called a \emph{generator} of $\mathcal{C}$.  Any set of morphisms containing a generator is a generating set.
+
+\textbf{Examples}
+\begin{enumerate}
+\item
+In \textbf{Set}, the category of sets, any singleton is a generator.  Suppose $f,g:A\to B$ are distinct functions, so that $f(x)\ne g(x)$ for some $x\in A$.  Let $\lbrace y\rbrace$ be any singleton.  Then $h:\lbrace y\rbrace \to A$ defined by $h(y)=x$ is the function distinguishing $f$ and $g$: for $f\circ h(y)=f(x)\ne g(x)=g\circ h(y)$.
+\item
+In \textbf{Rng}, the category of rings, the ring $\mathbb{Z}$ is a generator.  If $f,g:R\to S$ are distinct ring homomorphisms, say, $f(r)\ne g(r)$ for some $r\in R$.  Then the ring homomorphism $h:\mathbb{Z}\to R$ given by $h(1)=r$ distinguishes $f$ and $g$.
+\end{enumerate}
+
+\textbf{Remark}.  A projective object that is also a generator is called a \emph{progenerator}.
+
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

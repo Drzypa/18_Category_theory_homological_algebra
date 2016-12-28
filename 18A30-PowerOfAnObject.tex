@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerOfAnObject}
+\pmcreated{2013-03-22 18:31:32}
+\pmmodified{2013-03-22 18:31:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{power of an object}
+\pmrecord{5}{41223}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmdefines{power}
+\pmdefines{copower}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category and $A$ an object in $\mathcal{C}$.  Suppose $n$ is a non-negative integer.  The \emph{$n$-th power} of $A$ is defined as the direct product of $A$ with itself $n$ times.  In other words, the \emph{$n$-th power} of $A$ is an object $P$ in $\mathcal{C}$, together with $n$ parallel morphisms $\pi_1, \ldots, \pi_n \in \hom(P,A)$, such that if there are $n$ parallel morphisms $p_1, \ldots, p_n \in \hom(B,A)$, then there is a unique morphism $h:B\to P$ such that $\pi_i\circ h=p_i$, where $i=1,\ldots, n$.  The commutative diagram below illustrates the situation:
+
+$$\xymatrix@C=0.5cm{& B \ar@{.>}[d]^{h} \ar@/_4ex/[dddl]_{p_1} \ar@/^4ex/[dddr]^{p_n} & \\ & P \ar[ddl]_{\pi_1}="1" \ar[ddr]^{\pi_n}="2" & \\ & & \\ A & \cdots & A \ar@{}"1";"2"|-{\cdots}}$$
+
+The $n$-th power of $A$ is denoted by $A^n$.
+
+Below are some properties of the power of an object in a category:
+\begin{itemize}
+\item Each of the projection morphisms $\pi_i$ is a split epimorphism.
+\item $A^1 \cong A$.
+\item $A^0$ is a terminal object in $\mathcal{C}$.
+\item $A^{m+n}\cong A^n \times A^m$, if the product exists.
+\end{itemize}
+
+For example, in the category of sets, the $n$-th power of a set $A$ is the set of $n$-tuples where each entry is an element of $A$.
+
+\textbf{Remark}.  The \emph{copower} of an object is defined dually.  All of the properties above can be dualized.  For example, the $0$-th copower of an object is an initial object.  The $n$-th copower of an object $A$ in \textbf{Set} is the disjoint union of $n$-copies of $A$.
+%%%%%
+%%%%%
+\end{document}

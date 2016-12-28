@@ -1,0 +1,537 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuantumSymmetry}
+\pmcreated{2013-03-22 19:21:28}
+\pmmodified{2013-03-22 19:21:28}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantum symmetry}
+\pmrecord{4}{42310}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18D05}
+\pmclassification{msc}{20L05}
+\pmclassification{msc}{55Q05}
+\pmclassification{msc}{55Q35}
+\pmsynonym{symmetry}{QuantumSymmetry}
+%\pmkeywords{quantum theory}
+%\pmkeywords{mathematical foundations of quantum theories}
+\pmdefines{quantum symmetries}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Quantum Symmetry}
+Often quantum symmetry is understood in terms of properties of symmetry groups, their representations and related algebras. Quantum groups also possess quantum symmetries which are distinct from those exhibited by classical Lie groups, groups of rotations and Poisson or Lorentz transformation groups. Extended quantum symmetries are also encountered for quantum groupoids, quantum categories, Hamilton algebroids, graded Lie super-algebras, Lie algebroids and quantum systems with topological order.
+
+\subsection{Paracrystal Theory and Convolution Algebra}
+
+As reported in a recent publication \cite{BGB1},  the general theory of scattering by partially ordered, atomic or molecular, structures in terms of \emph{paracrystals} and \emph{lattice convolutions} was formulated by Hosemann and Bagchi in  \cite{Hosemann-Bagchi62} using basic techniques of Fourier analysis and convolution products.
+A natural generalization of such molecular, partial symmetries and their corresponding analytical versions involves convolution algebras -- a functional/distribution \cite{Schwartz45,Schwartz52} based theory that  we will discuss in the context of a more general and original concept of a \emph{convolution-algebroid of an extended symmetry groupoid of a paracrystal}, of any molecular or nuclear system, or indeed, any quantum system in general; such applications also  include quantum f\/ields theories, and local quantum net conf\/igurations that are endowed with either partially disordered or `completely' ordered structures, as well as in the graded, or super--algelbroid extension of these concepts for very massive structures such as stars and black holes treated by quantum gravity theories.
+
+A statistical analysis linked to structural symmetry and scattering theory considerations shows that a real paracrystal can be defined by a three dimensional convolution polynomial
+with a semi-empirically derived composition law, $*$, \cite{Hosemann-etal81}. As was shown in \cite{Baianu74,Baianu78}~-- supported
+with computed specific examples -- several systems of convolution can be expressed analytically, thus allowing the numerical computation
+of $X$-ray, or neutron, scattering by partially disordered layer lattices via complex Fourier transforms of one-dimensional structural models
+using fast digital computers.  The range of paracrystal theory applications is however much wider than the one-dimensional lattices with disorder, thus spanning very diverse non-crystalline systems, from metallic glasses and spin glasses to superfluids, high-temperature superconductors, and extremely hot anisotropic plasmas such as those encountered in controlled nuclear fusion (for example, JET) experiments. Other applications~-- as previously suggested in \cite{Baianu71}~-- may also include novel designs of `fuzzy' quantum machines and quantum computers with extended symmetries of quantum state spaces.
+\subsection{Convolution product of groupoids and the convolution algebra of functions}
+
+From a purely mathematical perspective, Alain Connes introduced the concept of   a~$C^{\ast}$-algebra of a (discrete) group (see, e.g.,~\cite{Connes94}). The underlying vector space is that of complex valued functions
+with finite support, and the multiplication of the algebra is the fundamental \emph{convolution product} which it is convenient for our
+purposes to write slightly differently from the common formula as:
+ 
+
+\begin{gather*} 
+(f \ast g )(z) = \sum_{xy=z} f(x)g(y),  Eq. 1.1. 
+\end{gather*}
+
+and $\ast$-operation
+
+Eq. 1.2. 
+\begin{gather*}
+f^{\ast}(x)= \overline{f(x^{-1})}
+\end{gather*}
+
+The more usual expression of these formulas has a sum over the elements of a selected group. For topological groups, where the underlying vector space consists of continuous complex valued functions, this product requires the availability of some structure of measure and of measurable functions, with the sum replaced by an integral. Notice also that this algebra has an identity, the distribution function~$\delta_1$, which has value~1 on the identity~1 of the group, and has zero value elsewhere.
+Currently, however, there are several important aspects of quantum dynamics left out of the invariant, simplified picture provided by group symmetries and their corresponding representations of quantum operator algebras~\cite{Gilmore2k5}. An alternative approach proposed in \cite{Harrison2k5} employs differential forms to find symmetries.
+Physicists deal often with such problems in terms of either spontaneous symmetry breaking or approximate symmetries that require underlying assumptions or ad-hoc dynamic restrictions that have a phenomenological basisl. A well-studied example of this kind is that of the dynamic Jahn--Teller effect and the corresponding `theorem' (Chapter~21 on pp.~807--831, as well as p.~735 of \cite{Abragam-Bleaney70}) which in its simplest form stipulates that {\em a quantum state with electronic non-Kramers degeneracy may be unstable against small distortions of the surroundings, that would lower the symmetry of the crystal field and thus lift the degeneracy} (i.e., cause an observable splitting of the corresponding energy levels). This effect occurs in certain paramagnetic ion systems {\em via} dynamic distortions of the crystal field symmetries around paramagnetic or high-spin centers by moving ligands that are diamagnetic. The established physical explanation is that the Jahn--Teller coupling replaces a purely electronic degeneracy by a vibronic degeneracy (of {\em exactly the same} symmetry!).  The dynamic, or spontaneous breaking of crystal field symmetry (for example, distortions of the octahedral or cubic symmetry) results in certain systems in the appearance of doublets of symmetry $\gamma_3$ or singlets of symmetry $\gamma_1$ or $\gamma_2$. Such dynamic systems could be locally expressed in terms of symmetry representations of a Lie algebroid, or globally in terms of a special Lie (or Lie--Weinstein) symmetry groupoid representations that can also take into account the spin exchange interactions between the Jahn--Teller centers exhibiting such quantum dynamic effects. Unlike the simple symmetries expressed by group representations, the latter can accommodate a much wider range of possible or approximate symmetries that are indeed characteristic of real, molecular systems with varying crystal field symmetry, as for example around certain transition ions dynamically bound to ligands in liquids where motional narrowing becomes very important.  This well known example illustrates the importance of the interplay between symmetry and dynamics in quantum processes which is undoubtedly involved in many other instances including: \emph{quantum chromodynamics (QCD), superfluidity, spontaneous symmetry breaking (SSB), quantum gravity and Universe dynamics} (i.e., the inflationary Universe), some of which will be discussed in further detail in Section 5.
+Physicists deal often with such problems in terms of either spontaneous symmetry breaking or approximate symmetries that require underlying assumptions or ad-hoc dynamic restrictions that have a phenomenological basisl. A well-studied example of this kind is that of the dynamic Jahn--Teller effect and the corresponding `theorem' (Chapter~21 on pp.~807--831, as well as p.~735 of \cite{Abragam-Bleaney70}) which in its simplest form stipulates that {\em a quantum state with electronic non-Kramers degeneracy may be unstable against small distortions of the surroundings, that would lower the symmetry of the crystal field and thus lift the degeneracy} (i.e., cause an observable splitting of the corresponding energy levels). This effect occurs in certain paramagnetic ion systems {\em via} dynamic distortions of the crystal field symmetries around paramagnetic or high-spin centers by moving ligands that are diamagnetic. The established physical explanation is that the Jahn--Teller coupling replaces a purely electronic degeneracy by a vibronic degeneracy (of {\em exactly the same} symmetry).  
+
+Therefore, the various interactions and interplay between the symmetries of quantum operator state space geometry and quantum dynamics at various levels leads to both algebraic and topological structures that are variable and complex, well beyond  symmetry groups and well-studied group algebras (such as Lie algebras, see for example~\cite{Gilmore2k5}). A unified treatment of quantum phenomena/dynamics and structures may thus become possible with the help of algebraic topology, non-Abelian treatments; such powerful mathematical tools are capable of revealing novel, fundamental aspects related to extended symmetries and quantum dynamics through
+a detailed analysis of the variable geometry of (quantum) operator algebra state spaces. At the center stage of non-Abelian algebraic
+topology are groupoid and algebroid structures with their internal and external symmetries \cite{Weinstein96} that allow one to treat
+physical spacetime structures and dynamics within an unified categorical, higher dimensional algebra frame\-work~\cite{Brown-etal2k7}.
+As already suggested in our recent report \cite{BGB1}, the interplay between extended symmetries and dynamics generates higher dimensional structures of
+quantized spacetimes that exhibit novel properties not found in lower dimensional representations of groups, group algebras or Abelian groupoids.
+
+It is also our intention here to explore new links between several important but seemingly distinct mathematical approaches to extended quantum symmetries
+that were not considered in previous reports.  An important example example is the general theory of scattering by partially ordered, atomic or molecular,
+structures in terms of \emph{paracrystals} and \emph{lattice convolutions} that was formulated in  \cite{Hosemann-Bagchi62} using basic techniques of Fourier analysis and convolution products. Further specific applications of the paracrystal theory to $X$-ray scattering, based on computer algorithms, programs and explicit numerical computations, were subsequently developed by the first author \cite{Baianu74} for one-dimensional paracrystals, partially ordered membrane lattices \cite{Baianu78} and other biological structures with partial structural disorder \cite{Baianu80}. Such biological structures, `quasi-crystals', and the paracrystals, in general, provide rather interesting physical examples of  extended symmetries (cf.~\cite{Hindeleh-Hosemann88}). Moreover, the quantum inverse scattering problem and the treatment of nonlinear dynamics in ultra-hot plasmas of white stars and nuclear fusion reactors requires the consideration of quantum doubles, or respectively,  quantum double groupoids and graded double algebroid representations \cite{BGB1}. 
+
+\subsection{Group and Groupoid Representations}
+
+Whereas group representations of quantum unitary operators are extensively employed in standard quantum mechanics, the quantum applications of
+\emph{groupoid representations} are still under development. For example, a description of stochastic quantum
+mechanics in curved spacetime \cite{Drechsler-Tuckey96} involving a Hilbert bundle is possible in terms of groupoid representations which can indeed be defined on such a Hilbert bundle $(X*H,\pi)$, but cannot be expressed as the simpler group representations on a Hilbert space $H$. On the other hand, as in the case of group representations, unitary
+groupoid representations induce associated $C^*$-algebra representations. In the next subsection we recall some of the basic results concerning groupoid representations and their associated groupoid *-algebra representations. For further details and recent results in the mathematical theory of groupoid representations one has also available a succint monograph \cite{BRM2k3} (and references cited therein).
+
+ Let us consider first the relationships between these mainly algebraic concepts and their extended quantum symmetries. Then we introducer several extensions of symmetry and algebraic topology in the context of local quantum physics, ETQFT, spontaneous symmetry breaking, QCD and the development of novel supersymmetry theories of quantum gravity. In this respect one can also take spacetime `inhomogeneity' as a criterion for the comparisons between physical, partial or local, symmetries: on the one hand, the example of paracrystals reveals thermodynamic disorder (entropy) within its own spacetime framework, whereas in spacetime itself, whatever the selected model, the inhomogeneity arises through (super) gravitational effects. More specifically, in the former case one has the technique of the generalized Fourier--Stieltjes transform (along with convolution and Haar measure), and in view of the latter, we may compare the resulting `broken'/paracrystal--type symmetry with that of the supersymmetry predictions for weak gravitational fields, as well as with the spontaneously broken global supersymmetry in the presence of intense gravitational fields. 
+
+Another significant extension of quantum symmetries may result from the superoperator algebra and/or algebroids of Prigogine's quantum \textit{superoperators} which are defined only for irreversible, infinite-dimensional systems \cite{Prigogine80}. The latter extension is also incompatible with a commutative logic algebra such
+as the Heyting algebraic logic currently utilized to define topoi \cite{Goldblatt84}.
+\PMlinkexternal{Quantum Symmetry Bibliography}{http://planetphysics.us/encyclopedia/QuantumSymmetryBibliography.html}
+
+http://planetphysics.us/encyclopedia/QuantumSymmetryBibliography.html
+
+\begin{thebibliography}{99}
+
+\bibitem{Abragam-Bleaney70}
+Abragam, A.; Bleaney, B.  \emph{Electron paramagnetic resonance of transition ions.}; Clarendon Press: Oxford, 1970.
+
+\bibitem{Aguiar-Andrusk2k4}
+Aguiar, M.; Andruskiewitsch, N.  Representations of matched pairs of groupoids and applications to weak Hopf algebras. {\it Contemp. Math.} {\bf 2005}, {\em 376}, 127--173.  
+
+
+\bibitem{Aguiar2k9a}
+Aguiar, M.C.O.; Dobrosavljevic, V.; Abrahams, E.; Kotliar G.  Critical behavior at Mott--Anderson transition: a TMT-DMFT perspective. \emph{Phys. Rev. Lett.} {\bf 2009}, {\em 102}, 156402, 4~pages. 
+
+\bibitem{Aguiar2k9b}
+Aguiar, M.C.O.; Dobrosavljevic, V.; Abrahams, E.; Kotliar G.  Scaling behavior of an Anderson impurity close to the Mott-Anderson transition. \textit{Phys. Rev.~B} {\bf 2006}, {\em 73}, 115117, 7~pages. 
+
+\bibitem{Alfsen-Schultz2k3}
+Alfsen, E.M.; Schultz, F.W. {\em Geometry of state spaces of operator algebras.}; Birkh\"auser: Boston~-- Basel~-- Berlin, 2003.
+
+\bibitem{Altintas-Arika2k8}
+Altintash, A.A.; Arika, M.  The inhomogeneous invariance quantum supergroup of supersymmetry algebra. \textit{Phys. Lett. A} {\bf 2008}, {\em 372}, 5955--5958.
+
+\bibitem{Anderson58}
+Anderson, P.W.  Absence of diffusion in certain random lattices. \textit{Phys. Rev.} {\bf 1958}, {\em 109}, 1492--1505.
+
+\bibitem{Anderson77}
+Anderson, P.W. Topology of Glasses and Mictomagnets. {\em  Lecture presented at The Cavendish Laboratory}: Cambridge, UK, 1977.
+
+\bibitem{Baez-Huerta2010}
+Baez, J. and  Huerta, J.  {\em An Invitation to Higher Gauge Theory}. {\bf 2010}, {\em Preprint, March 23, 2010}: Riverside, CA;pp. 60.  http://www.math.ucr.edu/home/baez/invitation.pdf 
+; 
+
+%%\href{http://arxiv.org/abs/hep-th/1003.4485}{arXiv:1003.4485v1} 
+
+\bibitem{Baez-Schr2k8}
+Baez, J. and  Schreiber, U. {\em  Higher Gauge Theory II: 2-Connections} (JHEP Preprint), 2008;pp.75. \\
+ http://math.ucr.edu/home/baez/2conn.pdf.
+
+\bibitem{Baianu2010}
+Baianu, I.C.; Editor. {\em Quantum Algebra and Symmetry: Quantum Algebraic Topology, Quantum Field Theories and Higher Dimensional Algebra}; PediaPress GmbH: Mainz, Second Edition, Vol. \\{\em 1}: {\em Quantum Algebra, Group Representations and Symmetry}; Vol.{\em 2}: {\em Quantum Algebraic Topology: \\ QFTs, SUSY, HDA};Vol.{\em 3}: {\em Quantum Logics and Quantum Biographies}, December 20, 2010;pp. 1,068.
+
+\bibitem{Baianu71}
+Baianu, I.C. Categories, functors and automata theory: a novel approach to quantum automata through algebraic-topological quantum computation. In {\em  Proceedings of the 4th Intl. Congress of Logic, Methodology and Philosophy of Science, Bucharest, August~-- September, 1971}; University of Bucharest: Bucharest, 1971;pp. 256--257.
+
+\bibitem{Baianu74}
+Baianu, I.C. \emph{Structural studies of erythrocyte and bacterial cytoplasmic membranes by X-ray diffraction and electron microscopy.} PhD Thesis; Queen Elizabeth College: University of London, 1974.
+
+\bibitem{Baianu78}
+Baianu, I.C.  X-ray scattering by partially disordered membrane systems. 
+\emph{Acta Cryst. A}, 1978, {\bf 34}: 751--753.
+
+\bibitem{Baianu-etal78a}
+Baianu, I.C.; Boden, N.; Levine, Y.K.;Lightowlers, D.  Dipolar coupling between groups of three spin-1/2 undergoing hindered reorientation in solids. {\it Solid State Comm.} 1978, {\bf 27}, 474--478.
+
+\bibitem{Baianu80}
+Baianu, I.C.  Structural order and partial disorder in biological systems. {\em Bull. Math. Biology} {\bf 1980}, {\em 42}, 464--468.
+
+\bibitem{Baianu-etal78b}
+Baianu, I.C.; Boden N.; Levine Y.K.; Ross S.M.  Quasi-quadrupolar NMR spin-Echoes in solids containing dipolar coupled methyl groups.  {\em J. Phys.  C: Solid State Phys.}
+{\bf 1978}, {\em 11}, L37--L41.
+
+\bibitem{Baianu-etal81}
+Baianu, I.C.; Boden, N.;Lightowlers, D.  NMR spin-echo responses of dipolar-coupled spin-1/2 triads in solids. {\em J. Magnetic Resonance} {\bf 1981},{\em 43}, 101--111.
+
+\bibitem{Baianu-etal78c}
+Baianu, I.C.; Boden, N.; Mortimer, M.; Lightowlers, D.  A new approach to the structure of concentrated aqueous electrolyte solutions by pulsed N.M.R. {\em Chem. Phys. Lett.} {\bf 1978}, {\em 54}, 169--175.
+
+\bibitem{Baianu-etal2k7}
+Baianu, I.C.; Glazebrook J.F.; Brown, R.  A non-Abelian, Categorical Ontology of Spacetimes and Quantum Gravity. {\em Axiomathes}  {\bf 2007}, {\em 17}, 353--408.
+
+\bibitem{BGB1}
+Baianu, I. C.; Glazebrook, J. F.; Brown, R.  Algebraic Topology Foundations of Supersymmetry and Symmetry Breaking in Quantum Field Theory and Quantum Gravity: A Review. {\em Sigma} {\bf 2009}, {\em 5}, 70 pages.
+
+\bibitem{Baianu-etal79a}
+Baianu, I.C.; Rubinson,  K.A.; Patterson, J. The observation of structural relaxation in a FeNiPB glass by $X$-ray scattering and ferromagnetic resonance. {\em Phys. Status Solidi A} {\bf 1979}, {\em 53}, K133--K135.
+
+\bibitem{Baianu-etal79b}
+Baianu, I.C.; Rubinson,  K.A.;  Patterson, J. Ferromagnetic resonance and spin--wave excitations in metallic glasses. \emph{J. Phys. Chem. Solids} {\bf 1979}, {\em 40}, 940--951.
+
+\bibitem{BSS2k2}
+Bais, F. A.;  Schroers, B. J.; and  Slingerland, J. K.  Broken quantum symmetry and confinement phases in planar physics. \emph{Phys. Rev. Lett.} \textbf{2002}, {\em 89}, No. 18 (1--4), 181--201. 
+
+\bibitem{Ball2k5}
+Ball, R.C.  Fermions without fermion fields. {\em Phys. Rev. Lett.} \textbf{95} (2005), 176407, 4~pages.
+
+
+\bibitem{Banica96}
+Banica, T. Theorie des representations du groupe quantique compact libre $O (n)$. {\em  C. R. Acad. Sci. Paris.}, {\bf 1996}, {\em 322}, Serie I, 241--244.
+
+\bibitem{Banica2k}
+Banica, T.  Compact Kac algebras and commuting squares. {\em J. Funct. Anal.}  {\bf 2000} ,{\em 176}, no. 1, 80--99.
+
+\bibitem{Barrett2k3}
+Barrett, J.W.  Geometrical measurements in three-dimensional quantum gravity.  In {\em Proceedings of the Tenth Oporto Meeting on Geometry, Topology and Physics (2001)}, \textit{Internat. J. Modern Phys. A}  {\bf 2003}, {\em 18}, October, suppl., 97--113.  
+
+\bibitem{Barrett-Mackaay2k6}
+Barrett, J.W.; Mackaay, M.  Categorical representation of categorical groups. \emph{Theory Appl. Categ.}  {\bf 2006},{\em 16}, 529--557.  
+
+\bibitem{HJB-DC91}
+Baues, H.J. ; Conduch{\'e}, D.  On the tensor algebra of a nonabelian group and applications. \emph{$K$-Theory}  {\bf 1991/92}, {\em 5} ), 531--554.
+
+\bibitem{Bellissard1}
+Bellissard, J.  K-theory of C*-algebras in solid state physics. \emph{Statistical Mechanics and Field Theory: Mathematical Aspects}
+;Dorlas, T. C. et al., Editors; Springer Verlag. \emph{Lect. Notes in Physics}, {\bf 1986}, {\em 257}, 99--156.
+
+\bibitem{Bichon2k8}
+Bichon, J.  Algebraic quantum permutation groups. {\em Asian-Eur. J. Math.} {\bf 2008}, {\em 1}, no. 1, 1--13. arXiv:0710.1521
+
+\bibitem{Bichonetal2k6}
+Bichon, J.; De Rijdt, A.; Vaes, S.  Ergodic coactions with large multiplicity and monoidal equivalence of quantum groups. {\em Comm. Math. Phys.} {\bf 2006}, {\em 262}, 703--728. 
+
+\bibitem{Blaom2k7}
+Blaom, A.D.  Lie algebroids and Cartan's method of equivalence. %%\href{http://arxiv.org/abs/math.DG/0509071}{math.DG/0509071}.
+
+\bibitem{Blok-Wen92}
+Blok, B.; Wen X.-G. Many-body systems with non-Abelian statistics. {\em Nuclear Phys. B} {\bf 1992}, {\em 374}, 
+\bibitem{Bellissard1}
+Bellissard, J.  K-theory of C*-algebras in solid state physics. \emph{Statistical Mechanics and Field Theory: Mathematical Aspects}
+;Dorlas, T. C. et al., Editors; Springer Verlag. \emph{Lect. Notes in Physics}, {\bf 1986}, {\em 257}, 99--156.
+
+\bibitem{Bichon2k8}
+Bichon, J.  Algebraic quantum permutation groups. {\em Asian-Eur. J. Math.} {\bf 2008}, {\em 1}, no. 1, 1--13. arXiv:0710.1521
+
+\bibitem{Bichonetal2k6}
+Bichon, J.; De Rijdt, A.; Vaes, S.  Ergodic coactions with large multiplicity and monoidal equivalence of quantum groups. {\em Comm. Math. Phys.} {\bf 2006}, {\em 262}, 703--728. 
+
+\bibitem{Blaom2k7}
+Blaom, A.D.  Lie algebroids and Cartan's method of equivalence. %%\href{http://arxiv.org/abs/math.DG/0509071}{math.DG/0509071}.
+
+\bibitem{Blok-Wen92}
+Blok, B.; Wen X.-G. Many-body systems with non-Abelian statistics. {\em Nuclear Phys. B} {\bf 1992}, {\em 374}, 615--619.
+
+\bibitem{HH88}
+Hindeleh, A.M. and Hosemann, R. Paracrystals representing the physical state of matter. Solid State Phys.  1988,  21, 4155--4170.
+
+\bibitem{Hosemann-etal81}
+Hosemann, R.; Vogel W.;  Weick, D.; Balta-Calleja, F.J.  Novel aspects of the real paracrystal.  \emph{Acta Cryst.~A} {\bf 1981}, {\bf 376}, 85--91.
+
+\bibitem{ThVetal69}
+Ionescu, Th.V.; Parvan, R.; and Baianu, I.  Les oscillations ioniques dans les cathodes creuses dans un champ magnetique. \emph{C.R.Acad.Sci.Paris}. {\bf 1969}, {\bf 270}, 1321--1324; (\emph{paper communicated by Nobel laureate Louis Ne\'el}).
+
+\bibitem{Butterfield-Isham2k4}
+Isham, C.J.; Butterfield, J.  Some possible roles for topos theory in quantum theory and quantum gravity. {\em Found. Phys.} {\bf 2000},{\em 30}, 1707--1735. %%\href{http://arxiv.org/abs/gr-qc/9910005}{gr-qc/9910005}.
+
+\bibitem{Janelidze91}
+Janelidze, G.  Precategories and Galois theory. In \emph{Category theory}; Como, 1990. {\em Springer Lecture Notes in Math.}, Vol.~\emph{1488}; Springer: Berlin, 1991;pp. 157--173.
+
+\bibitem{Janelidze90}
+Janelidze, G. Pure Galois theory in categories. \emph{J. Algebra}(1990), {\bf 132}, 270--286.
+
+\bibitem{Jimbo85}
+Jimbo, M.  A $q$-difference analogue of $U_g$ and the Yang--Baxter equations. \emph{Lett. Math. Phys.} (1985), {\bf 10},63--69. 
+
+\bibitem{Jones83}
+Jones, V. F. R. Index for Subfactors. \emph{Invetiones Math.} {\bf 1989} {\bf  72},1--25. Reprinted in: \emph{New Developments in the Theory of Knots.}; World Scientific Publishing: Singapore,1989.
+
+\bibitem{Andre-Street93}
+Joyal, A.; Street R.  Braided tensor categories. \emph{Adv. Math.} (1995), \emph{102}, 20--78.
+
+\bibitem{Kac77}
+Kac, V.  Lie superalgebras. \emph{Adv. Math.} {\bf 1977}, {\bf 26}, 8--96.
+
+\bibitem{Kamps-Porter99}
+Kamps, K. H.; Porter, T.  A homotopy 2--groupoid from a fibration. \emph{Homotopy, Homology and Applications.} (1999), {\bf 1}, 79--93.
+
+\bibitem{Kapitsa78}
+Kapitsa,  P. L.  Plasma and the controlled thermonuclear reaction. \emph{The Nobel Prize lecture in Physics 1978}, in \emph{Nobel Lectures, Physics 1971--1980}; Editor S.~Lundqvist; World Scientific Publishing Co.: Singapore, 1992.
+
+\bibitem{Kauffman89}
+Kauffman, L. Spin Networks and the Jones Polynomial. \emph{Twistor Newsletter, No.29}; Mathematics Institute: Oxford, November 8th, 1989.
+
+\bibitem{Kauffman91}
+Kauffman, L.  $SL(2)_q$--Spin Networks. \emph{Twistor Newsletter, No.32 }; Mathematics Institute: Oxford, March 12th, 1989.
+
+\bibitem{Khoroshkin-Tolstoy91}
+Khoroshkin, S.M.; Tolstoy, V.N. Universal $R$-matrix for quantum supergroups.  In {\em Group Theoretical Methods in Physics}; Moscow, 1990; {\em Lecture Notes in Phys.}, Vol.~382; Springer: Berlin, 1991;pp. 229--232.
+
+\bibitem{Kirilov-R89}
+Kirilov, A.N.; and Reshetikhin, N. Yu. Representations of the Algebra $U_q(sl(2))$, $q$-Orthogonal Polynomials and Invariants of Links. Reprinted in: {\em New Developments in the Theory of Knots.}; Kohno, Editor; World Scientific Publishing, 1989.
+
+\bibitem{KlimykSch97}
+Klimyk, A. U.; and SchmÃƒÂƒÃ‚Â¼dgen, K. {\em  Quantum Groups and Their Representations.}; Springer--Verlag: Berlin, 1997.
+
+\bibitem{Korepin}
+Korepin, V. E.  Completely integrable models in quasicrystals. {\em Commun. Math. Phys.}  {\bf 1987}, {\em 110}, 157--171.
+
+\bibitem{Kustermans-Vaes2k}
+Kustermans, J.; Vaes, S. The operator algebra approach to quantum groups. {\em Proc. Natl. Acad. Sci. USA} {\bf 2000}, {\em 97}, 547--552.
+
+\bibitem{Lambe-Redford97}
+Lambe, L.A.; Radford, D.E.  Introduction to the quantum Yang--Baxter equation and quantum groups: an algebraic approach. \emph{Mathematics and its Applications}, Vol.~{\em 423}; Kluwer Academic Publishers: Dordrecht, 1997.
+
+\bibitem{Lance95}
+Lance, E.C.  Hilbert $C^*$-modules. A toolkit for operator algebraists.  {\em London Mathematical Society Lecture Note Series}, Vol.~{\em 210}; Cambridge University Press: Cambridge, 1995.
+
+\bibitem{Landsman98}
+Landsman, N.P.  Mathematical topics between classical and quantum mechanics. {\em Springer Monographs in Mathematics}; Springer-Verlag: New York, 1998.
+
+\bibitem{Landsman2k}
+Landsman, N.P.  Compact quantum groupoids, in  Quantum Theory and Symmetries (Goslar,  July 18--22, 1999), Editors H.-D.~Doebner et al., World Sci. Publ., River Edge, NJ, 2000, 421--431, 
+%%\href{http://arxiv.org/abs/math-ph/9912006}{math-ph/9912006}.
+
+\bibitem{Landsman-Ramazan2k1}
+Landsman, N.P.; Ramazan, B. Quantization of Poisson algebras associated to Lie algebroids, in {\em Proc. Conf. on Groupoids in Physics, Analysis and Geometry: Boulder CO, 1999}; Editors: J.~Kaminker et al., \emph{Contemp. Math.}{\bf 2001},{\em 282}, 159--192.  
+%%\href{http://arxiv.org/abs/math-ph/0001005}{math-ph/0001005}.
+
+\bibitem{Lawrence95}
+Lawrence, R.L. Algebra and Triangle Relations. In: {\em Topological and Geometric Methods in Field Theory}; Editors: J. Michelsson and O.Pekonen; World Scientific Publishing,1992;pp.429-447. {\em J.Pure Appl. Alg.} {\bf 1995}, {\em 100}, 245-251.
+
+\bibitem{Lee-etal2k4}
+Lee, P.A.; Nagaosa, N.; Wen, X.-G.  Doping a Mott insulator: physics of high temperature superconductivity.{\bf 2004}. 
+%%\href{http://arxiv.org/abs/cond-mat/0410445}{cond-mat/0410445}.
+
+\bibitem{Levin-Olshanetsky08}
+Levin, A.; Olshanetsky, M.  Hamiltonian Algebroids and deformations of complex structures on Riemann curves. {\bf 2008}, hep--th/0301078v1.
+
+\bibitem{Levin-Wen2k3}
+Levin, M.; Wen, X.-G.  Fermions, strings, and gauge fields in lattice spin models.  {\em Phys. Rev. B} {\bf 2003}, {\em 67}, 245316, 4~pages. %%\href{http://arxiv.org/abs/cond-mat/0302460}{cond-mat/0302460}.
+
+\bibitem{Levin-Wen2k6a}
+Levin, M.; Wen, X.-G.  Detecting topological order in a ground state wave function. {\em Phys. Rev. Lett.} {\bf 2006}, {\em 96}, 110405, 4~pages. %%\href{http://arxiv.org/abs/cond-mat/0510613}{cond-mat/0510613}.
+
+\bibitem{Levin-Wen2k5}
+Levin M.; Wen, X.-G. Colloquium: photons and electrons as emergent phenomena. {\em Rev. Modern Phys.} {\bf 2005}, {\em 77}, 871--879. %%\href{http://arxiv.org/abs/cond-mat/0407140}{cond-mat/0407140}.
+
+\bibitem{Levin-Wen2k6b}
+Levin, M.; Wen, X.-G. Quantum ether: photons and electrons from a rotor model. {\em Phys. Rev. B} {\bf 2006}, {\em 73}, 035122, 10~pages. %%\href{http://arxiv.org/abs/hep-th/0507118}{hep-th/0507118}.
+\bibitem{Tsui-Allen2k7}
+Tsui, D.C.; Allen, S.J. Jr.  Mott--Anderson localization in the two-dimensional band tail of Si inversion layers. {\em Phys. Rev. Lett.}  {\bf 1974}, {\em 32}, 1200--1203.
+
+\bibitem{Turaev--Viro92}
+Turaev, V.G.; Viro, O.Ya. State sum invariants of 3-manifolds and quantum $6j$-symbols. \emph{Topology} (1992), {\bf 31}, 865--902.
+
+\bibitem{van Kampen33}
+van Kampen, E.H. On the connection between the fundamental groups of some related spaces. \emph{Amer. J. Math.} (1933), {\bf 55}, 261--267.
+
+\bibitem{Varilly97}
+V\'arilly, J.C. An introduction to noncommutative geometry. {\em EMS Series of Lectures in Mathematics}; European Mathematical Society (EMS): Z\"{u}rich, 2006.
+
+\bibitem{Weinberg96}
+Weinberg, S. {\em The quantum theory of fields., Vol. I. Foundations and Vol. II. Modern applications.}; Cambridge University Press: Cambridge, 1996-1997.
+
+\bibitem{Weinberg2005}
+Weinberg, S. {\em The quantum theory of fields. Vol.~III. Supersymmetry}; Cambridge University Press: Cambridge, 2005.
+
+\bibitem{Weinstein96}
+Weinstein, A.  Groupoids: unifying internal and external symmetry. A tour through some examples.{\em Notices Amer. Math. Soc.} {\bf 1996}, {\em 43}, 744--752. 
+%%\href{http://arxiv.org/abs/math.RT/9602220}{math.RT/9602220}.
+
+\bibitem{Wen91}
+Wen, X.-G.  Non-Abelian statistics in the fractional quantum Hall states. {\em Phys. Rev. Lett.} {\bf 1991}, {\em 66}, 802--805.
+
+\bibitem{Wen99}
+Wen, X.-G.  Projective construction of non-Abelian quantum Hall liquids. {\em Phys. Rev. B} {\bf 1999}, {\em 60}, 8827, 4~pages. %%\href{http://arxiv.org/abs/cond-mat/9811111}{cond-mat/9811111}.
+
+\bibitem{Wen2k3}
+Wen, X.-G. Quantum order from string-net condensations and origin of light and massless fermions.\\ {\em Phys. Rev. D} {\bf 2003}, {\em 68}, 024501, 25~pages. %%\href{http://arxiv.org/abs/hep-th/0302201}{hep-th/0302201}.
+
+\bibitem{Wen2k4}
+Wen, X.-G.{\em Quantum field theory of many--body systems -- from the origin of sound to an origin of\\  light and electrons}; Oxford University Press: Oxford, 2004.
+
+\bibitem{Wess-Bagger83}
+Wess, J.; Bagger, J. Supersymmetry and supergravity. {\em Princeton Series in Physics}; Princeton University Press: Princeton, N.J., 1983.
+
+\bibitem{WJ1}
+Westman, J.J. Harmonic analysis on groupoids. {\em Pacific J. Math.} {\bf 1968}, {\em 27}, 621--632.
+
+\bibitem{WJ2}
+Westman, J.J. {\em Groupoid theory in algebra, topology and analysis}; University of California at Irvine, 1971.
+
+\bibitem{Wickramasekara-Bohm2k2}
+Wickramasekara, S.; Bohm, A.  Symmetry representations in the rigged Hilbert space formulation of quantum mechanics.  {\em J. Phys. A: Math. Gen.} {\bf 2002}, {\em 35}, 807--829. 
+
+%%\href{http://arxiv.org/abs/math-ph/0302018}{math-ph/0302018}.
+
+\bibitem{Wightman56}
+Wightman, A.S. Quantum field theory in terms of vacuum expectation values. {\em Phys. Rev.} {\bf 1956}, {\em 101}, 860--866.
+
+\bibitem{Wightman76}
+Wightman, A.S., Hilbert's sixth problem: mathematical treatment of the axioms of physics.  In {\em Mathematical Developments Arising from Hilbert Problems : Proc. Sympos. Pure Math.}, Northern Illinois Univ., De Kalb, Ill., 1974. {\em Amer. Math. Soc.}: Providence, R.I., 1976;pp. 147--240.
+
+\bibitem{Wightman-Garding64}
+Wightman, A.S.; G\"arding,  L.  Fields as operator-valued distributions in relativistic quantum theory. {\em Ark. Fys.} {\bf 1964}, {\em 28}, 129--184.
+
+\bibitem{WEP31}
+ Wigner, E. P. \emph {Gruppentheorie}; Friedrich Vieweg und Sohn: Braunschweig, Germany, 1931;pp. 251-254. {\em Group Theory}; Academic Press Inc.: New York, 1959;pp. 233-236.
+
+\bibitem{WEP39}
+Wigner, E. P.  On unitary representations of the inhomogeneous Lorentz group. {\em Annals of Mathematics} {\bf 1939}, {\em 40} (1), 149ÃƒÂ¢Ã‚Â€Ã‚Â“204. doi:10.2307/1968551.
+
+\bibitem{Witten89}
+Witten, E. Quantum field theory and the Jones polynomial. {\em Comm. Math. Phys.} {\bf 1989}, {\em 121}, 351--355.
+
+\bibitem{Witten98}
+Witten, E. Anti de Sitter space and holography. {\em Adv. Theor. Math. Phys.} {\bf 1998},{\em 2}, 253--291. 
+%%\mbox{\href{http://arxiv.org/abs/hep-th/9802150}{hep-th/9802150}}.
+
+\bibitem{Wood97}
+Wood, E.E. Reconstruction Theorem for Groupoids and Principal Fiber Bundles. {\em Intl. J. Theor. Physics} {\em 1997} {\em 36} (5), 1253-1267.  DOI: 10.1007/BF02435815. 
+
+\bibitem{Woronowicz1}
+Woronowicz, S.L. Twisted $SU(2)$ group. An example of a non-commutative differential calculus. \emph{Publ. Res. Inst. Math. Sci. } (1987), {\bf 23},
+117--181.
+
+\bibitem{Woronowicz98}
+Woronowicz, S. L. Compact quantum groups. In \emph{Quantum Symmetries.}  Les Houches Summer School--1995, Session LXIV; Editors: A. Connes; K. Gawedzki; J. Zinn-Justin; Elsevier Science: Amsterdam,1998;pp. 845--884.
+
+\bibitem{Xu97}
+Xu, P. Quantum groupoids and deformation quantization. \emph{C. R. Acad. Sci. Paris S\'{e}r. I Math.} (1998), {\bf 326}, 289--294.  %%\href{http://arxiv.org/abs/q-alg/9708020}{q-alg/9708020}.
+
+\bibitem{Yang-Mills54}
+Yang, C.N.; Mills, R.L. Conservation of isotopic spin and isotopic gauge invariance. {\em Phys. Rev.} {\bf 1954}, {\em 96}, 191--195.
+
+\bibitem{Yang62}
+Yang, C.N. Concept of Off-Diagonal Long-Range Order and the Quantum Phases of Liquid He and of Superconductors.{\em Rev. Mod. Phys.} {\bf 1962}, {\em 34}, 694ÃƒÂ¢Ã‚Â€Ã‚Â“704.
+
+\bibitem{Yetter93}
+Yetter, D.N. TQFTs from homotopy 2-types. \textit{J. Knot Theory Ramifications} {\bf 1993}, {\em 2}, 113--123.
+
+\bibitem{Ypma1}
+Ypma, F.  K-theoretic gap labelling for quasicrystals, {\em Contemp. Math.}{\bf 2007}, {\em 434}, 247--255; \emph{Amer. Math. Soc.}: Providence, RI,.
+
+\bibitem{Ypma2}
+Ypma, F. {\em Quasicrystals, C*-algebras and K-theory}. Msc. Thesis. {\bf 2004}: University of Amsterdam.
+
+\bibitem{Zhang91}
+Zhang, R.B. Invariants of the quantum supergroup $U_q(gl(m/1))$. {\em J. Phys. A: Math. Gen.} {\bf 1991}, {\em 24}, L1327--L1332.
+
+\bibitem{Zhang-Gould99}
+Zhang, Y.-Z.; Gould,  M.D. Quasi-Hopf superalgebras and elliptic quantum supergroups, \emph{J. Math. Phys.} {\bf 1999}, {\em 40}, 5264--5282,
+%%\href{http://arxiv.org/abs/math.QA/9809156}{math.QA/9809156}.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

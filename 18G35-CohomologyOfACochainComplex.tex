@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CohomologyOfACochainComplex}
+\pmcreated{2013-03-22 19:03:46}
+\pmmodified{2013-03-22 19:03:46}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{cohomology of a cochain complex}
+\pmrecord{6}{41946}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmrelated{Tor}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\im}{im}
+\begin{document}
+\PMlinkescapeword{exact}
+\PMlinkescapeword{objects}
+
+If $(\mathcal{A},d)$ is a \PMlinkname{cochain complex}{CochainComplex2}
+\[
+  \cdots \xrightarrow{d_{n-1}} A^{n-1} \xrightarrow{d_{n}} A^n \xrightarrow {d_{n+1}}  
+      A^{n+1} \xrightarrow{d_{n+2}} \cdots
+\]
+then the $n^{\mathrm{th}}$ \emph{cohomology group} (or \emph{cohomology module})
+$H^n(\mathcal{A},d)$ of $(\mathcal{A},d)$
+is the quotient module
+\[
+ H^n(\mathcal{A},d)=\frac{\ker d_{n+1}}{\im d_n}.
+\]
+
+The cochain complex is an \PMlinkname{exact sequence}{ExactSequence} if and only if
+all of the cohomology groups are trivial.
+The cohomology groups can therefore be thought of
+as measuring the extent to which the cochain complex fails to be exact.
+
+Cohomology groups of other objects are defined as the cohomology groups of an associated cochain complex. (For example, see the entry on the \PMlinkname{cohomology of simplicial complexes}{SimplicialComplex}.)
+
+[Compare this entry with the entry on homology of a chain complex.]
+%%%%%
+%%%%%
+\end{document}

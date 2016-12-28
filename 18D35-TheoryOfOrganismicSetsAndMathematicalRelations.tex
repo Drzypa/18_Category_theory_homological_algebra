@@ -1,0 +1,278 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoryOfOrganismicSetsAndMathematicalRelations}
+\pmcreated{2013-03-22 18:29:59}
+\pmmodified{2013-03-22 18:29:59}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{theory of organismic sets and mathematical relations}
+\pmrecord{10}{41184}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D35}
+\pmclassification{msc}{18D15}
+\pmclassification{msc}{18C10}
+\pmclassification{msc}{92C30}
+\pmclassification{msc}{92B20}
+\pmclassification{msc}{92B05}
+\pmsynonym{algebraic theories of organismic organizational structures and relations}{TheoryOfOrganismicSetsAndMathematicalRelations}
+\pmsynonym{sets of organismic components}{TheoryOfOrganismicSetsAndMathematicalRelations}
+\pmsynonym{relations and activities}{TheoryOfOrganismicSetsAndMathematicalRelations}
+%\pmkeywords{orgnismic sets organization and definitions}
+%\pmkeywords{relational biology}
+%\pmkeywords{predicate logic}
+%\pmkeywords{set and relations theory}
+%\pmkeywords{mathematical biology}
+%\pmkeywords{organismic development}
+%\pmkeywords{organization of complex biosystems}
+\pmrelated{OrganismicSets2}
+\pmrelated{NicolasRashevsky}
+\pmrelated{GeneticNetsOrNetworks}
+\pmdefines{organismic set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Introduction}
+
+ The {\em theory of organismic sets and their abstract relations}, ({\em OSR}), was constructed by Nicolas Rashevsky (\cite{NRashevsky1-yr1965, NRashevsky2-1969}) as a new paradigm of mathematical models of biological organization at different hierarchical (that is, lattice-like) levels by means of mathematical sets. The first example is that of an {\em organismic set of zeroth order} which was defined as ``a finite collection $S_0$ whose elements correspond to (or represent) the genes $g_i$ of a cell or multi-cellular organism together with their activities $a_i$, biochemical products $p_i$ and corresponding inputs $I_j$ from the environment'', with  $i$ and $j$ being positive integer indices spanning a finite subset $N^+$ of the set of natural numbers $N$. 
+ 
+\subsection{Brief History}
+
+  Rashevsky's original definition (\cite{NRashevsky2-1969}) of the \emph{organismic sets} of zero-th order 
+whose elements are genes as explained above; $S_0$ is, therefore, perhaps the most general and simplest model
+of the genome of an organism. Furthermore, OSR contains also essential relations between such organismic sets
+that correspond to a biological system's organization. Therefore, Rashevsky's organismic set theory is part of abstract relational biology.  {\em First order organismic sets}, $S_1$, are then simple mathematical models of single cells in terms of both genetic (modeled by $S_0$ whose elements model the genes) and metabolic subsystems other than the 
+direct products of the genes. OSR models of multi-cellular organisms are then defined as {\em organismic sets of second order}, whose elements are the first order organismic sets that are set-theoretical models
+of living cells. Further mathematical concepts and a logic of predicates were then introduced by Rashevsky in order to expand his theory of organismic sets to organizational, mathematical models of human societies. 
+
+
+\subsection{Fundamental and Practical Results of Rashevsky's OSR} 
+ 
+ Results from such studies of {\em relations} between organismic sets in OSR were considered to be far more important than the numerical or {\em quantitative} aspects that play such important roles in physics and chemistry. 
+A number of interesting results were obtained by means of standard (Boolean) logic predicates applied to organismic sets and their relations. Further details can be found in the publications listed below and the references cited therein. Subsequently, autopoietic theories have enlarged upon, and also extended, the application of organismic sets to biological systems, Ecology, societal organizations, societies and the entire set of all humans viewed from the point of view of its activities in the broadest sense, including cultural ones, as well as the human society interactions with its global environment. In spite of its age, the theory of organismic sets thus appears to be today as relevant as it was 30 years ago to the current, pressing problems of the global human society; humanity is now being faced with, and indeed challenged by, critical global issues such as global warming, the growing global energy crysis, and the related problem of increasing costs of food crops, as well as food transport/manufacture/delivery/preservation that were predicted by this theory which employs the rather simple mathematical means of the theory of sets and set-based relations, albeit greatly enriched by the organismic contexts- biological, societal and environmental. 
+
+\subsection{Further Developments of OSR and Relational Biology, Mathematical Models}
+
+
+In parallel with OSR developments by Rashevsky there have been related theories in abstract relational biology such as Robert Rosen' s {\em theory of \textbf{$(M,R)$}-systems ($MR$s)} and Anthony Bartholomay's 
+{\em theory of molecular sets} with applications both in mathematical biology and mathematical medicine. MRs were represented initially in terms of {\em categories of sets and set-theoretical maps}(\cite{RRosen1, RRosen2}). Subsequent OSR developments introduced OSR representations in algebraic categories such as the {\em category of algebraic theories} in the sense defined by William F. Lawvere, and also in terms of organismic supercategories {\cite{ICBM68}, later defined as interpretations of ETAS axioms (\cite{ICB70}). Then, a functorial construction of MRs was reported (\cite{ICB73, ICBM74}) with similar properties with those previously found for the category of automata, or sequential machines. Such developments made then possible the formulation of a more general theory of organismic sets, molecular sets and \textbf{$(M,R)$}-systems in terms of {\em natural transformations of organismic structures} (\cite{ICB80}), whose results were then compared with those obtained, or obtainable, from other network, 'net' or automata-based theories and computer modeling of biological systems(\cite{ICB87a}); specific examples in biology, physiology and medicine were concisely presented for arterial systems in the lung, circulatory system in man, the human brain interactions with the hormonal and circulation systems, neural networks, enzyme networks of the neuron, genetic networks, tumor development (carcinogenesis), coupled biochemical oscillatory systems and biochemical networks,
+chaotic subsystems in organisms and other related topics (\cite{ICB87a, ICB87b}).
+
+
+\begin{thebibliography}{9}
+
+\bibitem{NRashevsky1-yr1965}
+Rashevsky, N.: 1965, The Representation of Organisms in Terms of
+Predicates, \emph{Bulletin of Mathematical Biophysics} \textbf{27}: 477-491.
+
+\bibitem{NRashevsky2-1969}
+Rashevsky, N.: 1969, Outline of a Unified Approach to Physics, Biology and Sociology., \emph{Bulletin of Mathematical Biophysics}, \textbf{31}: 159--198.
+
+
+\bibitem{ICBM68}
+Baianu, I.C. and M. Marinescu: 1968, Organismic Supercategories: Towards a Unitary Theory of Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{30}, 148-159.
+
+\bibitem{ICB70}
+Baianu, I.C.: 1970, Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32}: 539-561.
+
+\bibitem{ICB71}
+Baianu, I.C.: 1971, Organismic Supercategories and Qualitative Dynamics of Systems. \emph{Ibid.}, \textbf{33} (3), 339--354.
+
+\bibitem{ICB73}
+Baianu, I.C.: 1973, Some Algebraic Properties of \emph{\textbf{(M,R)}} -- Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{35}, 213-217.
+
+\bibitem{ICBM74}
+Baianu, I.C. and M. Marinescu: 1974, A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Mathematiques Pures et Appliqu\'ees} \textbf{19}: 388-391.
+
+\bibitem{ICB80}
+Baianu, I.C.: 1980, Natural Transformations of Organismic
+Structures. \emph{Bulletin of Mathematical Biophysics}
+\textbf{42}: 431-446.
+
+\bibitem{ICB83}
+Baianu, I. C.: 1983, Natural Transformation Models in Molecular
+Biology., in \emph{Proceedings of the SIAM Natl. Meet}., Denver,
+CO.; Eprint: \\http://cogprints.org/3675/ and http://cogprints.org/3675/0l/Naturaltransfmolbionu6.pdf
+
+\bibitem{ICB84}
+Baianu, I.C.: 1984, A Molecular-Set-Variable Model of Structural and Regulatory Activities in Metabolic and Genetic Networks, \emph{FASEB Proceedings} \textbf{43}, 917.
+
+\bibitem{ICB87a}
+Baianu, I. C.: 1986--1987a, Computer Models and Automata Theory in Biology and Medicine.,  in M. Witten (ed.), \emph{Mathematical Models in Medicine}, vol. 7., Ch.11 Pergamon Press, New York, 1513 -1577; URLs: \emph{CERN Preprint No. EXT-2004-072: } http://doe.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf ;
+http://en.scientificcommons.org/1857371 .
+
+\bibitem{ICB87b}
+Baianu, I. C.: 1987b, Molecular Models of Genetic and Organismic Structures, in \emph{Proceed. Relational Biology Symp.}
+Argentina; \emph{CERN Preprint No.EXT-2004-067} and http://doc.cern.ch/archive/electronic/other/ext/extusers/2004
+67/MolecularModels-ICB3.doc.
+
+\bibitem{RRosen1}
+Rosen, R.: 1958a, A Relational Theory of Biological Systems \emph{Bulletin of Mathematical Biophysics} 
+\textbf{20}: 245-260.
+
+\bibitem{RRosen2}
+Rosen, R.: 1958b, The Representation of Biological Systems from the Standpoint of the 
+Theory of Categories., \emph{ Bulletin of Mathematical Biophysics} \textbf{20}: 317-341.
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

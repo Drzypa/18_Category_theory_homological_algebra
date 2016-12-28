@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Syzygy}
+\pmcreated{2013-03-22 14:51:07}
+\pmmodified{2013-03-22 14:51:07}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{syzygy}
+\pmrecord{7}{36524}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G10}
+\pmclassification{msc}{16E05}
+\pmclassification{msc}{13D02}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal{A}$ be an abelian category.  Let $M\in\operatorname{Ob}(\mathcal{A})$.  If there is an exact sequence
+$$\xymatrix{0\ar[r]&S\ar[r]&P_n\ar[r]&{\cdots}\ar[r]&P_1\ar[r]&P_0\ar[r]&M\ar[r]&0},$$
+where each $P_i$ is a projective object in $\mathcal{A}$, then we call $S$ an $n$th \emph{syzygy} of $M$.
+
+If $S$ is itself projective, then the projective dimension of $M$, $\operatorname{pd}(M)$, is less than or equal to $n$.
+
+\textbf{Remark}.  
+\begin{enumerate}
+\item The word ``syzygy'' is used in astromony to describe three celestial objects (usually the Sun, Moon and Earth, or the Sun, Earth and Moon) being collinear. 
+\item Any two $n$th syzygies of a given object are projectively equivalent.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

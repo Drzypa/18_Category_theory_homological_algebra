@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{vCechCohomologyGroup}
+\pmcreated{2013-03-22 14:43:14}
+\pmmodified{2013-03-22 14:43:14}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{\v{C}ech cohomology group}
+\pmrecord{5}{36346}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G60}
+\pmsynonym{Cech cohomology group}{vCechCohomologyGroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal F$ be a sheaf of abelian groups on a topological space $X$ and consider an \PMlinkescapetext{open covering} $\mathcal U=\{U_i\}_{i\in I}$ of $X$. For the sake of simplicity denote
+$$
+U_{i_0i_1\cdots i_q}=U_{i_0}\cap U_{i_1}\cap\dots\cap U_{i_q}.
+$$
+The group $\check C^q(\mathcal U,\mathcal F)$ of \v{C}ech $q$-cochains is the set of families
+$$
+c=(c_{i_0i_1\cdots i_q})\in\prod_{(i_0,\dots,i_q)\in I^{q+1}}\mathcal F(U_{i_0i_1\cdots i_q}).
+$$
+The group \PMlinkescapetext{structure} on $\check C^q(\mathcal U,\mathcal F)$ is the obvious one deduced from the addition law on sections of $\mathcal F$.
+
+The \v{C}ech differential 
+$$
+\delta^q\colon\check C^q(\mathcal U,\mathcal F)\to\check C^{q+1}(\mathcal U,\mathcal F)
+$$
+is defined by the \PMlinkescapetext{formula}
+$$
+(\delta^q c)_{i_0\cdots i_{q+1}}=\sum_{0\le j\le q+1}(-1)^j c_{i_0\cdots\widehat{i_j}\cdots i_{q+1}}|_{U_{i_0\cdots i_{q+1}}},
+$$
+and we set $\check C^{q}(\mathcal U,\mathcal F)=0$, $\delta^q=0$ for $q<0$.
+Easy computations show that $\delta^{q+1}\circ\delta^q=0$. We get therefore a cochain complex $(\check C^\bullet(\mathcal U,\mathcal F),\delta)$, called the complex of \v{C}ech cochains relative to the \PMlinkescapetext{covering} $\mathcal U$.
+
+The $q$-th \emph{\v{C}ech cohomology group} of $\mathcal F$ relative to $\mathcal U$ is
+$$
+\check H^q(\mathcal U,\mathcal F)=H^q(\check C^\bullet(\mathcal U,\mathcal F)).
+$$
+%%%%%
+%%%%%
+\end{document}

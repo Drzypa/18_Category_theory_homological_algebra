@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProductOfCategories}
+\pmcreated{2013-03-22 16:37:05}
+\pmmodified{2013-03-22 16:37:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{product of categories}
+\pmrecord{10}{38816}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{CategoricalDirectProduct}
+\pmrelated{DisjointUnionOfCategories}
+\pmdefines{product category}
+\pmdefines{projection functor}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+There are occasions when we need to consider objects from different categories being paired up.  For example, if $\mathcal{C}$ is a category, then $\hom(A,B)$ where $A,B$ are objects of $\mathcal{C}$ is a set, and we can think of $\hom$ as a functor from $\mathcal{C}^{\operatorname{op}}\times \mathcal{C}$ to the category of sets.  But what is $\mathcal{C}^{\operatorname{op}}\times \mathcal{C}$ exactly?  We will give this a formal definition presently.
+
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories.  Define the \emph{Cartesian product} $\mathcal{C}\times \mathcal{D}$ of $\mathcal{C}$ and $\mathcal{D}$ as the following pair $(O,M)$, where
+\begin{itemize}
+\item $O$ is the class consisting of ordered pairs $(X,Y)$, where $X$ is an object in $\mathcal{C}$ and $Y$ is an object in $\mathcal{D}$
+\item $M$ is the class consisting of ordered pairs $(f,g)$, where $f$ is a morphism in $\mathcal{C}$ and $g$ is a morphism in $\mathcal{D}$.
+\end{itemize}
+There is a category structure on $\mathcal{C}\times \mathcal{D}$.  But several things need to be defined first.
+\begin{enumerate}
+\item
+Elements of $O$ are called the \emph{objects} of $\mathcal{C}\times \mathcal{D}$ and elements of $M$ are called the \emph{morphisms} of $\mathcal{C}\times\mathcal{D}$.  For each morphism $(f,g)\in M$, we define the domain and codomain operations $$\operatorname{dom}(f,g):=(\operatorname{dom}(f), \operatorname{dom}(g))\quad\mbox{ and }\quad \operatorname{cod}(f,g):=(\operatorname{cod}(f), \operatorname{cod}(g)).$$  Note that for simplicity, we have used the same symbol $\operatorname{dom}$ and $\operatorname{cod}$ for $\mathcal{C},\mathcal{D}$, and $\mathcal{C}\times \mathcal{D}$.
+\item
+Next, for each pair of objects $A,B\in \mathcal{C}\times\mathcal{D}$, we have a set $\hom(A,B)$ consisting of all morphisms in $\mathcal{C}\times \mathcal{D}$ whose domain is $A$ and codomain is $B$.  Note that $\hom(A,B)$ is a set because it is $\hom(X,Z)\times \hom(Y,T)$, where $A=(X,Y)$ and $B=(Z,T)$ and each component in the product is assumed to be a set.
+\item
+Finally, for objects $A,B,C$ in $\mathcal{C}\times\mathcal{D}$, we have a function $\circ$ called composition: 
+$$\circ:\hom(A,B)\times \hom(B,C)\to \hom(A,C).$$  To define $\circ$, write each object $A,B,C$ as ordered pairs: $A=(X,Y)$, $B=(Z,T)$, $C=(U,V)$.  In addition, let $\alpha=(f,g)\in \hom(A,B)$ and $\beta=(p,q)\in \hom(B,C)$.  Then $$\circ(\alpha,\beta):=(\circ_1(f,p),\circ_2(g,q)),$$ where $\circ_1$ and $\circ_2$ are compositions defined in $\mathcal{C}$ and $\mathcal{D}$ respectively, such that 
+$$\circ_1:\hom(X,Z)\times \hom(Z,U)\to \hom(X,U)\mbox{ and }\circ_2:\hom(Y,T)\times \hom(T,V)\to \hom(Y,V).$$
+As usual, we write $\beta\circ \alpha$ for $\circ(\alpha,\beta)$.
+\item
+Now, it is not hard to see that $\mathcal{C}\times \mathcal{D}$ with $\circ$ is a category.  For example, let us verify that $(A,B)\ne (C,D)$ implies $\hom(A,B)\cap \hom(C,D)=\varnothing$.  Write $A=(X,Y)$, $B=(Z,S)$, $C=(T,U)$ and $D=(V,W)$.  Suppose $\alpha=(f,g)\in \hom(A,B)\cap \hom(C,D)$.  Then $f\in \hom(X,Z)\cap \hom(T,V)$ and $g\in \hom(Y,S)\cap \hom(U,W)$.  But this implies $X=T$, $Z=V$, $Y=U$, and $S=W$.  So $A=(X,Y)=(T,U)=C$ and $B=(Z,S)=(V,W)=D$.
+\end{enumerate}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+The above construction can be generalized to $n$-fold Cartesian products.  If $\mathcal{C}_1,\ldots,\mathcal{C}_n$ be categories.  Then $\mathcal{C}:=\mathcal{C}_1\times\cdots \mathcal{C}_n$ can be defined much the same way as in the case $n=2$.  $\mathcal{C}$ is a category and is sometimes written $\prod_{i=1}^n \mathcal{C}_i$.
+\item
+Associated with this product, we can form $n$ (covariant) functors called \emph{projection functors} $\Pi_i:\mathcal{C}\to \mathcal{C}_i$, given by $\Pi_i(A)=A_i$ and $\Pi_i(\alpha)=\alpha_i$, where $A=(A_1,\ldots,A_n)$ and $\alpha=(\alpha_1,\ldots,\alpha_n)$.
+\item
+The product $\mathcal{C}$ of $\mathcal{C}_i$ also enjoys the universal property that for every category $\mathcal{D}$ and functors $F_i: \mathcal{D}\to \mathcal{C}_i$, there is a unique functor $F:\mathcal{D}\to \mathcal{C}$ such that $\Pi_i\circ F=F_i$ (in other words, $F_i$ factors through $F$).
+\item 
+If fact, any category that enjoys the universal property described above is naturally equivalent to the product of $\mathcal{C}_i$.  We may actually define product category this way, and then prove its existence using the construction that is given as the definition at the beginning of this article.
+\item
+More generally, we can define arbitrary (direct) product of categories.  The definition is completely similar to the one above.  If $\lbrace \mathcal{C}_i\mid i\in I\rbrace$ is a family of categories indexed by a set $I$, we often write $\prod_{i\in I} \mathcal{C}_i$ as the product category.  Objects and morphisms are written $(A_i)_{i\in I}$ and $(\alpha_i)_{i\in I}$ respectively.  When all the $\mathcal{C}_i$ are identical, say, equal to $\mathcal{C}$, we also write the product as $\mathcal{C}^I$, and call it the \emph{$I$-fold direct product of} $\mathcal{C}$.
+\item The existence of the product of categories indexed by an arbitrary set shows that the category of (small) categories \textbf{Cat} has products.
+\item 
+Let $\mathcal{C}=\mathcal{D}\times\mathcal{E}$.  Then we may identify $\mathcal{D}$ as a subcategory of $\mathcal{C}$: for each object $E$ in $\mathcal{E}$, define $F_E:\mathcal{D}\to\mathcal{C}$, by $F_E(A):=(A,E)$ and $F(\alpha)=(\alpha,1_E)$.  Then $F_E$ is a faithful functor.  The image $\mathcal{C}_E$ of $F_E$ (with objects $(A,E)$ and morphisms $(\alpha,1_E)$) is a subcategory of $\mathcal{C}$.  It is not hard to see that $\mathcal{D}$ and $\mathcal{C}_E$ are \PMlinkname{isomorphic as categories}{CategoryIsomorphism}.
+\item 
+The above also shows that for any objects $A,B$ in $\mathcal{E}$, $\mathcal{C}_A$ and $\mathcal{C}_B$ are isomorphic.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

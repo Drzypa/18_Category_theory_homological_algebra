@@ -1,0 +1,382 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HigherDimensionalAlgebra}
+\pmcreated{2013-03-22 18:10:36}
+\pmmodified{2013-03-22 18:10:36}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{higher dimensional algebra}
+\pmrecord{98}{40747}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A40}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{55U35}
+\pmclassification{msc}{18D05}
+\pmsynonym{HDA}{HigherDimensionalAlgebra}
+\pmsynonym{extension of algebraic topology}{HigherDimensionalAlgebra}
+%\pmkeywords{algebraic category}
+%\pmkeywords{HDA}
+%\pmkeywords{higher dimensional van Kampen theorems}
+%\pmkeywords{supercategories}
+%\pmkeywords{n-categores}
+\pmrelated{2Category}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{2Category2}
+\pmrelated{GroupoidCategory}
+\pmrelated{FundamentalGroupoidFunctor}
+\pmrelated{FunctorCategories}
+\pmrelated{Supercategories3}
+\pmrelated{HomotopyDoubleGroupoidOfAHausdorffSpace}
+\pmrelated{WeakHomotopyAdditionLemma}
+\pmrelated{ClassesOfAlgebras}
+\pmrelated{QuantumFundamenta}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsection{Basic concept} 
+Higher dimensional algebra (HDA) is a concept, and subsequently a field of modern mathematics, introduced by 
+\PMlinkexternal{Ronald Brown}{http://en.wikipedia.org/wiki/Ronald_Brown_(mathematician)} to signify the extensions of various structures in algebraic topology and category theory to higher dimensions. Such extensions can be carried out in several possible ways, including also several published axiomatic approaches, ranging from ETAC to various ETAS axiom systems (e.g. the axiomatic theory of supercategories); these are currently being studied and improved upon. In Ronald Brown's own words, the HDA concept is generally defined, or understood, as follows.
+
+\subsection{HDA Description} 
+ 
+\begin{quote}
+``In general, \textit{`Higher Dimensional Algebra'} (HDA) may be defined as the study of algebraic
+structures with operations whose domains of definitions are defined by {\em geometric} considerations. This allows for a splendid interplay of algebra and geometry, which early appeared in category theory with the use of complex commutative diagrams. What is needed next is a corresponding interplay with analysis and functional analysis that would extend also to quantum operator algebras, their representations and symmetries."
+\end{quote}
+
+(quoted from R. Brown, 2008).
+
+\subsection{HDA Examples:}  Double groupoids, double algebroids, double and multiple categories. 
+
+Double groupoids are often used to capture information about geometrical objects such as higher-dimensional manifolds (or n-dimensional manifolds)[2]. In general, an n-dimensional manifold is a space that locally looks like an n-dimensional Euclidean space, but whose global structure may be non-Euclidean. A first step towards defining higher dimensional algebras is the concept of 2-category, followed by the more `geometric' concept of double category.
+
+
+The geometry of squares and their compositions leads to a common representation of a \emph{double groupoid} in the following form:
+\bigbreak
+
+\begin{equation}
+\label{squ} \D= \vcenter{\xymatrix @=3pc {S \ar @<1ex> [r] ^{s^1} \ar @<-1ex> [r]
+_{t^1} \ar @<1ex> [d]^{\, t_2}  \ar @<-1ex> [d]_{s_2} & H   \ar[l]
+\ar @<1ex> [d]^{\,t}
+ \ar @<-1ex> [d]_s \\
+V \ar [u]  \ar @<1ex> [r] ^s \ar @<-1ex> [r] _t & M \ar [l] \ar[u]}}
+\end{equation}
+\bigbreak
+
+where $M$ is a set of `points', $H,V$ are
+`horizontal' and `vertical' groupoids, and $S$ is a set of
+`squares' with two compositions. The laws for a  double groupoid
+make it also describable as a groupoid internal to the \PMlinkname{category of groupoids}{GroupoidCategory}.
+
+
+\med
+Given two groupoids $H,V$  over a set $M$, there is a double groupoid $\Box(H,V)$ with $H,V$ as
+ horizontal and vertical edge groupoids, and squares given by
+ quadruples
+ \bigbreak
+\begin{equation}
+\begin{pmatrix} & h& \\[-0.9ex] v & & v'\\[-0.9ex]& h'&
+\end{pmatrix}
+\end{equation}
+for which we assume always that $h,h' \in H, \, v,v' \in V$ and
+that the initial and final points of these edges match in $M$ as
+suggested by the notation, that is for example $sh=sv, th=sv',
+\ldots$, etc. The compositions are to be inherited from those of
+$H,V$,
+ that is:
+ \bigbreak
+\begin{equation}
+\quadr{h}{v}{v'}{h'} \circ_1\quadr{h'}{w}{w'}{h''}
+=\quadr{h}{vw}{v'w'}{h''}, \;\quadr{h}{v}{v'}{h'}
+\circ_2\quadr{k}{v'}{v''}{k'}=\quadr{hk}{v}{v''}{h'k'} ~.
+\end{equation}
+\bigbreak
+This construction is defined by the right adjoint \textsl{R} to the forgetful functor \textsl{L} which takes the double groupoid as above, to the pair of groupoids $(H,V)$ over $M$. 
+
+\textbf{Remarks}\\
+Examples of contributions to HDA also include novel non--Abelian higher homotopy (and homology) results such as the outstanding extension provided by the higher dimensional, generalized Van Kampen theorems proved by Ronald Brown (\cite{BR67}, \cite{BR-AR71-2k5}, \cite{HPJ2k5} and relevant references cited therein). Other examples are the concepts of \PMlinkexternal{R-Supercategory}{http://planetphysics.org/encyclopedia/RSupercategory.html} and 
+\PMlinkexternal{2-category of double groupoids.}{http://planetphysics.org/encyclopedia/2CategoryOfDoubleGroupoids.html}
+
+Thus, several novel and important results pertinent to HDA were reported and/or published in the following areas: Algebraic Topology, higher dimensional Van Kampen theorems, \PMlinkname{supercategories}{Supercategories3}, n-categories, double groupoids, double categories, double algebroids, and so on. Furthermore, both earlier and more recent HDA applications include: the developments in the axiomatic theory of supercategories, (ETAS; in refs. \cite{ICB1} and \cite{ICB71b}), \PMlinkname{supercategories}{Supercategories3} of complex systems, and Organismic Supercategories: Superstructure and Dynamics in Mathematical/theoretical Biology and Biophysics (\cite{ICB71a}, \cite{ICB71b}, \cite{ICB73}, \cite{ICB-MM}, \cite{ICB77, ICB80,ICB87},\cite{B-P-P2k4, B-P2k3}). The interested reader is
+referred for further details to the following short bibliography list selected for this concise 
+outline defining HDA. 
+
+\begin{thebibliography}{99}
+
+\bibitem{Agl-Br-St2k2}
+Al-Agl, F.A., Brown, R. and R. Steiner: 2002, Multiple categories: the equivalence of a globular and cubical approach, \emph{Adv. in Math}, \textbf{170}: 711-118.
+
+\bibitem{BS1}
+R. Brown  and C.B. Spencer: Double groupoids and crossed modules, 
+\emph{Cahiers Top. G\'eom.Diff.} \textbf{17} (1976), 343--362.
+
+\bibitem{BMos}
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales--Bangor, Maths Preprint, 1986.
+
+\bibitem{BR67}
+R. Brown, {\em Groupoids and Van Kampen's theorem.}, Proc. London Math. Soc. (3) 17 (1967) 385-401. 
+
+\bibitem{RBROWN2k6}
+R. Brown, {\em Topology and Groupoids.}, Booksurge PLC (2006).
+ 
+\bibitem{BR-AR71-2k5}
+R. Brown and A. Razak, A van Kampen theorem for unions of non-connected spaces, {\em Archiv. Math.} \textbf{42} (1984) 85-88. 
+
+\bibitem{HPJ2k5}
+P.J. Higgins, {\em Categories and Groupoids}, van Nostrand: New York, 1971, Reprints of Theory and Applications of Categories, No. 7 (2005) pp 1-195.
+
+\bibitem{BHS2k5}
+Brown R., Higgins P.J., Sivera, R. (2008) Non-Abelian algebraic topology, (in preparation).,
+\PMlinkexternal{available here as a PDF}{http://www.bangor.ac.uk/~mas010/nonab-t/partI010604.pdf};
+\PMlinkexternal{PDFs of other relevant HDA papers }{http://www.bangor.ac.uk/~mas010/nonab-a-t.html}.
+
+\bibitem{VanKampen-sTheorem}
+R. Brown: \PMlinkexternal{the VanKampen's Theorem document is available here as html}{http://planetmath.org/encyclopedia/VanKampensTheorem.html} 
+
+\bibitem{B-P-P2k4}
+Brown, R., Paton, R. and T. Porter.: 2004, Categorical language and
+hierarchical models for cell systems, in \emph{Computation in
+Cells and Tissues - Perspectives and Tools of Thought}, Paton, R.;
+Bolouri, H.; Holcombe, M.; Parish, J.H.; Tateson, R. (Eds.)
+Natural Computing Series, Springer Verlag, 289-303.
+
+\bibitem{B-P2k3}
+Brown R. and T. Porter: 2003, Category theory and higher dimensional algebra: potential descriptive tools in neuroscience, {\em Proceedings of the International Conference on Theoretical Neurobiology}, Delhi, February 2003, edited by Nandini Singh, National Brain Research Centre, Conference Proceedings. {1} : 80-92.
+
+
+\bibitem{ICB1}
+Baianu, I.C.: 1970, Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32}: 539-561.
+
+\bibitem{ICB71a}
+Baianu, I.C.: 1971a, Organismic Supercategories and Qualitative Dynamics of Systems. \emph{Ibid.}, \textbf{33} (3), 339--354.
+ 
+\bibitem{ICB71b}
+Baianu, I.C.: 1971b, Categories, Functors and Quantum Algebraic Computations, in P. Suppes (ed.), \emph{Proceed. Fourth Intl. Congress Logic-Mathematics-Philosophy of Science}, September 1--4, 1971, Bucharest.
+
+\bibitem{ICB73}
+Baianu, I.C.: 1973, Some Algebraic Properties of \emph{\textbf{(M,R)}} -- Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{35}, 213-217.
+
+\bibitem{ICB-MM}
+Baianu, I.C. and M. Marinescu: 1974, On A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Math\'ematiques Pures et Appliqu\'ees} \textbf{19}: 388-391.
+
+\bibitem{ICB80}
+Baianu, I.C.: 1980, Natural Transformations of Organismic Structures.,
+\emph{Bulletin of Mathematical Biology},\textbf{42}: 431-446.
+
+\bibitem{ICB87}
+Baianu, I. C.: 1986--1987a, Computer Models and Automata Theory in Biology and Medicine.,  in M. Witten (ed.), \emph{Mathematical Models in Medicine}, vol. 7., Ch.11 Pergamon Press, New York, 1513 -1577; 
+URLs: \emph{CERN Preprint No. EXT-2004-072:},
+\PMlinkexternal{available here as PDF}{http://doc.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf}, or
+\PMlinkexternal{as as an archived html document}{http://en.scientificcommons.org/1857371}.
+
+\bibitem{bci1k9}
+\PMlinkexternal{Higher Dimensional Algebra: An Introduction}{http://en.wikipedia.org/wiki/Higher_dimensional_algebra}
+
+
+\bibitem{bci1k10}
+\PMlinkexternal{Higher Dimensional Algebra and Algebraic Topology., 282 pages, Feb. 10, 2010}{http://en.wikipedia.org/wiki/User:Bci2/Books/Higher_Dimensional_Algebra}
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

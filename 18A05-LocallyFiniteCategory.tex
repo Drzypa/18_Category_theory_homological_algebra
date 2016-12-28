@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyFiniteCategory}
+\pmcreated{2013-03-22 16:33:59}
+\pmmodified{2013-03-22 16:33:59}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{locally finite category}
+\pmrecord{4}{38756}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{06A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{arrow}
+\PMlinkescapeword{arrows}
+\PMlinkescapeword{loops}
+\PMlinkescapeword{decomposition}
+
+A \emph{locally finite category} is a category $\mathcal{C}$ such that each \PMlinkname{arrow}{Category} can be written as a composition of non-identity arrows in only finitely many ways.  To get a picture of what this means, view $\mathcal{C}$ as a graph, where the nodes are objects and the directed edges are all the arrows besides the identity arrows.  Note that loops besides identity arrows are permitted.  Then a decomposition of an arrow $f\colon A\to B$ is a directed path from $A$ to $B$ in the graph.  So the statement that each arrow can be decomposed in only finitely many ways essentially means that there are only finitely many directed paths from $A$ to $B$ in the graph.  This analogy only breaks down in the case where $A$ and $B$ are the same object.
+
+The notion of a locally finite category generalizes the notion of a locally finite poset.  The condition that each interval $[x,z]$ in a poset $P$ contain only finitely many elements $y$ of $P$ implies that a locally finite poset is locally finite when viewed as a category, since between two objects of $P$ there is at most one arrow.
+
+If $\mathcal{C}$ is a locally finite category, then an \PMlinkname{algebra over the category}{AlgebraFormedFromACategory} arises as the dual of a coalgebra over the category.
+
+\begin{thebibliography}{99}
+\bibitem{JoRo}
+S.~A.~Joni and G.-C.~Rota, {\it Coalgebras and bialgebras in combinatorics}, Stud.~Appl.~Math., 61 (1979), pp. 93--139.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

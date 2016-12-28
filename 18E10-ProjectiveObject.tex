@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectiveObject}
+\pmcreated{2013-03-22 14:47:09}
+\pmmodified{2013-03-22 14:47:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{projective object}
+\pmrecord{10}{36437}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+\pmrelated{EnoughProjectives}
+\pmrelated{EnoughInjectives}
+\pmdefines{injective object}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal{C}$ be a category.  An object $P$ in $\mathcal{C}$ is said to be \emph{projective} if, given a diagram on the left, with $g$ a strong epimorphism, there is a morphism $h:P\to A$ making the diagram on the right commutative:
+$$\xymatrix@+=4pc{
+&{P}\ar[d]^{f}\\
+{A}\ar[r]_{g}&{B}
+}
+\hspace{4cm}
+\xymatrix@+=4pc{
+&{P}\ar[d]^{f} \ar@{.>}[dl]_h \\
+{A}\ar[r]_{g}&{B}
+}
+$$
+An \emph{injective object} can be defined dually: an object $Q$ in $\mathcal{C}$ is \emph{injective} if, given a diagram on the left, with $g$ a strong monomorphism, there is a morphism $h:B\to Q$ making the digram on the right commutative:
+$$\xymatrix@+=4pc{
+{A}\ar[r]^{g} \ar[d] &{B} \\
+Q &
+}
+\hspace{4cm}
+\xymatrix@+=4pc{
+{A}\ar[r]^{g} \ar[d] &{B} \ar@{.>}[dl]^h \\
+Q &
+}
+$$
+
+When $\mathcal{C}$ is an abelian category, we have the following: an object $P$ in $\mathcal{C}$ is projective iff 
+$$\operatorname{Hom}(P,-)\colon\mathcal{C}\to\mathbf{Ab}$$ 
+is an exact functor, where $\mathbf{Ab}$ is the category of abelian groups.  Dually, an object $Q$ is injective iff the $\operatorname{Hom}(-,Q)$ functor from $\mathcal{C}$ to $\mathbf{Ab}$ is exact.
+
+\textbf{Example.}  Let $R$ be a ring with 1.  Consider the category of left $R$-modules $\mathcal{M}_R$.  $\mathcal{M}_R$ is an abelian category.  The projective objects in $\mathcal{M}_R$ are precisely the \PMlinkname{projective left $R$-modules}{ProjectiveModule}.  So $R$ is itself a projective object in $\mathcal{M}_R$.  
+
+Dually, the injective objects in $\mathcal{M}_R$ are exactly the \PMlinkname{injective left $R$-modules}{InjectiveModule}.
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

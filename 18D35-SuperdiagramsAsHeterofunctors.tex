@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SuperdiagramsAsHeterofunctors}
+\pmcreated{2013-03-22 18:16:49}
+\pmmodified{2013-03-22 18:16:49}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{superdiagrams as heterofunctors}
+\pmrecord{26}{40886}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D35}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{18-00}
+\pmsynonym{superdiagrams as heterofunctors}{SuperdiagramsAsHeterofunctors}
+%\pmkeywords{uperdiagrams in terms of diagrams heterofunctors}
+%\pmkeywords{Categorical Diagrams as Functors}
+%\pmkeywords{Limits}
+%\pmkeywords{Colimits}
+%\pmkeywords{Adjointness Diagrams}
+\pmrelated{CategoricalDiagramsAsFunctors}
+\pmrelated{Supergroupoid2}
+\pmrelated{CategoricalSequence}
+\pmrelated{RSupercategory}
+\pmdefines{superdiagram as heterofunctor}
+\pmdefines{heterofunctors}
+
+%% this is the default PlanetMath preamble. 
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,color,enumerate}
+%%\usepackage{xypic}
+\xyoption{curve}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{7.1in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.2in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-1.0in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.30in
+
+%the next gives two direction arrows at the top of a 2 x 2 matrix
+
+\newcommand{\directs}[2]{\def\objectstyle{\scriptstyle}  \objectmargin={0pt}
+\xy
+(0,4)*+{}="a",(0,-2)*+{\rule{0em}{1.5ex}#2}="b",(7,4)*+{\;#1}="c"
+\ar@{->} "a";"b" \ar @{->}"a";"c" \endxy }
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{plain}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\Ce}{\mathsf{C}}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\grp}{\mathsf{G}}
+\newcommand{\dgrp}{\mathsf{D}}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{\operatorname{Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+
+\newcommand{\hdgb}{\boldsymbol{\rho}^\square}
+\newcommand{\hdg}{\rho^\square_2}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\renewcommand{\leq}{{\leqslant}}
+\renewcommand{\geq}{{\geqslant}}
+
+\def\red{\textcolor{red}}
+\def\magenta{\textcolor{magenta}}
+\def\blue{\textcolor{blue}}
+\def\<{\langle}
+\def\>{\rangle}
+\begin{document}
+\begin{definition}
+\emph{Superdiagrams} $\Sigma_S$ are defined as heterofunctors $\F_S$ that are subject to ETAS axioms and link categorical diagrams $\Sigma_C$ (regarded as (homo)functors, which are subject to the eight ETAC axioms) in a manner similar to how groupoids are being constructed as \emph{many-object} structures of linked groups with all invertible morphisms between the linked groups. Thus, in the supercategory definition--instead of a groupoid with all invertible morphisms-- one replaces the linked groups by several $\Sigma_C$'s linked by hetero-functors $\F_S$ between such categorical diagrams or categorical sequences with different structure. The heterofunctors corresponding to 
+superdiagrams also need not be invertible (as in the case of \emph{supergroupoid} structures). In this construction, one defines a supercategorical diagram in terms of the composition ``$*$'' of the heterofunctors $\F_S$ with the (homo)functors $F_C$ determined by $\Sigma_C$, so that $$\F_S * F_C := \F_S (F_C);$$ 
+the right hand side of this equation is to be interpreted as a heterofunctor acting on the (homo)functor(s) $F_C$ determined by the categorical diagram, or the categorical sequence, $\Sigma_C$.
+\end{definition}
+
+\textbf{Remark}
+In a certain sense, the superdiagrams defined here as superfunctors resemble also the groupoid functor categories, as well as topological categories, if one regards the class of links between the different types of categorical diagrams as a meta-network or \emph{metagraph} (in the sense defined by Mac Lane and Moerdijk (2000). 
+
+
+%%%%%
+%%%%%
+\end{document}

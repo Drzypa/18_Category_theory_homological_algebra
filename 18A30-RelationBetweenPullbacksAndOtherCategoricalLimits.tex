@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationBetweenPullbacksAndOtherCategoricalLimits}
+\pmcreated{2013-03-22 18:29:25}
+\pmmodified{2013-03-22 18:29:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{relation between pullbacks and other categorical limits}
+\pmrecord{8}{41169}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{CategoryWithArbitraryProductsAndPullbacksIsComplete}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry examines some of the relations between pullbacks and other categorical limits, such as terminal objects, direct products, and equalizers.
+
+\begin{prop}  If $\mathcal{C}$ has a terminal object $T$ and finite products, then $$A\times_T B = A\times B.$$ \end{prop}
+
+\begin{proof}  Since $T$ is terminal, we have the following commutative diagram
+$$\xymatrix@+=2cm{A\times B \ar[r]^-{p_A} \ar[d]_{p_B} & A \ar[d]^f \\ B \ar[r]_g & T }$$
+as the morphism $A\times B\to T$ is unique.  Now, if $h_A:C\to A$ and $h_B:C\to B$ are morphisms such that $f\circ h_A = g
+\circ h_B$, then there is a unique morphism $h:C\to A\times B$ such that $p_A\circ h=h_A$ and $p_B\circ h = h_B$ by the universal property of categorical direct products.  This shows that $(A\times B,p_A,p_B)$ is the pullback of $f$ and $g$.
+\end{proof}
+
+\begin{cor} If $\mathcal{C}$ has a terminal object and pullbacks, then $\mathcal{C}$ has finite products. \end{cor}
+\begin{proof}  A terminal object $T$ serves as empty product in $\mathcal{C}$.  Use induction, suppose now the product $C_1\times \cdots \times C_n$ exists, then the binary product $(C_1\times \cdots \times C_n)\times C_{n+1}$ exists by the proposition above, which is isomorphic to $C_1 \times \cdots \times C_{n+1}$.  \end{proof}
+
+\begin{prop} If a category has finite products and equalizers, then it has pullbacks. \end{prop}
+\begin{proof} Let $f:A\to C$ and $g:B\to C$ be morphisms, and let $h:D\to A\times B$ be the equalizer of $f\circ \pi_A : A\times B\to C$ and $g\circ \pi_B: A\times B\to C$:
+$$\xymatrix@+=1cm{D \ar[r]^-h & A\times B \ar[r]^-{\pi_A} & A \ar[r]^f & C} \quad = \quad \xymatrix@+=1cm{D \ar[r]^-h & A\times B \ar[r]^-{\pi_B} & B \ar[r]^g & C}$$
+We want to show that $p:=\pi_A\circ h: D\to A$ and $q:=\pi_B\circ h: D\to B$ is the pullback of $f$ and $g$.  First, we observe that $f\circ p= f\circ (\pi_A\circ h) = (f\circ \pi_A) \circ h = (g\circ \pi_B) = g\circ (\pi_B\circ h) = g\circ q$. In other words, we have the commutative diagram
+$$\xymatrix@=2cm{D \ar[r]^p \ar[d]_q & A \ar[d]^f \\ B \ar[r]_g & C}$$
+Suppose now we have another commutative diagram 
+$$\xymatrix@=2cm{E \ar[r]^x \ar[d]_y & A \ar[d]^f \\ B \ar[r]_g & C}$$
+By the universality of $A\times B$, there is a unique morphism $z:E\to A\times B$ such that $\pi_A\circ z = x$ and $\pi_B \circ z = y$:
+$$\xymatrix@+=1.5cm{& E \ar[dr]^y \ar[d]_z \ar[dl]_x & \\ A & A\times B \ar[l]^-{\pi_A} \ar[r]_-{\pi_B} & B}$$
+Then $(f\circ \pi_A)\circ z = f\circ (\pi_A\circ z) = f\circ x= g\circ y = g\circ (\pi_B\circ z) = (g\circ \pi_B)\circ z$, so that $z$ equalizes $f\circ \pi_A$ and $g\circ \pi_B$:  
+$$\xymatrix@+=1.5cm{
+& E \ar[dr]^y \ar[d]_z \ar[dl]_x & \\ 
+A \ar[dr]_f & A\times B \ar[l]^-{\pi_A} \ar[r]_-{\pi_B} & B \ar[dl]^g \\
+& C &
+}$$
+By the universality of the equalizer $h:D\to A\times B$, there is a unique morphism $s: E\to D$ such that $z = h\circ s$.  Finally $p\circ s = (\pi_A \circ h)\circ s = \pi_A \circ (h\circ s)=\pi_A \circ z = x$.  Similarly, $q\circ s = y$.  As a result, $(p,q)$ is the pullback of $(f,g)$. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

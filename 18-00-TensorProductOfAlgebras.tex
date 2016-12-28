@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorProductOfAlgebras}
+\pmcreated{2013-03-22 17:43:55}
+\pmmodified{2013-03-22 17:43:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{tensor product of algebras}
+\pmrecord{11}{40181}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{13-00}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ and $B$ be algebras over a commutative ring $R$.  As modules, we can form the tensor product $A\otimes B$.  The resulting structure is again an $R$-module.  Since $A$ and $B$ have the additional structure of being algebras, we would like this structure being preserved in $A\otimes B$ as well.  This can indeed be done, if we define a ``multiplication'' $\cdot: (A\otimes B)\times (A\otimes B)\to A\otimes B$ by:
+$$(a\otimes b)\cdot (c\otimes d):=ac\otimes bd, \qquad a,c\in A\mbox{ and }b,d\in B$$
+and requiring that $\cdot$ distributes over $+$, that is, $$x\cdot (y+z):=x\cdot y+x\cdot z,\qquad(y+z)\cdot x:=y\cdot x+z\cdot x, \qquad x,y,z\in A\otimes B.$$  With this and the fact that $\cdot$ is associative, $(A\otimes B, +, \cdot)$ becomes a ring.  To turn $A\otimes B$ into an $R$-algebra, we need to verify that $\cdot$ is bilinear, that is:
+$$r(x\cdot y)=(rx)\cdot y = x\cdot (ry)\qquad x,y\in A\otimes B\mbox{ and }r\in R.$$
+Because of the distributivity of $\cdot$ over $+$, it is enough to verify the case when $x=a\otimes b$ and $y=c\otimes d$.  Then $r((a\otimes b)\cdot (c\otimes d))=r(ac\otimes bd)= (rac)\otimes bd = (ra\otimes b)\cdot (c\otimes d)=(r(a\otimes b))\cdot (c\otimes d)$.  This shows that $r(x\cdot y)=(rx)\cdot y$.  Since $(rac)\otimes bd = ac\otimes (rbd)$, we also have $r(x\cdot y)=x\cdot (ry)$.  Therefore, $A\otimes B$ is an algebra over $R$.
+
+Here are some basic properties of the tensor product of algebras:
+\begin{itemize}
+\item if $A$ and $B$ are both unital, so is $A\otimes B$, with $1\otimes 1$ as the multiplicative identity
+\item if $A$ and $B$ are both commutative, so is $A\otimes B$
+\item $A\otimes B\cong B\otimes A$
+\item $(A\otimes B)\otimes C\cong A\otimes (B\otimes C)$
+\item $(A\oplus B)\otimes C\cong (A\otimes C) \oplus (B\otimes C)$
+\item $R\otimes A\cong A$
+\item Assume both $A$ and $B$ are unital algebras, the canonical injections $A\to A\otimes B$ and $B\to A\otimes B$, given by $$a\mapsto a\otimes 1,\qquad b\mapsto 1\otimes b$$ turn $A,B$ into subalgebras of $A\otimes B$ (up to algebra isomorphism).  In fact, $A$ and $B$ are commuting subalgebras, in the sense that $$(A\otimes 1)\cdot (1\otimes B)=(1\otimes B)\cdot (A\otimes 1).$$
+\end{itemize}
+
+Like tensor products of modules, there is also a universal property associated with the tensor products of algebras: let $A$ and $B$ be $R$-algebras and $f:A\to C$ and $g:B\to C$ be algebra homomorphisms such that $f(A)g(B)=g(B)f(A)$ and $f(R\cdot 1)=g(R\cdot 1)$.  Then there is a unique $R$-algebra $D$ (=$A\otimes B$) and algebra homomorphism $h: D\to C$, such that the following diagram of algebra homomorphisms commutes:
+$$
+\xymatrix{A \ar[dr]^f \ar[d] & \\ D \ar[r]^h & C \\ B \ar[ur]_g \ar[u] & }
+$$
+%%%%%
+%%%%%
+\end{document}

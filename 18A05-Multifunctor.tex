@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Multifunctor}
+\pmcreated{2013-03-22 16:37:15}
+\pmmodified{2013-03-22 16:37:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{multifunctor}
+\pmrecord{16}{38819}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{Functor}
+\pmdefines{bifunctor}
+\pmdefines{trifunctor}
+\pmdefines{hom functor}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newcommand{\op}[1]{\mathcal{#1}^{\operatorname{op}}}
+\begin{document}
+Let $\mathcal{C}$ be the product of categories $\mathcal{C}_1,\ldots,\mathcal{C}_n$ and $\mathcal{D}$ be any category.  A \emph{multifunctor} $F:\mathcal{C}\to \mathcal{D}$ satisfies the following
+\begin{itemize}
+\item for every $A\in\operatorname{Ob}(\mathcal{C})$, $F(A)\in \operatorname{Ob}(\mathcal{D})$,
+\item for every $\alpha\in \operatorname{Mor}(\mathcal{C})$, $F(\alpha)\in \operatorname{Mor}(\mathcal{D}): F(A)\to F(B)$, for some objects $A,B\in \operatorname{Ob}(\mathcal{C})$,
+\item There is a function $\phi: \lbrace 1,\ldots, n\rbrace\to \lbrace \operatorname{id},\operatorname{op}\rbrace$ where $\operatorname{id}$ is the identity functor and $\operatorname{op}$ is the opposite functor, with $$\overline{C}:= \phi(1)(\mathcal{C}_1) \times \cdots \times \phi(n)(\mathcal{C}_n)\qquad\mbox{and}\qquad \overline{\alpha_i}:=\phi(i)(\alpha_i)$$ for any morphisms $\alpha_i$ in $\mathcal{C}_i$, such that $\overline{F}: \overline{\mathcal{C}}\to \mathcal{D}$ given by 
+$$\overline{F}(A):=F(A)\qquad\mbox{and}\qquad \overline{F}(\alpha_1,\ldots,\alpha_n):=F(\overline{\alpha_1},\ldots, \overline{\alpha_n})$$ is a \emph{covariant} functor. 
+\end{itemize}
+Condition 3 says that, while $F$ may not be a functor, by appropriately changing some of the categories $\mathcal{C}_i$ to their opposites, the newly defined $\overline{F}$ becomes a functor.  When there is no danger, we may identify $\overline{F}$ with $F$.
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item The function $\phi$ in condition 3 above can be changed so that $\overline{F}$ is a \emph{contravariant} functor instead.
+\item Since $\overline{F}$ is a functor, by restricting $\overline{F}$ to any coordinate gives us a functor as well.  Formally, given object $A=(A_1,\ldots,A_n) \in \overline{\mathcal{C}}$, if we define $F_A:\phi(i)(\mathcal{C}_i)\to D$ by setting $$F_A(B_i)= \overline{F}(\hat{A_i}(B_i))\qquad \mbox{and}\qquad  F_A(\beta_i)= \overline{F}(\hat{A_i}(\beta_i)),$$ for each $i$, where 
+\begin{enumerate}
+\item $\hat{A_i}(B_i)$ is the object in $\overline{\mathcal{C}}$ whose $i$-th coordinate is $B_i$ and agrees with $A$ everywhere else, and 
+\item $\hat{A_i}(\beta_i)$ is the morphism in $\overline{\mathcal{C}}$ whose $i$-th coordinate is $\beta_i$, and the identity morphism (on $A_j$) everywhere else, 
+\end{enumerate}
+then $F_A$ is a covariant functor.
+\item Furthermore, since $\overline{F}$ is covariant, this means for any $\alpha=(\alpha_1,\ldots, \alpha_n): A\to B$, we have the decomposition $$\overline{F}(\alpha)= \overline{F}(\hat{\alpha_1})\circ \cdots \circ \overline{F}(\hat{\alpha_n})$$
+where $\hat{\alpha_i}:=\hat{A_i}(\alpha_i)$ as defined in property 2 above.
+\item In addition, we see that $\overline{F}(\hat{\alpha_i})\circ \overline{F}(\hat{\alpha_j}) = \overline{F}(\hat{\alpha_j}) \circ \overline{F}(\hat{\alpha_i})$ for $i\ne j$.
+\item In fact, properties 2, 3, and 4 are enough to insure that $\overline{F}$ is a covariant functor, for 
+\begin{eqnarray*}
+\overline{F}(\alpha\circ \beta) &=& \overline{F}((\alpha_1,\ldots,\alpha_n)\circ (\alpha_n,\ldots, \beta_n)) \\ &=& \overline{F}(\alpha_1\circ \beta_1,\ldots, \alpha_n\circ \beta_n) \\ &=& \overline{F}(\widehat{\alpha_1\circ \beta_1})\circ \cdots \circ \overline{F}(\widehat{\alpha_n\circ \beta_n}) \\ &=& F_A(\alpha_1\circ \beta_1)\circ \cdots \circ F_A(\alpha_n\circ \beta_n) \\ &=& (F_A(\alpha_1)\circ F_A(\beta_1))\circ \cdots \circ (F_A(\alpha_n)\circ F_A(\beta_n)) \\ &=& (\overline{F}(\hat{\alpha_1})\circ \overline{F}(\hat{\beta_1}))\circ \cdots \circ (\overline{F}(\hat{\alpha_n})\circ \overline{F}(\hat{\beta_n})) \\ &=& (\overline{F}(\hat{\beta_1})\circ \overline{F}(\hat{\alpha_1}))\circ \cdots \circ (\overline{F}(\hat{\beta_n})\circ \overline{F}(\hat{\alpha_n})) \\ &=& \overline{F}(\widehat{\beta_1\circ \alpha_1})\circ \cdots \circ \overline{F}(\widehat{\beta_n\circ \alpha_n}) \\ &=& \overline{F}(\beta_1\circ \alpha_1,\ldots, \beta_n\circ \alpha_n) \\ &=& \overline{F}(\beta\circ \alpha)
+\end{eqnarray*}
+This means we can replace the statement that $\overline{F}$ is a covariant functor in condition 3 of the definition by the three properties above.
+\item $F$ is called a \emph{bifunctor} or \emph{trifunctor} whenever $n=2$ or $3$.  
+\end{enumerate}
+
+\textbf{Hom functors}.  The most famous bifunctor is the $\hom$ functor from $\mathcal{C}\times \mathcal{C}\to \textbf{Set}$.  Given objects $A,B$ in $\mathcal{C}$, $\hom(A,B)$ is the set of all morphisms from $A$ to $B$.  In addition, given morphisms $\alpha:A\to B$ and $\beta:X\to Y$, $\hom(\alpha,\beta)$ is the morphism from $\hom(B,X)$ $\hom(A,Y)$ taking $f:B\to X$ to $g:=\beta \circ f \circ \alpha:A\to Y$:
+$$\xymatrix{
+B\ar[d]_f & A\ar[l]_{\alpha} \ar[d]^g\\
+X\ar[r]_{\beta} & Y}
+$$
+Let us verify that $\hom$ is indeed a ``binary'' multifunctor.  Given any object $A$, we see that $\hom(A,-)$ is covariant functor, for 
+\begin{eqnarray*}
+\hom(1_A,\beta\circ \alpha)(f) &=& (\beta\circ\alpha)\circ f\circ 1_A = \beta\circ (\alpha\circ f \circ 1_A) \\ &=& \beta\circ \hom(1_A,\alpha)(f) = \beta\circ \hom(1_A,\alpha)(f)\circ 1_A \\ &=& \hom(1_A,\beta)(\hom(1_A,\alpha)(f)) = \hom(1_A,\beta)\circ \hom(1_A,\alpha)(f).
+\end{eqnarray*}  By the same reasoning, we see that, on the other hand, $\hom(-,B)$ is contravariant for any object $B$. 
+So we want to show that $\overline{\hom}:\op C\times\mathcal{C}\to \textbf{Set}$ is a covariant functor.  Having just verified property 2 (see remarks above), we are left with properties 3 and 4.  As the equation $g=\hom(\alpha,\beta)(f)$ turns into $g=\overline{\hom}(\alpha^*,\beta)(f)$, the diagram above turns into the commutative diagram below
+$$\xymatrix{
+B\ar[d]_f \ar[r]^{\alpha^*} & A \ar[d]^g\\
+X\ar[r]_{\beta} & Y}
+$$
+where $\alpha^*:B\to A$ is the opposite arrow of $\alpha$.  Now, properties 3 and 4 can be easily verified by the following commutative diagrams:
+$$\xymatrix{
+B\ar[d]_f \ar[r]^{{1_B}^*} & B \ar[d] \ar[r]^{\alpha^*} & A \ar[d]^g & \ar@{}[dr]|{=} &&
+B\ar[d]_f \ar[r]^{\alpha^*} & A \ar[d] \ar[r]^{{1_A}^*} & A \ar[d]^g 
+\\
+X\ar[r]_{\beta} & Y \ar[r]_{1_Y} & Y & &&
+X\ar[r]_{1_X} & X \ar[r]_{\beta} & Y }
+$$
+Therefore, $\overline{\hom}(\alpha^*,\beta)=\overline{\hom}(\alpha^*,1_Y) \circ \overline{\hom}({1_B}^*,\beta)=\overline{\hom}({1_A}^*,\beta) \circ \overline{\hom}(\alpha^*,1_X)$, and $\overline{\hom}$ is a covariant functor, or that $\hom$ is a bifunctor.
+
+\begin{thebibliography}{8}
+\bibitem{bk} A. J. Berrick, M. E. Keating, {\em Categories and Modules, with K-theory in View}, Cambridge University Press (2000).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

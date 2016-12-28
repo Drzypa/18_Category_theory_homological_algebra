@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HorseshoeLemma}
+\pmcreated{2013-03-22 15:49:46}
+\pmmodified{2013-03-22 15:49:46}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{horseshoe lemma}
+\pmrecord{5}{37799}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G10}
+\pmsynonym{simultaneous resolution theorem}{HorseshoeLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\newtheorem*{theorem*}{Theorem}
+\begin{document}
+\PMlinkescapeword{column}
+\PMlinkescapeword{columns}
+\PMlinkescapeword{row}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{commutative}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{completes}
+Let $\mathcal{A}$ be an abelian category with enough projectives.  
+The {\em horseshoe lemma}, also called the 
+{\em simultaneous resolution theorem}, says that if
+\[\xymatrix{
+             &             &             & 0\ar[d]         &   \\
+\cdots\ar[r] & P'_1\ar[r]  & P'_0\ar[r]  & A'\ar[r]\ar[d]  & 0 \\
+             &             &             & A\ar[d]         &   \\
+\cdots\ar[r] & P''_1\ar[r] & P''_0\ar[r] & A''\ar[r]\ar[d] & 0 \\
+             &             &             & 0               &
+}\]
+is a diagram in $\mathcal{A}$ such that the column is exact and the
+rows are projective resolutions of $A'$ and $A''$ respectively, then
+it can be filled to a commutative diagram
+\[\xymatrix{
+             & 0\ar[d]           & 0\ar[d]           & 0\ar[d]         &   \\
+\cdots\ar[r] & P'_1\ar[r]\ar[d]  & P'_0\ar[r]\ar[d]  & A'\ar[r]\ar[d]  & 0 \\
+\cdots\ar[r] & P_1\ar[r]\ar[d]   & P_0\ar[r]\ar[d]   & A\ar[r]\ar[d]  & 0 \\
+\cdots\ar[r] & P''_1\ar[r]\ar[d] & P''_0\ar[r]\ar[d] & A''\ar[r]\ar[d] & 0 \\
+             & 0                 & 0                 & 0               &
+}\]
+where all columns are exact, the middle row is a projective resolution 
+of $A$, and $P_n=P'_n\oplus P''_n$ for all $n$.  If $\mathcal{A}$ is an
+abelian category with enough injectives, the dual statement also holds.
+
+\begin{proof}
+We fill in the diagram a column at a time, proving exactness along the way.
+First we construct a surjective map $\pi\colon P_0\to A$.  There is a map
+from $P'_0$ to $A$, the composition $P'_0\to A'\to A$.  Since $P''_0$ is projective, there is a filler for the diagram
+\[\xymatrix{
+        & P''_0\ar[d]\ar@{.>}[ld] & \\
+A\ar[r] & A''\ar[r]               & 0
+}\]
+Since $P_0$ is the coproduct of $P'_0$ and $P''_0$, there is a
+unique filler $\pi$ for the diagram
+\[\xymatrix{
+P'_0\ar[r]\ar[rd] & P_0\ar@{.>}[d]^{\pi} & P''_0\ar[l]\ar[ld] \\
+                  & A                    &
+}\]
+The diagram
+\[\xymatrix{
+0\ar[r] &
+P'_0\ar[r]\ar[d] &
+P_0\ar[r]\ar[d]^{\pi} &
+P''_0\ar[r]\ar[d] &
+0 \\
+0\ar[r] & A'\ar[r] & A\ar[r] & A''\ar[r] & 0
+}\]
+is commutative and has exact rows, so we may apply the 
+\PMlinkname{short five lemma}{5Lemma}
+to conclude that $\pi$ is surjective.
+
+Now assume for induction that we have constructed a partial 
+resolution of $A$ in this manner, yielding a diagram
+\[\xymatrix{
+0\ar[d] & 0\ar[d] &            & 0\ar[d]         &   \\
+P'_n\ar[r]^{d'_n}\ar[d] & P'_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A'\ar[r]\ar[d]  & 0 \\
+P_n\ar[r]^{d_n}\ar[d] & P_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A\ar[r]\ar[d]   & 0 \\
+P''_n\ar[r]^{d''_n}\ar[d] & P''_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A''\ar[r]\ar[d] & 0 \\
+0 & 0             &                   & 0                 &                
+}\]
+with exact rows and columns.  (We are not assuming here that $n>0$; if $n=0$, then $P'_{n-1}$ denotes $A'$ and $P'_{n-2}$ denotes 0; similar substitutions apply).  By the snake lemma, there is a commutative diagram
+\[\xymatrix{
+0\ar[r] & \ker d'_n\ar[r]\ar[d] & \ker d_n\ar[r]\ar[d] & \ker d''_n\ar[d] & \\
+0\ar[r] & P'_n\ar[r]\ar[d]^{d'_n} & P_n\ar[r]\ar[d]^{d_n} & P''_n\ar[r]\ar[d]^{d''_n} & 0 \\
+0\ar[r] & P'_{n-1}\ar[r]\ar[d]^{d'_{n-1}} & P_{n-1}\ar[r]\ar[d]^{d_{n-1}} & P''_{n-1}\ar[r]\ar[d]^{d''_{n-1}} & 0 \\
+0\ar[r] & P'_{n-2}\ar[r] & P_{n-2}\ar[r] & P''_{n-2}\ar[r] & 0 
+}\]
+with exact rows and columns.  In fact, the map $\ker d_n\to\ker d''_n$ is
+surjective; this can be verified by a diagram chase.  We can construct a
+surjective map $b_{n+1}\colon P_{n+1}\to\ker d_n$ in the same way we 
+constructed $\pi$.  Specifically, there is a map $P'_{n+1}\to\ker d'_n$
+obtained by composition, and there is a filler for the diagram
+\[\xymatrix{
+& P''_n\ar[d]\ar@{.>}[ld] & \\
+\ker d_n\ar[r] & \ker d''_n\ar[r] & 0
+}\]
+These maps determine $b_{n+1}$ uniquely.  Define $d_{n+1}\colon P_{n+1}\to P_n$
+as the composition $P_{n+1}\xrightarrow{b_{n+1}} \ker d_n\hookrightarrow P_n$;
+since $b_{n+1}$ is surjective, the sequence $P_{n+1}\to P_n\to P_{n-1}$ is
+exact.  Hence we have managed to construct a diagram
+\[\xymatrix{
+0\ar[d] & 0\ar[d] & 0\ar[d] &            & 0\ar[d]         &   \\
+P'_{n+1}\ar[r]^{d'_{n+1}}\ar[d] & P'_n\ar[r]^{d'_n}\ar[d] & P'_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A'\ar[r]\ar[d]  & 0 \\
+P_{n+1}\ar[r]^{d_{n+1}}\ar[d] & P_n\ar[r]^{d_n}\ar[d] & P_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A\ar[r]\ar[d]   & 0 \\
+P''_{n+1}\ar[r]^{d''_{n+1}}\ar[d] & P''_n\ar[r]^{d''_n}\ar[d] & P''_{n-1}\ar[r]\ar[d] & \cdots\ar[r] & A''\ar[r]\ar[d] & 0 \\
+0 & 0 & 0             &                   & 0                 &                
+}\]
+with exact rows and columns.  This completes the proof.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{cite:CE}
+Cartan, H. and S. Eilenberg, \emph{Homological algebra}, Princeton University Press, 1956.
+\bibitem{cite:O}
+Osborne, M.\ S., \emph{Basic homological algebra}, Springer-Verlag, 2000.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfMatrices}
+\pmcreated{2013-03-22 16:31:54}
+\pmmodified{2013-03-22 16:31:54}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{category of matrices}
+\pmrecord{9}{38712}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The set of all matrices (rectangular as well as square) 
+over a given field (such as real or complex numbers; more
+generally, one could consider matrices over a unital ring
+such as integers or a suitable ring of polynomials) 
+forms a category.  As objects of this category, we take the 
+positive integers.  For any two integers $m$ and $n$, we 
+take $\operatorname{Hom}(m,n)$ to be the set of $m \times n$
+matrices.  The composition of morphisms is taken to be
+matrix multiplication.  It is easy to see that the defining
+properties of categories are satisfied:
+
+\begin{enumerate}
+\item The intersection of the set of $a \times b$ matrices and
+the set of $c \times d$ matrices is empty unless $a = c$ and 
+$b = d$.
+\item Matrix multiplication is associative.
+\item For every $n$, there is a special element of 
+$\operatorname{Hom}(n,n)$, the $n \times n$ identity matrix,
+which satisfies the properties of an identity morphism.
+\end{enumerate}
+
+This example illustrates an important \PMlinkescapetext{point} about 
+the notion of category.  As with groups and semigroups, categories are
+an algebraic structure defined by a single associative operation.
+Where they differ is that the closure property no longer holds
+--- given two morphisms in a category, it is not necessarily 
+the case that they can be composed.  The reason for introducing
+objects is to keep track of when it is possible to compose
+the morphisms.
+%%%%%
+%%%%%
+\end{document}

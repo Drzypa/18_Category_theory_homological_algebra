@@ -1,0 +1,346 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NsupercategoryTheory}
+\pmcreated{2013-03-22 18:13:03}
+\pmmodified{2013-03-22 18:13:03}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{$n$-supercategory theory}
+\pmrecord{91}{40801}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{18A40}
+\pmclassification{msc}{03D80}
+\pmclassification{msc}{03D15}
+\pmclassification{msc}{03C52}
+\pmclassification{msc}{18A25}
+\pmsynonym{n-supercategory}{NsupercategoryTheory}
+\pmsynonym{organismic supercategory}{NsupercategoryTheory}
+\pmsynonym{higher dimensional algebra(HDA)}{NsupercategoryTheory}
+\pmsynonym{$n$-supercategory}{NsupercategoryTheory}
+\pmsynonym{super-categories}{NsupercategoryTheory}
+%\pmkeywords{organismic supercategories}
+%\pmkeywords{axiomatic theory of supercategories}
+%\pmkeywords{higher dimensional algebra (HDA)}
+%\pmkeywords{meta-categories}
+%\pmkeywords{non-Abelian superstructures with heterofunctors}
+%\pmkeywords{n-categories}
+%\pmkeywords{super-categories}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{Supercategories3}
+\pmrelated{HigherDimensionalAlgebraHDA}
+\pmrelated{NaturalTransformationsOfOrganismicStructures}
+\pmrelated{AxiomsOfMetacategoriesAndSupercategories}
+\pmrelated{FormalLogicsAndMetaMathematics}
+\pmrelated{FunctorCategory2}
+\pmrelated{CategoricalDynamics}
+\pmrelated{AlternativeDefin}
+\pmdefines{supercategory}
+\pmdefines{organismic supercategory}
+\pmdefines{super-category}
+\pmdefines{$n$-supercategory}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd,  enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\voffset=-.4in
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\subsection{supercategory}
+There are several distinct concepts called `supercategories' that have been reported in the mathematical literature. Moreover, there is also available a general definition that encompasses the less general definitions of a supercategory.
+
+\begin{definition}
+In general, a \emph{supercategory} is defined axiomatically as an interpretation in mathematical terms of 
+\PMlinkname{ETAS}{ETAS} (\cite{Bib14to34}) as a non-Abelian structure involving classes of objects and/or classes of categorical diagrams with multiple structures-- algebraic, topological, geometric, analytical, differential, and so on-- which are mapped, `morphed', transformed or linked by hetero-functors (or `heterofunctors'); {\em hetero-functors} are defined as a natural extension of the concept of functor between categories, in the sense that heterofunctors link objects from different categorical diagrams or categories with different structures following rules and axioms specified by the elementary theory of abstract supercategories, ETAS.
+\end{definition}
+
+\textbf{Several examples of definitions of supercategories:}
+\begin{enumerate}
+\item super-category or `category of categories' , subject to Lawvere's ETAC axioms designed for
+``the foundation of Mathematics'';
+
+\item meta-category and meta-theorems as defined by Mitchell (1965) and the corresponding meta-theories;
+
+\item super-category of functor categories-as defined by Barry Mitchell (1965);
+
+\item various n-categories published by Baez and his group;
+
+\item supercategory defined at the 
+\PMlinkexternal{n-category web `caf\'e'}{http://golem.ph.utexas.edu/category/2007/07/supercategories.html}
+by Dr. Urs Schreiber from the 
+\PMlinkexternal{Center for Mathematical Physics}{http://www.math.uni-hamburg.de/home/schreiber/};
+
+\item An elementary example of a supercategory is that of a \PMlinkname{quasigroup;}{AlternativeDefinitionOfAQuasigroup}
+
+\item supercategory of organismic sets, and the theory of organismic sets;
+
+\item supercategory of $(M,R)$-systems and supercategory theory of $(M,R)$-systems;
+
+\item supercategory of quantum automata;
+\end{enumerate}
+Additional details for these supercategories are found in the literature references listed in the
+Bibliography, and also under the following, specific examples of geometric, algebraic, and/or 
+topological structures. 
+
+\textbf{Examples of supercategories} 
+\begin{enumerate}
+\item functor categories; 
+\item 2-categories, super-categories and n-categories; categories of categories (that are often considered for the foundation of Mathematics); 
+\item higher dimensional algebras (HDA): double groupoids, 
+double algebroids, crossed complexes of groupoids, crossed complexes of algebroids, superalgebroids, 
+double categories, multiple categories, $\omega$ and cubic structures, 
+\item organismic supercategories: algebraic theories of organismic sets, super-categories of Metabolic-Repair, or 
+$(M,R)$-systems
+\item  super-categories of \L{}ukasiewicz algebraic (3-valued) logics
+\item  supercategories of quantum automata,
+\item  $LM_n$-generalized toposes/topoi of genetic networks and interactomes, supercategories of Post algebraic logics,\
+supercategories of MV-algebraic logics.
+\end{enumerate}
+
+\section{Supercategory theories}
+Supercategories, and especially, {\em organismic supercategories} provide an unified conceptual framework for Relational Biology that utilizes flexible, algebraic and topological structures which transform naturally under heteromorphisms or heterofunctors, and natural transformations. 
+
+One of the major advantages of the ETAS axiomatic approach, which was inspired by the work of 
+Lawvere \cite{LW1, LW2}, is that ETAS avoids all the antimonies/paradoxes previously reported for sets,
+sets of sets, involving for example the elementhood relation or infinite sets, the axiom of choice, and so on (Russell and Whitehead, 1925, and Russell, 1937; \cite{BBGG1}). ETAS also provides an axiomatic approach to recent Higher Dimensional Algebra applications to Complex Systems Biology (\cite{Bib14to34} and references cited therein).
+
+\textbf{Ten axioms for a general ETAS example}
+(See also \cite{LW2} and the entry on axiomatic theory of supercategories.)
+
+0. For any letters $x, y, u, A, B$, and \emph{unary function} symbols $\Delta_0$ and $\Delta_1$,
+and \emph{composition law} $\Gamma$, the following are defined as \emph{formulas}: $\Delta_0 (x) = A$,
+$\Delta_1 (x) = B$, $\Gamma (x,y;u)$, and $ x = y$; These formulas are to be, respectively, interpreted as
+``$A$ is the domain of $x$", ``$B$ is the codomain, or range, of $x$", ``$u$ is the composition $x$ followed by $y$",
+and ``$x$ equals $y$". 
+
+1. If $\Phi$ and $\Psi$ are formulas, then ``$[\Phi]$ \textbf{and} $[\Psi]$'' , ``$[\Phi]$ \textbf{or} $[\Psi]$'', ``$[\Phi] \Rightarrow [\Psi]$'', and ``$ \textbf{not} ~[\Phi]$''  are also formulas.
+
+2. If $\Phi$ is a formula and $x$ is a letter, then ``$ \forall x[\Phi]$'', 
+``$ \exists x[\Phi]$'' are also formulas.
+
+3. A string of symbols is a formula in ETAS \emph{if and only if} it follows from the above axioms 0 to 2.
+
+A \emph{sentence} is then defined as any formula in which every occurrence of each letter $x$ is within the scope of a quantifier, such as $\forall x$  or $\exists x $.  The \emph{theorems} of ETAS are defined as all those sentences which can be derived through logical inference from the following ETAS axioms:
+
+4. $\Delta_i(\Delta_j(x))=\Delta_j(x)$ for  $i,j = 0, 1$. 
+
+5. $\Gamma(x,y;u)$ and $\Gamma(x,y;u')\Rightarrow u = u'$.
+
+5. $ \exists u [\Gamma(x,y;u)] \Rightarrow \Delta_1(x) =  \Delta_0(y)$;
+
+7. $\Gamma(x,y;u) \Rightarrow \Delta_0(u) =  \Delta_0(x)$ and $\Delta_1(u) =  \Delta_1(y)$.
+
+8. Identity axiom:
+$ \Gamma(\Delta_0 (x), x;x)$ and  $ \Gamma(x, \Delta_1 (x);x)$  yield always the same result.
+
+7. Associativity axiom: $\Gamma(x,y;u)$ and $\Gamma(y,z;w)$ and $\Gamma(x,w;f)$ and $\Gamma(u,z;g)\Rightarrow f = g $.
+With these axioms in mind, one can see that commutative diagrams can be now regarded as certain 
+\textit{abbreviated} formulas corresponding to systems of equations such as:  
+$\Delta_0(f) = \Delta_0(h) = A$, $\Delta_1(f) = \Delta_0(g) = B$, $\Delta_1(g) = \Delta_1(h) = C$ 
+and $\Gamma(f,g;h)$, instead of $g\circ f = h$ for the arrows f, g, and h, drawn respectively between the 
+`objects' A, B and C, thus forming a `triangular commutative super-diagram` in the usual sense of category theory. Compared with the ETAS formulas such diagrams have the advantage of a geometric--intuitive image of their equivalent underlying equations. The common property of A of being an object is written in shorthand as the abbreviated formula Obj(A) standing for the following three equations:
+
+8. $A = \Delta_0(A) = \Delta_1(A)$,
+
+9. $ \exists x[A = \Delta_0 (x)] \exists y[A = \Delta_1 (y)]$,
+
+and 
+
+10. $\forall x \forall u [\Gamma (x,A; u)\Rightarrow x = u]$ and 
+$ \forall y  \forall v [\Gamma (A,y; v)] \Rightarrow y = v$ .  
+
+Intuitively, with this terminology and axioms a \textit{supercategory} is meant to be any structure which is a direct interpretation of these ten ETAS axioms. A \textit{heterofunctor} is then  understood to be a \textit{triple} consisting of two such supercategories (or classes of objects, diagrams, etc.) and of a set, or proper class,  of rules $\S_H$ (`the hetero-functor') which assigns to each arrow or morphism $x$ of the first supercategory,
+a unique morphism, written as `$\S_H (x)$' of the second category, in such a way that the usual conditions on objects (but not on arrows) are fulfilled (see for example \cite {ICBM})--  the functor is well behaved, it carries object identities to image object identities, and commutative super-diagrams (or classes) to image commmutative super-diagrams of the corresponding image objects and image (hetero)morphisms betwen objects with different structures, as well as homo-morphisms (between objects with the {\em same type of structure}, such as groupoid homomorphisms, or topological space homeomorphisms, automata homomorphisms, etc).  At the next level, one then defines \emph{natural transformations} or \emph{functorial morphisms} between functors as metalevel abbreviated formulas and equations pertaining to commutative diagrams of the distinct images of two functors acting on both objects and morphisms. As the name indicates natural transformations are also well--behaved in terms of the ETAC equations satisfied. 
+
+The general example presented above is an ETAS formulation closest to ETAC-axioms for categories and super-categories, or categories of categories in volved in the foundations of most Mathematics, (viz. Lawvere and others). 
+\subsection{Notes on the general definition of a supercategory and a standard example} 
+In the usual sense, super-categories are defined as categories of categories,
+and the process is repeated in higher dimensions in $n$-categories. There is however
+a `more geometric', or `gluing' construction of double categories, double groupoids (\cite{BS}, and 
+double algebroids \cite{BM}) that involves additional conditions or axioms leading to non-Abelian higher dimensional structures and Higher Dimensional Algebra (HDA;\cite{BS, BM} and \cite{BGB2}). Similarly, the construction of \textit{supercategories} (\cite{ICB3}), unlike that of $n$-categories, allows for `gluing' together distinct structures
+and/or their corresponding diagrams (such as algebraic and topological ones), through hetero-morphisms or hetero-functors, which are arrows (not necessarily subject to all of the ETAC axioms) linking distinct structures into the superstructure called a \textit{`supercategory}'; the latter is a generalized type of double groupoid, double category, 2-category,..., n-category or super--category/meta--category, that always involves only diagrams of homo-morphisms at each level, but also includes hetero-morphisms or hetero-functors, and so on, between different types of structures. 
+Proper supercategories could also be called \textit{`n-ary'} super-categories, or \textit{multi-categories}, in the sense of extending double groupoid, double algebroid and double category structures to higher dimensions. 
+Note however that even in a general, abstract supercategory at the level of diagrams of homo-morphisms, homo-functors, natural transformations, or any n-categories with only one type of arrows at each level, all the ETAC axioms still hold. On the other hand, at the levels of supercategorical diagrams, or superdiagrams, involving several types of morphisms, or hetero-morphisms and hetero-functors, several of the rules for connecting diagrams are weakened, and the result is a superstructure which does not have all naturality conditions satisfied by all arrows, and one has additional composition laws, such as $\Gamma', \Gamma'', ...$, and so on,  satisfying new ETAS axioms that are not allowed in ETAC. Thus, additional ETAS axioms are needed to also specify how such distinct composition laws are combined within the same superstructure. Any interpretation of ETAS axioms (that may include also the ETAC axioms for the special cases of categories, $n$-categories, double categories, etc) then defines a \textit{supercategory}.
+
+\begin{definition}.
+A specific, `standard' example of supercategories was recently introduced in Mathematical (or more specifically `Categorified') Physics,  on the web at the
+\PMlinkexternal{$n$-category caf\'e' s site}{http://golem.ph.utexas.edu/category/2007/07/supercategories.html} under \textit{``Supercategories''}. This is a rather `simple' example of supercategories, albeit in a much more restricted sense as it still involves only the standard categorical homo-morphisms, homo-functors, and so on; it begins with a somewhat standard definiton of super-categories, or `super categories' from Category Theory, but then it becomes more interesting as it is being tailored to supersymmetry and extensions of `Lie' superalgebras, or superalgebroids, which are sometimes called graded `Lie' algebras (but not really Lie algebras),  that are thought to be relevant to Quantum Gravity (\cite{BGB2} and references cited therein). The following is an almost exact quote from the above $n$-category cafe' s website posted mainly by Urs Schreiber:  
+A \textit{super category} is a \textit{diagram} of the form: 
+$\diamond  \diamond Id_C \diamond \textbf{C} \diamond \diamond s$ in \textbf{Cat}--the category of categories and (homo-) functors between categories-- such that: 
+$$\diamond  \diamond \emph{Id} \diamond \diamond Id_C \diamond \textbf{C} \diamond \textbf{C}\diamond \diamond s \diamond \diamond s = \diamond  \diamond Id_C \diamond Id_C  \diamond  \diamond \textsl{Id}$$, 
+(where the `diamond' symbol should be replaced by the symbol `square', as in the original Urs's postings.) 
+\end{definition} 
+
+This specific instance is that of a supercategory which has only \textbf{one object}-- the above quoted superdiagram of diamonds, an arbitrary abstract category \textbf{C} (subject to all ETAC axioms), and the standard category identity (homo-) functor; it can be further specialized to the previously introduced concepts of \emph{supergroupoids} (also definable as crossed complexes of groupoids), and \textit{supergroups} (also definable as crossed modules of groups), which seem to be of great interest to mathematicians involved in `categorified' mathematical physics or physical mathematics. The new supercategory introduction was then continued with the following interesting example that aims to answer the following question. ``What, in this sense, is a \emph{braided monoidal supercategory ?}''.  Urs, suggested the following answer: like an ordinary braided monoidal category is a 3-category which in lowest degrees looks like the trivial 2-group, a braided monoidal supercategory is a 3-category which in lowest degree looks like the strict 2-group that comes from the crossed module $$G(2)=(\diamond 2 \diamond \emph{Id} \diamond 2)$$. Urs called this generalization of stabilization of n-categories, $G(2)$- \emph{stabilization}. So the claim would be that braided monoidal supercategories come from $G(2)$-stabilized 3-categories, with $G(2)$ the above strict 2-group.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Bib14to34}
+References \PMlinkname{[14] to [34] in the \emph{Bibliography on category theory and algebraic topology}}{CategoricalOntologyABibliographyOfCategoryTheory}
+
+\bibitem{ICB5}
+I.C. Baianu: 1973, Some Algebraic Properties of \emph{\textbf{(M,R)}} -- Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{35}, 213-217.
+
+\bibitem{ICBm2}
+I.C. Baianu and M. Marinescu: 1974, A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Mathematiques Pures et Appliquees} \textbf{19}: 388-391.
+
+\bibitem{ICB6}
+I.C. Baianu: 1977, A Logical Model of Genetic Activities in \L ukasiewicz Algebras: The Non-linear Theory. \emph{Bulletin of Mathematical Biophysics}, \textbf{39}: 249-258.
+
+\bibitem{ICB7}
+I.C. Baianu: 1980, Natural Transformations of Organismic Structures. \emph{Bulletin of Mathematical Biophysics}
+\textbf{42}: 431-446.
+
+\bibitem{ICB2}
+I.C. Baianu: 1987a, Computer Models and Automata Theory in Biology and Medicine.,  in M. Witten (ed.), 
+\emph{Mathematical Models in Medicine}, vol. 7., Pergamon Press, New York, 1513-1577;  
+
+\bibitem{BGB2}
+R. Brown, J. F. Glazebrook and I. C. Baianu: A categorical and higher dimensional algebra framework for complex systems and spacetime structures, \emph{Axiomathes} \textbf{17}:409--493.
+(2007).
+
+\bibitem{BM}
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales--Bangor, Maths Preprint, 1986.
+
+\bibitem{BS}
+R. Brown  and C.B. Spencer: Double groupoids and crossed modules,
+\emph{Cahiers Top. G\'eom.Diff.} \textbf{17} (1976), 343--362.
+
+\bibitem{LW1}
+W.F. Lawvere: 1963. Functorial Semantics of Algebraic Theories.,
+ {\em Proc. Natl. Acad. Sci. USA}, {\bf 50}: 869--872
+
+\bibitem{LW2}
+W. F. Lawvere: 1966. The Category of Categories as a Foundation for Mathematics. , 
+In {\em Proc. Conf. Categorical Algebra--La Jolla}, 1965, Eilenberg, S et al., eds. Springer --Verlag: Berlin, Heidelberg and New York, pp. 1--20.
+
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

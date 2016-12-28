@@ -1,0 +1,449 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniversalMappingProperty}
+\pmcreated{2013-03-22 15:38:10}
+\pmmodified{2013-03-22 15:38:10}
+\pmowner{MichaelMcCliment}{20205}
+\pmmodifier{MichaelMcCliment}{20205}
+\pmtitle{universal mapping property}
+\pmrecord{15}{37566}
+\pmprivacy{1}
+\pmauthor{MichaelMcCliment}{20205}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A40}
+\pmsynonym{universal}{UniversalMappingProperty}
+\pmsynonym{co-universal}{UniversalMappingProperty}
+\pmrelated{AdjointFunctor}
+\pmrelated{UnitOfAnAdjunction}
+\pmrelated{LimitingCone}
+\pmdefines{universal morphism}
+\pmdefines{universality}
+\pmdefines{universal arrow}
+\pmdefines{universal property}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\KVect}{\operatorname{\mathit{K}-Vect}}
+\newcommand{\KAlg}{\operatorname{\mathit{K}-Alg}}
+
+
+\begin{document}
+\PMlinkescapeword{areas}
+\PMlinkescapeword{attribute}
+
+\section{Introduction.}
+
+A strong attribute of categories is a uniform description of many seemingly
+unrelated concepts from diverse interest areas of mathematics.  For example, 
+Cartesian products produce new sets from old just as direct product produce
+new groups from old and Cartesian products of topologies are again topologies.
+To make these notions uniform one can provide categorical definitions.  Because
+categories assume as their constituents only abstract objects and morphisms,
+all the properties of such constructions must be given as properties of morphisms
+between objects.  Those constructions which can be characterized by means of the
+existence of a \emph{unique} morphism are generally grouped under the heading
+of \emph{universal mapping properties} \cite[p. 57]{Hungerford}.  A precise
+definition will follow below.
+
+As is common with category theory, there are generally not many theorems
+that can be proved at a categorical level and set to apply to all universal 
+mapping properties.  The exception is a generic proof of uniqueness of objects 
+with a universal mapping property.  It should be emphasized that most universal 
+mapping properties are a result of the underlying structure of the categories in 
+question and not provided for abstract reasons.  (For concrete examples 
+consider the construction of free groups or free Lie algebras.)
+
+\begin{remark}
+There are contingents that use the phrase \emph{universal property} especially in
+the vernacular.  Mac Lane does so in passing but his use is not as a defined term but
+rather as an intuitive concept to be refined to a strict definition later \cite[p. 2]{MacLane}
+
+Because the property applies to the uniqueness of mappings the title \emph{universal 
+mapping property} remains the choice of most mathematical references in print.
+Authors interested in shorter titles will sometimes substitute Mac Lane's concept
+of \emph{universal arrows}\cite[III.1]{MacLane} -- a rigorous definition which will 
+be explained below and captures the spirit of the universal mapping property as
+presently described.  The preferred term of morphism for arrow motivates the modern
+title \emph{universal morphism}.
+\end{remark}
+
+Universal mapping properties arise in such constructions
+as: direct products and direct sums, free groups, free algebras, product topology,
+Stone-\v{C}ech compactification, tensor product, exterior algebra, inverse and direct limit, 
+pullbacks and pushouts.
+
+\section{Universal Morphisms and the Universal Mapping Property}
+
+We follow \cite[III.1]{MacLane} for our treatment of universal arrows and 
+universal mapping properties.
+
+\begin{defn}
+Let $U: \mathcal{D} \to \mathcal{C}$ be a functor from a category
+$\mathcal{D}$ to a category $\mathcal{C}$, and let $X$ be an
+object of $\mathcal{C}$. A \emph{universal morphism} from $X$ to $U$
+consists of a pair $(A, \phi)$ where $A$ is an object of $\mathcal{D}$
+and $\phi : X \to U(A)$ is a morphism in $\mathcal{C}$, such
+that the following \emph{universal mapping property} is satisfied: 
+\begin{quote}
+  Whenever $Y$ is an object of $\mathcal{D}$ and $f \colon X \to U(Y)$ is a
+  morphism in $\mathcal{C}$, then there exists a \textbf{unique} morphism 
+  $g:A\to Y$ such that the following diagram commutes.
+  \begin{figure}[h]
+    \[\xymatrix{
+                         & U(A)\ar[dd] &  A\ar@{-->}[dd]^g\\
+         X\ar[ur]^{\phi}\ar[dr]_f &			   & 			\\
+         				 & U(Y)	       & Y.           
+    }\]
+    \caption{A universal morphism from $X$ to $U$}
+  \end{figure}
+\end{quote}
+\end{defn}
+
+The existence of the morphism g intuitively expresses the fact
+that $A$ is ``general enough'', while the uniqueness of the morphism
+ensures that $A$ is ``not too general''.
+
+One can also consider the categorical dual of the above definition by
+reversing all the arrows. Let $F:\mathcal{C}\to \mathcal{D}$ be a functor, and let $X$
+be an object of $\mathcal{D}$. A
+co-universal morphism from $F$ to $X$ consists of a pair $(A, \phi)$
+where $A$ is an object of $\mathcal{C}$ and $\phi:F(A) \to X$ is a
+morphism in $\mathcal{D}$, such that the following universal mapping property is
+satisfied:
+\begin{quote}
+  Whenever $Y$ is an object of $\mathcal{C}$ and $f \colon F(Y) \to X$ is a morphism
+  in $\mathcal{D}$, then there exists a \textbf{unique} morphism $g \colon Y \to A$
+  such that the following diagram commutes.
+  \begin{figure}[h]
+    \centering
+    \[\xymatrix{
+ 		 Y\ar@{-->}[dd]^g & F(Y)\ar[dd]^{F(g)}\ar[rd]^f & \\
+ 		   &      &  X.\\
+ 		 A & F(A)\ar[ur]_{\phi} &     
+    }\]
+    \caption{A co-universal morphism from $F$ to $X$}
+  \end{figure}
+\end{quote}
+To avoid ambiguity, some authors may call one of these constructions a
+universal morphism and the other one a co-universal morphism.
+
+\section{Properties}
+
+\paragraph{Existence and uniqueness.}
+Defining a quantity does not guarantee its existence. Given a functor
+$U$ and an object $X$ as above, there may or may not exist a universal
+morphism from $X$ to $U$ (or from $U$ to $X$). If, however, a universal
+morphism $(A, \phi)$ does exists, then it is unique up to a unique
+isomorphism. That is, if $(A', \phi')$ is another such pair
+then there exists a unique isomorphism $g \colon A \to A'$ such
+that $\phi' = U(g)\phi$. This is easily seen by substituting
+$(A', \phi')$ for $(Y, f)$ in the definition of the universal mapping
+property.
+
+\paragraph{Equivalent formulations.}
+The definition of a universal morphism can be rephrased in a variety
+of ways. Let $U$ be a functor from $\mathcal{D}$ to $\mathcal{C}$, and let $X$ be
+an object of $\mathcal{C}$. Then the following statements are equivalent
+\begin{itemize}
+\item $(A, \phi)$ is a universal morphism from $X$ to $U$;
+\item $(A, \phi)$ is an initial object of the comma category $(X
+  \downarrow U)$;
+\item $(A, \phi)$ is
+  a representable functor of $\Hom_{\mathcal{C}}(X,U(-))$.
+\end{itemize}
+
+The dual statements are also equivalent
+\begin{itemize}
+\item $(A, \phi)$ is a universal morphism from $F$ to $X$;
+\item $(A, \phi)$ is a terminal object of the comma category $(F
+  \downarrow X)$;
+\item $(A, \phi)$ is a representable functor|representation of
+  $\Hom_{\mathcal{C}}(F(-),X)$.
+\end{itemize}
+
+
+\paragraph{Relation to adjoint functors.}
+Suppose that $(A_1, \phi_1)$ is a universal morphism from $X_1$ to $U$
+and that $(A_2,\phi_2)$ is also a universal morphism from $X_2$ to $U$.
+By the universal mapping property, given any morphism $h \colon X_1 \to X_2$
+there exists a unique morphism $g \colon A_1 \to A_2$ such that the
+following diagram commutes
+\begin{figure}[h]
+  \[\xymatrix{
+     X_1\ar[r]^{\phi_1}\ar[d]_h & U(A_1)\ar[d]_{U(g)} & A_1\ar@{-->}[d]^g \\
+     X_2\ar[r]_{\phi_2} & U(A_2) & A_2 \\
+   }\]
+\end{figure}
+If \textbf{every} object $X_i$ of $\mathcal{C}$ admits a universal morphism to
+$U$, then the assignment $X_i\mapsto A_i$ and $h \mapsto g$ defines a
+functor $V\colon \mathcal{C} \to \mathcal{D}$. The maps $\phi_i$ then define a natural
+transformation from $1_{\mathcal{C}}$ (the identity functor on $\mathcal{C}$) to $U
+V$. The functors $(V, U)$ are then a pair of adjoint functors, with
+$V$ left-adjoint to $U$.
+Similar statements apply to the dual situation of morphisms from
+$U$. If such morphisms exist for every $X\in \mathcal{C}$ one obtains a
+functor $V \colon \mathcal{C} \to \mathcal{D}$ which is right-adjoint to $U$.
+
+Indeed, all pairs of adjoint functors arise from universal
+constructions in this manner. Let $F$ and $G$ be a pair of adjoint
+functors with unit $\eta$ and co-unit $\epsilon$ (see the article on
+adjoint functors for the definitions). Then we have a universal
+morphism for each object in $\mathcal{C}$ and $\mathcal{D}$.
+\begin{itemize}
+\item For each object $X\in\mathcal{C}$, the pair $(F(X), \eta_X)$ is a
+  universal morphism from $X$ to $G$. That is, for all $f \colon X \to
+  G(Y)$, there exists a unique $g \colon F(X) \to Y$ for which the
+  diagrams below commute.
+\item Dually, for each object $Y \in \mathcal{D}$, the pair $(G(Y),\epsilon_Y)$
+  is a universal morphism from $F$ to $Y$. That is, 
+  for all $g \colon F(X) \to Y$ there exists a unique $f \colon X \to
+  G(Y)$ for which the following diagrams commute.
+  \begin{figure}[t]
+    \[
+     \xymatrix{
+           & GF(X)\ar[dd]^{G(g)}     &  F(X)\ar[dd]^{F(f)}\ar[dr]^g  \\
+        X\ar[ur]^{\eta_X}\ar[dr]_f  & &  & Y      \\
+           & G(Y)  & FG(Y)\ar[ur]_{\epsilon_Y}
+    }
+    \]
+    \caption{Universal mapping property of a pair of adjoint functors}
+  \end{figure}
+\end{itemize}
+
+Universal constructions are more general than adjoint functor pairs.  A
+universal construction is like an optimization problem; it gives rise
+to an adjoint pair if and only if this problem has a solution for
+every object of $\mathcal{C}$ (equivalently, for every object of $\mathcal{D}$).
+
+\section{Examples}
+
+\paragraph{Tensor algebras.}
+Let $\KVect$ be the category of vector spaces over a field $K$, and
+let $\KAlg$ be the category of $K$-algebras (assumed to be unital and
+associative). Let $U$ be the forgetful functor which assigns to each
+algebra its underlying vector space.  Given any vector space $V$ over
+$K$ we can construct the tensor algebra $T(V)$ of $V$. The universal
+mapping property of the tensor algebra expresses the fact that the pair
+$(T(V), \iota)$, where $\iota \colon V \to T(V)$ is the natural
+inclusion map, is a universal morphism from $V$ to $U$.  Since this
+construction works for any vector space $V$, we conclude that $T$ is a
+functor from $\KVect$ to $\KAlg$. This functor is left-adjoint to the
+forgetful functor $U$.
+
+\paragraph{Kernels.}
+Suppose $\mathcal{C}$ is a category with zero morphisms $0_{AB}\in\Hom_{\mathcal{C}}(A,B)$ (such
+as the category of groups) and let $f \colon X \to Y$ be a morphism in
+$\mathcal{C}$. A kernel of $f$ is any morphism $k\colon K \to X$ such that
+\begin{itemize}
+\item the composition $f k$ is the zero morphism from $K$ to $Y$;
+\item given any morphism $k'\colon K' \to X$ such that $f k'$ is the
+  zero morphism, there is a unique morphism $u\colon K' \to K$ such
+  that $k u = k'$.
+\end{itemize}
+To understand this in the framework of the general setting above, we
+let $\mathcal{D}$ be the category of morphisms in $\mathcal{C}$. The objects of $\mathcal{D}$
+are morphisms $f \colon X \to Y$ in $\mathcal{C}$, and a morphism from $f
+\colon X \to Y$ to $g \colon S \to T$ is a commutative square whose
+sides are a pair of morphisms $\alpha \colon X \to S$ and $\beta
+\colon Y \to T$.  Diagramatically,
+\[\xymatrix{
+   X\ar[r]^f\ar[d]_{\alpha} & Y\ar[d]^{\beta} \\
+   S\ar[r]^g  & T
+}\]
+
+Let $F \colon \mathcal{C} \to \mathcal{D}$ be the functor that maps an object
+$K\in\mathcal{C}$ to the zero morphism $0_{\scriptscriptstyle KK} \colon K \to
+K $, and that maps a morphism $r \colon K \to L$ to the trivial square
+with sides $(r,0_{KL})$.  Now,  let $f$ be
+an object $\mathcal{D}$ (which is the same thing as a morphism $f \colon X \to
+Y$ in the category $\mathcal{C}$).  A kernel $k\colon K\to X$, if it exists,
+is the same thing as an object $K\in \mathcal{C}$ and a morphism $(k,0)$ in
+$\mathcal{D}$ that satisfies the co-universal property expressed by the
+diagram below. 
+I.e., a kernel is the same thing as a universal morphism
+from $F$ to $f$.
+\[\xymatrix{
+  K'\ar@{-->}[dr]_r  & & K'\ar[dd]_{k'}\ar@{-->}[dr]^r\ar[rr]^0 & & K'\ar[dd]^0 \ar@{-->}[dr]^0\\
+  & K   &    &  K\ar[ld]_k \ar[rr]_{0~~~}  & & K\ar[ld]^0 \\
+     & & X\ar[rr]_f & & Y
+}\]
+
+\paragraph{Limits and colimits.}
+Limits and colimits are important special
+cases of universal constructions. Let $\mathcal{J}$ and $\mathcal{C}$ be categories
+with $\mathcal{J}$ small ($\mathcal{J}$ is to be thought of as an index
+category) and let $\mathcal{C}^\mathcal{J}$ be the corresponding functor
+category of functors from $\mathcal{J}$ to $\mathcal{C}$. The \emph{diagonal functor}
+$\Delta \colon \mathcal{C} \to 
+\mathcal{C}^\mathcal{J}$ is the functor that maps each object $N\in\mathcal{C}$
+to the constant functor $\Delta(N) \colon \mathcal{J} \to \mathcal{C}$
+(i.e., $\Delta(N)(X) = N$ for each $X\in \mathcal{J}$.)
+Given a functor $F \colon \mathcal{J} \to \mathcal{C}$ (thought of as an object in
+$\mathcal{C}^\mathcal{J}$), the limit of $F$, if it exists, is
+nothing but a universal morphism from $\Delta$ to $F$. Dually, the
+colimit of $F$ is a co-universal morphism from $F$ to $\Delta$.
+
+\section{Motivational remarks.}
+
+For the most part, the objects in a category which are constructed in terms of universal mapping properties are not new to the theorist of these categories.  For example,
+topologist long knew that a new topology results from a Cartesian product
+of topologies.  However the general vocabulary allows for easier detection and understanding of functors between different categories.  For example, the
+homology functors take the coproducts -- \PMlinkname{wedge products}{WedgeProductOfPointedTopologicalSpaces} in topology -- to
+coproducts of modules -- direct sums in module categories.  Proofs of these
+facts are in no way facilitated by category theory but the terminology is
+at least uniform and thus easier to conceptualize and express.
+
+Once one recognizes a certain construction as given by a universal mapping
+property, one gains several benefits.
+\begin{itemize}
+\item Universal mapping properties define objects up to a unique isomorphism.
+  One strategy to prove that two objects are isomorphic is therefore
+  to show that they satisfy the same universal mapping property.
+\item The concrete details of a given construction may be messy, but
+  if the construction satisfies a universal mapping property, one can forget
+  all those details; all there is to know about the construct is
+  already contained in the universal mapping property. Proofs often become
+  short and elegant if the universal mapping property is used rather than the
+  concrete details.
+\item If the universal construction can be carried out for every $X$
+  in $\mathcal{C}$, then we know that we obtain a functor from $\mathcal{C}$ to $D$.
+  For example, forming kernels is functorial; every 
+  commutative square
+  $(\alpha,\beta)$ from the morphism $f$ to the morphism $g$ induces a
+  morphism from the kernel of $f$ to the kernel of $g$.
+\item Furthermore, if such a functor can be formed, it is a right or
+  left adjoint to $U$. But right adjoints commute with limits, and
+  left adjoints commute with colimits! So, looking back at the
+  previous example, we can immediately conclude that the kernel of a
+  product is equal to the product of the kernels.
+\end{itemize}
+
+Universal mapping properties of various topological constructions were
+presented by Pierre Samuel in 1948. They were later used extensively
+by Bourbaki. The closely related concept of adjoint functors was
+introduced independently by Daniel Kan in 1958.
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{10}
+\bibitem{Hungerford}
+Thomas W. Hungerford \emph{Algebra}, Springer-Verlag, New York, (1974).
+\bibitem{Cohen}
+Paul M. Cohen, \emph{Universal Algebra}, D.Reidel
+  Publishing, Holland, (1981). ISBN 90-277-1213-1.
+\bibitem{MacLane}
+Saunders Mac Lane \emph{Categories for the Working Mathematician} 2nd ed. Graduate 
+Texts in Mathematics 5. Springer, (1998). ISBN 0-387-98403-8.
+\end{thebibliography}
+
+\section{Acknowledgements and Notes}
+This entries was adapted, for the most part, from the Wikipedia entry
+entitled \PMlinkexternal{Universal
+  Property}{http://en.wikipedia.org/wiki/Universal_property}.  In turn
+  much of Wikipedia's entry appears in \cite[III.1]{MacLane} were the interested reader is directed for further details.
+%%%%%
+%%%%%
+\end{document}

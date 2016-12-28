@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EffectiveEquivalenceRelation}
+\pmcreated{2013-03-22 18:31:58}
+\pmmodified{2013-03-22 18:31:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{effective equivalence relation}
+\pmrecord{6}{41240}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that given an equivalence relation $R$ on a set $A$, we can form the quotient $A/R$ of $A$ by $R$.  Elements of $A/R$ are the equivalence classes under $R$.  There are two functional properties of $A/R$:
+\begin{itemize}
+\item If $p_1,p_2$ are projections of $R$ onto $A$, given by $p_1(a,b)=a$ and $p_2(a,b)=b$, then the canonical surjection $q:A\to A/R$ is the coequalizer of $p_1$ and $p_2$.  
+\begin{proof}
+First, $q\circ p_1(a,b) = q(a)=[a]=[b]= q(b)=q\circ p_2$.  Suppose that $r:A\to B$ is another function with $r\circ p_1=r\circ p_2$.  Define $f:A/R\to B$ by $f([a])=r(a)$.  This is a well-defined function because $[a]=[b]$ implies that $r(a)=r\circ p_1(a,b)=r\circ p_2(a,b)=r(b)$.  This shows that $f\circ q=r$, which also implies that $f$ is uniquely determined.
+\end{proof}
+\item $p_1$ and $p_2$ form a kernel pair of $q$.
+\begin{proof}
+Again, $q\circ p_1 = q\circ p_2$, as was just shown previously.  Now suppose $g,h:C\to A$ are functions with $q\circ g = q\circ h$.  For any $c\in C$, we see that $[g(c)]=q(g(c))=q(h(c))=[h(c)]$, so that $(g(c),h(c))\in R$.  Define $s:C\to R$ by $s(c)=(g(c),h(c))$.  Then $p_1\circ s=g$ and $p_2\circ s=h$.  It is again easy to see that $s$ is uniquely determined by $g$ and $h$.  Hence, $p_1,p_2$ are a kernel pair of $g$.
+\end{proof}
+\end{itemize}
+
+\textbf{Definition}.  An equivalence relation object $(R,p_1,p_2)$ on an object $A$ in a category $\mathcal{C}$ is said to be an \emph{effective equivalence relation object} if 
+\begin{itemize}
+\item the projections $p_1,p_2$ has a coequalizer $q:A\to A/R$, and
+\item $p_1,p_2$ form the kernel pair of $q$.
+\end{itemize}
+In other words, $R$ is effective iff there is an exact fork
+$$\xymatrix@+=2cm{R \ar@<0.75ex>[r]^-{p_1} \ar@<-0.75ex>[r]_-{p_2} & A \ar[r]^-q & A/R}$$
+
+In \textbf{Set}, the category of sets, every equivalence relation object (which is just an equivalence relation on a set) is effective, as we have just shown above.  However, this is not true in general.  For example, not every equivalence relation object is effective in \textbf{Top}, the category of topological spaces (and continuous functions).
+
+More to come...
+%%%%%
+%%%%%
+\end{document}

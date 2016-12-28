@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoubleDualEmbedding}
+\pmcreated{2015-01-13 20:35:35}
+\pmmodified{2015-01-13 20:35:35}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{double dual embedding}
+\pmrecord{23}{32916}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{15A04}
+\pmrelated{DualHomomorphism}
+\pmrelated{DualSpace}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{xypic}
+
+
+
+
+
+
+\begin{document}
+\PMlinkescapeword{language}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{associates}
+
+
+\newcommand{\rI}{\mathrm{I}}
+\newcommand{\rD}{\mathrm{D}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Hom}{\operatorname{Hom}}
+
+Let $V$ be a vector space over a field $K$.  Recall that $V^*$, the
+dual space, is defined to be the vector space of all linear forms on
+$V$.  There is a natural embedding of $V$ into $V^{**}$, the dual of
+its dual space.  In the language of categories, this embedding is a
+natural transformation between the identity functor and the double
+dual functor, both endofunctors operating on $\mathcal{V}_K$, the category of
+vector spaces over $K$.
+
+Turning to the details, let 
+\[\rI, \rD:\cV_K\rightarrow \cV_K\]
+denote the identity and the dual functors, respectively.  Recall that for a
+linear mapping $L:U\rightarrow V$ (a morphism in $\cV_K$), the dual
+homomorphism $D[L]:V^*\rightarrow U^*$ is defined by
+\[ D[L](\alpha): u \mapsto \alpha(Lu),\quad u\in U,\; \alpha\in V^*.\]
+
+The double dual embedding is a natural transformation
+\[\delta:\rI\rightarrow \rD^2,\]
+that associates to every $V\in \cV_K$ a linear homomorphism
+$\delta_V\in\operatorname{Hom}(V,V^{**})$ described by
+\[\delta_V(v): \alpha\mapsto \alpha(v),\quad v\in V,\;\alpha\in V^*\]
+To show that this transformation is natural, let $L:U\rightarrow
+V$ be a linear mapping.  We must show that the following diagram
+commutes:
+
+$$
+\xymatrix{%
+U \ar[r]^{\delta_U} \ar[d]^L & U^{**} \ar[d]^{D^2[L]} \\
+V \ar[r]^{\delta_V} & V^{**}
+}
+$$
+
+Let $u\in U$ and $\alpha\in V^*$ be given.  Following the arrows down
+and right we have that
+$$(\delta_V\circ L)(u): \alpha\mapsto \alpha(Lu).$$
+Following the arrows right, then down we have that
+\begin{eqnarray*}
+(\rD[\rD[L]]\circ \delta_U)(u):
+\alpha &\mapsto& (\delta_U u)(\rD[L]\alpha) \\
+&=& (\rD[L]\alpha)(u) \\
+&=& \alpha(Lu),
+\end{eqnarray*}
+as desired.
+
+Let us also note that for every non-zero $v\in V$, there exists an
+$\alpha\in V^*$ such that $\alpha(v)\neq 0$. Hence $\delta_V(v)\neq
+0$, and hence $\delta_V$ is an embedding, i.e. it is one-to-one.  If
+$V$ is finite dimensional, then $V^*$ has the same dimension as $V$.
+Consequently, for finite-dimensional $V$, the natural embedding
+$\delta_V$ is, in fact, an isomorphism.
+%%%%%
+%%%%%
+\end{document}

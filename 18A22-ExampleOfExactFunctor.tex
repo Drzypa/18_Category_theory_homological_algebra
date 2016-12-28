@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfExactFunctor}
+\pmcreated{2013-03-22 18:08:29}
+\pmmodified{2013-03-22 18:08:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{example of exact functor}
+\pmrecord{5}{40696}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A22}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\im}{\operatorname{im}}
+\begin{document}
+In this entry, we show the following proposition:
+
+\begin{prop} $\hom(F,-)$ is an exact functor for any free module $F$ over a ring $R$. \end{prop}
+
+Before proving this, let us prove something related to a free module:
+\begin{lem} If $f:F\to N$ is a module homomorphism where $F$ is free, then for any module homomorphism $\alpha: M\to N$  where $\im(f)\subseteq \im(\alpha)$, there is a module homomorphism $g:F\to M$ such that $\alpha \circ g = f$.  \end{lem}
+
+\begin{proof}
+The case when $F=0$ is trivial.  Suppose now $F\ne 0$ is free, $F$ has a basis, say $X$.  For each $x\in X$, let $M_x:=\alpha^{-1}(f(x))$.  Each $M_x$ is non-empty.  By the axiom of choice (one of its equivalents if necessary), there is a function $g$ from $X$ to $\bigcup \lbrace M_x\mid x\in F\rbrace \subseteq M$ such that $g(x)\in M_x$.  Since $X$ is a basis for $F$, this function can be extended to a module homomorphism from $F$ to $M$.  By abuse of notation, let us use $g$ for the extension.  Since $\alpha (g(x))=f(x)$ for all $x\in X$, this implies that $\alpha\circ g=f$ on all of $F$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition 1]
+Let 
+$$
+\xymatrix{
+0 \ar[r] & A \ar[r]^{\alpha} & B \ar[r]^{\beta} & C \ar[r] & 0
+}
+$$
+be a short exact sequence of $R$-modules.  We want to show that 
+$$
+\xymatrix{
+0 \ar[r] & \hom(F,A) \ar[r]^{\alpha^*} & \hom(F,B) \ar[r]^{\beta^*} & \hom(F,C) \ar[r] & 0
+}
+$$
+is short exact.  This amounts to establishing the following three equations:
+\begin{itemize}
+\item
+$\ker(\alpha^*)=0$:  
+
+If $\alpha^*(f)=0$, then $\alpha\circ f=0$, which implies that $f(x)=0$ for all $x\in F$.  This means that $f=0$.
+
+\item
+$\im(\beta^*)=\hom(F,C)$: 
+
+By Lemma 1 above, for every $f:F\to C$, there is a $g:F\to B$ such that $\beta \circ g = f$, or $\beta^*(g)=f$.
+
+\item
+$\im(\alpha^*)=\ker(\beta^*)$: 
+
+If $f\in \im(\alpha^*)$, then there is $g: F\to A$ such that $\alpha \circ g = f$.  Therefore, $\beta^*(f)=\beta\circ f= \beta \circ (\alpha \circ g)=(\beta\circ \alpha)\circ g=0\circ g=0$, showing that $\im(\alpha^*)\subseteq \ker(\beta^*)$.  
+
+On the other hand, pick $f\in \ker(\beta^*)$, so $f(F)\subseteq \ker(\beta)=\im(\alpha)$.  Therefore, by Lemma 1 above, there is a $g:F\to A$ such that $\alpha\circ g=f$.  This means that $f\in \im(\alpha^*)$.
+\end{itemize}
+Thus, $\hom(F,-)$ is exact.
+\end{proof}
+
+\textbf{Remark}.  The converse of this is not true.  But we do have the following fact: $\hom(P,-)$ is an exact functor iff $P$ is a projective module (over some ring $R$).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InterchangeLaw}
+\pmcreated{2013-03-22 18:27:08}
+\pmmodified{2013-03-22 18:27:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{interchange law}
+\pmrecord{5}{41114}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A99}
+\pmclassification{msc}{08A99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $S$ be a set and $\circ$ and $\bullet$ two \PMlinkname{partial}{PartialFunction} binary operations on $S$.  Then $\circ$ and $\bullet$ are said to satisfy the \emph{interchange law} if
+$$(a\circ b)\bullet (c\circ d)=(a\bullet c)\circ (b\bullet d),$$
+provided that the operations are defined on both sides of the equation.
+
+An element $e\in S$ is a $\circ$-identity, or an identity with respect to $\circ$, if $e\circ a=a\circ e=a$ provided the operations are defined.
+
+\begin{prop} If $\circ$ is a total function (defined for all of $S\times S$), then there is at most one $\circ$-identity. \end{prop}
+\begin{proof}  If $e$ and $f$ are both $\circ$-idenities, then $e=e\circ f=f$.
+\end{proof}
+
+\begin{prop}  If both $\circ$ and $\bullet$ are total functions, and identities exist and the same with respect to both operations, then $\circ=\bullet$ and is commutative.\end{prop}
+\begin{proof}  Suppose that $e$ is both the $\circ$-identity and the $\bullet$-identity.  Then, according to the interchange law, $a\bullet d = (a\circ e)\bullet (e\circ d)=(a\bullet e)\circ (e\bullet d) = a \circ d$, showing that $\bullet = \circ$.  Again, using the interchange law, $a\bullet d=(e\circ a)\bullet (d\circ e)= (e\bullet d)\circ (a\bullet e) = d\circ a = d\bullet a$, showing that $\bullet$ is commutative.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

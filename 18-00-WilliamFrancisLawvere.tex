@@ -1,0 +1,286 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WilliamFrancisLawvere}
+\pmcreated{2013-03-22 18:27:05}
+\pmmodified{2013-03-22 18:27:05}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{William Francis Lawvere}
+\pmrecord{14}{41113}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Biography}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+%\pmkeywords{biography}
+%\pmkeywords{William Francis Lawvere}
+%\pmkeywords{Adjointness in Mathematics}
+%\pmkeywords{especially Category Theory}
+\pmrelated{ETAC}
+\pmrelated{CategoricalDynamics}
+\pmrelated{CategoryTheory}
+\pmrelated{ETAS}
+\pmrelated{Supercategory}
+\pmrelated{Supercategory3}
+\pmdefines{category of categories}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\section{William Francis Lawvere's biography}
+
+ American mathematician born February 9, 1937 at Muncie, Indiana, USA. Currently, he is with the New York University at Buffalo as an Emeritus Professor. Special interests include applications of category theory to the axiomatic foundations
+of mathematics, categorical dynamics and algebraic semantics.
+
+ Dr. William Francis Lawvere is widely known for his foundation work on adjointness in mathematics, especially category theory, toposes, closed Cartesian categories, and the axiomatic foundation of mathematics and category theory based on ETAC.
+
+ W.F. Lawvere obtained his Ph.D at Columbia university in 1963 with Samuel Eilenberg, (who was the co-founder of category theory with Saunders MacLane in 1942--1945). He visited for a year at Berkeley University, and after his PhD, during 1964--1967, he worked at the Forschungsinstitut f\''ur Mathematik at the famous ETH in Z\''urich; he began work on the \emph{`category' of categories} (which is defined either as a meta-category or as a super-category), and was there directly influenced by Pierre Gabriel's seminars at Oberwolfach on Alexander Grothendieck's ``Foundation of Algebraic Geometry''.
+ 
+ Subsequently, he worked at the University of Chicago, Illinois, in the Department of Mathematics with Professor Saunders Mac Lane especially on categorical logics, using adjoint functors, algebraic semantics and universal quantifiers (see ETAC and ETAS). During this time he also worked on \PMlinkname{categorical dynamics}{Categorical Dynamics}. 
+
+ In 1968 and 1969 he was back in Z\"urich, at a time when the first papers on the $<$ category$>$ of categories and 
+\PMlinkname{supercategories}{Supercategory} were published, and he introduced the concept of a generalized Grothendieck topos, or `elementary topos'.
+
+ He then moved to Dalhousie University in 1969, where in 1995 there was a celebration of 50 years of Category Theory with Professor Saunders MacLane also being present. (Currently, there is also an over-due celebration of 40 years of categorical dynamics, with Lawvere as one of its founders). 
+
+He opposed in 1970 the use of the War Measures Act on moral principles.
+
+ Since 1974, until his retirement in 2000, he was a Professor of Mathematics at University at Buffalo,NY,  often collaborating with Stephen Schanuel. He beacame an Emeritus Professor of Mathematics and Adjunct, Emeritus Professor  of Philosophy at the University at Buffalo, NY.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{LFW86}
+W.F. Lawvere. 1986. {\em Categories in Continuum Physics}, (Buffalo, N.Y. 1982), edited by Lawvere and Stephen H. Schanuel (with Introduction by Lawvere pp 1-16), Springer Lecture Notes in Mathematics 1174. (ISBN $3-540-16096-5$).
+
+\bibitem{LFW64}
+Lawvere, F. W., 1964, ``An Elementary Theory of the Category of Sets'', {\em Proceedings of the National Academy of Sciences U.S.A.}, 52, 1506--1511. 
+
+\bibitem{LFW65}
+Lawvere, F. W., 1965, ``Algebraic Theories, Algebraic Categories, and Algebraic Functors'', Theory of Models, Amsterdam: North Holland, 413--418.  
+
+\bibitem{LFW66}
+Lawvere, F. W., 1966, ``The Category of Categories as a Foundation for Mathematics'', Proceedings of the Conference on Categorical Algebra, La Jolla, New York: Springer-Verlag, 1--21. 
+
+\bibitem{LFW69a}
+Lawvere, F. W., 1969a, ``Diagonal Arguments and Cartesian Closed Categories'', {\em Category Theory, Homology Theory, and their Applications: II}, Berlin: Springer, 134--145.  
+
+\bibitem{LFW69b}
+Lawvere, F. W., 1969b, ``Adjointness in Foundations'', {\em Dialectica}, 23, 281--295.  
+
+\bibitem{LFW70}
+Lawvere, F. W., 1970, ``Equality in Hyper doctrines and Comprehension Schema as an Adjoint Functor", Applications of Categorical Algebra, Providence: AMS, 1-14.  
+
+\bibitem{LT271}
+Lawvere, F. W., 1971, ``Quantifiers and Sheaves", Actes du CongrÃƒÃƒÃ‚Â¨s International des MathÃƒÃƒÃ‚Â©maticiens, Tome 1, Paris: Gauthier-Villars, 329--334. 
+
+\bibitem{LFW72}
+Lawvere, F. W., 1972, ``Introduction'', {\em Toposes, Algebraic Geometry and Logic, Lecture Notes in Mathematics}, 274, Springer-Verlag, 1--12.  
+
+\bibitem{LFW75}
+Lawvere, F. W., 1975, ``Continuously Variable Sets: Algebraic Geometry = Geometric Logic'', Proceedings of the Logic Colloquium Bristol 1973, Amsterdam: North Holland, 135--153. 
+
+\bibitem{LFW76}
+Lawvere, F. W., 1976, ``Variable Quantities and Variable Structures in Topoi.'', {\em Algebra, Topology, and Category Theory}, New York: Academic Press, 101--131. 
+
+\bibitem{LFW97}
+Lawvere, F. W. \& Schanuel, S., 1997, Conceptual Mathematics: A First Introduction to Categories, Cambridge: Cambridge University Press. 
+
+\bibitem{LFW66}
+Lawvere, F. W.: 1966, The Category of Categories as a Foundation for Mathematics., in
+\emph{Proc. Conf. Categorical Algebra- La Jolla}., Eilenberg, S. et al., eds. Springer--Verlag:
+Berlin, Heidelberg and New York., pp. 1-20.
+
+\bibitem{LFW63}
+Lawvere, F. W.: 1963, Functorial Semantics of Algebraic Theories,
+\emph{Proc. Natl. Acad. Sci. USA, Mathematics}, \textbf{50}: 869-872.
+
+\bibitem{LFW69}
+Lawvere, F. W.: 1969, \emph{Closed Cartesian Categories}., Lecture held as a guest of the
+Romanian Academy of Sciences, Bucharest.
+
+\bibitem{LFW92}
+Lawvere, F. W., 1992, ``Categories of Space and of Quantity'', The Space of Mathematics, Foundations of Communication and Cognition, Berlin: De Gruyter, 14--30.  
+
+\bibitem{LFW94a}
+Lawvere, F. W., 1994a, ``Cohesive Toposes and Cantor's lauter Ensein'', Philosophia Mathematica, 2, 1, 5--15. 
+
+\bibitem{LFW94b}
+Lawvere, F. W., 1994b, ``Tools for the Advancement of Objective Logic: Closed Categories and Toposes'', The Logical Foundations of Cognition, Vancouver Studies in Cognitive Science, 4, Oxford: Oxford University Press, 43--56.  
+
+\bibitem{LFW95}
+Lawvere, H. W (ed.), 1995. Springer Lecture Notes in Mathematics 274,:13--42. 
+
+\bibitem{LFW2k}
+Lawvere, F. W., 2000, ``Comments on the Development of Topos Theory'', Development of Mathematics 1950-2000, Basel: BirkhÃƒÃƒÃ‚Â¤user, 715--734. 
+
+\bibitem{LFW2k2}
+Lawvere, F. W., 2002, "Categorical Algebra for Continuum Micro Physics'', Journal of Pure and Applied Algebra, 175, no. 1--3, 267--287. 
+
+\bibitem{LFW-RR2k3}
+Lawvere, F. W. \& Rosebrugh, R., 2003, \emph{Sets for Mathematics}, Cambridge: Cambridge University Press.  
+
+\bibitem{LFWk3}
+Lawvere, F. W., 2003, ``Foundations and Applications: Axiomatization and Education. New Programs and Open Problems in the Foundation of Mathematics", Bullentin of Symbolic Logic, 9, 2, 213--224. 
+
+\bibitem{LFW63}
+Lawvere, F.W., 1963, ``Functorial Semantics of Algebraic Theories'', Proceedings of the National Academy of Sciences U.S.A., 50, 869--872. 
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

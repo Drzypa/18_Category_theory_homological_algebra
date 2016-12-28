@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfEqualizers}
+\pmcreated{2013-03-22 18:23:52}
+\pmmodified{2013-03-22 18:23:52}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{examples of equalizers}
+\pmrecord{10}{41043}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{18A20}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry illustrates some common examples of equalizers and coequalizers.
+
+\subsubsection*{Examples of Equalizers}
+
+\begin{itemize}
+\item In \textbf{Set}, the category of sets, the equalizer of a pair of functions $f,g:A\to B$ is given by the following: a set $$C=\lbrace x\in A\mid f(x)=g(x)\rbrace,$$ and function $i:C\to A$ the canonical injection.  Clearly $i$ equalizes $f$ and $g$ by construction: $f\circ i = g\circ i$.  Now, if $j:D\to A$ also equalizes $f$ and $g$, then define $k:D\to C$ by $k(d)=j(d)$.  To see that this is well-defined, we need to show that $j(d)\in C$.  Since $j$ equalizes $f$ and $g$, we have $f(j(d))=g(j(d))$, so that $j(d)\in C$.  Therefore $k$ is a well-defined function from $D$ into $C$.  In addition, $i\circ k(d)=i(j(d))=j(d)$.  Finally, it is easy to see that if $i\circ t=j$, then $t=k$.  Therefore, $(C,i)$ is the equalizer of $f$ and $g$.
+\item In fact, most concrete categories (concrete over \textbf{Sets}), the equalizer of a pair of morphisms is given by the object $C$ above with $i$ the corresponding injective mapping.
+\item 
+\end{itemize}
+
+\subsubsection*{Examples of Coequalizers}
+
+\begin{itemize}
+\item In \textbf{Set}, the coequalizer of a pair of functions $f,g:A\to B$ can be found as follows: define a binary relation $\sim$ on $B$ such that for any $x,y\in B$, $x\sim y$ iff either $x=y$, or there is an $a\in A$ such that $h_1(a)=x$ and $h_2(a)=y$, where $h_1,h_2\in \lbrace f,g\rbrace$.  Then $\sim$ is easily seen to be a reflexive symmetric relation.  Now, take the transitive closure $\sim^*$ of $\sim$.  So $\sim^*$ is an equivalence relation on $B$.  Let $B/\sim^*$ be the set of all the equivalence classes, and $p:B\to B/\sim^*$ the canonical projection.  Then $(B/\sim^*, p)$ is the coequalizer of $f$ and $g$.  First, $p\circ f(a)=[f(a)]=[g(a)]=p\circ g(a)$, since $f(a)\sim g(a)$.  Suppose now that $q:B\to D$ is another function that coequalizes $f$ and $g$.  Define $r:B/\sim^* \to D$ by $r([b])=q(b)$.  We want to show that $r$ is well-defined.  In other words, if $b\sim^* c$, then $q(b)=q(c)$.  First, assume $b\sim c$.  Then either $b=c$ (in which case, $q(b)=q(c)$ is immediate), or there is $a\in A$ such that $h_1(a)=b$ and $h_2(a)=c$, with $h_1,h_2\in \lbrace f,g\rbrace$.  In this case, $q(b)=q(h_1(a))=q(h_2(a))=q(c)$ since $q\circ f=q\circ g$.  Now, if $b\sim^* c$, then there are $d_1,\ldots, d_n \in B$ such that $b=d_1\sim d_2 \sim \cdots \sim d_n = c$.  As a result, $q(b)=q(d_1)=q(d_2)=\cdots = q(d_n)=q(c)$.  In addition, $r\circ p(b)=r([b])=q(b)$, and that $r$ is uniquely determined this way.  Therefore, $(B/\sim^*,p)$ is the coequalizer of $f$ and $g$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KernelPair}
+\pmcreated{2013-03-22 18:20:34}
+\pmmodified{2013-03-22 18:20:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{kernel pair}
+\pmrecord{10}{40976}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{KernelOfAHomomorphismBetweenAlgebraicSystems}
+\pmdefines{cokernel pair}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+%\usepackage{pst-plot}
+\usepackage[curve]{xypic}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $f:A\to B$ be a morphism in a category $\mathcal{C}$.  The \emph{kernel pair} of $f$ is defined as the pair of morphisms $(k_1: K\to A, k_2:K\to A)$ such that 
+$$\xymatrix@+=4pc{
+{K}\ar[r]^{k_1}\ar[d]_{k_2} &{A}\ar[d]^{f} \\
+{A}\ar[r]_{f}&{B}
+}
+$$
+is a pullback diagram.
+
+Since 
+$$\xymatrix@+=4pc{
+{A}\ar[r]^{1_A}\ar[d]_{1_A} &{A}\ar[d]^{f} \\
+{A}\ar[r]_{f}&{B}
+}
+$$
+is a commutative diagram, we have a unique morphism $g:A\to K$ such that
+$$\xymatrix@+=4pc{
+A\ar@/^1ex/[rrd]^{1_A} \ar@/_1ex/[rdd]_{1_A} \ar[rd]^g & & \\
+& K \ar[d]^{k_2} \ar[r]_{k_1} & A\ar[d]^f \\
+& A\ar[r]_f & B.
+}
+$$
+is commutative.  As a result, $k_1$ and $k_2$ are both monomorphisms: if $k_1\circ h_1 = k_1\circ h_2$, then $$h_1 = 1_A \circ h_1 = (g\circ k_1) \circ h_1 = g\circ (k_1 \circ h_1) =g\circ (k_1 \circ h_2) = (g\circ k_1) \circ h_2 = 1_A \circ h_2 = h_2.$$
+
+For example, in \textbf{Set}, the category of sets, the kernel pair of a function $f:A\to B$ is the pair $p_1:K\to A$ and $p_2:K\to A$, given by $$K=\lbrace (a,b) \in A\times A \mid f(a)=f(b) \rbrace,$$ and $p_1$ and $p_2$ are given by $$p_1(a,b)=a \qquad \mbox{and} \qquad p_2(a,b)=b.$$
+This is just the kernel of a function, in the sense of universal algebra.  Please see \PMlinkname{this entry}{KernelOfAHomomorphismBetweenAlgebraicSystems} for more details.
+
+The notion of \emph{cokernel pair} is dually defined.
+
+\textbf{Remark}.  $f:A\to B$ is a monomorphism iff the kernel pair of $f$ is $(1_A,1_A)$.  Dually, $f$ is an epimorphism iff the cokernel pair of $f$ is $(1_A,1_A)$.
+
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

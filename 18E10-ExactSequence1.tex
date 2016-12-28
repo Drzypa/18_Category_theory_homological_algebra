@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExactSequence1}
+\pmcreated{2013-03-22 12:36:50}
+\pmmodified{2013-03-22 12:36:50}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{exact sequence}
+\pmrecord{10}{32872}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+\pmrelated{ExactSequence}
+\pmdefines{image morphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\cok}{\operatorname{cok}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+Let $\A$ be an abelian category. We begin with a preliminary definition.
+
+\begin{definition}
+For any morphism $f: A \longrightarrow B$ in $\A$, let $m: X \longrightarrow B$ be the morphism equal to $\ker(\cok(f))$. Then the object $X$ is called the {\em image} of $f$, and denoted $\Im(f)$. The morphism $m$ is called the {\em image morphism} of $f$, and denoted $\im(f)$.
+\end{definition}
+
+Note that $\Im(f)$ is not the same as $\im(f)$: the former is an object of $\A$, while the latter is a morphism of $\A$. We note that $f$ factors through $\im(f)$:
+$$
+\xymatrix{
+A \ar[r]^-{e} \ar@/_1pc/[rr]_{f} & \Im(f) \ar[r]^-{m} & B
+}
+$$
+The proof is as follows: by definition of cokernel, $\cok(f) f = 0$; therefore by definition of kernel, the morphism $f$ factors through $\ker(\cok(f)) = \im(f) = m$, and this factor is the morphism $e$ above. Furthermore $m$ is a monomorphism and $e$ is an epimorphism, although we do not prove these facts.
+
+\begin{definition}
+A sequence
+$$
+\xymatrix{
+\cdots \ar[r] & A \ar[r]^-f & B \ar[r]^-g & C \ar[r] & \cdots
+}
+$$
+of morphisms in $\A$ is {\em exact} at $B$ if $\ker(g) = \im(f)$.
+\end{definition}
+%%%%%
+%%%%%
+\end{document}

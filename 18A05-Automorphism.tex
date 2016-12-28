@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Automorphism}
+\pmcreated{2013-03-22 13:48:29}
+\pmmodified{2013-03-22 13:48:29}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{automorphism}
+\pmrecord{10}{34529}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+%\pmkeywords{morphism}
+%\pmkeywords{isomorphism}
+%\pmkeywords{endomorphism}
+%\pmkeywords{epimorphism}
+%\pmkeywords{monomorphism}
+\pmrelated{OppositeNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Roughly, an automorphism is a map from a mathematical object onto itself such that: 1. There exists an ``inverse'' map such that the composition of the two is the identity map of the object, and 2. any relevant structure related to the object in question is preserved.
+
+In category theory, an automorphism of an object $A$ in a category $\mathcal{C}$ is a morphism $\psi \in Mor(A, A)$ such that there exists another morphism $\phi \in Mor(A, A)$ and $\psi \circ \phi = \phi \circ \psi = id_{A}$. 
+
+For example in the category of groups an automorphism is just a bijective (inverse exists and composition gives the identity) group homomorphism (group structure is preserved). Concretely, the map: $x \mapsto -x$ is an automorphism of the additive group of real numbers. In the category of topological spaces an automorphism would be a bijective, continuous map such that its inverse map is also continuous (not guaranteed as in the group case). Concretely, the map $\psi: S^1 \to S^1$ where $\psi(\alpha) = \alpha + \theta$ for some fixed angle $\theta$ is an automorphism of the topological space that is the circle.
+%%%%%
+%%%%%
+\end{document}

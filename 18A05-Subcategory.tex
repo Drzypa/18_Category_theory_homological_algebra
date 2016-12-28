@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subcategory}
+\pmcreated{2013-03-22 14:21:58}
+\pmmodified{2013-03-22 14:21:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subcategory}
+\pmrecord{13}{35850}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{Category}
+\pmrelated{Functor}
+\pmrelated{FaithfulFunctor}
+\pmdefines{full subcategory}
+\pmdefines{inclusion functor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{embedding}
+
+Let $\mathcal{C}$ be a (small) category.  If $\mathcal{S}$ is a collection of both a subset, call it $\operatorname{Ob}(\mathcal{S})$, of objects of $\mathcal{C}$ and a subset, call it $\operatorname{Mor}(\mathcal{S})$, of morphisms of $\mathcal{C}$ such that
+\begin{enumerate}
+\item
+For each $S\in\operatorname{Ob}(\mathcal{S})$, the identity morphism of $S$, $id_S\in\operatorname{Mor}(\mathcal{S});$
+\item
+For each $f\in\operatorname{Mor}(\mathcal{S})$, $\operatorname{domain}(f)$ and 
+$\operatorname{codomain}(f)\in\operatorname{Ob}(\mathcal{S});$ 
+\item
+For every pair $f,g\in\operatorname{Mor}(\mathcal{S})$ such that $f\circ g$ exists, then $f\circ g\in\operatorname{Mor}(\mathcal{S}).$ 
+\end{enumerate}
+Then $\mathcal{S}$ is readily seen to be a category.  It is called a \emph{subcategory} of the category $\mathcal{C}.$
+
+Given a category $\mathcal{C}$ and a subcategory $\mathcal{S}$ of $\mathcal{C}$, a map $$\operatorname{Incl}:\mathcal{S}\hookrightarrow \mathcal{C}$$ that sends each object of $\mathcal{S}$ to itself (in $\mathcal{C}$), and each morphism of $\mathcal{S}$ to itself (in $\mathcal{C}$), is a functor.  $\operatorname{Incl}$ is called the \emph{inclusion functor}, or an \emph{embedding}.  This inclusion functor is a faithful functor.  If it is also \PMlinkname{full}{fullfunctor}, then we call the corresponding subcategory  $\mathcal{S}$ a \emph{full subcategory} of $\mathcal{C}$.  In other words, if $\mathcal{S}$ is a full subcategory of $\mathcal{C}$, then $$\operatorname{hom_{\mathcal{C}}}(S_1,S_2)=\operatorname{hom_{\mathcal{S}}}(S_1,S_2)$$ for pair of $S_1,S_2\in \operatorname{Ob}(\mathcal{S})$.
+
+\textbf{Remarks}
+\begin{enumerate}
+\item
+Let $T:\mathcal{C}\to\mathcal{D}$ be a full and faithful functor.  Then $T(\mathcal{C})$ is a full subcategory of $\mathcal{D}$.
+\item
+Again, let $T:\mathcal{C}\to\mathcal{D}$ be a full and faithful functor.  If $\mathcal{S}$ is a full subcategory of $\mathcal{D}$, then $T^{-1}(\mathcal{S})$ defined by: 
+\begin{itemize}
+\item
+$\operatorname{Ob}(T^{-1}(\mathcal{S})):=\lbrace C\in\operatorname{Ob}(\mathcal{C})\mid T(C)\in\operatorname{Ob}(\mathcal{S})\rbrace$
+\item
+$\operatorname{Mor}(T^{-1}(\mathcal{S})):=\lbrace f\in\operatorname{Mor}(\mathcal{C})\mid T(f)\in\operatorname{Mor}(\mathcal{S})\rbrace$
+\end{itemize}
+is a subcategory of $\mathcal{C}$.
+\end{enumerate}
+
+\textbf{Examples of Subcategories}
+\begin{enumerate}
+\item
+In \textbf{Set}, the category of finite sets is a full subcategory, and so is the category of $k$-element sets, where $k$ is any (possibly infinite) cardinality.  If $k$ is finite, then every morphism in the subcategory is invertible.
+\item
+In \textbf{Top}, we have the full subcategories whose objects are Euclidean spaces, compact spaces, or Hausdorff spaces.
+\item
+In \textbf{Grp}, there is the full subcategory whose objects are abelian groups with additive homomorphisms.
+\item
+\textbf{Grp} is in fact a subcategory of the category of topological groups, since every group may be viewed as a topological group with the discrete topology.
+\item
+In \PMlinkescapetext{\textbf{Ring}}, there are the subcategories of commutative rings, matrix rings, or fields.  Note that \textbf{Field} is not a full subcategory of \textbf{Ring}, since the ring homomorphism that maps every element to $0$ is not a field homomorphism.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{Ma}S. Mac Lane, \emph{Categories for the Working Mathematician} (2nd edition), Springer-Verlag, 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

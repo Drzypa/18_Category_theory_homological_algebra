@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartiallyOrderedCategory}
+\pmcreated{2013-03-22 18:18:24}
+\pmmodified{2013-03-22 18:18:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partially ordered category}
+\pmrecord{10}{40928}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B35}
+\pmdefines{linearly ordered category}
+\pmdefines{directed category}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category in which for every pair of objects $A,B$, the collection $\hom(A,B)$ is a set.  $\mathcal{C}$ is called a \emph{partially ordered category} if $\hom(A,B)\cup \hom(B,A)$ has at most one element.  The reason why it is called \emph{partially ordered} is because we can put a partial order on the objects of $\mathcal{C}$, as follows: $$A\le B \qquad \mbox{iff} \qquad \hom(A,B)\ne \varnothing.$$
+It is easily verified that $\le$ is a partial order on $\operatorname{Ob}(\mathcal{C})$: clearly, $\hom(A,A)$ is a singleton as it contains the identity morphism, so that $\le$ is reflexive; if $\hom(A,B)\ne \varnothing$ and $A\ne B$, then $\hom(B,A)=\varnothing$ by definition, and so $\le$ is antisymmetric; finally, if neither $\hom(A,B)$ nor $\hom(B,C)$ are empty, then $\hom(A,C)$ can not be empty, as it contains the composition of the elements in $\hom(A,B)$ and $\hom(B,C)$, and thus $\le$ is transitive.
+
+It is easy to see that any poset can be realized as categroy, and in fact, a partially ordered category.
+
+Given a partially ordered category $\mathcal{C}$, the partial order defined on the objects of $\mathcal{C}$ may be extended to a partial order on the morphisms of $\mathcal{C}$.  Formally, let $f,g$ be morphisms in $\mathcal{C}$.  Define $f\le g$ iff $\operatorname{dom}(f)\le \operatorname{dom}(g)$ and $\operatorname{codom}(f)\le \operatorname{codom}(g)$.  This binary relation can be immediately verified as a partial order (on the \emph{class} of all morphisms), and an extension of the partial order on objects of $\mathcal{C}$, since every object is identified the corresponding identity morphism.  Furthermore, the partial order respects composition, if $f\le g$, then 
+\begin{itemize}
+\item $f\circ h \le g\circ h$, provided that $\operatorname{dom}(f)=\operatorname{dom}(g)=\operatorname{codom}(h)$,
+\item $h\circ f \le h\circ g$, provided that $\operatorname{codom}(f)=\operatorname{codom}(g)=\operatorname{dom}(h)$.
+\end{itemize}
+Combining the two above, we see that $f_1\le g_1$ and $f_2\le g_2$ imply $f_1\circ f_2 \le g_1\le g_2$, provided that $f_1\circ f_2$ and $g_1\circ g_2$ are both defined.
+
+
+\textbf{Remarks}.  From a partially ordered category, one may also define 
+\begin{itemize}
+\item
+a \emph{linearly ordered category}, which is partially category in which $\hom(A,B)\cup \hom(B,A)$ has at least one element for every pair $A,B$ of objects
+\item
+a \emph{directed category}, which is a partially ordered category in which for every pair $A,B$ of objects, there is an object $C$ such that $\hom(A,C)$ and $\hom(B,C)$ are both non-empty.
+\item
+The definition given above of a partially ordered category can be generalized.  Instead of having a partial order on the objects of the category, the partial order is now on the morphisms.  Let $\mathcal{C}$ be a category such that a partial order $\le$ is given on the class of morphisms of $\mathcal{C}$.  This partial order induces a partial order on the objects: $A\le B$ iff $1_A\le 1_B$.  Call $\mathcal{C}$ a \emph{partially ordered category} if
+\begin{enumerate}
+\item if $f\le g$, then $\operatorname{dom}(f)\le \operatorname{dom}(g)$ and $\operatorname{codom}(f)\le \operatorname{codom}(g)$,
+\item if $f_1\le g_1$ and $f_2\le g_2$ such that $f_1\circ f_2$ and $g_1\circ g_2$ are defined, then $f_1\circ f_2 \le g_1\circ g_2$,
+\item for any $A$ and $f$ such that $A\le \operatorname{dom}(f)$, there exists a unique $g$ such that $g\le f$ with $\operatorname{dom}(g)=A$,
+\item for any $A$ and $f$ such that $A\le \operatorname{codom}(f)$, there exists a unique $g$ such that $g\le f$ with $\operatorname{codom}(g)=A$.
+\end{enumerate}
+It's not hard to see that the above definition does generalize the one given at the beginning of the entry.  For example, to see 3., let $f:B\to C$.  So $A\le B$, which means there is a unique $h:A\to B$.  Then $g= f\circ h:A\to C$ is the desired morphism: $g$ is unique, $\operatorname{dom}(g)=A$, and $g\le f$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{BK} A. J. Berrick, M. E. Keating, {\em Categories and Modules, with K-theory in View}, Cambridge (2000).
+\bibitem{CH} C. Hollins, {\em \PMlinkexternal{Extending The Ehresmann-Schein-Nambooripad Theorem}{http://arxiv.org/PS_cache/arxiv/pdf/0804/0804.4702v3.pdf}}, (2009)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

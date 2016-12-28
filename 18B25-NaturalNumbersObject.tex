@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NaturalNumbersObject}
+\pmcreated{2013-03-22 16:36:34}
+\pmmodified{2013-03-22 16:36:34}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{natural numbers object}
+\pmrecord{4}{38806}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B25}
+\pmdefines{strong natural numbers object}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{remark}
+\newtheorem*{example*}{Example}
+\begin{document}
+Let $\mathcal{C}$ be a category with a terminal object $1$.  A (weak) \emph{natural numbers object} consists of an object $N$ along with morphisms $z\colon 1\to N$ (``zero'') and $S\colon N\to N$ (``successor'') of $\mathcal{C}$ such that if $\xymatrix{1\ar[r]^{z'} & N'\ar[r]^{S'} & N}$ is a diagram in $\mathcal{C}$, then there exists a morphism $g\colon N\to N'$ such that the diagram
+\[\xymatrix{
+1\ar[r]^z\ar@{=}[d] & N\ar[r]^S\ar[d]^g  & N\ar[d]^g \\
+1\ar[r]^{z'}        & N'\ar[r]^{S'}      & N'
+}\]
+is commutative.  The morphism $g$ is not required to be unique.  If we additionally require the morphism to be unique, we obtain a \emph{strong natural numbers object}.  Note that a strong natural numbers object can also be defined as an initial diagram of the form
+\[\xymatrix{
+1 \ar[r] & N\ar[r] & N.
+}\]
+%Not every category with a terminal object has a natural numbers object.
+
+\begin{example*}
+In the category $\mathbf{Set}$, the set $\mathbb{N}$ of natural numbers is a natural numbers object.  Using arithmetic notation for simplicity, the morphism $z\colon 1\to\mathbb{N}$ picks out the element zero, and the morphism $S\colon\mathbb{N}\to\mathbb{N}$ is defined by the formula $S(x) = x + 1$.  This object is the source of the name ``natural numbers object''.
+\end{example*}
+
+\begin{thebibliography}{99}
+\bibitem{LaSc}
+J.~Lambek and P.~J.~Scott. {\it Introduction to higher order categorical logic}. Cambridge University Press, 1986.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

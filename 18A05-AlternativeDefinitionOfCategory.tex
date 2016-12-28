@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfCategory}
+\pmcreated{2013-03-22 16:38:31}
+\pmmodified{2013-03-22 16:38:31}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{alternative definition of category}
+\pmrecord{9}{38845}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\comp}{\circ}
+\newcommand{\src}{S}
+\newcommand{\tgt}{T}
+\newcommand{\Hom}{\mathrm{Hom}}
+\begin{document}
+When compared with set theory, category theory may seem ontologically
+extravagant; after all, set theory postulates the existence of only
+one type of entity, the class, while category theory postulates the
+existence of at least two types, objects and morphisms.  However, it
+is possible to dispense with objects and deal only with morphisms.
+The basic idea behind this reduction is the observation that objects
+appear in a one-to-one correspondence with their identity morphisms.
+Thus to say what a category is, we need only specify the axioms the
+morphisms must obey; ultimately this will allow us to present a
+category as a sort of partial algebraic system, with a partial 
+binary operation representing composition of morphisms and two 
+unary operations representing the domain and codomain of a morphism.
+
+Let $M$ be a class.  Its members will be called \emph{morphisms}.
+Then a \emph{category} on $M$ consists of the following ingredients:
+
+\begin{itemize}
+\item
+a partial binary operation $\comp\colon M\times M\to M$, called
+\emph{composition};
+
+\item
+a unary operation $\src\colon M\to M$, called \emph{source} or \emph{domain}; and
+
+\item
+a unary operation $\tgt\colon M\to M$, called \emph{target} or \emph{codomain}.
+\end{itemize}
+
+The above operations are required to satisfy the following axioms.
+
+\begin{enumerate}
+\item
+{\bf (Right absorption.)} 
+For any morphism $f$,
+\[
+\src\src f = \tgt\src f = \src f \text{\quad and\quad}
+\tgt\src f = \tgt\tgt f = \tgt f.
+\]
+
+\item
+{\bf (Existence of composite morphisms.)}  
+The composite morphism $g\comp f$ is defined if and only if $\tgt g =
+\src f$; the morphism $g\comp f$ has source $\src(g\comp f) = \src f$
+and target $\tgt(g\comp f) = \tgt f$.
+\[\xymatrix{
+\bullet\ar@(ul,dl)[]_{\src(g\comp f) = \src f}\ar[r]^f\ar@{.>}[rd]_{\exists !\, g\comp f} & \bullet\ar[d]^g \\
+                                                 & \bullet\ar@(dr,ur)_{\tgt (g\comp f) = \tgt g}
+}\]
+
+\item
+{\bf (Existence of identity morphisms.)}
+For any morphism $f$, $\tgt f\comp f = f\comp\src f = f$.
+\[\xymatrix{
+  \bullet\ar[r]^f\ar[d]_{\src f}\ar[rd]^f 
+& \bullet\ar[d]^{\tgt f} \\
+  \bullet\ar[r]_f 
+& \bullet
+}\]
+
+
+\item
+{\bf (Associativity of composition.)} 
+Whenever $h\comp g$ and $g\comp f$ are both defined, then $h\comp
+(g\comp f) = (h\comp g)\comp f$.
+\[\xymatrix{
+  \bullet\ar[r]^f\ar[rd]_{g\comp f} 
+& \bullet\ar[d]^g\ar[rd]^{h\comp g}
+& \\
+& \bullet\ar[r]_h 
+& \bullet
+}\]
+\end{enumerate}
+
+Using this definition, we can define an \emph{object} to be a morphism
+in the image of $\src$; by the right absorption law, this is
+equivalent to being in the image of $\tgt$.  If we also define
+$\Hom(A,B)$ to be the collection of morphisms $f$ such that $\src f =
+A$ and $\tgt f = B$, then we recover the rest of the ordinary
+definition of category.
+
+\PMlinkescapeword{absorption}
+\PMlinkescapeword{collection}
+\PMlinkescapeword{composite}
+\PMlinkescapeword{observation}
+\PMlinkescapeword{postulates}
+\PMlinkescapeword{reduction}
+\PMlinkescapeword{right}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{source}
+\PMlinkescapeword{type}
+
+\begin{thebibliography}{8}
+\bibitem{pfas} P. Freyd, A. Scedrov, {\em Categories, Allegories}, North-Holland, New York (1989).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

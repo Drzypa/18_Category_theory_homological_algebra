@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialOrderingOnSubobjectsOfAnObject}
+\pmcreated{2013-03-22 18:20:40}
+\pmmodified{2013-03-22 18:20:40}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partial ordering on subobjects of an object}
+\pmrecord{11}{40978}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmdefines{union}
+\pmdefines{intersection}
+\pmdefines{union of subobjects}
+\pmdefines{intersection of subobjects}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\newcommand{\Sub}{{\mathrm{Sub}}}
+\begin{document}
+Let $\mathcal{C}$ be a category and $A$ an object $\mathcal{C}$.  Recall that a subobject of $A$ is just an equivalent class of equivalent monomorphisms into $A$.  A subobject is denoted by $[f:B\to A]$, where $f$ is monomorphic, or simply $[B]$, whenever there is no confusion.  Furthermore, we write $B\subseteq A$ to mean that $B$ is a subobject of $A$, and write $B\cong C$ whenever $[B]=[C]$.  The class of all subobjects of $A$ is denoted by $\Sub(A)$.  We wish to put a partial order on $\Sub(A)$.
+
+Given any two monomorphisms $f:B \to A$ and $g:C\to A$, define $g\le f$ iff there is a morphism $h:C\to B$ such that
+$$
+\xymatrix{
+C\ar[dr]^g\ar[dd]_h\\
+&A\\
+B\ar[ur]_f
+}
+$$
+Now, if $f':B'\to A$ is equivalent to $f$ and $g':C\to A$ is equivalent to $g$, then we have morphisms $x:C\to C'$ and $x':C'\to C$ and $y:B\to B'$ and $y':B'\to B$ such that the diagram below consisting of only the solid lines is commutative:
+$$
+\xymatrix{
+C\ar[dr]_g\ar[dd]_h\ar[rr]_x & & C'\ar[dl]^{g'}\ar[ll]_{x'} \ar@{.>}[dd]^{h'} \\
+&A &\\
+B\ar[ur]^f\ar[rr]_y & & B'\ar[ul]_{f'}\ar[ll]_{y'}
+}
+$$
+We define $h'=y\circ h\circ x'$ (the dotted line above).  Then the diagram above including the dotted line is commutative: as $f'\circ h'=f'\circ (y\circ h\circ x')= f\circ (h\circ x')=g \circ x' = g'$.  Hence $g'\le f'$.  As a result, $\le$ induces a binary relation on $\Sub(A)$: $$C\le B$$ iff there are representing monomorphisms $f:B\to A$ and $g:C\to A$ such that $g\le f$.  Let us use the same notation $\le$ for the induced relation.  Then $\le$ on $\Sub(A)$ is a partial ordering on $\Sub(A)$:
+
+\begin{description}
+\item[reflexivity:] $B\le B$, because the composition of the identity morphism $1_B$ with any representing monomorphism $f:B\to A$ is $f$ itself.
+\item[anti-symmetry:] if $B\le C$ and $C\le B$, then there are representing monomorphisms $f:B\to A$ and $g:C\to A$ such that $f\le g$ and $g\le f$.  So there are morphisms $h:B\to C$ and $h':C\to B$ such that
+$$
+\xymatrix{
+C\ar@<0.5ex>[dr]^g \ar@<0.5ex>[dd]^{h'}\\
+&A\\
+B\ar@<-0.5ex>[ur]_f \ar@<0.5ex>[uu]^h
+}
+$$
+is commutative.  But this just means that $h$ and $h'$ are inverses of one other, or $B\cong C$, so that they are the same subobject of $A$.
+
+\item[transitivity:] if $D\le C$ and $C\le B$, then there are representing monomorphisms $f:B\to A$, $g:C\to A$ and $h:D\to A$ such that $h\le g$ and $g\le f$.  This means there are morphisms $r:D\to C$ and $s:C\to B$ such that $g\circ r = h$ and $f\circ s=g$.  Since $f\circ (s\circ r)=g\circ r=h$, $h\le f$, and as a result, $D\le B$.
+\end{description}
+
+Thus, $\le$ turns $\Sub(A)$ into a partially ordered class, with top element $A$.  With this, we may form the notions of unions and intersections of subobjects.  Formally, let $\lbrace B_i \mid i\in I\rbrace$ be a collection of subobjects of $A$, indexed by a set $I$.  
+\begin{itemize}
+\item
+The \emph{union} $C$ of $B_i$ is the supremum of the $B_i$'s with respect to $\le$, provided that it exists.  In notation, we write $$C=\bigvee_{i\in I} B_i.$$
+\item
+The \emph{intersection} $D$ of $B_i$ is the infimum of the $B_i$'s with respect to $\le$, provided that it exists.  In notation, we write $$D=\bigwedge_{i\in I} B_i.$$
+\end{itemize}
+
+For example, let $f:B \to A$ and $g:C\to A$ be subobjects of $A$.  Then the pullback of $f$ and $g$, if it exists, is the intersection of $B$ and $C$.
+
+\textbf{Remark}.  It can be shown that in any Abelian category, $\Sub(A)$ under $\le$ is a lattice for any object $A$.
+%%%%%
+%%%%%
+\end{document}

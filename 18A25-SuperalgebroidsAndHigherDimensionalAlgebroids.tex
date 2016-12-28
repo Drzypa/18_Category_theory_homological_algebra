@@ -1,0 +1,318 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SuperalgebroidsAndHigherDimensionalAlgebroids}
+\pmcreated{2013-03-22 18:30:02}
+\pmmodified{2013-03-22 18:30:02}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{superalgebroids and higher dimensional algebroids}
+\pmrecord{10}{41185}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A25}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{55U35}
+\pmclassification{msc}{18D05}
+\pmsynonym{HDA superstructure}{SuperalgebroidsAndHigherDimensionalAlgebroids}
+%\pmkeywords{higher dimensional algebroids}
+%\pmkeywords{groupoids}
+%\pmkeywords{superalgebroids or generalized superalgebra}
+%\pmkeywords{graded Lie algebroids}
+\pmrelated{RAlgebroid}
+\pmrelated{HDA}
+\pmrelated{HigherDimensionalAlgebraHDA}
+\pmrelated{SuperfieldsSuperspace}
+\pmdefines{generalized superalgebra}
+\pmdefines{graded Lie algebroid}
+\pmdefines{HDA structure}
+
+% this is the default PlanetMath preamble.  
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate,color}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+\def\blue{\textcolor{blue}}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\midsqn}[1]{\ar@{}[dr]|{#1}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsubsection{Definitions of double, and higher dimensional, algebroids, superalgebroids and generalized superalgebras}
+
+\emph{Double algebroids}
+
+
+\begin{definition} A \emph{double $R$--algebroid} consists of a 
+\PMlinkname{double category $D$}{HomotopyDoubleGroupoidOfAHausdorffSpace}, 
+as detailed in ref.\cite{BS1}, such that each category structure has the additional structure of
+an $R$--algebroid.  More precisely, a double \PMlinkname{$R$--algebroid}{RAlgebroid} $\D$ involves four related 
+\PMlinkname{$R$--algebroids}{RAlgebroid}:
+
+\begin{equation}
+\begin{aligned} (D,D_1,\del^0_1 ,\del^1_1 , \vep_1 , +_1 , \circ _1 , ._1)
+,\qquad  &(D,D_2,\del^0_2 , \del ^1_2 , \vep_2 , +_2 , \circ _2 ,
+._2 )\\
+ (D_1,D_0, \delta^0_1 ,\delta^1_1 , \vep , + , \circ  , .) ,\qquad
+ &(D_2 , D_0 , \delta^0_2 , \delta^1_2 , \vep , + , \circ  , .)
+\end{aligned}
+\end{equation}
+that satisfy the following rules:
+
+\begin{itemize}
+\item[i)]
+$\delta^i_2 \del^j_2 = \delta ^j_1 \del ^i_1$  for $i,j \in
+\{0,1\}$
+
+\med
+\item[ii)]
+\begin{equation}
+\begin{aligned} \del^i_2 ( \a +_1 \be) = \del^i_2\a
++\del^i_2\be , \qquad &\del^i_1 ( \a +_2 \be) = \del^i_1 \a
++\del^i_1\be \\ \del^i_2 ( \a \circ _1 \be) = \del^i_2 \a \circ
+\del^i_2 \be ,\qquad  &  \del^i_1 (\a \circ _2 \be ) = \del^i_1\a
+\circ \del^i_1\be
+\end{aligned}
+\end{equation}
+for $i = 0,1 , \a,\be  \in D$ and both sides are defined.
+
+\med
+\item[iii)]
+\begin{equation}
+\begin{aligned}
+r ._1 (\a+_2 \be) = (r ._1 \a) +_2 (r ._1\be ) ,\qquad  & r ._2
+(\a  +_1 \be  ) = (r ._2 \a ) +_1 (r ._2\be  )\\ r ._1 (\a  \circ
+_2 \be ) = (r ._1\a ) \circ _2  (r ._1 \be )  , \qquad & r ._2 (\a
+\circ _1 \be  ) = (r ._2 \a ) \circ _1  (r ._2\be )\\
+ r ._1 ( s ._2 \be  ) &= s ._2 ( r._1 \be  )
+\end{aligned}
+\end{equation}
+for all $\a ,\be  \in  D, ~r,s \in R$ and both sides are defined.
+
+\med
+\item[iv)]
+\begin{equation}
+\begin{aligned}
+(\a  +_1 \be  ) +_2  (\gamma  +_1 \lambda )& = (\a  +_2 \gamma )
++_1 (\be   +_2  \lambda ) ,\\
+ (\a  \circ _1 \be ) \circ _2  (\gamma  \circ _1  \lambda )& =
+(\a  \circ _2  \gamma ) \circ _1  (\be   \circ _2  \lambda
+ )\\ (\a  +_i \be  ) \circ _j (\gamma  +_i \lambda ) &= (\a  \circ _j
+\gamma ) +_i (\be   \circ _j \lambda )
+\end{aligned}
+\end{equation}
+for  $i \neq j$, whenever both sides are defined.
+\end{itemize}
+
+\end{definition}
+
+The definition of a double algebroid specified above was introduced by Brown and Mosa \cite{RBM1986}. 
+Two functors can be then constructed, one from the category of double algebroids to the
+category of crossed modules of algebroids, whereas the reverse functor is the unique adjoint (up to natural
+equivalence). The construction of such functors requires the following definition.
+
+\subsection{Category of Double Algebroids}
+
+A \textit{morphism $f : \D \to \E$ of double algebroids} is then
+defined as a morphism of truncated cubical sets which commutes
+with all the algebroid structures. Thus, one can construct a
+category $\mathbf{DA}$ of double algebroids and their morphisms.
+The main construction in this subsection is that of two functors
+$\eta,\eta'$ from this category $\mathbf{DA}$ to the category
+$\mathbf{CM}$ of crossed modules of algebroids.
+
+Let ${D}$ be a double algebroid. One can associate to ${D}$ a
+crossed module $\mu : M  \lra {D}_1$. Here $M(x,y)$ will consist
+of elements $m$ of ${D}$ with boundary of the form:
+                                                                                                0                         1
+\begin{equation}
+\del m = \quadr{a}{1_y}{1_x}{ 0_{xy}}~,
+\end{equation}
+that is
+$M(x,y) = \{ m \in D : \del^1_1 m = 0_{xy} , \del^0_2 m =
+1_x,\del^1_2  m = 1_y \}$.
+
+\subsection{Cubic and Higher dimensional algebroids}
+
+One can extend the above notion of double algebroid to cubic and higher dimensional algebroids.
+The concepts of 2-algebroid, 3-algebroid,..., $n$--algebroid and superalgebroid are however
+quite distinct from those of double, cubic,..., n--tuple algebroid, and have technically less complicated
+definitions. 
+
+
+\begin{thebibliography}{9}
+
+\bibitem{RBM1986}
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales--Bangor, Maths Preprint, 1986.
+
+
+\bibitem{BS1}
+R. Brown and C.B. Spencer: Double groupoids and crossed modules, \emph{Cahiers Top. G\'eom.Diff.} \textbf{17}: 343--362 (1976).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

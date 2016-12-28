@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InternalCategory}
+\pmcreated{2013-03-22 18:28:59}
+\pmmodified{2013-03-22 18:28:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{internal category}
+\pmrecord{12}{41159}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D35}
+\pmclassification{msc}{18D99}
+\pmclassification{msc}{18D05}
+\pmsynonym{category object}{InternalCategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a small category is a category where the class of objects is a set.  As a result, the class of morphisms is also a set.  One can thus define a small category completely within set theory, as a 6-tuple $(O,M,s,t,i,c)$, where
+\begin{enumerate}
+\item $O$ is the set of objects and $M$ is the set of morphisms
+\item $s,t: M\to O$ are functions such that $s(f)$ is the source (domain) of $f$, and $t(f)$ is the target (codomain) of $f$
+\item $i:O\to M$ is a function such that $i(A)$ is the identity morphism $1_A$
+\item $c:K\to M$ is a function such that $c(g,f)$ is the composition of morphism $f$ followed by morphism $g$ (or $g\circ f$); here, $K$ is the collection the all composable pairs of morphisms: $$K=\lbrace (g,f)\in M\times M\mid s(g)=t(f)\rbrace$$
+\end{enumerate}
+These functions satisfy the following rules:
+\begin{enumerate}
+\item the source and target of an identity morphism on an object $A\in O$ is just $A$: $$s(i(A))=t(i(A))=A$$
+\item the source of $c(g,f)$ is the the source of $f$, and the target of $c(g,f)$ is the target of $g$: $$s(c(g,f))=s(f)\qquad \mbox{ and }\qquad t(c(g,f))=t(g)$$
+\item the composition of a morphism $f$ with the identity morphism of its source $s(f)$ is just $f$; same holds for $t(f)$: $$c(f,i(s(f)))=f=c(i(t(f)),f)$$
+\item composition is associative, if defined: that is, if $(g,f),(h,g)\in K$, then $$c(h,c(g,f))=c(c(h,g),f)$$
+\end{enumerate}
+
+An internal category is the ``categorical abstraction'' (and generalization) of a small category.  Whereas a small category can be completely described in \textbf{Set}, the category of sets, an internal category is completely specified within another category, using only objects and morphisms of this category and their properties.
+
+\textbf{Definition}.  Given a category $\mathcal{C}$ with pullbacks, an \emph{internal category} (or \emph{category object}) $\mathcal{D}$ of $\mathcal{C}$ consists of the following:
+\begin{enumerate}
+\item two objects $O,M$ of $\mathcal{C}$, where $O$ is called the \emph{object of objects}, and $M$ the \emph{object of morphisms},
+\item two morphisms $s,t:M\to O$, where $s,t$ are called the \emph{source} and \emph{target} respectively,
+\item a morphism $i:O\to M$ called the \emph{identity},
+\item a morphism $c:M\times_O M\to M$ called the \emph{composition}, where $M\times_O M$ is the pullback of $s$ and $t$:
+$$\xymatrix@+=2cm{M\times_O M \ar[r]^-{p_1} \ar[d]_{p_2} & M \ar[d]^s \\ M \ar[r]_t & O}$$
+\end{enumerate}
+such that the following conditions are satisfied
+\begin{enumerate}
+\item $s\circ i=t\circ i=1_O$, the identity morphism on $O$
+\item $s\circ c = s\circ p_2$ and $t\circ c=t\circ p_1$
+\end{enumerate}
+For condition 3, we need to introduce some notations.  By condition 1, we see that $s\circ i \circ t = 1_O \circ t = t = t\circ 1_M$ and $t\circ i\circ s = 1_O\circ s = s=s\circ 1_M$.  So we get two commutative diagrams
+$$\xymatrix@+=2cm{M \ar[r]^{i\circ t} \ar[d]_{1_M} & M \ar[d]^s="1" & & M \ar[r]^{1_M} \ar[d]_{i\circ s}="2" & M \ar[d]^s \\ M \ar[r]_t & O & & M \ar[r]_t & O   \ar@{}"1";"2"|-{\mbox{and}} }$$
+Because $M\times_O M$ is the pullback of $s$ and $t$, we get two unique morphisms $${i\!\circ\! t \choose 1_M}:M\to M\times_O M \qquad \mbox \qquad {1_M \choose i\!\circ\! s}:M\to M\times_O M$$
+and commutative diagrams
+$$\xymatrix@+=2cm{& M \ar[dl]_{1_M} \ar[dr]^{i\circ t}="1" \ar[d]^{i\circ t \choose 1_M} &  &  & M  \ar[dl]_{i\circ s}="2" \ar[dr]^{1_M} \ar[d]^{1_M \choose i\circ s} & \\ M & M\times_O M \ar[l]^-{p_1} \ar[r]_-{p_2} & M  &  M & M\times_O M \ar[l]^-{p_1} \ar[r]_-{p_2} & M \ar@{}"1";"2"|-{\mbox{and}} }$$
+Now, we are ready for condition 3:
+\begin{enumerate}
+\item[3.] $c\circ \displaystyle{i\!\circ\! t \choose 1_M} = 1_M = c\circ \displaystyle{i_M \choose i\!\circ\! s}$ 
+\end{enumerate}
+Condition 4 also requires some preliminary explanation.  Since $\mathcal{C}$ has pullbacks, we get two pullback diagrams:
+$$\xymatrix@+=2cm{M\times_O(M\times_O M) \ar[r]^-{t \times_O 1_M} \ar[d] & M\times_O M \ar[d]^{s\circ p_1} & (M\times_O M)\times_O M \ar[r] \ar[d]_-{1_M \times_O s} & M \ar[d]^s \\ M \ar[r]_t & O & M\times_O M \ar[r]_{t\circ p_2} & O}$$
+which result in two morphisms: 
+$$t \times_O 1_M: M \times_O (M \times_O M) \to M\times_O M  \qquad\mbox{and} \qquad  1_M \times_O s: (M\times_O M)\times_O M \to M\times_O M $$
+
+Since $M \times_O (M \times_O M) \cong (M\times_O M)\times_O M \cong M\times_O M \times_O M$, we may view $M\times_O M \times_O M$ as the domain of morphisms $t \times_O 1_M$ and $1_M \times_O s$.  We are now ready for condition 4:
+\begin{enumerate}
+\item[4.] $c\circ (t \times_O 1_M) = c\circ (1_M \times_O s)$.
+\end{enumerate}
+
+\textbf{Remark}.  In \textbf{Set}, an internal category is just a small category as we have seen from the discussion earlier.  An internal category in \textbf{Cat} is a double category.
+%%%%%
+%%%%%
+\end{document}

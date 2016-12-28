@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SnakeLemmaProofOf}
+\pmcreated{2013-03-22 14:09:28}
+\pmmodified{2013-03-22 14:09:28}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{snake lemma, proof of}
+\pmrecord{4}{35578}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmsynonym{proof of zig-zag lemma}{SnakeLemmaProofOf}
+\pmsynonym{proof of serpent lemma}{SnakeLemmaProofOf}
+%\pmkeywords{exact sequence}
+%\pmkeywords{kernel-cokernel sequence}
+\pmrelated{LongExactSequenceOfHomologyGroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\im}{im}
+\begin{document}
+\PMlinkescapeword{commutative}
+\PMlinkescapeword{commutativity}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{sequences}
+\PMlinkescapeword{exact}
+\PMlinkescapeword{row}
+\PMlinkescapeword{square}
+\PMlinkescapeword{presentation}
+\PMlinkescapeword{lemma}
+%\begin{proof}
+Suppose we are given a commutative diagram
+\[\xymatrix{
+0\ar[r] &
+A_1\ar[d]_{\alpha}\ar[r] &
+B_1\ar[d]_{\beta}\ar[r] &
+C_1\ar[d]_{\gamma}\ar[r] &
+0 \\
+0\ar[r] &
+A_2\ar[r] &
+B_2\ar[r] &
+C_2\ar[r] &
+0 \\
+}\]
+with \PMlinkname{exact rows}{ExactSequence2}.
+We wish to prove that the sequence
+\[0\to\ker\alpha\to\ker\beta\to\ker\gamma\to
+\coker\alpha\to\coker\beta\to\coker\gamma\to 0\]
+is exact.\footnote{This proof was reconstructed without any notes, but the style of the proof is influenced by a presentation by Edgar Enochs of the zig-zag lemma.}
+
+First we claim that if any square
+\[\xymatrix{
+X_1\ar[d]_{\varphi}\ar[r] & Y_1\ar[d]_{\psi} \\
+X_2\ar[r] & Y_2
+}\]
+is commutative, then there are well-defined morphisms
+$\ker\varphi\to\ker\psi$ and $\coker\varphi\to\coker\psi$.
+For example, if $x\in\ker\varphi$, then the square
+\[\xymatrix{
+x\ar@{|->}[d]_{\varphi}\ar@{|->}[r] & y\ar@{|->}[d]_{\psi} \\
+0\ar@{|->}[r] & 0
+}\]
+must commute, and so the image of $x$ in the top row must be
+in $\ker\psi$.  The proof of the claim for cokernels is similar.
+Thus we have two sequences,
+\[0\to\ker\alpha\to\ker\beta\to\ker\gamma\text{\ and\ }
+\coker\alpha\to\coker\beta\to\coker\gamma\to 0,\]
+each of which inherits being a complex from the original diagram.
+
+Suppose $x\in\ker\beta$ is sent to $0\in\ker\gamma$.  By exactness,
+$x$ has a preimage $x'\in A_1$.  Because the diagram
+\[\xymatrix{
+x'\ar@{|->}[d]_{\alpha}\ar@{|->}[r] & x\ar@{|->}[d]_{\beta} \\
+y'\ar@{|->}[r] & 0
+}\]
+is commutative and the bottom morphism is injective, $y'=0$ and so
+$x'\in\ker\alpha$.  So the sequence
+\[0\to\ker\alpha\to\ker\beta\to\ker\gamma\]
+is exact.  The proof of the claim for the cokernel sequence is
+similar.
+
+So now all we need to do is find a connecting morphism
+$\ker\gamma\to\coker\alpha$ such that the resulting sequence
+is exact at both of those points.
+
+Suppose $x''\in\ker\gamma$.  Then $x''$ has at least one preimage in $B_1$.
+So let $x$ and $\widehat{x}$ be preimages of $x''$.
+Thus $\widehat{x}-x\mapsto 0$ and so by exactness has a
+preimage $x'\in A_1$.
+By commutativity of the diagram, $\beta(x)$ has a preimage $y'$, which is
+unique by injectivity of the morphism $A_2\to B_2$.  But we know
+that the square
+\[\xymatrix{
+x'\ar@{|->}[d]_{\alpha}\ar@{|->}[r] & \widehat{x}-x\ar@{|->}[d]_{\beta} \\
+\alpha(x')\ar@{|->}[r] & \beta(\widehat{x}-x)
+}\]
+is commutative.
+We wish to define $\ker\gamma\to\coker\alpha$ by
+$x''\mapsto y'+\im\alpha$.
+Observe that
+\[y'+\alpha(x')\mapsto\beta(x)+\beta(\widehat{x}-x)=\beta(\widehat{x}),\]
+and so the choice of preimage of $x''$ does not affect which cokernel
+element we ultimately select.  So now we have our connecting
+morphism.  By applying this definition we see that
+\[\ker\beta\to\ker\gamma\to\coker\alpha\to\coker\beta\]
+is a complex.
+
+Suppose $x''\in\ker\gamma$ is sent to $0$ by the connecting morphism.
+Thus we have a diagram
+\[\xymatrix{
+x'\ar@{|->}[d]_{\alpha} & x\ar@{|->}[d]_{\beta}\ar@{|->}[r] & x''\ar@{|->}[d]_{\gamma} \\
+y'\ar@{|->}[r] & \beta(x)\ar@{|->}[r] & 0
+}\]
+which is commutative.  Let $\widehat{x}$ be the image of $x'$ under the
+morphism $A_1\to B_1$.  Exactness of the diagram implies that $x-\widehat{x}$
+is a preimage of $x''$.  But $\beta(x-\widehat{x})=0$.  So the kernel-cokernel
+sequence is exact at $\ker\gamma$.  The proof that it is exact at
+$\coker\alpha$ is similar.\qedhere
+%\end{proof}
+%%%%%
+%%%%%
+\end{document}

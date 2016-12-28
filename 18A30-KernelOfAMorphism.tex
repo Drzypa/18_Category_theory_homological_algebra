@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KernelOfAMorphism}
+\pmcreated{2013-03-22 18:20:09}
+\pmmodified{2013-03-22 18:20:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{kernel of a morphism}
+\pmrecord{22}{40968}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{18A20}
+\pmsynonym{null morphism}{KernelOfAMorphism}
+\pmsynonym{has kernels}{KernelOfAMorphism}
+\pmsynonym{has cokernels}{KernelOfAMorphism}
+\pmsynonym{Ab1 axiom}{KernelOfAMorphism}
+\pmrelated{KernelIsAnInverseLimit}
+\pmdefines{kernel}
+\pmdefines{cokernel}
+\pmdefines{zero morphism}
+\pmdefines{have kernels}
+\pmdefines{have cokernels}
+\pmdefines{Ab1}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category with zero object $O$.  Given objects $A,B$, we can define a \emph{zero morphism}, or \emph{null morphism} to be the morphism $o_{A,B}$ of the composition of the two unique morphisms $A\to O$ and $O\to B$ in $\operatorname{Hom}(A,B)$:
+$$\xymatrix@+=4pc{A\ar[r]^{o_{A,B}}&B}=\xymatrix@1{A\ar[r]&O\ar[r]&B}.$$
+This morphism is unique with respect to $A$ and $B$, because $A\to O$ and $O\to B$ are both unique, and any two zero objects are isomorphic.  Instead of writing $o_{A,B}$, we may drop the subscript and write $o$ if there is no confusion.  It is easy to see that a composition of a morphism with a zero morphism is a zero morphism.
+
+With the zero morphism, we define the \emph{kernel} of a morphism $f:A\to B$ to be the equalizer of $f$ and the corresponding zero morphism $o:A\to B$.  This means that, if $k:K\to A$ is the kernel of $f$, then $f\circ k=o$, and if $f\circ g=o$ for some morphism $g$, there is a unique morphism $h$ such that $g=k\circ h$.  Diagrammatically, this means that
+$$\xymatrix@+=3pc{K\ar[r]^k & A\ar[r]^f &B}=0,$$
+and if
+$$\xymatrix@+=3pc{C\ar[r]^g & A\ar[r]^f &B}=0,$$
+then there is a unique $h: C\to K$ such that
+\begin{center}
+$\xymatrix@R-=1pc{
+C\ar[dr]^g\ar[dd]_h\\
+&A\\
+K\ar[ur]_k
+}$
+\end{center}
+is a commutative diagram.
+
+By the universality of equalizers, $(K,k)$ is unique up to isomorphism, if it exists.  We usually call $K$ the kernel of $f$, and denote it by $\ker(f)$, since $k$ is determined by $K$, up to isomorphism.  A \emph{kernel} is the kernel of some morphism.  A kernel is always a monomorphism:
+\begin{proof}
+Suppose $k:K\to A$ is the kernel of $f:A\to B$, and $g,h:D\to K$ are morphisms such that $r:=k\circ g=k\circ h:D\to A$.  Then $f\circ r = f\circ (k\circ g)=(f\circ k)\circ h=0$, so that there is a unique morphism $s:D\to K$ such that $k\circ s=r$.  But then $k\circ s=k\circ g=k\circ h$ also.  Since $s$ is unique, $g=h$.
+\end{proof}
+
+Dually, we can define the cokernel of a morphism $g$, $\operatorname{coker}(g)$, to be the coequalizer of $g$ and $o$.  A \emph{cokernel} is the cokernel of a morphism.  A cokernel is always an epimorphism.
+
+\textbf{Remark}.  A category with zero object is said to \emph{have kernels} if every morphism has a kernel.  Dually, it is said to \emph{have cokernels} if every morphism has a cokernel.
+
+\textbf{Examples}.  
+\begin{itemize}
+\item
+The category \textbf{Grp} of groups has the trivial group as the zero object, and any trivial group homomorphism, mapping every element in the domain to the identity in the range, as a zero morphism.
+\item
+The category \textbf{Grp} of groups has kernels.  For any group homomorphism $\phi:G\to H$, let $K=\ker(\phi)$, the kernel of $\phi$ (in the sense of group theory), and $k:K\to G$ be the canonical injection.  We shall see presently that $K$ is the kernel of $f$, in the sense of category theory.  First, $\phi \circ k (a) =\phi(a)=e$ for every $a\in K=\ker(\phi)$.  Let $\sigma:S\to G$ be another group homomorphism with $\phi\circ \sigma = 1$, the trivial map from $S$ to $H$.  Define $\psi:S\to K$ by $\psi(s)=\sigma(s)$, which is a well-defined, because $\phi(\sigma(s))=e$, or $\sigma(s)\in \ker(\phi)=K$.  Furthermore, $\sigma(s) = \psi(s) = k(\psi(s))$.  It is easy to see that $\psi$ is unique.  Thus, $\ker(\phi)$ is the kernel of $\phi:G\to H$ in $\textbf{Grp}$.
+\item
+In addition, $\textbf{Grp}$ has cokernels.  Let $\phi: G\to H$ be as above, and $C:=\phi(G)^H$ the \PMlinkname{normal closure}{NormalClosure2} of $\phi(G)$ in $H$.  Form $Q=H/C$ and let $p: H\to Q$ be the canonical projection.  For any $a\in G$, we have $p\circ \phi(a) = \phi(a)C = C$, since $\phi(a)\in \phi(G)\subseteq C$.  Let $q: H\to T$ be a group homomorphism with $q\circ \phi = 1$.  Define $\mu: Q\to T$ by $\mu(bC)=q(b)$.  This is well-defined, for if $cC=bC$, then $cb^{-1}\in C$, which means that $cb^{-1}$ is a finite product of elements of the form $d\phi(a)d^{-1}$ where $a\in G$ and $d\in H$.  Since $q(d\phi(a)d^{-1})=q(d)q(d^{-1})=e\in T$, we have that $q(c)q(b)^{-1}=e$.  Again, $\mu$ is easily seen to be unique.  This shows that $H/C$ is the cokernel of $\phi:G\to H$ in \textbf{Grp}.
+\end{itemize}
+
+\textbf{Remark}.  A category is said to be \emph{Ab1}, a la Grothendieck, if it satisifes the \emph{Ab1 Axiom}: it has kernels and cokernels.  From the examples above, \textbf{Grp} is Ab1.
+%%%%%
+%%%%%
+\end{document}

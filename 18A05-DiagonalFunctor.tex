@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiagonalFunctor}
+\pmcreated{2013-03-22 16:37:11}
+\pmmodified{2013-03-22 16:37:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{diagonal functor}
+\pmrecord{5}{38818}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{18-00}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category.  A \emph{diagonal functor} on $\mathcal{C}$ is a functor $\delta:\mathcal{C}\to \mathcal{C}^I$ for some set $I$ given by
+$$\delta(A)=(A)_{i\in I}\quad\mbox{ and }\quad \delta(\alpha)=(\alpha)_{i\in I}.$$
+Here, $\mathcal{C}^I$ denotes the \PMlinkname{$I$-fold direct product}{ProductCategory} of the category $\mathcal{C}$.  For any given $I$, $\delta$ is unique.
+
+$\delta$ is \PMlinkname{faithful}{FaithfulFunctor}.  Its image, $\delta(\mathcal{C})$, is the subcategory of $\mathcal{C}^I$ whose objects are $(A)_{i\in I}$ and morphisms are $(\alpha)_{i\in I}$.  $\delta(\mathcal{C})$ is \PMlinkname{isomorphic}{CategoryIsomorphism} to $\mathcal{C}$, and may be pictured as the great diagonal of an $I$-dimensional ``cube''.
+
+More generally, when $I$ is a category, then the diagonal functor is just a functor $\delta$ that sends each object $A\in \mathcal{C}$ to the constant functor $\delta(A):I\to \mathcal{C}$ with fixed value $A$, and every morphism $\alpha:A\to B$ to the natural transformation $\delta(\alpha):\delta(A)\dot{\to} \delta(B)$, which sends every object $i\in I$ to $\alpha$.  A routine verification shows that $\delta(\alpha)$ is indeed a natural transformation.
+%%%%%
+%%%%%
+\end{document}

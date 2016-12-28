@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeltaFunctor}
+\pmcreated{2013-03-22 15:27:55}
+\pmmodified{2013-03-22 15:27:55}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{delta functor}
+\pmrecord{4}{37317}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G10}
+\pmclassification{msc}{18G99}
+\pmsynonym{$\delta$-functor}{DeltaFunctor}
+%\pmkeywords{exact sequence}
+%\pmkeywords{homological algebra}
+\pmrelated{DerivedFunctor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The concept of a $\delta$-functor is used to formalize the procedure
+of constructing long exact sequences from short exact sequences.
+Examples include derived functors and cohomology.
+
+{\bf Definition.}\enspace
+Let $\mathcal{A}$ and $\mathcal{B}$ be Abelian categories.  A
+\emph{delta functor} ($\delta$-functor) from $\mathcal{A}$ to
+$\mathcal{B}$ consists of a family of covariant additive
+functors
+$$
+F^n\colon\mathcal{A}\to\mathcal{B}\quad(n=0,1,2,\ldots)
+$$
+and for each exact sequence
+$$
+0\to A\to B\to C\to 0
+$$
+of objects in $\mathcal{A}$ a family of homomorphisms
+$$
+\delta^n\colon F^n(C)\to F^{n+1}(A)\quad(n=0,1,2,\ldots)
+$$
+such that the following two conditions hold:
+\begin{enumerate}
+\item For any exact sequence $0\to A\to B\to C\to 0$ as above, there
+is a corresponding long exact sequence
+$$
+\vcenter{\openup\jot
+\ialign{\hfil$\displaystyle{#{}}$&$\displaystyle{#}$\hfil\crcr
+0\to& F^0(A)\to F^0(B)\to F^0(C)\stackrel{\delta^0}{\longrightarrow}\cr
+&F^1(A)\to F^1(B)\to
+F^1(C)\stackrel{\delta^1}{\longrightarrow}\cdots.\cr}}
+$$
+\item For any morphism between exact sequences
+$$
+\xymatrix{
+0\ar[r] & A\ar[r]\ar[d] & B\ar[r]\ar[d] & C\ar[r]\ar[d] & 0 \\
+0\ar[r] & A'\ar[r] & B'\ar[r] & C'\ar[r] & 0 \\
+}
+$$
+and all integers $n\ge 0$ the diagram
+$$
+\xymatrix{
+F^n(C) \ar[r]^{\delta^n} \ar[d] & F^{n+1}(A) \ar[d] \\
+F^n(C') \ar[r]^{\delta^n} & F^{n+1}(A') \\
+}
+$$
+is commutative.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

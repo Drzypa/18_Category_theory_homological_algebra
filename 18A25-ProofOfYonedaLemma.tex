@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfYonedaLemma}
+\pmcreated{2013-03-22 18:30:16}
+\pmmodified{2013-03-22 18:30:16}
+\pmowner{GodelsTheorem}{21277}
+\pmmodifier{GodelsTheorem}{21277}
+\pmtitle{proof of Yoneda lemma}
+\pmrecord{7}{41188}
+\pmprivacy{1}
+\pmauthor{GodelsTheorem}{21277}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We give a proof of Yoneda's Lemma. Thus, we have to show that  $\mathcal{C}\to\hat{\mathcal{C}}$ is a faithful functor. Let $X$ and $Y$ be two objects belonging to $\mathcal{C}$, we want to show that 
+
+
+$\psi : {\rm Hom}(X,Y)\to {\rm Hom}(X(.),Y(.))$  
+
+$f\mapsto (f_K:X(K)\to Y(K))_K$      is bijective.
+
+Let's start with injectivity. Let $f$ and $g$ be two morphisms from $X$ to $Y$ which are having the same mappings for the points $f_K=g_K$ for all K. Let's show that $f=g$. What happens for the $X$-points? For the $X$-points, we have $f=g$ and the range of $f_X$ and of $g_X$ of the $X$-point of X which is $Id_X$ is exactly the $X$-points of $Y$ which are $f$ and $g$. Hence $f=g$.
+
+Now for surjectivity: let $\psi: X(.)\to Y(.)$ a morphism of functors. We need to show that this morphism comes from an arrow $f$ which should be the range of $Id_X$ by the map $\phi_X$. Thus, let $f=\psi_X(Id_X)$. 
+Let's verify that $f_K=\psi_K$ for all $K$. Let $p:K\to X$ be a $K$-point of $X$. $p$ is a morphism between the two types of points $K$ and $X$ and in this case we have the following commutative diagram:
+
+$I don't know how to do diagrams with latex, it's too hard$
+
+If you make $Id(X)$ turn in the diagram one verifies that $\psi_K(p)=f\circ p=f_K(p)$ which proves the surjectivity.
+%%%%%
+%%%%%
+\end{document}

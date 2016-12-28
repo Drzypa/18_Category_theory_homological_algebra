@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialObject}
+\pmcreated{2013-03-22 16:36:20}
+\pmmodified{2013-03-22 16:36:20}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{exponential object}
+\pmrecord{9}{38801}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D15}
+\pmrelated{CompleteCategory}
+\pmdefines{has exponentials}
+\pmdefines{exponential functor}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category with finite products and $A,B$ be objects in $\mathcal{C}$.  An object $E$ in $\mathcal{C}$ is called an \emph{exponential object} from $A$ to $B$ if it satisfies the following conditions:
+\begin{itemize}
+\item there is a morphism $f:E\times A\to B$, called an \emph{evaluation morphism}
+\item for any morphism $g:C\times A\to B$, there is a unique morphism $h:C\to E$ such that $f\circ (h\times 1_A)=g$, where $h\times 1_A:C\times A\to E\times A$ is the product morphism of $h$ and the identity morphism on $A$.
+\end{itemize}
+The two conditions can be summarized by the following commutative diagram:
+\begin{center}
+$
+\xymatrix@R-=20pt{
+E\times A\ar[dr]^f\\
+&B\\
+C\times A\ar[ur]_g\ar[uu]^{h\times 1_A}
+}
+$
+\end{center}
+where $h$ is uniquely determined by $g$.  It is easy to see that any two exponential objects from $A$ to $B$ are isomorphic, hence the existence of an exponential objects between two objects is a universal property.  We may write $B^A (\cong E$ above) \emph{the} exponential object from $A$ to $B$.
+
+For example, in the category of sets, $\textbf{Set}$, where products clearly exist (empty set is a set!) between pairs of objects (sets), the exponential from $A$ to $B$ is the set $B^A$, which is defined as the set of all functions from $A$ to $B$.  The evaluation morphism is the function $ev: B^A\times A\to B$ given by $ev(f,a)=f(a)$, where $f\in B^A$ and $a\in A$.  If $g:C\times A\to B$ is any function, then we define $h:C\to B^A$ by $h(c)(a)=g(c,a)$.  Then $ev\circ (h\times 1_A)(c,a)=ev(h(c),a)=h(c)(a)=g(c,a)$, and $ev$ is universal (in the sense of the second condition above).
+
+Since each $h$ is uniquely determined by $g$ in the above definition, and conversely every $h$ determines a $g$ by the formula $g=f\circ (h\times 1_A)$, we have a bijection $$\hom(C\times A,B)\cong \hom(C,B^A).$$
+
+If an exponential object exists between every pair of objects in category $C$ with finite products, then we say that $C$ \emph{has exponentials}.  According to the bijection above, we see that the functor $\cdot\times A:\mathcal{C}\to \mathcal{C}$ has a right adjoint, namely $\cdot ^A:\mathcal{C}\to\mathcal{C}$, called the \emph{exponential functor}.
+
+It can be seen that a category $C$ with finite products has exponentials iff the covariant function $\cdot\times A:\mathcal{C}\to\mathcal{C}$ has a right adjoint for every object $A$ in $\mathcal{C}$.
+%%%%%
+%%%%%
+\end{document}

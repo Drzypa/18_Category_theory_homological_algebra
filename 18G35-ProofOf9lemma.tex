@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOf9lemma}
+\pmcreated{2013-03-22 16:42:49}
+\pmmodified{2013-03-22 16:42:49}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of 9-lemma}
+\pmrecord{4}{38930}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+As in the proof of the 5-lemma, we assume without loss of generality that we are working in modules over a ring. In keeping with the notion that the maps between the $A$'s (as well as between the $B$'s and the $C$'s) are cohomology sequences, we denote all vertical maps by $d$. The map $A_i\to B_i$ is denoted $\alpha_i$, and the map $B_i\to C_i$ is denoted $\beta_i$. We must show that
+\begin{enumerate}
+\item $\beta_1$ is surjective;
+\item $\alpha_1$ is injective;
+\item $\ker \beta_1 \subset \mathrm{im}\  \alpha_1$;
+\item $\beta_1\circ\alpha_1=0$ (i.e. $\ker \beta_1 \supset \mathrm{im}\  \alpha_1$)
+\end{enumerate}
+
+$\beta_1$ is surjective: Choose $c\in C_1$. Then $dc = \beta_2 b$, and $\beta_3db=d\beta_2b=d^2c=0$, so $db=\alpha_3a=\alpha_3 da'$. Thus $d(b-\alpha_2 a')=0$, so $db'=b-\alpha_2 a'$. Finally, $d\beta_1 b'=\beta_2 db'=\beta_2(b-\alpha_2a')=\beta_2 b=dc$. But $d$ is injective, so $c=\beta_1 b'$.
+
+$\alpha_1$ is injective: This is clear, since $d\alpha_1=\alpha_2 d$, and $\alpha_2$ and both $d$'s are injective.
+
+$\ker \beta_1\subset \mathrm{im}\ \alpha_1$: Suppose $\beta_1(b)=0$. Then $\beta_2 db=d\beta_1 b=0$, so $db=\alpha_2 a$. But then $\alpha_3 da=d\alpha_2 a=d^2b=0$, and $\alpha_3$ is injective, so $a\in\ker d$ and $da'=a$. Finally, $d\alpha_1 a'=\alpha_2 da'=\alpha_2 a=db$. $d$ is injective and thus $b=\alpha_1 a'$.
+
+$\beta_1\circ\alpha_1=0$: $d\beta_1\alpha_1=\beta_2\alpha_2d=0$. But $d$ is injective, so $\beta_1\alpha_1=0$.
+
+Similar diagram chasing can be used to prove that if the top two rows are exact then so is the bottom row.
+%%%%%
+%%%%%
+\end{document}

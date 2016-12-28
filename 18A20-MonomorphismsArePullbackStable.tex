@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonomorphismsArePullbackStable}
+\pmcreated{2013-03-22 15:41:25}
+\pmmodified{2013-03-22 15:41:25}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{monomorphisms are pullback stable}
+\pmrecord{13}{37633}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmrelated{pullback}
+
+\usepackage{graphicx}
+\begin{document}
+In this entry we show that the pullback of a monomorphism is also a
+monomorphism.  Let $m:T\to Y$ be a monomorphism, let $f:X\to Y$ be
+an arbitrary morphism, and suppose that $S=T\times_Y X$ is a pullback
+(refer to the diagram below) with $\hat{m}:S\to X$ and $\hat{f}:S\to
+T$ the pullback projections.  Let $a,b:A\to S$ be morphisms such that
+\[ \hat{m} a = \hat{m} b =d.\]
+Our goal is to show that, necessarily, $a=b$.
+
+By the commutativity of the pullback square, we have
+\[ m \hat{f} a = m \hat{f} b.\]
+Since $m$ is a mono, this implies that 
+\[ \hat{f} a = \hat{f} b;\]
+we name this morphism $c$.  By construction,
+\[ fd = mc .\]
+Hence, by the universality of the pullback there exists a unique
+morphism from  $A$ to $S$ that makes everything commute.  Hence,
+both $a$ and $b$ are equal to that morphism, and hence are equal to
+each other.
+\begin{figure}[h]
+  \centering
+  \medskip
+  \includegraphics[width=5cm]{pullbackofmonomorphism-fig}
+  \medskip
+  \caption{pullback of a monomorphism}
+\end{figure}
+% $
+% \psmatrix[colsep=1.5cm,rowsep=1.5cm]
+% A \\
+%   & S & X\\
+%   & T & Y
+% \endpsmatrix
+%  \psset{nodesep=3pt,arrows=->}
+%  \ncline[offset=3pt]{1,1}{2,2}\trput[tpos=.4]{a}
+%  \ncline[offset=-3pt]{1,1}{2,2}\tlput[tpos=.6]{b}
+%  \ncline{>->}{2,2}{2,3}\taput{\hat{m}}
+%  \ncline{>->}{3,2}{3,3}\taput{m}
+%  \ncline{2,2}{3,2}\tlput{\hat{f}}
+%  \ncline{2,3}{3,3}\trput{f}
+%  \ncarc[arcangle=-30,nodesep=6pt]{1,1}{3,2}\tlput{c}
+%  \ncarc[arcangle=30,nodesep=6pt]{1,1}{2,3}\taput{d}
+% $
+
+\begin{thebibliography}{9}
+\bibitem{AHS} J. Ad\'amek, H. Herrlich and G.E. Strecker, ''Abstract and Concrete Categories'', \PMlinkexternal{\texttt{http://katmat.math.uni-bremen.de/acc/acc.pdf}}{http://katmat.math.uni-bremen.de/acc/acc.pdf}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

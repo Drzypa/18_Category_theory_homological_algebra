@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalMorphisms}
+\pmcreated{2013-03-22 18:29:28}
+\pmmodified{2013-03-22 18:29:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{orthogonal morphisms}
+\pmrecord{18}{41171}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A32}
+\pmsynonym{diagonally polar pair}{OrthogonalMorphisms}
+\pmdefines{orthogonal}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A morphism $f:A\to B$ in a category $\mathcal{C}$ is said to be \emph{orthogonal} to a morphism $g:C\to D$ in $\mathcal{C}$, written $$f\perp g$$ if whenever we have a commutative diagram
+$$\xymatrix@+=3pc{A \ar[r]^f \ar[d] & B \ar[d] \\ C \ar[r]_g & D}$$
+there is a unique morphism $h:B\to C$ such that the diagram 
+$$\xymatrix@+=3pc{A \ar[r]^f \ar[d] & B \ar[d] \ar@{.>}[dl]|h \\ C \ar[r]_g & D}$$
+is commutative also.  If $f\perp g$, we sometimes call the ordered pair $(f,g)$ a \emph{diagonally polar pair}.
+
+For example, in \textbf{Set}, the category of sets, any surjective function is orthogonal to an injective function.  To see this, suppose $f:A\to B$ is surjective and $g:C\to D$ injective, with $y\circ f= g\circ x$, where $x:A\to C$ and $y:B\to D$ are functions.  For any $b\in B$, there is some $a\in A$ such that $f(a)=b$ since $f$ is surjective.  Define $h:B\to C$ by $h(b)=x(a)$.  Now, if there is $c\in A$ such that $b=f(a)=f(c)$, then $g(x(a))= y(f(a))=y(b)=y(f(c))=g(x(c))$.  Since $g$ is injective, $x(a)=x(c)$.  This shows that $h$ is a well-defined function.  It is clear that $h\circ f=x$ and $g\circ h=y$.  Now, if $e:B\to C$ is another such a function, then $g(e(b))=y(b)=g(h(b))$, so that $e(b)=h(b)$ since $g$ is injective.  This shows that $h$ is uniquely defined.
+
+Here are some basic properties of the orthogonality relation on morphisms:
+
+\begin{itemize}
+\item
+If either $f$ or $g$ is an isomorphism, then $f\perp g$.
+\item 
+If $f\perp f$, then $f$ is an isomorphism.
+\item 
+If $f\perp g$ and $f\perp h$, then $f\perp (h\circ g)$.  Similarly, $g\perp f$ and $h\perp f$ imply $(h\circ g)\perp f$.  Of course, both statements make sense provided that $h\circ g$ exists.
+\end{itemize}
+
+More generally, if $\mathcal{F}$ and $\mathcal{G}$ are two classes of morphisms in a category $\mathcal{C}$, we say that $\mathcal{F}$ is \emph{orthogonal} to $\mathcal{G}$, or that $(\mathcal{F},\mathcal{G})$ is a \emph{diagonally polar pair}, written $\mathcal{F}\perp \mathcal{G}$, if $f\perp g$ for every $f$ in $\mathcal{F}$ and every $g$ in $\mathcal{G}$.
+
+For every class $\mathcal{X}$ of morphism, the largest class of morphisms in $\mathcal{C}$ such that $\mathcal{X}$ is orthogonal to is denoted by $\mathcal{X}_*$, and the largest class of morphisms that is orthogonal to $\mathcal{X}$ is denoted by $\mathcal{X}^*$.  
+
+Based on the properties of $\perp$ above, below are some properties of $^*$ and $_*$:
+
+\begin{itemize}
+\item $\mathcal{X} \subseteq \mathcal{Y}_*$ iff $\mathcal{Y}\subseteq \mathcal{X}^*$.  Equivalently, if $\mathscr{M}$ is the class of all subclasses of morphisms of $\mathcal{C}$, then $(-^*,-_*)$ is a Galois connection between $(\mathscr{M},\subseteq)$ and $(\mathscr{M},\supseteq)$.
+\item A morphism is in both $\mathcal{X}^*$ and $\mathcal{X}_*$ iff it is an isomorphism.
+\item Both $\mathcal{X}^*$ and $\mathcal{X}_*$ are closed under $\circ$.
+\item Given that $m=m_1\circ m_2$ exists in $\mathcal{C}$ and $m_2\in \mathcal{X}_*$, then $m \in \mathcal{X}_*$ iff $m_1\in \mathcal{X}_*$.
+\item
+If $f\in \mathcal{X}_*$, then the pullback of $f$ along any morphism is again in $\mathcal{X}_*$.
+\end{itemize} 
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

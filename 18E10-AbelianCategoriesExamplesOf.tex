@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelianCategoriesExamplesOf}
+\pmcreated{2013-03-22 16:42:52}
+\pmmodified{2013-03-22 16:42:52}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{abelian categories, examples of}
+\pmrecord{28}{38931}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+%\pmkeywords{Abelian groups}
+%\pmkeywords{Grothendieck categories}
+%\pmkeywords{commutative groupoids}
+%\pmkeywords{reversible automata}
+%\pmkeywords{quantum automata}
+%\pmkeywords{rings}
+%\pmkeywords{modules}
+\pmrelated{GrothendieckCategory}
+\pmrelated{NonAbelianStructures}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{AbelianCategory}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{Categoric}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\xyoption{all}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ab}{\mathbf{Ab}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\coker}{coker}
+\newcommand{\Mod}[1]{{}_{#1}\mathbf{Mod}}
+\newcommand{\rMod}[1]{\mathbf{Mod}_{#1}}
+
+\theoremstyle{example}
+\newtheorem{example}{Example}
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{terminal}
+
+The axiomatization of abelian categories was intended to capture some of the useful properties of categories in homological algebra.  This entry gives some examples of abelian categories.
+
+\begin{example}
+The category $\Ab$ of abelian groups is an abelian category. [\PMlinkname{Proof}{ProofThatAbelianGroupsFormAnAbelianCategory}]
+\end{example}
+
+Since abelian groups are a special case of $R$-modules, one might ask whether categories of $R$-modules are also abelian categories.  This is the case.
+
+\begin{example}
+For any ring $R$, the category $\Mod{R}$ of left $R$-modules is an abelian category.
+\end{example}
+
+\begin{example}
+For any ring $R$, the category $\mathcal{C}(R)$ of \PMlinkname{complexes}{ChainComplex} of left $R$-modules is an abelian category.
+\end{example}
+
+\begin{example}
+For any topological space $X$, the category of sheaves of abelian groups over $X$ is an abelian category.
+\end{example}
+
+\begin{example}
+Every Grothendieck category that satisfies the $\mathcal{A}b6$ axiom is Abelian.
+\end{example}
+
+\begin{example}
+For any topological groupoid $\mathcal{G}$, the 2--category of sheaves of commutative groupoids over the groupoid space $X_G$ is an abelian 2-category.
+\end{example}
+
+\begin{example} 
+The 2--category of commutative groupoids $\mathcal{G_C}$ is an Abelian 2--category. 
+\end{example}
+
+\begin{example}
+For any reversible sequential machine, or automaton, $R_S$, (with all state transitions reversible), the category $\mathcal{A}(R_S)$ of such reversible automata is an Abelian category.
+\end{example}
+
+\textbf{Counter-example}
+For general quantum automata $Q_A$s, the category $\mathcal{Q_A}$ of such quantum automata is in general, non-Abelian
+(or nonabelian).
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupoidRepresentationsInducedByMeasure}
+\pmcreated{2013-03-22 18:16:27}
+\pmmodified{2013-03-22 18:16:27}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{groupoid representations induced by measure}
+\pmrecord{27}{40879}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D05}
+\pmclassification{msc}{55N33}
+\pmclassification{msc}{55N20}
+\pmclassification{msc}{55P10}
+\pmclassification{msc}{55U40}
+\pmsynonym{associated Haar system}{GroupoidRepresentationsInducedByMeasure}
+%\pmkeywords{groupoid representations induced by measure are induced operators}
+\pmrelated{Groupoids}
+\pmrelated{LocallyCompactGroupoids}
+\pmrelated{BorelGroupoid}
+\pmdefines{associated Haar system}
+\pmdefines{groupoid representation}
+\pmdefines{measure induced operator}
+\pmdefines{measure-preserving transformation}
+\pmdefines{associated Haar system}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Associated, Left or Right, Haar System}
+
+\begin{definition}
+A \emph{groupoid representation induced by measure} can be defined as measure induced operator
+or as an operator induced by a measure preserving map in the context of Haar systems with measure that are
+associated with locally compact groupoids, $\mathbf{G_{lc}}$. 
+
+  Thus, let us consider a locally compact groupoid 
+$\mathbf{G_{lc}}$ endowed with an associated Haar system 
+$\nu = \left\{\nu^u, u \in U_{\mathbf{G_{lc}}} \right\}$, and $\mu$
+a quasi-invariant measure on $U_{\mathbf{G_{lc}}}$. 
+Moreover, let $(X_1, \mathfrak{B}_1, \mu_1)$ and $(X_2, \mathfrak{B}_2, \mu_2)$ be measure spaces and denote by $L^0(X_1)$ and $L^0(X_2)$ the corresponding spaces of measurable functions (with values in $\mathbb{C}$). Let us also recall that with a measure-preserving transformation $T: X_1 \longrightarrow X_2$ one can define an \emph{operator induced by a measure preserving map},  $U_T:L^0(X_2) \longrightarrow L^0(X_1)$ as follows:
+
+\begin{displaymath}
+(U_T f)(x):=f(Tx)\,, \qquad\qquad f \in L^0(X_2),\; x \in X_1
+\end{displaymath}
+
+ Next, let us define $\nu = \int \nu^u d\mu (u)$ and also define $\nu^{-1}$ as the mapping 
+$x \mapsto  x^{-1}$. With $f \in C_c(\mathbf{G_{lc}})$, one can now define the 
+\emph{measure induced operator} $\textbf{Ind}\mu (f) $ as an operator being defined on $L^2(\nu^{-1})$
+by the formula: 
+$$\textbf{Ind}\mu (f)\xi(x)= \int f(y) \xi(y^{-1}x)d\nu^{r(x)}(y) = f * \xi(x) $$
+\end{definition}
+
+\begin{remark}
+
+One can readily verify that :
+
+$$\left\| \textbf{Ind}\mu(f) \right\|  \leq  \left\| f \right\|_1 ,$$ 
+
+and also that $\textbf{Ind}\mu$ is a proper representation of $C_c(\mathbf{G_{lc}})$, in the sense that the latter is usually defined for groupoids.
+\end{remark}
+
+%%%%%
+%%%%%
+\end{document}

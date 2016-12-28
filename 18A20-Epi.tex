@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Epi}
+\pmcreated{2013-03-22 14:50:19}
+\pmmodified{2013-03-22 14:50:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{epi}
+\pmrecord{14}{36507}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18A05}
+\pmsynonym{epimorphism}{Epi}
+\pmsynonym{epimorphic}{Epi}
+\pmrelated{Monic}
+\pmdefines{epic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%\usepackage{xypic}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A morphism $f : A\to B$ in a category $\mathcal{C}$ is called {\em epi} if for any object $C$ and any morphisms $g_1,g_2 : B\to C$, if $g_1 f = g_2 f$ then $g_1 = g_2$.  In other words, any diagram 
+\begin{center}
+$\xymatrix{A \ar[r]^f & B \ar[r]^{g_1} & C}=\xymatrix{A \ar[r]^f & B \ar[r]^{g_2} & C}$
+\end{center}
+reduces to the diagram $$\xymatrix{B \ar[r]^{g_1} & C}=\xymatrix{B \ar[r]^{g_2} & C}.$$
+
+An \emph{epimorphism} is just an epi morphism, and epi is also known as \emph{right cancellable}, \emph{epimorphic}, or simply \emph{epic}.
+
+\textbf{Remarks.}
+\begin{enumerate}
+\item If $\mathcal{C}$ is an abelian category, then an epi has the property that $gf=0$ implies $g=0$ (surely, since $gf=0=0f$, and the result follows).
+\item Epi is the generalization of a function being onto.  In some categories where surjections are well-defined (such as sets and groups), epi is the same as being onto.
+\item The dual notion of epi is that of \PMlinkname{monic}{Monic}.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

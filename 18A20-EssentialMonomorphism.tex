@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EssentialMonomorphism}
+\pmcreated{2013-03-22 18:27:30}
+\pmmodified{2013-03-22 18:27:30}
+\pmowner{jocaps}{12118}
+\pmmodifier{jocaps}{12118}
+\pmtitle{essential monomorphism}
+\pmrecord{9}{41122}
+\pmprivacy{1}
+\pmauthor{jocaps}{12118}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmsynonym{essential extension}{EssentialMonomorphism}
+\pmrelated{essentialextension}
+\pmdefines{essential monomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal C$ be a category and $A,B \in \mathrm{Ob}(\mathcal C)$.  Then a monomorphism 
+$f \in \mathcal C(A,B)$ is said to be an \emph{essential extension} (or \emph{essential monomorphism}) iff : 
+
+
+If $g\in\mathcal C(B,C)$ be such that $g \circ f : A\rightarrow B\rightarrow C$ is a monomorphism then 
+$g$ is a monomorphism.
+
+Some examples:
+\begin{itemize}
+
+\item Consider the category of commutative rings. One way to redefine essential extension in this category is in the following way: 
+
+If $A$ is a subring of another ring $B$ then $B$ is an essential extension of $A$ iff for any $b\in B\backslash\{0\}$ there exists a $c\in B$ such that $bc \in A\backslash\{0\}$.
+
+\item In the category of modules see \PMlinkname{essential submodules}{EssentialSubmodule}.
+
+\item In the category of groups see essential subgroups.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

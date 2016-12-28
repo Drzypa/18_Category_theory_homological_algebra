@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImageOfAMorphism}
+\pmcreated{2013-03-22 18:07:59}
+\pmmodified{2013-03-22 18:07:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{image of a morphism}
+\pmrecord{14}{40684}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmsynonym{have images}{ImageOfAMorphism}
+\pmsynonym{have coimages}{ImageOfAMorphism}
+\pmsynonym{Ab2 axiom}{ImageOfAMorphism}
+\pmrelated{ExactSequence2}
+\pmrelated{CategoricalSequence}
+\pmdefines{image}
+\pmdefines{coimage}
+\pmdefines{has images}
+\pmdefines{has coimages}
+\pmdefines{Ab2}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\goto}[1]{\buildrel #1 \over \longrightarrow}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coim}{\operatorname{coim}}
+\newcommand{\cok}{\operatorname{cok}}
+\begin{document}
+\subsubsection*{Image}
+
+Let $\mathcal{C}$ be a category and a $f:A\to B$ a morphism from objects $A$ to $B$ in $\mathcal{C}$.  An \emph{image} of $f$ is a subobject $I$ of $B$ with a representing monomorphism $g:I\to B$, such that
+\begin{itemize}
+\item $f$ factors through $g$; i.e. there is a morphism $h:A\to I$ such that $f=g\circ h$:
+$$A \goto{f} B = A \goto{h} I \goto{g} B$$
+\item if $f$ factors through a monomorphism $s:J\to B$: 
+$$A \goto{f} B = A \goto{t} J \goto{s} B,$$
+then there is a morphism $x:I\to J$ such that
+$$I \goto{g} B = I \goto{x} J \goto{s} B.$$
+\end{itemize}
+
+\textbf{Example}.  In the category of sets, the image of a function $f:A\to B$ is just the \PMlinkname{image}{Image} $f(A)$ with the canonical injection into $B$.
+
+In the literature, the first bullet is equivalent to saying that the subobject $g: C\to B$ \emph{allows} $f$.  So the definition of the image of $f$ is the smallest subobject of $B$ that allows $f:A\to B$.
+
+\subsubsection*{Coimage}
+
+Dually, one defines the \emph{coimage} of $f:A\to B$ as a quotient object $C$ of $A$ with a representing epimorphism $h: A\to C$, such that
+\begin{itemize}
+\item $f$ factors through $h$; i.e. there is a morphism $g:C\to B$ such that $f=g\circ h$:
+$$A \goto{f} B = A \goto{h} C \goto{g} B$$
+\item if $f$ factors through an epimorphism $t:A\to D$: 
+$$A \goto{f} B = A \goto{t} D \goto{s} B,$$
+then there is a morphism $y:D\to C$ such that
+$$A \goto{h} C = A \goto{t} D \goto{y} C.$$
+\end{itemize}
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item In the definition of image, since $g$ is a monomorphism, $x$ is a monomorphism.  Furthermore, since $s$ is a monomorphism, $x$ is uniquely determined, and we have the following commutative diagram:
+\begin{center}
+$\xymatrix@R-=2pt{
+& I \ar[dd]^x \ar[dr]^g & \\
+A\ar[ur]^h \ar[dr]_t && B \\
+& J \ar[ur]_s &
+}$
+\end{center}
+\item Dually, $y$ is a uniquely determined epimorphism satisfying the following commutative diagram:
+\begin{center}
+$
+\xymatrix@R-=2pt{
+& D \ar[dd]^y \ar[dr]^g & \\
+A\ar[ur]^t \ar[dr]_h && B \\
+& C \ar[ur]_s &
+}$
+\end{center}
+\item If $f:A\to B$ has an image (dually, coimage), it is unique up to isomorphism.  The image and coimage of $f$ are denoted by $\im(f)$ and $\coim(f)$ respectively.
+\item Suppose that a category is Ab1.  If $\im(f)$ and $\coim(f)$ exist for $f:A\to B$, then there is a unique morphism $\overline{f}:\coim(f)\to \im(f)$ such that 
+$$\xymatrix@C+=4pc{
+{A}\ar[r]^{f}\ar[d]&{B}\\
+{\coim(f)}\ar[r]^{\overline{f}}&{\im(f)}\ar[u]
+}
+$$
+is commutative.  The \emph{Ab2 Axiom}, a la Grothendieck, is the statement that if $\overline{f}$ exists, it is an isomorphism.  A category is said to be \emph{Ab2} if it is Ab1, and every morphism satisfies the Ab2 Axiom.
+\item A category $\mathcal{C}$ is said to \emph{have images} (dually, \emph{has coimages}) if the image (coimage) of any morphism exists.
+\end{enumerate}
+
+Every abelian category has images and coimages, and $$\im(f)=\ker(\cok(f))\qquad \mbox{ and }\qquad\coim(f)=\cok(\ker(f)),$$ where $\ker$ and $\cok$ are the kernel and cokernel operations.  In addition, we have the following important result:
+\begin{quote}\emph{
+if a morphism $f:A\to B$ can be factored as 
+$$A \goto{f} B = A \goto{h} I \goto{g} B$$
+with $g$ a monomorphism and $h$ an epimorphism, then $I$ (with $g$) is the image of $f$ and $I$ (with $h$) is the coimage of $f$.  }
+\end{quote}
+In other words, the factorization above is uniquely determined, up to isomorphism.
+%%%%%
+%%%%%
+\end{document}

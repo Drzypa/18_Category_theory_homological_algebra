@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoubleCategory}
+\pmcreated{2013-03-22 19:21:55}
+\pmmodified{2013-03-22 19:21:55}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{double category}
+\pmrecord{26}{42318}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18C10}
+\pmclassification{msc}{18-00}
+%\pmkeywords{double category}
+%\pmkeywords{pseudo-double category of rings}
+\pmrelated{FundamentalGroupoidFunctor}
+\pmdefines{$Rng$}
+\pmdefines{$2$-category}
+\pmdefines{pseudo-double category of rings}
+\pmdefines{$ObjRng$}
+\pmdefines{$HorRng$}
+\pmdefines{$VerRng$}
+\pmdefines{higher -dimensional category}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\subsubsection{Background}
+
+Charles Ehresmann defined in 1963 a {\em double category} $\mathcal{D}$ as an internal category in the category of small categories $\bf{Cat}$.
+
+$$2-categories \to double~categories \to pseudo-algebras ~over~ the ~2-theory~of~ categories $$ and  
+$$ crossed ~modules \to double~categories \to ...$$
+\section{Double category definition}
+\begin{definition}
+A double category $\mathcal{D}$ consists of:
+\begin{itemize}
+\item a set of objects,
+\item a set of horizontal morphisms $$f: A \to B,$$
+\item a set of vertical morphisms $$j: A \to C,$$ and
+\item a class of squares with source and target as shown in the following diagrams: $$\xymatrix{
+{A}\ar[r]^{f}\ar[d]_{k}&{B}\ar[d]^{g}\\
+{C}\ar[r]_{h}&{D}
+}
+$$
+\end{itemize}
+
+with compositions and units of the double category that satisfy the following axioms:
+\begin{itemize}
+\item \emph{i.} Horizontal:
+\[
+A\buildrel f_1 \over \longrightarrow
+B \buildrel f_2 \over \longrightarrow
+C = [f_1, f_2]= f_2 \circ f_1
+\]
+
+\[
+A\buildrel 1^h_A \over \longrightarrow
+A \buildrel f_1 \over \longrightarrow
+B = A\buildrel f_1 \over \longrightarrow
+B = A \buildrel f_1 \over \longrightarrow
+B \buildrel 1^h_B \over \longrightarrow
+B
+\]
+
+\item \emph{ii.} Vertical:
+\[
+[A\buildrel j_1 \over \longrightarrow
+B \buildrel j_2 \over \longrightarrow
+C]_{vert} = [j_1, j_2]_{vert.}= j_2 \circ j_1
+\]
+
+\[
+[A\buildrel 1^v_A \over \longrightarrow
+A \buildrel j_1 \over \longrightarrow
+B = A\buildrel j_1 \over \longrightarrow
+B = A \buildrel j_1 \over \longrightarrow
+B \buildrel 1^v_B \over \longrightarrow
+B]_{vert.}
+\]
+\emph{Compositions for square diagrams in a double category $\mathcal{D}$:}
+\item \emph{iii.} Horizontal composition:
+$$\xymatrix{
+{A}\ar[r]^{f_1}\ar[d]_{j}&{B}\ar[d]^{k}\\
+{D}\ar[r]_{g_1}&{E}}~~~~[\alpha]``\circ'' \xymatrix{
+{B}\ar[r]^{f_2}\ar[d]_{k}&{C}\ar[d]^{l}\\
+{E}\ar[r]_{g_2}&{F}}~~~~[\beta] = \xymatrix{
+{A}\ar[r]^{[f_1f_2]}\ar[d]_{j}&{C}\ar[d]^{l}\\
+{D}\ar[r]_{g_1g_2}&{F}} ~~~~[\alpha \beta].$$
+\item \emph{iv.} Vertical composition of squares in $\mathcal{D}$:
+${[\alpha \beta]}_{vert.}$ is expressed as
+$$\xymatrix{
+{A}\ar[r]^{f}\ar[d]_{[j_1 j_2]_v}&{B}\ar[d]^{[k_1 k_2]_v}\\
+{E}\ar[r]_{h}&{F}}~~~~[\alpha \beta]_v.$$
+\end{itemize}
+
+\end{definition}
+
+Moreover, all compositions are associative and unital, and also subject to the Interchange Law:
+
+$$\xymatrix{
+{[\alpha]}\ar[r]^{--}\ar[d]_{|}&{[\beta]}\ar[d]^{|}\\
+{[\gamma]}\ar[r]_{--}&{[\delta]}
+} =
+{[ [\alpha \beta] ~~over~~ [\gamma \delta]]}_{vert.} = [\alpha \gamma]_v \circ [\beta \delta]_v.$$
+
+Unit morphisms are also subject to the axioms of the double category. For further details on double categories and examples please see the related \PMlinkexternal{free download PDF file}{http://www-personal.umd.umich.edu/~tmfiore/1/fiorefolding.pdf}.
+
+\subsection{Examples of Double Categories:}
+\begin{itemize}
+\item $Rng$:= pseudo double category or rings, bimodules, and equivariant maps: $Obj Rng$ := rings with identity; $HorRng$ := bimodules; $VerRng$ := homomorphisms of rings. 
+
+\item $W$:= {\em pseudo double category of worldsheets} (A {\em worldsheet} is a real, compact, not necessarily connected, two dimensional, smooth manifold with complex structure and real analytically parametrized boundary components.)
+
+\item Let $C_{Top}$ be a topological category, i.e. both $Obj C_{Top}$ and $Mor C_{Top}$ are topological spaces.
+$P'OC$:= double category of Moore paths on $C_{Top}$.
+
+\item The \PMlinkexternal{Double groupoid}{http://aux.planetmath.org/files/objects/12318/DG1.png}
+\end{itemize}
+
+\begin{definition}
+
+The geometry of squares and their compositions lead to a common representation, or definition of a \emph{double groupoid} in the following form:
+
+
+\begin{equation}
+\label{squ} \D = \vcenter{\xymatrix @=3pc {S \ar @<1ex> [r] ^{s^1} \ar @<-1ex> [r]
+_{t^1} \ar @<1ex> [d]^{\, t_2} \ar @<-1ex> [d]_{s_2} & H \ar[l]
+\ar @<1ex> [d]^{\,t}
+\ar @<-1ex> [d]_s \\
+V \ar [u] \ar @<1ex> [r] ^s \ar @<-1ex> [r] _t & M \ar [l] \ar[u]}},
+\end{equation}
+
+
+where $M$ is a set of `points', $H,V$ are `horizontal' and `vertical' groupoids, and $S$ is a set of
+`squares' with two compositions.
+
+The laws for a double groupoid are also defined, more generally, for any topological space $\mathbb{T}$, and make it also describable as a groupoid internal to the category of groupoids.
+\end{definition}
+ 
+
+{\bf Remarks:}
+Every $2$-category {\bf C} is a double category with {\em trivial} vertical morphisms
+(See  Tom Fiore's : http://www-personal.umd.umich.edu/~tmfiore/1/fiorefolding.pdf)
+
+
+Note the third set of arrows in the double groupoid diagram, making it a very special type of double category.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{HKK}
+K.A. Hardie, K.H. Kamps and R.W. Kieboom., A homotopy 2-groupoid of a Hausdorff 
+\emph{Applied Categorical Structures}, \textbf{8} (2000): 209-234.
+
+\bibitem{BHKP}
+R. Brown, K.A. Hardie, K.H. Kamps  and T. Porter., 
+\PMlinkexternal{A homotopy double groupoid of a Hausdorff space}{http://www.tac.mta.ca/tac/volumes/10/2/10-02.pdf} ,
+{\it Theory and Applications of Categories} \textbf{10},(2002): 71-93.
+
+\bibitem{Fiore98}
+Tom Fiore.1998. \PMlinkexternal{Double Categories and Pseudo Algebras}{http://www-personal.umd.umich.edu/~tmfiore/1/fiorefolding.pdf} and $www.math.uchicago.edu/~Fiore/$
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

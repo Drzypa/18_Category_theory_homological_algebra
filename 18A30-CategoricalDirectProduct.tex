@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalDirectProduct}
+\pmcreated{2013-03-22 12:36:08}
+\pmmodified{2013-03-22 12:36:08}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{categorical direct product}
+\pmrecord{10}{32855}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmsynonym{direct product}{CategoricalDirectProduct}
+\pmrelated{CategoricalDirectSum}
+\pmrelated{DirectProduct}
+\pmrelated{DirectProduct2}
+\pmdefines{product}
+\pmdefines{categorical product}
+\pmdefines{categorical direct product}
+\pmdefines{projection morphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\{C_i\}_{i \in I}$ be a set of objects in a category $\mathcal{C}$. A \emph{direct product} of the collection $\{C_i\}_{i \in I}$ is an object $\prod_{i \in I} C_i$ of $\mathcal{C}$, with morphisms $\pi_i\colon \prod_{j \in I} C_j \to C_i$ for each $i \in I$, such that:
+
+For every object $A$ in $\mathcal{C}$, and any collection of morphisms $f_i\colon A \to C_i$ for every $i \in I$, there exists a unique morphism $f\colon A \to \prod_{i \in I} C_i$ making the following diagram commute for all $i \in I$.
+\[
+\xymatrix{
+A \ar@{-->}[dr]_{f} \ar[rr]^{f_i} & & C_i  \\
+& \prod_{j \in I} C_j \ar[ur]_{\pi_i}
+}
+\]
+The morphisms $\pi_i\colon \prod_{j \in I} C_j \to C_i$ are called \emph{projection morphisms}.
+
+The direct product of a finite collection of sets $C_1, C_2, \ldots, C_n$ is often denoted $C_1 \times C_2 \times \cdots \times C_n$, in analogy with the Cartesian product.
+%%%%%
+%%%%%
+\end{document}

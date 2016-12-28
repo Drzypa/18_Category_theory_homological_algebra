@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Skeleton}
+\pmcreated{2013-03-22 17:02:29}
+\pmmodified{2013-03-22 17:02:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{skeleton}
+\pmrecord{10}{39329}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A99}
+\pmsynonym{skeletal subcategory}{Skeleton}
+\pmsynonym{skeletally small}{Skeleton}
+\pmdefines{skeletal}
+\pmdefines{essentially small}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A subcategory $\mathcal{S}$ of a category $\mathcal{C}$ is said to be \emph{skeletal}, or a \emph{skeleton} of $\mathcal{C}$ if
+\begin{itemize}
+\item the inclusion functor is an \PMlinkname{equivalence}{NaturalTransformation}, and
+\item no two objects of $\mathcal{S}$ are isomorphic.
+\end{itemize}
+Equivalently, a subcategory $\mathcal{S}$ of $\mathcal{C}$ is a skeleton of $\mathcal{C}$ if it is a isomorphism-dense full subcategory such that no two of its objects are isomorphic.
+
+For example, in the category of sets, objects are isomorphic if and only if they have the same cardinality.  So a skeleton of the category of sets could include as objects a unique set from each class of sets of the same cardinality, for each cardinality.  If this is done, then any two objects in the skeleton have different cardinalities, so are not isomorphic.
+
+\textbf{Remark}.  From the example above, we see that there may be more than one skeleton in any given category.  However, as natural equivalence is an equivalence relation on the class of subcategories of a category, any two skeletons are naturally equivalent, since they are both naturally equivalent to the original category.  Therefore, we may think of a skeleton as uniquely defined by the category, and this uniqueness is understood to be up to natural equivalence.  In summary, any two skeletons of a category are isomorphic.
+
+We may manufacture a skeleton out of a given small category.  Let $\mathcal{C}$ be a (small) category and $\operatorname{Ob}(\mathcal{C})$ be the set of objects in $\mathcal{C}$.  Define $\sim$ on $\operatorname{Ob}(\mathcal{C})$ by $A \sim B$ iff $A$ is isomorphic to $B$.  Then it is easily checked that $\sim$ is an equivalence relation on $\operatorname{Ob}(\mathcal{C})$.  Let $\mathcal{S}$ be the category consisting of, as objects, one object from each equivalence class under $\sim$ for each equivalence class.  This is permitted by the axiom of choice.  As morphisms of $\mathcal{S}$, we grab all the $\mathcal{C}$-morphisms between $S_1$ and $S_2$ for any two $S_1,S_2\in \operatorname{Ob}(\mathcal{S})$.  It is not hard to verify that $\mathcal{S}$ is indeed a skeleton of $\mathcal{C}$.
+
+In general, however, a category may not have skeletons, and even if it does, its skeleton may not be small.  A category with a small skeleton is called an \emph{essentially small} or \emph{skeletally small} category.
+
+
+%%%%%
+%%%%%
+\end{document}

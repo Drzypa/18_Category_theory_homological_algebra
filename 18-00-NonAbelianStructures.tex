@@ -1,0 +1,843 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonAbelianStructures}
+\pmcreated{2013-03-22 18:12:34}
+\pmmodified{2013-03-22 18:12:34}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{non-Abelian structures}
+\pmrecord{88}{40790}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{03G12}
+\pmclassification{msc}{03G30}
+\pmclassification{msc}{03G20}
+\pmsynonym{nonabelian}{NonAbelianStructures}
+\pmsynonym{non-commutative structure}{NonAbelianStructures}
+\pmsynonym{non-abelian structure}{NonAbelianStructures}
+%\pmkeywords{non-AbelianTheories}
+%\pmkeywords{non-commutative structures}
+%\pmkeywords{several examples of nonabelian structures}
+\pmrelated{NonAbelianTheories}
+\pmrelated{AbelianCategory}
+\pmrelated{ExamplesOfAbelianCategory}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{CategoricalOntology}
+\pmrelated{NonCommutingGraphOfAGrou}
+\pmdefines{non-Abelian structure}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in %%ps format
+%\hoffset=-1.0in %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}} 
+\begin{document}
+\begin{definition} Any mathematical structure (algebraic or topological, etc.)--in the sense defined by either
+C. Ehresmann \cite{EC65, EC66} or `N. Bourbaki' -- which is {\em not} commutative is usually called either {\em non-Abelian} ({\em non-abelian, nonabelian}) or {\em non-commutative}. 
+\end{definition}
+
+\subsection{Examples} 
+ Every non-commutative ring, non-commutative group, non-commutative groupoid, non-commutative monoid, non-commutative algebra, and so on, has a {\em non-Abelian structure}; a few specific examples of non-Abelian algebras are : Clifford algebras, matrix algebras, non-commutative $C^*$-algebras, quantum `groups' (non-commuative Hopf algebras), quantum `groupoids' (non-commutative weak Hopf algebras).
+
+\subsection{Remarks}  
+
+ The term `non-Abelian'--instead of noncommutative-- is often the preferred qualifier for theories,
+with the possible exeception of `noncommutative geometry', which is a non-Abelian theory.
+On the other hand, the term `anabelian' (in French, ``anabelienne'') was employed by Alexander Grothendieck to 
+describe a new field of research called ``Anabelian Geometry'' in his `Esquisse d'un Programme''
+
+ The commutativity property in all Abelian structures, such as Abelian groups and Abelian categories is a {\em global} rather than partial, or {\em local}, property. Thus, many categories or toposes/topoi may exhibit
+local but not global commutativity properties; for example, a category is still non-Abelian 
+if $Hom_{Ab}(-, -)$ does not have the structure of a commutative (or {\em Abelian}) group;
+alternatively, a category that does not satisfy one of the four $Ab$-axioms of Freyd, or one of the
+$Ab1$ to $Ab6$ axioms in the current abelian category definition is non-Abelian.
+\med
+
+\subsection{Many-valued, algebraic logic examples}    
+The structures of several, n-valued logic algebras are represented as non-commutative lattices and are, therefore, non-Abelian. Specific examples are provided by the generally non-commutative $LM_n$-logic algebras, categories of $LM_n$-logic algebras and lattice morphisms. On the other hand, the Heyting (intuitionistic logic) algebra subobject classifier of a standard topos is {\em commutative} and thus, it is {\em Abelian}; this does {\em not} mean however that all toposes/topoi have Abelian structure-in fact, this is not generally case. \\
+
+\subsection{Examples of {\em} Abelian categories} 
+\begin{enumerate} 
+\item The category of Abelian (or commutative) groups is Abelian;
+\item The Grothendieck category is a special case of $\mathcal{\A}b5$ category; 
+\item Local Grothendieck categories are Abelian categories;
+\item The Grassmann category is Abelian;
+\item The category of (commutative) semi-noetherian rings is Abelian. (\cite{NP73});
+\item The category of Heyting logic algebras, $Hy$ and the category of Boolean logic algebras, \textbf{Boole} are both categories of commutative lattices, and are Abelian categories;
+\item If $\grp$ is a topological groupoid the {\em category of sheaves, $S_{hA}$} of Abelian groups over $\grp$ is an Abelian category.
+\end{enumerate}
+
+\textbf{Related results} 
+If $\mathcal{\G}$ is a Grothendieck catgeory and $\mathcal{\A}$ is a localizing subcategory of $\mathcal{\G}$, then $\mathcal{\G} \slash \mathcal{\A}$ is
+Abelian, as it is also a Grothendieck category (\textbf{COROLLARY 6.2} on p. 186 in \cite{NP73}) .
+
+\begin{thebibliography}{9}
+
+\bibitem{NP73}
+Popescu, N. {\em Abelian Categories with Applications to Rings and Modules},
+(Academic Press: New York and London, 1973 and 1976 edns., {\em English translation by I. C. Baianu}).
+
+\bibitem{Bggb4}
+Baianu, I.C.,  R. Brown and J. F. Glazebrook: 2007b, A Non-Abelian, Categorical Ontology of Spacetimes and Quantum Gravity, {\em Axiomathes}, \textbf{17}: 169-225.
+
+\bibitem{Ba-We2k}
+Barr, M. and C.~Wells. {\em Toposes, Triples and Theories}. Montreal: McGill University, 2000.
+ 
+\bibitem{BaM98}
+Batanin, M., 1998, Monoidal Globular Categories as a Natural Environment for the Theory of Weak n-Categories, Advances in Mathematics, \textbf{136}: 39--103.   
+
+\bibitem{BJL81}
+Bell, J. L., 1981, Category Theory and the Foundations of Mathematics, {\em British Journal for the Philosophy of Science}, \textbf{32}: 349-358. 
+ 
+\bibitem{BJL86}
+Bell, J. L., 1986, From Absolute to Local Mathematics, {\em Synthese}, \textbf{69} (3): 409-426. 
+
+\bibitem{BJL88} 
+Bell, J. L., 1988, {\em Toposes and Local Set Theories: An Introduction}, Oxford: Oxford University Press. 
+
+\bibitem{BG-MCLS99}
+Birkoff, G. \& Mac Lane, S., 1999, Algebra, 3rd ed., Providence: AMS.   
+
+
+\bibitem{Borceux94}
+Borceux, F.: 1994, \emph{Handbook of Categorical Algebra}, vols: 1--3, 
+in {\em Encyclopedia of Mathematics and its Applications} \textbf{50} to \textbf{52}, Cambridge University Press.
+
+\bibitem{Bourbaki1}
+Bourbaki, N. 1961 and 1964: \emph{Alg\`{e}bre commutative.},
+in \`{E}l\'{e}ments de Math\'{e}matique., Chs. 1--6., Hermann: Paris.
+
+\bibitem (BJk4)
+Brown, R. and G. Janelidze: 2004, Galois theory and a new homotopy double groupoid of a map of spaces, 
+\emph{Applied Categorical Structures} \textbf{12}: 63-80.
+
+\bibitem{BHR2}
+Brown, R., Higgins, P. J. and R. Sivera,: 2007, \emph{Non-Abelian Algebraic Topology}, 
+\PMlinkexternal{in preparation}{http://www.bangor.ac.uk/~mas010/nonab-t/partI010604.pdf}
+
+\bibitem{BGB2k7b}
+Brown, R., Glazebrook, J. F. and I.C. Baianu.: 2007b, A Conceptual, Categorical and Higher Dimensional Algebra Framework of Universal Ontology and the Theory of Levels for Highly Complex Structures and Dynamics., \emph{Axiomathes} (17): 321--379.
+
+\bibitem{BP2k3}
+Brown R. and T. Porter: 2003, Category theory and higher dimensional algebra: potential descriptive tools in neuroscience, In: {\em Proceedings of the International Conference on Theoretical
+Neurobiology.}, Delhi, February 2003, edited by Nandini Singh, National Brain Research Centre, Conference Proceedings \textbf{1}: 80-92.
+
+\bibitem{Br-Har-Ka-Po2k2}
+Brown, R., Hardie, K., Kamps, H. and T. Porter: 2002, The homotopy double groupoid of a Hausdorff space., \emph{Theory and Applications of Categories} \textbf{10}, 71-93.
+
+\bibitem{Br-Sp76}
+Brown, R. and Spencer, C.B.: 1976, Double groupoids and crossed modules, \emph{Cah.  Top. G\'{e}om. Diff.} \textbf{17}, 343-362.
+
+\bibitem{BDA55}
+Buchsbaum, D. A.: 1955, Exact categories and duality., {\em Trans. Amer. Math. Soc.} \textbf{80}: 1-34.
+
+\bibitem{BDA55}
+Buchsbaum, D. A.: 1969, A note on homology in categories., {\em Ann. of Math}. \textbf{69}: 66-74.
+
+\bibitem{BI65}
+Bucur, I. (1965). {\em Homological Algebra}. (orig. title: ``Algebra Omologica'')
+Ed. Didactica si Pedagogica: Bucharest.
+
+\bibitem{BI-DA68}
+Bucur, I., and Deleanu A. (1968). {\em  Introduction to the Theory of Categories and Functors}. J.Wiley and Sons: London
+
+\bibitem{BL2k3}
+Bunge, M. and S. Lack: 2003, Van Kampen theorems for toposes, \emph{Adv. in Math.} \textbf{179}, 291-317.
+
+\bibitem{BM84}
+Bunge, M., 1984, Toposes in Logic and Logic in Toposes, {\em Topoi}, 3, no. 1, 13-22. 
+
+\bibitem{BM-LS2k3}
+Bunge M, Lack S (2003) Van Kampen theorems for toposes. {\em Adv Math}, \textbf {179}: 291-317.
+
+\bibitem{BJ-ICJ98-2k2}
+Butterfield J., Isham C.J. 1998, 1999, 2000-2002, A topos perspective on the Kochen-Specker theorem
+I-IV, Int J Theor Phys 37(11):2669-2733; 38(3):827-859; 39(6):1413-1436; 41(4): 613-639.
+
+\bibitem{CH-ES56}
+Cartan, H. and Eilenberg, S. 1956. {\em Homological Algebra}, Princeton Univ. Press: Pinceton. 
+
+\bibitem{Chaician}
+M. Chaician and A. Demichev. 1996. Introduction to Quantum Groups, World Scientific.
+
+\bibitem{CC46}
+Chevalley, C. 1946. The theory of Lie groups. Princeton University Press, Princeton NJ
+
+\bibitem{CPM65}
+Cohen, P.M. 1965. {\em Universal Algebra}, Harper and Row: New York, london and Tokyo.
+
+\bibitem{CA94}
+Connes A 1994. {\em Noncommutative geometry}. Academic Press: New York.
+
+\bibitem{CR-LL63}
+Croisot, R. and Lesieur, L. 1963. {\em Alg\`ebre noeth\'erienne non-commutative.},
+Gauthier-Villard: Paris.
+
+\bibitem{DJ-ALEX60-71}
+Dieudonn\'e, J. and Grothendieck, A., 1960, [1971], \'Elements de G\'eom\'etrie Alg\'ebrique, Berlin: Springer-Verlag.  
+
+\bibitem{Dirac30}
+Dirac, P. A. M., 1930, {\em The Principles of Quantum Mechanics}, Oxford: Clarendon 
+Press. {\em contains important examples of non-Abelian structures at the mathematical foundation of Quantum Mechanics.} 
+
+\bibitem{Dixmier}
+Dixmier, J., 1981, Von Neumann Algebras, Amsterdam: North-Holland Publishing 
+Company. [First published in French in 1957: Les Alg\`ebres d'Operateurs dans 
+l' \'Espace Hilbertien, Paris: Gauthier--Villars.]
+
+\bibitem{Durdevich1}
+M. Durdevich : Geometry of quantum principal bundles I, Commun. Math. Phys. \textbf{175} (3) (1996), 457--521.
+
+\bibitem{Durdevich2}
+M. Durdevich : Geometry of quantum principal bundles II, Rev. Math. Phys. \textbf{9} (5) (1997), 531--607.
+
+\bibitem{EC65}
+Ehresmann, C.: 1965, \emph{Cat\'egories et Structures}, Dunod, Paris.
+
+\bibitem{EC66}
+Ehresmann, C.: 1966, Trends Toward Unity in Mathematics., \emph{Cahiers de Topologie et Geometrie Differentielle}
+\textbf{8}: 1-7.
+
+\bibitem{Eh-pseudo}
+Ehresmann, C.: 1952, Structures locales et structures infinit\'esimales,
+\emph{C.R.A.S.} Paris \textbf{274}: 587-589.
+
+\bibitem{Eh}
+Ehresmann, C.: 1959, Cat\'egories topologiques et cat\'egories
+diff\'erentiables, \emph{Coll. G\'eom. Diff. Glob.} Bruxelles, pp.137-150.
+
+\bibitem{Eh-quintettes}
+Ehresmann, C.:1963, Cat\'egories doubles des quintettes: applications covariantes
+, \emph{C.R.A.S. Paris}, \textbf{256}: 1891--1894.
+
+\bibitem{Eh-Oe}
+Ehresmann, C.: 1984, \emph{Oeuvres compl\`etes et  comment\'ees:
+Amiens, 1980-84}, edited and commented by Andr\'ee Ehresmann.
+
+\bibitem{EML1}
+Eilenberg, S. and S. Mac Lane.: 1942, Natural Isomorphisms in Group Theory., \emph{American Mathematical Society 43}: 757-831.
+
+\bibitem{EL}
+Eilenberg, S. and S. Mac Lane: 1945, The General Theory of Natural Equivalences, \emph{Transactions of the American Mathematical Society} \textbf{58}: 231-294.
+
+
+\bibitem{EML45}
+S. Eilenberg and S. MacLane.1945. Relations between homology 
+and homotopy groups of spaces. {\em Ann. of Math.}, \textbf{46}:480--509.
+
+
+\bibitem{EML50}
+Eilenberg, S. and S. MacLane. 1950. Relations between homology and homotopy groups of spaces. II,  
+{\em Annals of Mathematics} , \textbf{51}: 514--533.
+
+\bibitem{EML66}
+Eilenberg, S. and S. Mac Lane. 1966. Relations between Homology and Homotopy Groups
+{\em Proceed. Natl. Acad. Sci. (USA)}, Volume 29, Issue 5, pp. 155--158.
+
+\bibitem{ES-CH56}
+Eilenberg, S. and Cartan, H., 1956, \emph{Homological Algebra}, Princeton: Princeton University Press. 
+
+\bibitem{ES-MCLS42}
+Eilenberg, S. and MacLane, S., 1942, Group Extensions and Homology, \emph{Annals of Mathematics}, 43, 757--831. 
+
+\bibitem{ES-SN52}
+Eilenberg, S. and Steenrod, N., 1952, \emph{Foundations of Algebraic Topology}, Princeton: Princeton University Press. 
+
+\bibitem{ES60}
+Eilenberg, S.: 1960. Abstract description of some basic functors., \emph{J. Indian Math.Soc.}, \textbf{24} :221-234.
+
+\bibitem{S.Eilenberg}
+S.Eilenberg. Relations between Homology and Homotopy Groups., \emph{Proc.Natl.Acad.Sci.USA} (1966),v:10--14.  
+
+\bibitem{ED88}
+Ellerman, D., 1988, Category Theory and Concrete Universals, {\em Synthese}, 28, 409--429. 
+
+\bibitem{ETH}
+Z. F. Ezawa, G. Tsitsishvilli and K. Hasebe : Noncommutative geometry, extended $W_{\infty}$ algebra and Grassmannian solitons in multicomponent Hall systems, arXiv:hep--th/0209198.
+
+\bibitem{FS77}
+Feferman, S., 1977, Categorical Foundations and Foundations of Category Theory, 
+{\em Logic, Foundations of Mathematics and Computability}, R. Butts (ed.), Reidel, 149-169.
+
+\bibitem{Fell}
+Fell, J. M. G., 1960, The Dual Spaces of  C*-Algebras, {\em Transactions of the 
+American Mathematical Society}, \textbf{94}: 365--403. 
+
+\bibitem{FP60}
+Freyd, P., 1960. \emph{Functor Theory} (Dissertation). Princeton University, Princeton, New Jersey.
+ 
+\bibitem{FP63}
+Freyd, P., 1963, Relative homological algebra made absolute. , {\em Proc. Natl. Acad. USA}, \textbf{49}:19-20.
+  
+\bibitem{FP64}
+Freyd, P., 1964, {\em Abelian Categories. An Introduction to the Theory of Functors.}, New York and London: Harper and Row.  
+
+\bibitem{FP65}
+Freyd, P., 1965, The Theories of Functors and Models., {\em Theories of Models}, Amsterdam: North Holland, 107--120. 
+
+\bibitem{FP66}
+Freyd, P., 1966, Algebra-valued Functors in general categories and tensor product in particular., {\em Colloq. Mat}. 
+{14}: 89--105.
+
+\bibitem{FP72}
+Freyd, P., 1972, Aspects of Topoi, {\em Bulletin of the Australian Mathematical Society}, \textbf{7}: 1--76.  
+ 
+\bibitem{FP90}
+Freyd, P., 1990, Categories, Allegories, Amsterdam: North Holland. 
+
+\bibitem{FP2k2}
+Freyd, P., 2002, Cartesian Logic, {\em Theoretical Computer Science}, 278, no. 1--2, 3--21.  
+
+\bibitem{FP-FH-SA87}
+Freyd, P., Friedman, H. \& Scedrov, A., 1987, Lindembaum Algebras of Intuitionistic Theories and Free Categories, Annals of Pure and Applied Logic, 35, 2, 167--172.
+
+\bibitem{Gabriel1}
+Gabriel, P.: 1962, Des cat\'egories ab\'eliennes, \emph{Bull. Soc. Math. France} \textbf{90}: 323-448.
+
+\bibitem{Gabriel2}
+Gabriel, P. and M.Zisman:. 1967: Category of fractions and homotopy theory, \emph{Ergebnesse der math.} Springer: Berlin.
+
+\bibitem{GabrielNP}
+Gabriel, P. and N. Popescu: 1964, Caract\'{e}risation des cat\'egories ab\'eliennes
+avec g\'{e}n\'{e}rateurs et limites inductives. , \emph{CRAS Paris} \textbf{258}: 4188-4191.
+
+\bibitem{GA-RG-SM2k}
+Galli, A. \& Reyes, G. \& Sagastume, M., 2000, Completeness Theorems via the Double Dual Functor, {\em Studia Logica}, 64, no. 1, 61--81. 
+
+\bibitem{GN}
+Gelfan'd, I. and Naimark, M., 1943, On the Imbedding of Normed Rings into the Ring of Operators in Hilbert Space, {\em Recueil Math\'ematique [Matematicheskii Sbornik] Nouvelle S\'erie}, \textbf{12} [54]: 197--213. [Reprinted in C*--algebras: 
+1943--1993, in the series Contemporary Mathematics, 167,  Providence, R.I. : 
+American Mathematical Society, 1994.] 
+
+\bibitem{GS-ZM2K2}
+Ghilardi, S. \& Zawadowski, M., 2002, Sheaves, Games \& Model Completions: A Categorical Approach to Nonclassical Propositional Logics, Dordrecht: Kluwer.  
+
+\bibitem{GS89}
+Ghilardi, S., 1989, Presheaf Semantics and Independence Results for some Non-classical first-order logics, Archive for Mathematical Logic, 29, no. 2, 125--136. 
+
+\bibitem{Gob68}
+Goblot, R., 1968, Cat\'egories modulaires , {\em C. R. Acad. Sci. Paris, S\'erie A.}, \textbf{267}: 381--383.
+
+\bibitem{Gob71}
+Goblot, R., 1971, Sur deux classes de cat\'egories de Grothendieck, {\em Th\`ese.}, Univ. Lille, 1971.
+
+\bibitem{GR79}
+Goldblatt, R., 1979, Topoi: The Categorical Analysis of Logic, Studies in logic and the foundations of mathematics, Amsterdam: Elsevier North-Holland Publ. Comp. 
+
+\bibitem{Goldie}
+Goldie, A. W., 1964, \textbf{Localization in non-commutative noetherian rings}, {\em J.Algebra}, \textbf{1}: 286-297.
+
+\bibitem{Godement}
+Godement,R. 1958. Th\'{e}orie des faisceaux. Hermann: Paris.
+
+\bibitem{GRAY65}
+Gray, C. W.: 1965. Sheaves with values in a category.,\emph {Topology}, 3: 1-18.
+
+\bibitem{Alex1}
+Grothendieck, A.: 1971, Rev\^{e}tements \'Etales et Groupe Fondamental (SGA1),
+chapter VI: Cat\'egories fibr\'ees et descente, \emph{Lecture Notes in Math.}
+\textbf{224}, Springer--Verlag: Berlin.
+
+\bibitem{Alex2}
+Grothendieck, A.: 1957, Sur quelque point d-alg\'{e}bre homologique. , \emph{Tohoku Math. J.}, \textbf{9:} 119-121.
+
+\bibitem{Alex3}
+Grothendieck, A. and J. Dieudon\'{e}.: 1960, El\'{e}ments de geometrie alg\'{e}brique., \emph{Publ. Inst. des Hautes Etudes de Science}, \textbf{4}.
+
+\bibitem{ALEXsem}
+Grothendieck, A. et al., \emph{S\'eminaire de G\'eometrie Alg\'ebrique}, Berlin: Springer-Verlag.
+(See also \PMlinkexternal{additional discussion at two websites}{http://en.wikipedia.org/wiki/Grothendieck}, and \PMlinkexternal{also English Abstracts for all volumes}{http://planetphysics.org/?op=getobj&from=books&id=201}).
+  
+\bibitem{ALEX57}
+Grothendieck, A., 1957, Sur Quelques Points d'alg\'ebre homologique, {\em Tohoku Mathematics Journal}, 9, 119--221.
+  
+\bibitem{GL66}
+Gruson, L, 1966, Compl\'etion ab\'elienne. {\em Bull. Math.Soc. France}, \textbf{90}: 17-40.
+ 
+\bibitem{HKK}
+K.A. Hardie, K.H. Kamps and R.W. Kieboom, A homotopy 2--groupoid of a Hausdorff 
+space, {\em Applied Cat. Structures} 8 (2000), 209--234.
+
+\bibitem{HWS82}
+Hatcher, W. S., 1982, {\em The Logical Foundations of Mathematics}, Oxford: Pergamon Press. 
+  
+\bibitem{Heller58}
+Heller, A. :1958, Homological algebra in Abelian categories., \emph{Ann. of Math.}
+\textbf{68}: 484-525.
+
+\bibitem{HellerRowe62}
+Heller, A.  and K. A. Rowe.:1962, On the category of sheaves., \emph{Amer J. Math.}
+\textbf{84}: 205-216.
+
+\bibitem{HG2k3}
+Hellman, G., 2003, Does Category Theory Provide a Framework for Mathematical Structuralism ?, Philosophia Mathematica, 11, 2, 129--157. 
+
+\bibitem{HC-MM-PJ2K}
+Hermida, C. \& Makkai, M. \& Power, J., 2000, On Weak Higher-dimensional Categories I, Journal of Pure and Applied Algebra, 154, no. 1-3, 221--246. 
+
+\bibitem{HC-MM-PI2K1}
+Hermida, C. \& Makkai, M. \& Power, J., 2001, On Weak Higher-dimensional Categories 2, Journal of Pure and Applied Algebra, 157, no. 2-3, 247--277.  
+
+\bibitem{HC-MM-PI2K2}
+Hermida, C. \& Makkai, M. \& Power, J., 2002, On Weak Higher-dimensional Categories 3, Journal of Pure and Applied Algebra, 166, no. 1-2, 83--104.  
+
+\bibitem{HPJbook}
+Higgins, P. J.: 2005, \emph{Categories and groupoids}, Van Nostrand Mathematical Studies: 32, (1971); \emph{Reprints in
+Theory and Applications of Categories}, No. 7: 1-195.
+
+\bibitem{HPJ2k5}
+Higgins, Philip J. Thin elements and commutative shells in cubical $\omega$-categories. Theory Appl. Categ. 14 (2005), No. 4, 60--74 (electronic). 18D05.
+
+\bibitem{E.Hurewicz}
+E.Hurewicz. CW Complexes. {\em Trans AMS}., \textbf{55}: 737--755(1949), (cited in Spanier, E. H.: 1966, {\em Algebraic Topology}, McGraw Hill: New York. 
+
+\bibitem{Isham1}
+Isham, C. J., A new approach to quantising space--time: I. quantising on a general category, \emph{Adv. Theor. Math. Phys.} \textbf{7} (2003), 331--367.
+
+\bibitem{JPT79A}
+Johnstone, P. T., 1979a, Conditions Related to De Morgan's Law.,{\em Applications of Sheaves}, Lecture Notes in Mathematics, \textbf{753}, Berlin: Springer, 479--491. 
+
+\bibitem{JPT79B}
+Johnstone, P.T., 1979b, Another Condition Equivalent to De Morgan's Law, Communications in Algebra, 7, no. 12, 1309--1312.  
+
+\bibitem{JPT85}
+Johnstone, P. T., 1985, How General is a Generalized Space ?, {\em Aspects of Topology}, Cambridge: Cambridge University Press, 77--111. 
+
+\bibitem{JAMI95}
+Joyal, A. \& Moerdijk, I., 1995, \emph{Algebraic Set Theory}, Cambridge: Cambridge University Press.  
+
+\bibitem{kampen1-1933}
+Van Kampen, E. H.: 1933, On the Connection Between the Fundamental Groups of some Related Spaces, \emph{Amer. J. Math.} \textbf{55}: 261-267
+
+\bibitem{KDM58}
+Kan, D. M., 1958, Adjoint Functors, \emph{Transactions of the American Mathematical Society}, 87, 294-329.  
+
+\bibitem{Kleisli62}
+Kleisli, H.: 1962, Homotopy theory in Abelian categories.,{\em Can. J. Math.}, \textbf{14}: 139-169.
+
+\bibitem{KJT70}
+Knight, J.T., 1970, \emph{On epimorphisms of non-commutative rings.}, {\em Proc. Cambridge Phil. Soc.},
+\textbf{25}: 266-271.
+
+\bibitem{LTY}
+Lam, T. Y., 1966, The category of noetherian modules, {\em Proc. Natl. Acad. Sci. USA}, \textbf{55}: 1038-104.
+
+\bibitem{LJ-SPJ81}
+Lambek, J. \& Scott, P. J., 1981, Intuitionistic Type Theory and Foundations, Journal of Philosophical Logic, 10, 1, 101--115. 
+
+\bibitem{LJ-SPJ86}
+Lambek, J. \& Scott, P.J., 1986, Introduction to Higher Order Categorical Logic, Cambridge: Cambridge University Press. 
+
+\bibitem{LJ72}
+Lambek, J., 1972, Deductive Systems and Categories III. Cartesian Closed Categories, Intuitionistic Propositional Calculus, and Combinatory Logic, in {\em Toposes, Algebraic Geometry and Logic}, Lecture Notes in Mathematics, 274, Berlin: Springer, 57--82.  
+
+\bibitem{LT89A}
+Lambek, J., 1989A, On Some Connections Between Logic and Category Theory, Studia Logica, 48, 3, 269--278. 
+
+\bibitem{LJ89B}
+Lambek, J., 1989B, On the Sheaf of Possible Worlds, in {\em Categorical Topology and its relation to Analysis, Algebra and Combinatorics}, Teaneck: World Scientific Publishing, 36--53. 
+ 
+\bibitem{LaSc}
+Lambek, J. and P.~J.~Scott. {\em Introduction to higher order categorical logic}. Cambridge University Press, 1986.
+
+\bibitem{Lance}
+E. C. Lance :  Hilbert C*--Modules. \emph{London Math. Soc. Lect. Notes} \textbf{210}, \emph{Cambridge Univ. Press.} 1995.
+
+\bibitem{LE99}
+Landry, E., 1999, Category Theory: the Language of Mathematics, {\em Philosophy of Science}, 66, 3: supplement, S14--S27. 
+
+\bibitem{LE99}
+Landry, E., 2001, Logicism, Structuralism and Objectivity, {\em Topoi}, 20, 1, 79--95. 
+
+\bibitem{LandNP98}
+Landsman, N. P.: 1998, \emph{Mathematical Topics between Classical and Quantum Mechanics}, Springer Verlag: New York.
+
+\bibitem{Land1}
+N. P. Landsman : Compact quantum groupoids, arXiv:math--ph/9912006
+
+\bibitem{LPRM94}
+La Palme Reyes, M., et. al., 1994, The non-Boolean Logic of Natural Language Negation, {\em Philosophia Mathematica}, 2, no. 1, 45--68.
+
+\bibitem{LFW64}
+Lawvere, F. W., 1964, An Elementary Theory of the Category of Sets. (ETAC), {\em Proceedings of the National Academy of Sciences U.S.A}., \textbf{52}: 1506-1511. 
+
+\bibitem{LFW65}
+Lawvere, F. W., 1965, Algebraic Theories, Algebraic Categories, and Algebraic Functors, {\em Theory of Models.}, 
+
+\bibitem{LFW66}
+Lawvere, F. W.: 1966, The Category of Categories as a Foundation for Mathematics., in
+\emph{Proc. Conf. Categorical Algebra- La Jolla}., Eilenberg, S. et al., eds. Springer--Verlag:
+Berlin, Heidelberg and New York., pp. 1-20.
+
+\bibitem{LFW69a}
+Lawvere, F. W., 1969a, Diagonal Arguments and Cartesian Closed Categories, {\em Category Theory, Homology Theory, and their Applications: II}, Berlin: Springer: 134--145.  
+
+\bibitem{LFW69b}
+Lawvere, F. W., 1969b, Adjointness in Foundations., {\em Dialectica}, \textbf{23}: 281-295.  
+
+\bibitem{LFW72}
+Lawvere, F. W., 1972, Introduction. , in {\em Toposes, Algebraic Geometry and Logic}, Lecture Notes in Mathematics, \textbf{274}, Springer-Verlag, 1-12.  
+
+\bibitem{LFW75}
+Lawvere, F. W., 1975, Continuously Variable Sets: Algebraic Geometry = Geometric Logic., {\em Proceedings of the Logic Colloquium,}, Bristol 1973, Amsterdam: North Holland, pp 135-153. 
+
+\bibitem{LFW76}
+Lawvere, F. W., 1976, Variable Quantities and Variable Structures in Topoi, {\em Algebra, Topology, and Category Theory}, New York: Academic Press,pp. 101-131. 
+
+\bibitem{LFW63}
+Lawvere, F. W.: 1963, Functorial Semantics of Algebraic Theories, \emph{Proc. Natl. Acad. Sci. USA, Mathematics}, \textbf{50}: 869-872.
+
+\bibitem{LFW92}
+Lawvere, F. W., 1992, Categories of Space and of Quantity, {\em The Space of Mathematics, Foundations of Communication and Cognition}, Berlin: De Gruyter, 14--30.  
+
+\bibitem{LFW95}
+Lawvere, H. W (ed.), 1995. Springer Lecture Notes in Mathematics, \textbf{274}:13-42. 
+
+\bibitem{LFW2k}
+Lawvere, F. W., 2000, Comments on the Development of Topos Theory., {\em Development of Mathematics 1950-2000}, Basel: Birkha\"user, pp. 715-734. 
+
+\bibitem{LFW2k2}
+Lawvere, F. W., 2002, Categorical Algebra for Continuum Micro-Physics, {\em Journal of Pure and Applied Algebra}, \textbf {175}, no. 1--3, 267--287. 
+
+\bibitem{LFWk3}
+Lawvere, F. W., 2003, Foundations and Applications: Axiomatization and Education. New Programs and Open Problems in the Foundation of Mathematics., {\em Bulletin of Symbolic Logic}, \textbf{9}, (2): 213--224. 
+
+\bibitem{LT2k2}
+Leinster, T., 2002, A Survey of Definitions of $n$-categories, {\em Theory and Applications of Categories}, (electronic), 10, 1-70. 
+
+\bibitem{Lofgren68}
+L\"{o}fgren, L.: 1968, An Axiomatic Explanation of Complete Self-Reproduction, \emph{Bulletin of Mathematical Biophysics}, \textbf{30}: 317-348
+
+\bibitem{LS60}
+Lubkin, S., 1960. Imbedding of abelian categories.,  {\em Trans. Amer. Math. Soc.}, \textbf{97}: 410-417.
+
+\bibitem{Mack1}
+K. C. H. Mackenzie : \emph{Lie Groupoids and Lie Algebroids in Differential Geometry}, LMS Lect. Notes \textbf{124}, Cambridge University Press, 1987.
+
+\bibitem{MCLSS48}
+MacLane, S.: 1948. Groups, categories, and duality., {\em Proc. Natl. Acad. Sci.U.S.A},
+\textbf{34}: 263-267.
+
+\bibitem{MCLSS69}
+MacLane, S., 1969, Foundations for Categories and Sets., {\em Category Theory, Homology Theory and their Applications. II}, Berlin: Springer, pp. 146-164. 
+
+\bibitem{MCLS69}
+MacLane, S., 1969, One Universe as a Foundation for Category Theory., {\em Reports of the Midwest Category Seminar. III}, Berlin: Springer, 192--200. 
+
+\bibitem{MCLS71}
+MacLane, S., 1971, Categorical algebra and Set-Theoretic Foundations, {\em Axiomatic Set Theory}, Providence: AMS, 231--240. 
+
+\bibitem{MCLS75}
+MacLane, S., 1975, Sets, Topoi, and Internal Logic in Categories., {\em Studies in Logic and the Foundations of Mathematics}, \textbf{80}, Amsterdam: North Holland, pp. 119-134. 
+
+\bibitem{MCLS89}
+MacLane, S., 1989, The Development of Mathematical Ideas by Collision: the Case of Categories and Topos Theory, in 
+{\em Categorical Topology and its Relation to Analysis, Algebra and Combinatorics}, Teaneck: World Scientific, pp. 1-9.
+
+\bibitem{MS-IM92}
+MacLane, S and I. Moerdijk., \emph{Sheaves in Geometry and Logic -- A first Introduction to Topos Theory}, Springer Verlag, New York. 1992. 
+
+\bibitem{MCLS96} 
+MacLane, S., 1996, Structure in Mathematics. Mathematical Structuralism., {\em Philosophia Mathematica},
+ \textbf{4} (2): 174-183. 
+
+\bibitem{MCLS98}
+MacLane, S., 1997, {\em Categories for the Working Mathematician}, 2nd edition, New York: Springer-Verlag. 
+
+\bibitem{Majid1}
+Majid, S.: 1995, \emph{Foundations of Quantum Group Theory}, Cambridge Univ. Press: Cambridge, UK.
+
+\bibitem{Majid2}
+Majid, S.: 2002, \emph{A Quantum Groups Primer}, Cambridge Univ.Press: Cambridge, UK.
+
+\bibitem{MM-RG95} 
+Makkai, M. and Par, R., 1989, Accessible Categories: the Foundations of Categorical Model Theory, Contemporary Mathematics 104, Providence: AMS. 
+
+\bibitem{MM98}
+Makkai, M., 1998, Towards a Categorical Foundation of Mathematics, in {\em Lecture Notes in Logic}, \textbf{11}, Berlin: Springer, 153--190. 
+
+\bibitem{MM99}
+Makkai, M., 1999, On Structuralism in Mathematics, 
+in {\em Language, Logic and Concepts}, Cambridge: MIT Press, 43--66. 
+
+\bibitem{MM-RG77}
+Makkai, M. and Reyes, G., 1977, {\em First-Order Categorical Logic}, Springer Lecture Notes in Mathematics 611, New York: Springer. 
+
+\bibitem{MM-RG95}
+Makkei, M. and Reyes, G., 1995, Completeness Results for Intuitionistic and Modal Logic in a Categorical Setting, 
+{\em Annals of Pure and Applied Logic}, 72, 1, 25--101. 
+
+\bibitem{Manders}
+Manders, K.L.: 1982, On the space-time ontology of physical theories, \emph{Philosophy of Science} \textbf{49} no. 4: 575--590.
+
+\bibitem{MJP95}
+Marquis, J.-P., 1995, Category Theory and the Foundations of Mathematics: Philosophical Excavations., Synthese, 103, 421--447. 
+
+\bibitem{MJP2k6} 
+Marquis, J.-P., 2006, Categories, Sets and the Nature of Mathematical Entities, in {\em The Age of Alternative Logics. Assessing philosophy of logic and mathematics today.}, J. van Benthem, G. Heinzmann, Ph. Nabonnand, M. Rebuschi, H.Visser, eds., Springer, : 181-192. 
+
+\bibitem{MJP1999}
+May, J.P. 1999, \emph{A Concise Course in Algebraic Topology}, The University of Chicago Press: Chicago.
+
+\bibitem{MCWP43}
+McCulloch, W. and W. Pitt.: 1943, A logical Calculus of Ideas Immanent in Nervous Activity., \emph{Bull. Math. Biophysics,} \textbf{5}: 115-133.
+
+\bibitem{MLC86}
+Mc Larty, C., 1986, Left Exact Logic, {\em Journal of Pure and Applied Algebra}, {41}, no. 1" 63-66.
+
+\bibitem{MLC91}
+Mc Larty, C., 1991, {\em Axiomatizing a Category of Categories}, {\em Journal of Symbolic Logic}, 56, no. 4, 1243-1260. 
+
+\bibitem{MLC92} 
+Mc Larty, C., 1992, {\em Elementary Categories, Elementary Toposes}, Oxford: Oxford University Press.
+
+\bibitem{MLC94}
+Mc Larty, C., 1994, Category Theory in Real Time, {\em Philosophia Mathematica}, \textbf{2}, no. 1: 36-44.
+
+\bibitem{2k4}
+Mc Larty, C., 2004, Exploring Categorical Structuralism, {\em Philosophia Mathematica}, 12, 37-53.
+
+\bibitem{Mitchell1}
+Mitchell, B.: 1965, \emph{Theory of Categories}, Academic Press:London.
+
+\bibitem{Mitchell2}
+Mitchell, B.: 1964, The full imbedding theorem. \emph{Amer. J. Math}. \textbf{86}: 619-637.
+
+\bibitem{MI-P2k2}
+Moerdijk, I. and Palmgren, E., 2002, Type Theories, Toposes and Constructive Set Theory: Predicative Aspects of AST., Annals of Pure and Applied Logic, 114, no. 1--3, 155--201. 
+
+\bibitem{MO98}
+Moerdijk, I., 1998, Sets, Topoi and Intuitionism., {\em Philosophia Mathematica}, 6, no. 2, 169--177.
+
+\bibitem{Moer1}
+Moerdijk, I : Classifying toposes and foliations, {\it Ann. Inst. Fourier, Grenoble} \textbf{41}, 1 (1991) 189--209.
+
+\bibitem{Moer2}
+Moerdijk, I : Introduction to the language of stacks and gerbes, arXiv:math.AT/0212266 (2002).
+
+\bibitem{MK70}
+Morita, K. , 1970. Localization in categories of modules. I., {\em Math. Z.}, 
+\textbf{114}: 121-144.
+
+\bibitem{Mostow}
+M. A. Mostow : The differentiable space structure of Milnor classifying spaces, 
+simplicial complexes, and geometric realizations, \emph{J. Diff. Geom.} \textbf{14} (1979) 255-293.
+
+
+\bibitem{NSA}
+National Academy of Sciences. 2000. H. Bass, Henri Cartan, Peter Freyd, Alex Heller and Saunders Mac Lane.  \PMlinkexternal{Samuel Eilenberg: 1913-1998. A Biographical Memoir.}{http://www.nap.edu/html/biomems/seilenberg.pdf} 
+
+\bibitem{OB69}
+Oberst, U.: 1969, Duality theory for Grothendieck categories., \emph{Bull. Amer. Math. Soc.} \textbf{75}: 1401-1408.
+
+\bibitem{ORT70}
+Oort, F.: 1970. On the definition of an abelian category. \emph{Proc. Roy. Neth. Acad. Sci}. \textbf{70}: 13-02.
+
+\bibitem{OO31}
+Ore, O., 1931, Linear equations on non-commutative fields., {\em Ann. Math.},\textbf{32}: 463-477.
+
+\bibitem{PB70}
+Pareigis, B., 1970, {\em Categories and Functors}, New York: Academic Press. 
+
+\bibitem{PMC 2k4}
+Pedicchio, M. C. \& Tholen, W., 2004, {\em Categorical Foundations}, Cambridge: Cambridge University Press.  
+
+\bibitem{PAM90}
+Pitts, A. M., 1989, Conceptual Completeness for First-order Intuitionistic Logic: an Application 
+of Categorical Logic, {\em Annals of Pure and Applied Logic}, 41, no. 1, 33--81. 
+
+\bibitem{PAM2k}
+Pitts, A. M., 2000, {\em Categorical Logic. Handbook of Logic in Computer Science}, Vol.5, Oxford: Oxford Unversity Press, 39--128.
+
+\bibitem{Pradines1966}
+Pradines, J.: 1966, Th\'eorie de Lie pour les groupo\"ides diff\'erentiable, relation entre propri\'etes locales et globales, \emph{C. R. Acad Sci. Paris S\'er. A} \textbf{268}: 907-910.
+
+\bibitem{RGZH91}
+Reyes, G. and Zolfaghari, H., 1991, Topos-theoretic Approaches to Modality, 
+{\em Category Theory (Como 1990)}, Lecture Notes in Mathematics, 1488, Berlin: Springer, 359--378. 
+
+\bibitem{RGZH96}
+Reyes, G. and Zolfaghari, H., 1996, Bi-Heyting Algebras, Toposes and Modalities, 
+{\em Journal of Philosophical Logic}, 25, no. 1, 25--43.
+
+\bibitem{Seelik}
+Paul Selick. 1997. Relations between Homology and Homotopy Groups., In {\em Introduction to homotopy theory}. 
+Fields Institute Monograph.
+
+\bibitem{SEP99}
+SEP. 1999. {\em The Stanford Encyclopedia of Philosophy.} 
+\PMlinkexternal{(Winter 1999 Edition)}{http://plato.stanford.edu/archives/win1999/entries/}. 
+
+\bibitem{SEH66}
+Spanier, E. H.: 1966, \emph{Algebraic Topology}, McGraw Hill: New York.
+
+\bibitem{Szabo}
+Szabo, R. J.: 2003, Quantum field theory on non-commutative spaces,
+\emph{Phys. Rep.} \textbf{378}: 207--209.
+
+\bibitem{Varilly97}
+V\'arilly, J. C.: 1997, {\em An introduction to noncommutative geometry.},(preprint)
+\emph{arXiv:physics/9709045}.
+
+\end{thebibliography} 
+%%%%%
+%%%%%
+\end{document}

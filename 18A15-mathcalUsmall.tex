@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathcalUsmall}
+\pmcreated{2013-03-22 14:13:21}
+\pmmodified{2013-03-22 14:13:21}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{$\mathcal{U}$-small}
+\pmrecord{11}{35658}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{03E30}
+\pmrelated{Universe}
+\pmrelated{Category}
+\pmrelated{DirectLimit}
+\pmrelated{FunctorCategory}
+\pmdefines{$\mathcal{U}$-category}
+\pmdefines{small category}
+\pmdefines{kittygory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\DeclareMathOperator{\Hom}{Hom}
+\begin{document}
+\PMlinkescapeword{restrictions}
+Let $\mathcal{U}$ be a universe (so is, in particular, a set of sets).
+
+A set $S$ is said to be \emph{$\mathcal{U}$-small} if it is isomorphic to an element of $\mathcal{U}$ (i.e., there is a bijection between $S$ and some element of $\mathcal{U}$).
+
+A category $C$ is \emph{$\mathcal{U}$-small} (or just \emph{small}, if no confusion is likely to arise) if the set of objects of $C$ is isomorphic to a set in $\mathcal{U}$, and is a \emph{$\mathcal{U}$-category} if for every pair of objects $A$, $B$ in $C$, $\Hom(A,B)$ is isomorphic to a set in $\mathcal{U}$.
+
+These definitions amount to restrictions on the cardinality of the objects involved, and are intended to provide a condition that will allow operations such as extracting the category of functors or taking the direct limit to give results that are reasonable, that is, either isomorphic to an object of $\mathcal{U}$ or made up of objects of $\mathcal{U}$. 
+
+Observe that the category of subsets of $\mathcal{U}$ is a $\mathcal{U}$-category but is not $\mathcal{U}$-small.
+
+\begin{thebibliography}{9}
+
+\bibitem[SGA4]{sga4} Grothendieck et al., \emph{S\'eminaires en G\`eometrie Alg\`ebrique 4}, tomes 1, 2, and 3.
+\bibitem[Mur68]{Mur68}  Murphy, O.  \emph{Some modern methods in the theory of lion hunting}, American Mathematical Monthly {\bf 75} (2), Feb., 1968, 185--187.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

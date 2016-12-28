@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DisjointUnionOfCategories}
+\pmcreated{2013-03-22 18:27:22}
+\pmmodified{2013-03-22 18:27:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{disjoint union of categories}
+\pmrecord{5}{41119}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{CategoricalDirectSum}
+\pmrelated{ProductOfCategories}
+\pmdefines{disjoint union}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\lbrace \mathcal{C}_i\rbrace$ be a collection of categories, indexed by a set $I$.  The \PMlinkescapetext{\emph{disjoint union}} $\mathcal{C}$ of these categories is defined as follows:
+\begin{enumerate}
+\item the class of objects of $\mathcal{C}$ is the disjoint union of classes of objects, $\operatorname{Ob}(\mathcal{C}_i)$, for every $i\in I$,
+\item the class of morphisms of $\mathcal{C}$ is the disjoint union of classes of morphisms, $\operatorname{Mor}(\mathcal{C}_i)$, for every $i\in I$.
+\item for objects $A,B$ in $\mathcal{C}$, if they are objects of $\mathcal{C}_i$, then $\hom(A,B)$ is the set of morphisms from $A$ to $B$ in $\mathcal{C}_i$, otherwise, $\hom(A,B):=\varnothing$.
+\item given $\hom(A,B)$ and $\hom(B,C)$, the composition of morphisms is defined so that, if $A,B,C$ are all objects of some $\mathcal{C}_i$, the composition is the same as the composition of morphisms defined in $\mathcal{C}_i$.  Otherwise, it is defined as $\varnothing$.
+\end{enumerate}
+
+With the above conditions, one immediately sees that $\mathcal{C}$ is a category, as each $\hom(A,B)$ is a set, associativity of morphism composition and identity morphisms all inherit from the individual categories $\mathcal{C}_i$.
+
+\textbf{Remark}.  If each $\mathcal{C}_i$ is small, so is their disjoint union.  In fact, in \textbf{Cat}, the category of small categories, the disjoint union of these categories is their coproduct.
+%%%%%
+%%%%%
+\end{document}

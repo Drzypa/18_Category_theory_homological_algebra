@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentDefinitionOfARepresentableFunctor}
+\pmcreated{2013-03-22 15:49:18}
+\pmmodified{2013-03-22 15:49:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{equivalent definition of a representable functor}
+\pmrecord{9}{37788}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We provide an equivalent, motivating, way of defining a representable functor.
+
+Let $\mathcal{C}$ be a category and $F : \mathcal{C} \rightarrow Set$ be a covariant functor and $A \in \mathcal{C}$. Then the following are equivalent
+
+\begin{enumerate}
+\item $\mathcal{C}(A,-)$ is naturally isomorphic to $F$ (or, isomorphic in the appropriate category of functors)
+\item There exists an element $i \in F(A)$ such that for every $B \in \mathcal{C}, r \in F(B)$ there exists a unique $f \in \mathcal{C}(A,B)$ such that $F(f)(i) = r$
+\end{enumerate}
+
+
+To illustrate the significance of this, consider the category $\mathcal{C} = \bf{Vect}_k$ of vector spaces over a field $k$. For arbitrary vector spaces $V, W$ consider the functor $F : \mathcal{C} \rightarrow Set$ determined by
+
+$$ F(U) = \operatorname{Bilin}(V \times W, U) $$
+
+Where this denotes the set of maps which are linear in both entries. This is a covariant functor in the obvious way. Then one may define $V \otimes W$ as the object which represents $F$ (if it exists). The significance of the result is it shows this is equivalent to the 'usual' definition: there is a bilinear map $i : V \times W \rightarrow V \otimes W$ through which all bilinear maps from $V \times W$ (these are quantified by r in the theorem) factor uniquely. This is because $r : V \times W \rightarrow U$ factors through $i$ exactly when there is an $f \in \mathcal{C}(V \otimes W, U)$ such that $F(f)(i) = r$.
+
+Such universal constructions can be shown to be functorial in the basic objects. For instance the tensor product may be shown to be a functor
+
+$$ {\bf{Vect}_k} \times {\bf{Vect}_k} \rightarrow {\bf{Vect}_k} $$
+
+To generalise this suppose that $\mathcal{D}$ is a category (roughly representing ${\bf{Vect}_k} \times {\bf{Vect}_k}$ in our case) and we have a functor
+
+$$ F : \mathcal{D}^{op} \times \mathcal{C} \rightarrow Set $$
+
+such that $F(d,-) : \mathcal{C} \rightarrow Set$ is isomorphic to $\mathcal{C}(G(d),-)$ for some object $G(d)$. Then one may show that $G$ extends to a functor in such a way that $F(-,-)$ is naturally isomorphic to $\mathcal{C}(G(-),-)$.
+
+We may show further that if $F,F^\prime$ are isomorphic functors and $G,G^\prime$ are functors which represent them respectively, then there is a natural isomorphism between $G$ and $G^\prime$.
+%%%%%
+%%%%%
+\end{document}

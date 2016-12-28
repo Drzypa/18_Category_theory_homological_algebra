@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfACommaCategory}
+\pmcreated{2013-03-22 18:28:27}
+\pmmodified{2013-03-22 18:28:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of a comma category}
+\pmrecord{7}{41146}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A25}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage[2cell]{xy}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{A},\mathcal{B},\mathcal{C}$ be categories, and $F:\mathcal{A}\to \mathcal{C}$ and $G:\mathcal{B}\to \mathcal{C}$ be functors between them, and $(F\downarrow G)$ the comma category.
+
+\begin{prop}  There are two functors $P:(F\downarrow G) \to \mathcal{A}$ and $Q:(F\downarrow G)\to \mathcal{B}$ and one natural transformation $\eta: F\! \circ\! P \Rightarrow G\!\circ\! Q$.
+$$\xymatrix@+=2cm{\mathcal{A} \ar[d]_F &  (F\downarrow G) \ar[r]^Q \ar[l]_P \ar@{-->}[dl]|{F\circ P \mbox{ }}="1" \ar@{-->}[dr]|{\mbox{ } G\circ Q}="2" & \mathcal{B} \ar[d]^G  \\ \mathcal{C} && \mathcal{C} \ar@{=>}"1" ;"2"_{\eta} }$$
+\end{prop}
+\begin{proof}[Sketch of Proof]
+We first define functors $P$ and $Q$.
+\begin{itemize}
+\item For $P:(F\downarrow G)\to \mathcal{A}$, set $P(A,B,f):=A$ and $P(x,y):=x$.
+\item For $Q:(F\downarrow G)\to \mathcal{B}$, set $Q(A,B,f):=B$ and $Q(x,y):=y$.
+\end{itemize}
+We leave it for the reader to check that $P$ and $Q$ preserve morphism composition and therefore are indeed covariant functors.
+
+Now, given $F\! \circ\! P,G\!\circ\! Q:(F\downarrow G)\to \mathcal{C}$, we set $$\eta_{(A,B,f)}:=f$$ for every object $(A,B,f)$ in $(F\downarrow G)$.  To see that $\eta$ is natural, start with a morphism $(x,y):(A,B,f)\to (C,D,g)$.  Then the rest of the proof is done by looking at two commutative diagrams and realizing that they are exactly the same:
+$$\xymatrix@+=1.5cm{F(A) \ar[r]^f \ar[d]_{F(x)} & G(B) \ar[d]^{G(y)}="1" & F\!\circ\! P(A,B,f) \ar[r]^{\eta_{(A,B,f)}} \ar[d]_{F\circ P(x,y)}="2" & G\!\circ\! Q(A,B,f) \ar[d]^{G\circ Q(x,y)} 
+\\ F(C) \ar[r]_g & G(D) & F\!\circ\! P(C,D,g) \ar[r]_{\eta_{(C,D,g)}} & G\!\circ\! Q(C,D,g) \ar@{}"1";"2"|-{=} }$$
+where the first diagram comes from the definition of $(x,y)$.
+\end{proof}
+
+\begin{prop}  If we have another diagram 
+$$\xymatrix@+=2cm{\mathcal{A} \ar[d]_F &  \mathcal{D} \ar[r]^S \ar[l]_R \ar@{-->}[dl]|{F\circ R \mbox{ }}="1" \ar@{-->}[dr]|{\mbox{ } G\circ S}="2" & \mathcal{B} \ar[d]^G  \\ \mathcal{C} && \mathcal{C} \ar@{=>}"1" ;"2"_{\tau} }$$
+Then there is a unique functor $H:\mathcal{D}\to (F\downarrow G)$ with the commutative diagram
+$$\xymatrix@+=1.5cm{ & \mathcal{D} \ar[d]^H \ar[dl]_R \ar[dr]^S & \\ \mathcal{A} & (F\downarrow G) \ar[r]_Q \ar[l]^P & \mathcal{B} }$$
+Furthermore, we have the horizontal composition of natural transformations $\tau=\eta\circ 1_H$:
+$$
+\UseAllTwocells
+\xymatrix @+=3cm{\mathcal{D} \ruppertwocell<5>^{\stackrel{F\circ R}{}}{<0>_{\quad \tau}} \rlowertwocell<-5>_{\stackrel{}{G\circ S}}{\omit} & \mathcal{C}} \quad{=}\quad
+\xymatrix @+=3cm{\mathcal{D} \ruppertwocell<4.5>^{\stackrel{H}{}}{<0>_{\quad 1_H}} \rlowertwocell<-4.5>_{\stackrel{}{H}}{\omit} & (F\downarrow G) \ruppertwocell<4.5>^{\stackrel{F\circ P}{}}{<0>_{\quad \eta}} \rlowertwocell<-4.5>_{\stackrel{}{G\circ Q}}{\omit} & \mathcal{C}}
+$$
+\end{prop}
+\begin{proof}
+$H:\mathcal{D}\to (F\downarrow G)$ can be obtained as follows: 
+\begin{itemize}
+\item for any object $X$ in $\mathcal{D}$, set $H(X):=(R(X),S(X),\tau_X)$, and
+\item for any morphism $u:X\to Y$ in $\mathcal{D}$, set $H(u):=(R(u),S(u))$.  This is well-defined because 
+$$\xymatrix@+=2cm{F(R(X)) \ar[d]_{\tau_X} \ar[r]^{F(R(u))} & F(R(Y)) \ar[d]^{\tau_Y} \\
+G(S(X)) \ar[r]^{G(S(u))} & G(S(Y))}$$ is a commutative diagram due to the naturality of $\tau$.
+\end{itemize}
+To see that $H$ is a (covariant) functor, let $u:X\to Y$ and $v:Y\to Z$ be morphisms in $\mathcal{D}$.  Then $H(v\circ u)=(R(v\circ u),S(v\circ u))=(R(v)\circ R(u),S(v)\circ S(u))=(R(v),S(v))\circ (R(u),S(u))=H(v)\circ H(u)$.  
+
+Next, we check the commutativity conditions, which are clear: $P\!\circ\! H(X)=R(X)$, $P\!\circ\! H(u) = R(u)$, and $Q\!\circ\! H(X)=S(X)$, $Q\!\circ\! H(u)=S(u)$.  Finally, $(\eta\circ 1_H)_X = \eta_{H(X)}\circ (F\circ P)((1_H)_X) = \eta_{H(X)}\circ (F\circ P)(1_{H(X)}) = \eta_{H(X)}\circ F(1_{R(X)}) = \eta_{H(X)}\circ 1_{F\circ R(X)} = \tau_X\circ 1_{F\circ R(X)} = \tau_X$.
+
+This shows the existence of $H$.
+
+Now we prove the uniqueness of $H$.  Suppose $K:\mathcal{D}\to (F\downarrow G)$ is another such a functor (satisfying the diagram above).  This boils down to showing that $K(X)=H(X)$ and $K(u)=H(u)$ for any object $X$ and morphism $u$ in $\mathcal{D}$.
+\begin{itemize}
+\item
+If $(A,B,f)=K(X)$, then $A=P(A,B,f)=P(K(X))=R(X)$ and $B=Q(A,B,f)=Q(K(X))=S(X)$.  This shows that $f:F(A)\to G(B)$ is a morphism from $F(R(X)$ to $G(S(X))$.  Finally, $\tau_X = (\eta \circ 1_K)_X = \eta_{K(X)} \circ (F\circ P)((1_K)_X) = f\circ (F\circ P)((1_K)_X) = f\circ (F\circ P)(1_{K(X)}) = f\circ F(1_{P(K(X))}) = f\circ F(1_{R(X)}) = f\circ 1_{F(R(X))} = f$.  Therefore, $K(X)=(A,B,f)=(R(X),S(X),\tau_X)=H(X)$.
+\item
+If $(x,y)=K(u)$, then $x=P(x,y)=P(K(u))=R(u)$ and $y=Q(x,y)=Q(K(u))=S(u)$.  Therefore, $K(u)=(x,y)=(R(u),S(u))=H(u)$.
+\end{itemize}
+This shows that $H$ is unique, and the proof is complete.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

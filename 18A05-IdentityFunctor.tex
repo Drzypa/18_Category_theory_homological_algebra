@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdentityFunctor}
+\pmcreated{2013-03-22 16:37:08}
+\pmmodified{2013-03-22 16:37:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{identity functor}
+\pmrecord{9}{38817}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{18-00}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category.  The \emph{identity functor} of $\mathcal{C}$ is the unique functor, written $I_{\mathcal{C}}$, such that for every object $A$ and every morphism $\alpha$ in $\mathcal{C}$, we have 
+$$I_{\mathcal{C}}(A)=A\quad\mbox{ and }\quad I_{\mathcal{C}}(\alpha)=\alpha.$$  To verify that $I_{\mathcal{C}}$ is indeed a functor, we note that $I_{\mathcal{C}}(1_A)=1_A=1_{I_{\mathcal{C}}(A)}$, where $1_A$ is the identity morphism of $A$, and $I_{\mathcal{C}}(\alpha\circ\beta)=\alpha\circ \beta=I_{\mathcal{C}}(\alpha)\circ I_{\mathcal{C}}(\beta)$.
+
+For any functor $F:\mathcal{C}\to \mathcal{D}$, we have $F\circ I_{\mathcal{C}}= I_{\mathcal{D}}\circ F=F$.
+
+Since every category gives rise to its unique identity functor, we can think of \emph{the identity functor} $I$ as a (covariant) functor on \textbf{Cat}, the category of (small) categories.  It is given by taking any category $\mathcal{C}$ to itself and any functor $F:\mathcal{C}\to \mathcal{D}$ to itself.
+%%%%%
+%%%%%
+\end{document}

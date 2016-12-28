@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommaCategory}
+\pmcreated{2013-03-22 16:14:37}
+\pmmodified{2013-03-22 16:14:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{comma category}
+\pmrecord{12}{38347}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A25}
+\pmsynonym{slice category}{CommaCategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Naive notion of a comma category}
+Let $\mathcal{C}$ be a category and two subcategories $D_1$ and $D_2$ of $\mathcal{C}$.  We form a category $(D_1,D_2)$ as follows:
+
+\begin{enumerate}
+\item The objects of $(D_1,D_2)$ are of the form $(a,b,f)$, where $a$ is an object in $D_1$, $b$ is an object in $D_2$, and $f$ is a morphism (in $\mathcal{C}$) from $a$ to $b$:
+\[
+\xymatrix{a \ar[d]_f \\ b}
+\]
+\item The morphisms of $(D_1,D_2)$ are of the form $(x,y):(a,b,f)\to (c,d,g)$, where $x:a\to c$ and $y:b\to d$ are morphisms, such that 
+\[
+\xymatrix{a \ar[d]_f \ar[r]^x & c \ar[d]^g \\
+b \ar[r]^y & d}
+\]
+is a commutative diagram: $yf = gx$.
+\end{enumerate}
+
+It is easy to check that $(D_1,D_2)$ is indeed a category.  For 
+example, given object $(a,b,f)$, $(1_a,1_b)$ is the corresponding identity 
+morphism.  Furthermore, if we have the following two commutative diagrams
+\[
+\xymatrix{a \ar[d]_f \ar[r]^x & c \ar[d]^g \\
+b \ar[r]^y & d}
+\qquad\qquad\qquad\qquad
+\xymatrix{c \ar[d]_g \ar[r]^i & m \ar[d]^h \\
+d \ar[r]^j & n}
+\]
+we may combine them and form the following commutative diagram
+\[
+\xymatrix{a \ar[d]_f \ar[r]^x & c \ar[d]_g \ar[r]^i & m \ar[d]^h \\
+b \ar[r]^y & d \ar[r]^j & n}
+\]
+which shows that $h(ix)=(jy)f$, so that $(ix,jy)\in (D_1,D_2)$ is the 
+composition of $(x,y)$ and $(i,j)$.
+
+\textbf{Definition}.  $(D_1,D_2)$, so constructed, is called a \emph{comma category} (the 
+comma between $D_1$ and $D_2$), or a \emph{slice category}.
+
+\textbf{Examples}.  In the following examples, identity morphisms and compositions of morphisms are implicitly assumed to be included in the subcategories.
+\begin{itemize}
+\item $D_1$ and $D_2$ each consists of a single object of $\mathcal{C}$, say $a,b$, then $(D_1,D_2)$ is just $\hom(a,b)$.  The objects of $\hom(a,b)$ are just morphisms $a\to b$, and \emph{the} morphism of $\hom(a,b)$ is $(1_a,1_b)$.  $\hom(a,b)$ is a discrete category.
+\item $D_1$ consists of an object $a$ in $\mathcal{C}$ and $D_2= \mathcal{C}$.  Then the comma category, written $(a,\mathcal{C})$ or $(a\downarrow \mathcal{C})$, may be visualized as a ``cone'' with apex $a$ and base $\mathcal{C}$.
+\item Similarly, we can form an ``inverted cone'' $(\mathcal{C},b)$ or $(\mathcal{C}\downarrow b)$.
+\item Taking $D_1=D_2=\mathcal{C}$, then the comma category $(\mathcal{C}, \mathcal{C})$ is the arrow category of $\mathcal{C}$ whose objects are morphisms of $\mathcal{C}$ and morphisms can be identified with commutative squares in $\mathcal{C}$.
+\end{itemize}
+
+\subsubsection*{Formal definition of a comma category}
+The diagrams $D_1,D_2$, can be joined to the original category $\mathcal{C}$ via the inclusion functors $I_1,I_2$:
+\[
+\xymatrix{D_1 \ar[r]^{I_1} & \mathcal{C} & D_2 \ar[l]_{I_2} }
+\]
+which suggests that a comma category may be more generally defined in terms of a pair of categories $\mathcal{A},\mathcal{B}$, and a pair of functors $F,G$ into a certain given category $\mathcal{C}$.  Specifically, let $\mathcal{A}$ and $\mathcal{B}$ be categories and $F: \mathcal{A}\to \mathcal{C}$ and $G:\mathcal{B}\to \mathcal{C}$ be functors into a specific category $\mathcal{C}$.  A \emph{comma category} of the diagram 
+
+\[
+\xymatrix{\mathcal{A} \ar[r]^{F} & \mathcal{C} & \mathcal{B} \ar[l]_{G} }
+\]
+written $(F,G)$ or $(F\downarrow G)$, consists of the following:
+\begin{enumerate}
+\item objects have the form $(a,b,f)$, where 
+\begin{enumerate}
+\item $a$ is an object of $\mathcal{A}$, 
+\item $b$ is an object of $\mathcal{B}$, and 
+\item $f:F(a)\to G(b)$ is a morphism in $\mathcal{C}$;
+\[
+\xymatrix{F(a) \ar[d]_f \\ G(b)}
+\]
+\end{enumerate}
+\item morphisms from $(a,b,f)$ to $(c,d,g)$ have the form $(x,y)$, where 
+\begin{enumerate}
+\item $x:a\to c$ is a morphism of $\mathcal{A}$, 
+\item $y:b\to d$ is a morphism of $\mathcal{B}$, such that
+\item the following diagram
+\[
+\xymatrix@+=2cm{F(a) \ar[d]_f \ar[r]^{F(x)} & F(c) \ar[d]^g \\
+G(b) \ar[r]^{G(y)} & G(d)}
+\]
+is commutative: $F(y)f=gF(x)$.
+\end{enumerate}
+\item morphism composition in $(F\downarrow G)$ is given by $(x_2,y_2)\circ (x_1,y_1):=(x_2\circ x_1, y_2\circ y_1)$, where $(x_1,y_1):(a_1,b_1,f_1)\to (a_2,b_1,f_2)$ and $(x_2,y_2):(a_2,b_2,f_2)\to (a_3,b_3,f_3)$.
+\end{enumerate}
+It is an easy exercise to verify that indeed, $(F\downarrow G)$ is a category.  For example, the identity morphism on $(a,b,f)$ is provided by the morphism $(1_a,1_b)$.
+
+\textbf{Remark}.  If $\mathcal{A}$ and $\mathcal{B}$ happen to be subcategories of $\mathcal{C}$ and $F,G$ are the inclusion functors, then we may write $(F,G)$ as $(\mathcal{A},\mathcal{B})$ or $(\mathcal{A}\downarrow \mathcal{B})$.
+%%%%%
+%%%%%
+\end{document}

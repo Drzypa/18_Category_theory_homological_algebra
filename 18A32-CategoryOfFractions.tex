@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfFractions}
+\pmcreated{2013-03-22 18:30:55}
+\pmmodified{2013-03-22 18:30:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{category of fractions}
+\pmrecord{6}{41201}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A32}
+\pmrelated{CategoryOfAdditiveFractions}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that given a commutative ring $R$ and a subset $S$ that is multiplicatively closed and does not contain any zero divisors, we can then form the ring of fractions $S^{-1}R$ by \emph{formally} inverting elements of $S$.  $S^{-1}R$ has the following universal property: there is a ring homomorphism $\phi: R\to S^{-1}R$ with the property that 
+\begin{quote}\begin{center} $\phi(s)$ is a unit in $S^{-1}R$ for every $s\in S$; \end{center}\end{quote} and if $\sigma: R\to T$ is another ring homomorphism with the above property, then we get a unique ring homomorphism $\delta: S^{-1}R\to T$ such that $\delta\circ \phi=\sigma$.  The category of fractions is the generalization of this concept to category theory.
+
+\textbf{Definition}.  Let $\mathcal{C}$ be a category, and $\Sigma$ a class of morphisms in $\mathcal{C}$.  A \emph{category of fractions} of $\mathcal{C}$ over $\Sigma$ is a pair $(\mathcal{D},F)$, where 
+\begin{enumerate}
+\item $\mathcal{D}$ is a category and $F:\mathcal{C} \to \mathcal{D}$ is a functor, such that
+\begin{quote}\begin{center} $F(f)$ is an isomorphism for every $f$ in $\Sigma$, \end{center}\end{quote}
+\item if $(\mathcal{E},G)$ is another such a pair satisfying condition 1 above, then there is a unique functor $H:\mathcal{D} \to \mathcal{E}$ with $H\circ F = G$.
+\end{enumerate}
+Equivalently, consider the (large) category $\mathcal{Q}$ with objects all pairs $(\mathcal{D},F)$ satisfying condition 1 above, and a morphism from $(\mathcal{D}_1,F_1)$ to $(\mathcal{D}_2,F_2)$ is a functor $G:\mathcal{D}_1\to \mathcal{D}_2$ where $$\xymatrix@+=1.5cm{& \mathcal{C} \ar[dr]^{F_1} \ar[dl]_{F_2} & \\ \mathcal{D}_1 \ar[rr]_{G} & & \mathcal{D}_2 }$$ is a commutative diagram.  An initial object in $\mathcal{Q}$ is called a \emph{category of fractions} (of $\mathcal{C}$ over $\Sigma$).
+
+It is clear that a category of fractions is unique up to natural isomorphism, so we call $(\mathcal{D},F)$ \emph{the} category of fractions of $\mathcal{C}$ over $\Sigma$, and we denote the category $\mathcal{D}$ by $\mathcal{C}\Sigma^{-1}$.
+
+For example, let $\mathcal{C}$ is the category with objects $A,B$ and morphisms $1_A,1_B$ and $f:A\to B$, and $\Sigma=\lbrace f\rbrace$.  Consider the category $\mathcal{D}$ with the same two objects $A,B$ and morphisms $1_A,1_B, g:A\to B$ and its inverse $g^{-1}:B\to A$, and the functor $F:\mathcal{C}\to \mathcal{D}$ given by $F(A)=A, F(B)=B$ and $F(1_A)=1_A,F(1_B)=1_B$ and $F(f)=g$.  Then $(\mathcal{D},F)$ is the category of fractions of $\mathcal{C}$ over $\Sigma$.  To see this, suppose $G:\mathcal{C}\to \mathcal{E}$ is another functor with $G(f)$ an isomorphism.  Define $H:\mathcal{D}\to \mathcal{E}$ given by $H(A):=G(A),H(B):=G(A)$ and $H(1_A)=G(1_A), H(1_B)=G(1_B), H(g)=G(f)$, and $H(g^{-1})= G(f)^{-1}$.  It is clear that $H$ is a functor with $H\circ F=G$, and that $H$ is uniquely determined.
+
+In fact, one can prove the following existence property:
+\begin{prop} $\mathcal{C}\Sigma^{-1}$ exists if $\Sigma$ is a set.  Furthermore, $\mathcal{C}\Sigma^{-1}$ is small if $\mathcal{C}$ is. \end{prop}
+%%%%%
+%%%%%
+\end{document}

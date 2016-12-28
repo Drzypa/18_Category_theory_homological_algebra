@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerObject}
+\pmcreated{2013-03-22 15:41:16}
+\pmmodified{2013-03-22 15:41:16}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{power object}
+\pmrecord{29}{37630}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+%\pmkeywords{PowerSet}
+%\pmkeywords{Subobject}
+%\pmkeywords{SubobjectClassifier}
+%\pmkeywords{topoi}
+%\pmkeywords{topos}
+\pmrelated{PowerSet}
+\pmrelated{Subobject}
+\pmrelated{SubobjectClassifier}
+\pmrelated{Topos}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newcommand{\cC}{{\mathcal{C}}}
+\newcommand{\Set}{\mathit{Set}}
+\newcommand{\Map}{\mathrm{Map}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Sub}{\mathrm{Sub}}
+\newcommand{\hf}{\hat{f}}
+\newcommand{\hm}{\hat{m}}
+\begin{document}
+\section{Preliminary remarks.}
+Let $A$ be a set. The \emph{power set} $P(A)$ is the set of all subsets of
+$A$; as such, this idea belongs to the realm of set theory.  However,  properly formulated, the power set notion can be extended to
+categories more general than $\Set$.
+
+Every subset $S\subset A$ determines, and is in turn determined by the \PMlinkname{characteristic map}{CharacteristicFunction}\, 
+$\chi_S:A \to \{0,\,1\}$\,  defined by
+\[ \chi_S(a)=
+\begin{cases}
+  1 & a\in S,\\
+  0 & a\notin S;
+\end{cases}
+\quad a\in A.
+\]
+In other words, elements of the power set $P(A)$ correspond in a
+one-to-one fashion to maps from $A$ to $\{0,1\}$.  Suppose now that
+$A$ is an object in a category $\cC$; this will be specified as $ A \in Ob \cC$,
+with $Ob \cC$ being the class of objects of category $\cC$.  
+
+It is tempting to generalize the power set construction by considering general homomorphisms into
+some special object $\Omega \in Ob \cC$ that can somehow serve as a
+category-theoretical analogue of the two element set.  This, however,
+will give us $P(A)$ as a Hom-set, whereas we want $P(A)$ to be another
+object of $\cC$.  What to do?
+
+A guiding insight\cite{BW} is to regard morphisms with codomain $A$ as
+``generalized elements'' (gelements) of $A$.  Let's return, for the
+moment, to the category of sets. Henceforth we use $\Map(X,Y)$ to
+denote the set of maps from $X$ to $Y$, and use the symbol $2$ to
+denote the two element set $\{0,1\}$.  Recall that the set
+$\Map(A,\Map(X,Y))$ is naturally isomorphic to the set $\Map(A\times
+X,Y)$.  In other words, the gelements of $\Map(X,Y)$ are those special
+gelements of $Y$ whose domains are products $A\times X$.  It follows
+that a gelement of $P(A)$, which is to say a map from $X$ to
+$\Map(A,2)$, is naturally the same thing as a map from $X\times A$ to
+$2$. The latter corresponds to a subset of $X\times A$.  We thereby
+arrive at the key insight:
+\begin{quote}
+  Subsets of $X\times A$ are naturally isomorphic to  maps from $X$ to
+  $P(A)$.  
+\end{quote}
+The rest, as they say, is details.
+
+\section{Definition of power object.}
+Let $\cC$ be a category with finite limits (products and pullbacks
+exist).  For a morphism $m$ of the category, let $[m]$ denote the
+equivalence class consisting of all morphisms $mf$ with $f$ an
+isomorphism.  Recall that a subobject of an object $X \in Ob \cC$ is an
+equivalence class $[m]$ where $m$ is a monomorphism.
+
+Let $\Sub(-)$ denote the contravariant functor from $\cC$ to $\Set$
+that sends an object $X\in Ob \cC$ to $\Sub(X)$, the set of all
+subobjects of $X$.  For a morphism $f:X\to Y$ we define $\Sub(f):
+\Sub(Y)\to \Sub(X)$ to be the set map that acts by sending a
+monomorphism $m:S\to Y$ along $f$ to a monomorphism
+$\hm:S\times_f X\to X$ obtained as the pullback of $m$ along $f$ (see the
+figure below).
+Note: monomorphisms are pullback stable.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=4cm]{powerobject-fig1}
+  \caption{functoriality of $\Sub$}
+  \label{fig:1}
+\end{figure}
+%\usepackage{pstricks}
+%\usepackage{pst-node}
+
+%\begin{document}
+%\pagestyle{empty}
+%\noindent
+%$
+%\psmatrix[colsep=2cm,rowsep=2cm]
+%  S\times_f X  & S \\
+%  X & Y
+%\endpsmatrix
+%psset{nodesep=5pt,arrows=->}
+% \ncline{1,1}{1,2}
+% \ncline{1,1}{2,1}\tlput{\hat{m}}
+% \ncline{1,2}{2,2}\trput{m}
+% \ncline{2,1}{2,2}\taput{f}
+%$
+%\end{document}
+
+
+Next, let us fix an object $A\in Ob \cC$ and define what it means to be a
+power object of $A$.  Let $F_A= \Sub(-\times A)$ be the functor from
+$\cC$ to $\Set$ that sends $X\in \cC$ to $\Sub(X\times A)$.  To
+establish the functoriality of $F_A$ we note that it is the
+composition of the functor $-\times A: \cC \to \cC$ and the functor
+$\Sub:\cC \to \Set$.  We say that an object $B\in \cC$ is a power
+object of $A$ if $B$ represents the functor $F_A$.  If such a $B$
+exists, then by the Yoneda lemma, it is unique up to isomorphism.  In
+other words, $B$ is a power object of $A$ if there every monomorphism
+$m:S\to X\times A$ corresponds in a natural fashion to a morphism
+$\hm \in \Hom_\cC(X,B)$, with equivalent monomorphisms corresponding to
+the same $\hm$.
+
+\textbf{Note} that categories $\cC_L$ that have finite limits and are endowed \emph{with the power objects} defined above satisfy the two axioms of topoi and are therefore called \emph{topoi} (or toposes).
+
+
+\begin{thebibliography}{99}
+\bibitem{BW} Michael Barr and Charles Wells, ``Toposes, Triples, and
+  Theories'', \PMlinkexternal{\texttt{http://www.cwru.edu/artsci/math/wells/pub/ttt.html}}{http://www.cwru.edu/artsci/math/wells/pub/ttt.html}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SplicingTogetherExactSequences}
+\pmcreated{2013-03-22 19:03:35}
+\pmmodified{2013-03-22 19:03:35}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{splicing together exact sequences}
+\pmrecord{4}{41943}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmsynonym{splicing lemma}{SplicingTogetherExactSequences}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\coker}{\mathrm{coker}}
+\newcommand{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{Hom}
+
+\theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{useful}
+This article proves a simple but very useful result about ``splicing'' together two exact sequences. Assume we are working in an abelian category such as groups, rings, or modules.
+
+\begin{prop} Let
+\[
+  A \to B \xrightarrow{f} C
+\]
+and
+\[
+  D \xrightarrow{g} E \to F
+\]
+be exact, and assume that there is an isomorphism $\varphi : \coker f \to \ker g$. Define $\psi : C\to D: c\mapsto \varphi(\bar{c})$, where $\bar{c}$ is the image of $c$ in $\coker f$. Then the following is exact:
+\[
+  A \to B \xrightarrow{f} C \xrightarrow{\psi} D \xrightarrow{g} E \to F
+\]
+\end{prop}
+\begin{proof} Exactness at $C$:
+\[
+  c\in \ker \psi \iff \psi(c) = \varphi(\bar{c})=0 \iff \bar{c} = 0 \iff c\in\im f.
+\]
+Exactness at $D$:
+\[
+  d\in \ker g \iff d = \varphi(\bar{c}) \text{ for some } c\in C \iff d = \psi(c)\text{ for some } c\in C.
+\]
+
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

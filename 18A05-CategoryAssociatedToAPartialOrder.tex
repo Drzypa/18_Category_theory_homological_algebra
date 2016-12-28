@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryAssociatedToAPartialOrder}
+\pmcreated{2013-03-22 14:11:19}
+\pmmodified{2013-03-22 14:11:19}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{category associated to a partial order}
+\pmrecord{6}{35618}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{PartialOrder}
+\pmrelated{InverseLimit}
+\pmrelated{DirectLimit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $S$ be a collection of objects, and let $\leq$ be a partial order on $S$.  Then we can construct a category $C$ as follows.  Let the objects of $C$ be exactly $S$.  For a pair of objects $A$ and $B$ in $S$, construct a single arrow from $A$ to $B$ if $A\leq B$; otherwise there are no arrows from $A$ to $B$.
+Then $C$ is a category.  
+
+Categories of this form are of interest because they provide some justification for using categories as indices for direct limits and inverse limits.  This is exactly the construciton one goes through to construct the Zariski site, for example, and a stalk on that site is easily recognizable as a limit over a category of this form.
+%%%%%
+%%%%%
+\end{document}

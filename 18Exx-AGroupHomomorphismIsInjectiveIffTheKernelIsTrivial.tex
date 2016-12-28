@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AGroupHomomorphismIsInjectiveIffTheKernelIsTrivial}
+\pmcreated{2013-03-22 14:10:15}
+\pmmodified{2013-03-22 14:10:15}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a group homomorphism is injective iff the kernel is trivial}
+\pmrecord{7}{35596}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18Exx}
+\pmclassification{msc}{18A30}
+\pmclassification{msc}{20K30}
+\pmclassification{msc}{13B10}
+\pmclassification{msc}{16W20}
+\pmclassification{msc}{15A03}
+%\pmkeywords{injective}
+%\pmkeywords{homomorphism}
+\pmrelated{KernelOfAGroupHomomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\begin{document}
+\begin{prop}
+Let $G,H$ be groups, and let $f \colon G \to H$ be a group homomorphism. Then $f$ is injective if and only if $\Ker(f)=\{e_G\}$, where $e_G$ is the identity element of $G$, and $\Ker$ denotes the kernel of $f$ (see also Kernel of a group homomorphism).  
+\end{prop}
+\begin{proof}
+
+First assume that $f$ is injective (i.e. $f(g_1)=f(g_2) \Rightarrow g_1=g_2$). Recall that:
+$$\Ker(f)=\{ g\in G : f(g)=e_H \}$$
+where $e_H$ is the identity element of $H$. Since $f$ is a group homomorphism, it follows that $f(e_G)=e_H$. Let $g\in \Ker(f)$, then $f(g)=e_H=f(e_G)$, which implies that $g=e_G$, by the injectivity of $f$. Thus $\Ker(f)=\{ e_G \}$.
+
+For the converse, we assume that $\Ker(f)=\{ e_G \}$ and suppose that $f(g_1)=f(g_2)$, for some $g_1,g_2 \in G$. Since $f$ is a homomorphism:
+$$f(g_1)=f(g_2) \Rightarrow f(g_1)\cdot f(g_2)^{-1}=e_H \Rightarrow f(g_1\cdot g_2^{-1})=e_H$$
+Thus $g_1\cdot g_2^{-1} \in \Ker(f)$, and the kernel is trivial so $g_1\cdot g_2^{-1}=e_G$, therefore $g_1=g_2$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

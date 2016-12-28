@@ -1,0 +1,259 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrganismicSupercategoriesAndSupercomplexSystemsBiodynamics}
+\pmcreated{2013-03-22 18:16:57}
+\pmmodified{2013-03-22 18:16:57}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{organismic supercategories and super-complex systems biodynamics}
+\pmrecord{39}{40890}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D25}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{81P05}
+\pmclassification{msc}{81Q05}
+\pmclassification{msc}{92B05}
+\pmsynonym{super-complex system biodynamics}{OrganismicSupercategoriesAndSupercomplexSystemsBiodynamics}
+%\pmkeywords{super-complex system biodynamics}
+%\pmkeywords{qualitative dynamics}
+%\pmkeywords{qualitative biodynamics}
+%\pmkeywords{super-complex system}
+%\pmkeywords{generating class}
+%\pmkeywords{dynamic multi-stability}
+%\pmkeywords{biodynamics}
+%\pmkeywords{qualitative dynamics of systems}
+%\pmkeywords{organismic supercategories and complex systems biodynamics}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{GroupoidCDynamicalSystem}
+\pmdefines{system dynamics}
+\pmdefines{complex systems biodynamics}
+\pmdefines{configuration space topology and algebra}
+\pmdefines{dynamic system examples}
+\pmdefines{qualitative dynamics}
+\pmdefines{dynamic configuration functors}
+\pmdefines{qualitative biodynamics}
+\pmdefines{super-complex system}
+\pmdefines{generating class}
+\pmdefines{dynamic multi-stability}
+
+% this is the default PlanetMath preamble.  
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+
+
+
+
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsection{Organismic Supercategories and Complex Systems Biodynamics}
+
+\subsubsection{A Dynamic System Example: Connecting Topological and Algebraic Structures} 
+
+ Let us consider an example of a system whose state space consists of a torus, $T^3$,  such that the states of the system are contained inside the torus, and all transitions lead to states inside the torus. The homology theory offers in this case two intuitive examples of generators as the entire torus is generated by only two cycles. 
+These two cycles generate two homology groups $H_0(T) = Z$ and $H_1(T) = Z \otimes Z$, where $Z$ is the group of integers, and $\otimes$ denotes the product operation. These homology groups give a characterization of the topological space represented by the torus. In this way a connection is established between a \emph{topological} structure-that of the toroidal space, and \emph{algebraic} structures, those of homology groups, for example. Even more, we can assign two numbers to a given complex $K$ : the Betti number-which is the number of repetitions of $Z$ in the homology group, 
+$H_p(K) = Z \otimes Z \otimes ... \otimes Z \otimes  G_{PT}$  of a complex $K$-and a number $p$ which is the number of elements of a finite abelian group $G_{PT}$. The Betti number gives the number of $p$-dimensional holes of the complex $K$, and the number $p$ gives the number of $p$-dimensional turns of $K$.
+A natural physical interpretation that one can give to the holes inside of the state space of a system will be that of \emph{instability fields} of the system under consideration. Consequently, the Betti number will give a coarse idea about the instability of the system, being the number of instability fields of the state space. However, homological as well as homotopy techniques would allow a much finer characterization of the local and global properties of the dynamics of a system, being able, for example, to locate singularities in a state space (Hwa and Teplitz, 1966). It must be mentioned here that the theory of categories and functors provides a natural framework for homological techniques, mostly for abelian structures in commutative homological algebra. In the example discussed above, a number was assigned to a quality, that is, a Betti number was assigned to a topological space. Another example of such an assignment is found in the theory of elementary particles, where one associates a probability with a Feynman diagram
+that qualitatively represents particle interactions \emph{via} quantum fields or exchanged quanta. 
+However, the general procedure is not to assign a single number to a quality, but an entire set of numbers or elements. In our second example the operation of addition induced a corresponding operation on diagrams. This fact suggests that operations which are used in metric, or quantitative, biology may induce corresponding operations in relational biology. Conversely, one can think of significant relational operations with notions which would permit us to obtain solutions of complicated problems of quantitative biology.
+
+\subsubsection{Observables, Generators and Qualitative Dynamics.} 
+
+ Observables of a biological system may be introduced as intensities of some 
+(metabolic / biochemical / enzymatic, or genetic, etc.) \emph{activities} of the living system (as suggested for example by Rashevsky and Rosen); alternatively, they may be considered either as \emph{parameters} characterizing specific or global processes inside the system, or as \emph{variables} (e.g., molecular set variables) that specify the quantities of certain bioproducts which are formed as a result of the activities of the system. Among observables, 
+\emph{structural parameters} as defined in (Rosen 1968a, b) and \emph{time observables} play distinguished roles. Some observables are ``linked'', in the sense that, a change in one of the observables implies a corresponding change of the others. \emph{Linked observables} were represented as \emph{morphisms} in a categorical diagram. Such a diagram may represent, for example, the linkage group of observables and is a part of the \emph{generating class} of the system. Since diagrams can be regarded as functors (Mitchell, 1965) one can represent the linked observables that specify the generating classes of a system by \emph{`dynamic configuration' functors} between categories of possible system configurations at different times; therefore, qualitative changes in system dynamics may be represented by natural transformations of such dynamic configuration functors, whereas transition-state morphisms assign numerical values to observables in different system states. There is then a classification problem associated with defining, or determining through measurements the biodynamics of super-complex systems as the latter are endowed with \emph{variable state-space (or configuration space) topologies} (Baianu et al, 2007a). This leads unavoidably to the consideration of supercategories of variable topological structures and their associated algebroids related to global stability and qualitative dynamics.
+
+ Let us define a state of a system or organismic set, biomolecular set, $(M,R)$-system,..., any theoretical model of a biosystem, at a given moment as an $n$-tuple of the values of essential observables at that moment. In this representation, either a state, or system `configuration', is then defined by a dynamic functor from the category of generating classes of the system to $mathsf{\R}$--the set of real numbers regarded for example as a discrete category (or as a category whose objects are real numbers, and whose morphisms are mappings; the operations with real numbers in this category are induced by the structure of the category of generating classes). Let us also consider here a specific example from microbial genetics. An \emph{operon} as defined by Jacob and Monod (1961) may be considered- in a very simple model- as having two states: an active state and an inactive one. In its inactive state the operon will not induce the synthesis of the corresponding enzyme, while in its active state, it will induce the synthesis of a determined quantity $C$ of synthesized enzyme per unit of time. Now, if we consider a linkage group of operons 
+$O_1, O_2, . . ., O_n$,  which are all active in the same time and, if the synthesized quantities of enzymes per unit of time are respectively, $C_1, C_2,..., C_n$, a state of the linked operons may be defined by the $n$-tuple $(C^t_1, C^t_2, . . ., C^t_n)$ of the values of $C_1, C_2,..., C_n$ at a given instant $t$. However, suppose that only $C_1, C_2$ and $C_3$ are essential, and all other observables can be expressed in terms of $C_1, C_2$ and $C_3$. Moreover, let us suppose that we may find some operators such that $C_2 =YC_1$ and $C_3 = ZC_2$. In this case there exists a third operator $X$ such that $C_3 = X C_1$, which makes the three operon diagram commutative.
+This is the \emph{generating diagram} of the linkage group of operators. In this simple model, a \emph{genetic system},
+or organsimic set (discrete organismic supercategory) of zero-th order, $S_0$, will be then represented by a \emph{generating class}, whose objects are generating diagrams of the linkage groups of operons, and whose morphisms are the functional connections among the activities of the operons. Suppose that a mutation takes place in such a genetic system, so that an operon will begin to induce the synthesis of an enzyme which was not induced previously by the genetic system. The state corresponding to the very moment when the change takes place will be considered as a singularity of the state space, because at that moment when the genetic mutation occurred one cannot characterize the state of the genetic system either by $C^t_k$ --the quantity of synthesized enzyme $E_k$ per unit of time, or by $C_k$ the quantity of the `mutated' enzyme $E$  per unit of time (that is, $E$  is the enzyme which begins to be synthesized only after the mutation took place). It may happen that a mutation produces effects such as the complete inactivation of an essential operon. In this case, it is conceivable that the whole linkage group will become inactive.  If the inactivated operon is the \emph{replicon} (Jacob et al., 1963), then the cell will cease to divide, and eventually die. The singularity of the genomic state space in the case of a mutation would last much less than other states of the dynamical system, and may be therefore considered as an \emph{unstable} state inside the state space of the system.
+
+Generally, if the unstable state leads only to other unstable states, it may result in the destruction of the system-generating an \emph{unstable field} outside the state space stable attractors of the system. Consequently, states in growth processes should have to be considered as \emph{metastable}, and cannot be simply considered as unstable. The replacement of an observable by another, in the case of a mutation discussed here, is in fact a change of the structure of the genetic system-- a structure which has both algebraic and topological representations in a \emph{supercatgeory},
+that may also be viewed as a family or class of multiple, \emph{(variable) categories}; the latter type of generalized structure necessary for the representation of super-complex system biodynamics will be defined more precisely in the
+next section as an interpretation of \emph{ETAS} axioms, a natural extension of Lawvere's \emph{ETAC} axioms for the foundation of the theory of categories and functors. 
+
+
+\subsection{Biodynamics in Organismic Supercategories} 
+
+Axiomatic definitions of categories and supercategories based respectively on \emph{ETAC} and \emph{ETAS} interprertations provide a framework for representations of Super- Complex Biological Systems and also allow for dynamic computations of cell transformations that may lead to neoplasia,  and in certain intriguing cases to malignancy. The concepts of quantum automata and quantum computation are applied in the context of quantum genetics and genetic networks to study their nonlinear dynamics. In a previous publication (Baianu,1971a) the formal concept of quantum automaton was introduced and its possible implications for genetic and metabolic activities in living cells and organisms were considered. This was followed by a report on quantum and abstract, symbolic computation based on the theory of categories, functors and natural transformations (Baianu,1971b). The notions of topological semigroup, quantum automaton, or quantum computer, were then suggested with a view to their potential applications to the analogous simulation of biological systems, and especially genetic activities and nonlinear dynamics in genetic networks. Further, detailed studies of nonlinear dynamics in genetic networks were carried out in 
+categories of $n$-valued, \PMlinkname{\L{}ukasiewicz Logic Algebras}{AlgebraicCategoryOfLMnAlgebras} that showed significant dissimilarities (Baianu, 1977; Baianu et al., 2006-2008) from the oversimplified Boolean models of human neural networks.A categorical and Topos framework for Lukasiewicz Algebraic Logic models of nonlinear dynamics in complex functional genomes and cell interactomes is proposed. Lukasiewicz Algebraic Logic models of genetic networks and signaling pathways in cells are formulated in terms of nonlinear dynamic systems with n-state components that allow for the generalization of previous logical models of both genetic activities and neural networks. An algebraic formulation of variable `next-state functions' is extended to a \L{}ukasiewicz Topos endowed with a $n$-valued 
+\L{}ukasiewicz algebraic logic subobject classifier description that represents non-random and nonlinear network activities as well as their transformations in developmental processes and carcinogenesis. Novel results and specific applications concerning cell interactomics, dynamics of genetic-proteomic networks and signaling pathways, development, regeneration, the control mechanisms of cell dynamic programming in cells, neoplastic transformations and oncogenesis are then derived on the basis of complex system modeling and biomolecular network representations in categories of 
+\L ukasiewicz logic algebras and \L ukasiewicz-topos. Molecular models in terms of categories, functors and natural transformations were then formulated for unimolecular chemical transformations, as well as multi-molecular chemical and biochemical transformations (Baianu, 1983,2004a). Previous applications of computer modeling, classical automata theory, and relational biology to molecular biology, oncogenesis and medicine were extensively reviewed (Baianu,1987). Novel approaches to solving the realization problems of relational biology models in complex system biology are introduced in terms of natural transformations between functors of such biomolecular supercategories. Natural transformations of organismic superstructure were  developed for modelling protein biosynthesis, embryogenesis and nuclear transplant experiments. Other possible realizations in molecular biology and relational biology of organisms are here suggested as a novel approach to bioinformatics to interactomics and relational quantum genetics. 
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLeraysTheoremviaSpectralSequences}
+\pmcreated{2013-03-22 14:42:35}
+\pmmodified{2013-03-22 14:42:35}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Leray's Theorem (via spectral sequences)}
+\pmrecord{12}{36329}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\F}{\mathcal F}
+\begin{document}
+Let's consider an \PMlinkescapetext{acyclic} resolution (i.e. a \PMlinkname{resolution}{ResolutionOfASheaf} by \PMlinkname{acyclic sheaves}{AcyclicSheaf}) $\F^\bullet$ of $\F$ and the double complex $K^{\bullet,\bullet}=
+\check C^\bullet(\mathcal U,\F^\bullet)$ endowed with the differentials
+$$
+\begin{aligned}
+& \partial\colon\check C^p(\mathcal U,\F^\bullet)\to
+\check C^{p+1}(\mathcal U,\F^\bullet),\\
+& \bar\partial\colon\check C^\bullet(\mathcal U,\F^{q})\to
+\check C^\bullet(\mathcal U,\F^{q+1}),
+\end{aligned}
+$$
+which are respectively the \PMlinkname{Cech}{CechCohomologyGroup2} one and the one \PMlinkescapetext{induced} by the resolution.
+
+The first filtration of this complex gives rise to a spectral sequence whose \PMlinkescapetext{terms} of the first generation are:
+$$
+{^\prime\!E^{p,q}_r}=H^q_{\bar\partial}
+(\check C^p(\mathcal U,\F^\bullet))=\prod_{i_0,\dots,i_p\in I}
+H^q(U_{i_0\cdots i_p},\F),
+$$
+where $I$ is the set indexing the covering and the last equality is obtained in virtue of the De Rham-Weil theorem.
+Thanks to the hypothesis on $\mathcal U$, we have
+$$
+{^\prime\!E^{p,q}_1}=
+\begin{cases}
+\check C^p(\mathcal U,\F) & \text{if $q=0$} \\
+0 & \text{if $q\ge 1$}.
+\end{cases}
+$$
+Then
+$$
+\begin{aligned}
+{^\prime\!E^{p,q}_2}
+&=H^p_\partial(H^q_{\bar\partial}
+(\check C^\bullet(\mathcal U,\F^\bullet))) \\
+&=
+\begin{cases}
+H^p_\partial(\check C^\bullet(\mathcal U,\F)) & \text{if $q=0$} \\
+0 & \text{if $q\ge 1$}.
+\end{cases}
+\end{aligned}
+$$
+So ${^\prime\!E^{p,0}_2}=\check H^p(\mathcal U,\F)$ and 
+${^\prime\!E^{p,q}_2}=0$ if $q\ne 0$. The general \PMlinkescapetext{theory} of spectral sequences of a double complex now yields:
+$$
+H^l(K^\bullet)={^\prime\!E^{l,0}_2}=\check H^l(\mathcal U,\F).
+$$
+Now we consider the second filtration to obtain a spectral sequence whose \PMlinkescapetext{terms} of the first generations are:
+$$
+{^{\prime\prime}\!E^{p,q}_1}=H^q_\partial(\check C^\bullet(\mathcal U,\F^{p}))
+=\check H^q(\mathcal U,\F^{p}).
+$$
+The resolution being \PMlinkescapetext{acyclic}, we obtain:
+$$
+{^{\prime\prime}\!E^{p,q}_1}=
+\begin{cases}
+\F^p(X) & \text{if $q=0$} \\
+0 & \text{if $q\ge 1$},
+\end{cases}
+$$
+and so
+$$
+\begin{aligned}
+{^{\prime\prime}\!E^{p,q}_2}
+&=H^p_{\bar\partial}(H^q_\partial(\check C^\bullet(\mathcal U,\F^\bullet)))
+&=
+\begin{cases}
+H^p(\F^\bullet(X)) & \text{if $q=0$} \\
+0 & \text{if $q\ge 1$}.
+\end{cases}
+\end{aligned}
+$$
+But then ${^{\prime\prime}\!E^{p,0}_2}=H^p(X,\F)$ thanks to the De Rham-Weil theorem and ${^{\prime\prime}\!E^{p,q}_2}=0$ if $q\ne 0$ and so we get:
+$$
+H^l(K^\bullet)={^{\prime\prime}\!E^{l,0}_2}=H^l(X,\F),
+$$
+which leads to the claim.
+%%%%%
+%%%%%
+\end{document}

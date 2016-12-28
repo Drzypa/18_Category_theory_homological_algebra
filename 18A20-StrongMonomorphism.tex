@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrongMonomorphism}
+\pmcreated{2013-03-22 18:23:33}
+\pmmodified{2013-03-22 18:23:33}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{strong monomorphism}
+\pmrecord{14}{41038}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18-00}
+\pmsynonym{strong monic}{StrongMonomorphism}
+\pmsynonym{strong epi}{StrongMonomorphism}
+\pmsynonym{strong epic}{StrongMonomorphism}
+\pmrelated{PropertiesOfRegularAndExtremalMonomorphisms}
+\pmdefines{strong}
+\pmdefines{strong epimorphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category.  A monomorphism $f:A\to B$ in $\mathcal{C}$ is said to be a \emph{strong monomorphism} if, whenever we are given the following commutative diagram
+$$\xymatrix@+=3pc{
+{C}\ar[r]^{g}\ar[d]_{x}&{D}\ar[d]^{y}\\
+{A}\ar[r]_{f}&{B}
+}
+$$
+with $g$ an epimorphism, then there is a morphism $h: D\to A$ such that the following is another commutative diagram:
+$$\xymatrix@+=3pc{
+{C}\ar[r]^{g}\ar[d]_{x}&{D}\ar[d]^{y} \ar@{.>}[dl]|{h} \\
+{A}\ar[r]_{f}&{B}
+}
+$$
+
+Note that the ``diagonal'' morphism $h$ is necessarily unique.  In other words, a monomorphism is strong iff every epimorphism is orthogonal to it.
+
+Dually, a \emph{strong epimorphism} is an epimorphism which is orthogonal to every monomorphism in the category.
+
+\textbf{Remark}.  Every regular monomorphism is strong (see proof \PMlinkname{here}{RegularMonomorphism}), and every strong monomorphism is \PMlinkname{extremal}{ExtremalMonomorphism}.
+\begin{proof}
+Suppose $f:A\to B$ is a strong monomorphism and that $f=h\circ g$ with $g:A\to C$ epimorphic.  Then we have the following commutative diagram
+$$\xymatrix@+=3pc{
+{A}\ar[r]^{g}\ar[d]_{1_A}&{C}\ar[d]^{h}\\
+{A}\ar[r]_{f}&{B}
+}
+$$
+Since $f$ is strong, there is a morphism $e:C\to A$ such that the diagram below is commutative
+$$\xymatrix@+=3pc{
+{A}\ar[r]^{g}\ar[d]_{1_A}&{C}\ar[d]^{h} \ar@{.>}[dl]|{e} \\
+{A}\ar[r]_{f}&{B}
+}
+$$
+This shows that $g$ is a split monomorphism, as $1_A=e\circ g$.  But $g$ is epimorphic, we conclude that $g$ is an isomorphism (this fact is proved \PMlinkname{here}{PropertiesOfRegularAndExtremalMonomorphisms}).
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryIsomorphism}
+\pmcreated{2013-03-22 14:22:04}
+\pmmodified{2013-03-22 14:22:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{category isomorphism}
+\pmrecord{9}{35852}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories.  An
+\emph{isomorphism} $T:\mathcal{C}\to\mathcal{D}$ is a (covariant)
+functor which has a \emph{two-sided inverse}.  In other words, there
+is a (covariant) functor $S:\mathcal{D}\to\mathcal{C}$ such that
+$T\circ S=I_{\mathcal{D}}$ and $S\circ T=I_{\mathcal{C}}$, where
+$I_{\mathcal{D}}$ and $I_{\mathcal{C}}$ are the identity functors of
+$\mathcal{D}$ and $\mathcal{C}$ respectively.  Two categories
+$\mathcal{C}$ and $\mathcal{D}$ are \emph{isomorphic} if there exists
+a functor $T:\mathcal{C}\to\mathcal{D}$ that is an isomorphism.
+
+\textbf{Remarks}
+\begin{enumerate}
+\item
+An isomorphism (functor) from $\mathcal{C}$ to $\mathcal{D}$ is just
+an \PMlinkname{isomorphism}{Isomorphism2} (in the sense of morphism)
+in the functor category $\mathcal{D}^{\mathcal{C}}$.
+
+\item
+Two isomorphic categories are
+\PMlinkname{equivalent}{EquivalenceOfCategories}.  The converse is not
+true.  For example, the category of all finite sets is
+\PMlinkescapetext{equivalent} to its subcategory of all finite
+ordinals.  But clearly these two categories are not isomorphic.
+Isomorphism has a ``size'' restriction, whereas natural equivalence
+does not.  
+\end{enumerate}
+
+\PMlinkescapeword{isomorphism}
+\PMlinkescapeword{isomorphic}
+\PMlinkescapeword{restriction}
+
+
+%%%%%
+%%%%%
+\end{document}

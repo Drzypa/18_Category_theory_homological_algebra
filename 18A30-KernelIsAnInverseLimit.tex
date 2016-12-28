@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KernelIsAnInverseLimit}
+\pmcreated{2013-03-22 14:11:28}
+\pmmodified{2013-03-22 14:11:28}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{kernel is an inverse limit}
+\pmrecord{5}{35621}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{Kernel}
+\pmrelated{AbelianCategory}
+\pmrelated{KernelOfAGroupHomomorphism}
+\pmrelated{KernelOfAMorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{mathrsfs}
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{warning}{Warning}
+
+\newcommand{\Univ}{\mathscr{U}}
+\DeclareMathOperator{\liminv}{\varprojlim}
+\DeclareMathOperator{\limdir}{\varinjlim}
+\DeclareMathOperator{\Funct}{Funct}
+\DeclareMathOperator{\Hom}{Hom}
+\begin{document}
+\begin{theorem}
+Let $C$ be an abelian category, and $f\colon A\to B$ be a morphism of $C$.  Then $\ker f$ is an inverse limit. 
+\end{theorem}
+\begin{proof}
+Recalling the definition of a kernel in an abelian category, we can see that $i\colon X\to A$ is a kernel of $f$ if and only if the following diagrams commute:
+\[
+\xymatrix{
+& X \ar[dl]_i \ar[dr]^{f\circ i}&\\
+A \ar[rr]^f & & B 
+}
+\]
+\[
+\xymatrix{
+& X \ar[dl]_i \ar[dr]^{0\circ i}&\\
+A \ar[rr]^0 & & B 
+}
+\]
+and $f\circ i = 0\circ i$. 
+
+Let $I$ be the category
+\[
+\xymatrix{
+\diamondsuit \ar@<0.5ex>[r]^\dagger \ar@<-0.5ex>[r]_\ddagger & \heartsuit
+}
+\]
+and define a functor $G\colon I\to C$ by 
+$G(\diamondsuit)=A$, 
+$G(\heartsuit)=B$, 
+$G(\dagger) = f$, and 
+$G(\ddagger) = 0$.  
+
+Suppose that $\liminv G$ exists and is equal to $Y$.  Then there are maps $\pi_\diamondsuit\colon Y\to A$ and $\pi_\heartsuit\colon Y\to A$ that make the following diagrams commute:
+\[
+\xymatrix{
+& Y \ar[dl]_{\pi_\diamondsuit} \ar[dr]^{\pi_\heartsuit}&\\
+A \ar[rr]^{G(\dagger)=f} & & B 
+}
+\]
+\[
+\xymatrix{
+& Y \ar[dl]_{\pi_\diamondsuit} \ar[dr]^{\pi_\heartsuit}&\\
+A \ar[rr]^{G(\ddagger)=0} & & B 
+}
+\]
+This is exactly the universal condition for a kernel in an abelian category.
+\end{proof}
+
+By reversing arrows, we can see that a cokernel is a direct limit.
+
+This result can be extremely useful in proving exactness results: one shows that finite inverse and direct limits exist and are exact in a particular category, and one immediately obtains the fact that sums, products, kernels and cokernels are all exact.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditiveCategory}
+\pmcreated{2013-03-22 15:55:03}
+\pmmodified{2013-03-22 15:55:03}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{additive category}
+\pmrecord{8}{37922}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E05}
+\pmrelated{AbelianCategory}
+\pmrelated{AlternativeDefinitionOfAnAbelianCategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category.  Then $\mathcal{C}$ is an \emph{additive category} if 
+\begin{enumerate}
+\item $\mathcal{C}$ is a preadditive category, and
+\item for every pair of objects $A,B$ in $\mathcal{C}$, their \PMlinkname{product}{CategoricalDirectProduct} exists.
+\end{enumerate}
+
+\textbf{Proposition}.  In a preadditive category, coproduct of two objects exists iff their product exists.  Furthermore, they are isomorphic.
+\begin{proof}We shall prove the fact if the product $D$ of objects $A$ and $B$ exists, then $D$ is also their coproduct.  The other direction is dual.
+
+Suppose $D$ is the product of $A$ and $B$, with morphisms
+$$\xymatrix@1{D\ar[r]^{\pi_A}&A}\qquad\mbox{ and }\qquad\xymatrix@1{D\ar[r]^{\pi_B}&B}.$$
+From these two morphisms, we construct two commutative diagrams
+$$\xymatrix{&A \\ A \ar[ur]^1 \ar[dr]_0 \ar@{-->}[r]^{\alpha} & D
+\ar[u]_{\pi_A} \ar[d]^{\pi_B}\\ &B}
+\qquad\mbox{ and }\qquad
+\xymatrix{&A \\ B \ar[ur]^0 \ar[dr]_1 \ar@{-->}[r]^{\beta} & D
+\ar[u]_{\pi_A} \ar[d]^{\pi_B}\\ &B}$$
+where $0$ and $1$ are zero morphisms and identity morphisms on $A$ and $B$, and $\alpha$ and $\beta$ are morphisms based on the definition of the product $D$.
+
+Then it's not hard to see that $D$ is a coproduct of $A$ and $B$ with morphisms $\alpha$ and $\beta$, for if $r:A\rightarrow C$ and $s:B\rightarrow C$ are two morphisms into an object $C$, we can form two morphisms $r\pi_A$ and $s\pi_B$, both from $D$ to $C$.  Since $\operatorname{hom}(D,C)$ is an abelian group, these two can then be added to form $f:=r\pi_A+s\pi_B$.  Then $f\alpha=(r\pi_A+s\pi_B)\alpha=r$, and similarly $f\beta=s$.  This shows that $D$ is also the coproduct of $A$ and $B$ with morphisms $\alpha$ and $\beta$.
+\end{proof}
+An easy way to remember the relationships among the various morphisms in the above proof are the following two matrix products:
+\begin{center}
+$
+\begin{pmatrix}
+\pi_A \\
+\pi_B 
+\end{pmatrix}
+\begin{pmatrix}
+\alpha & \beta 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1 
+\end{pmatrix}
+\qquad
+\mbox{ and } 
+\qquad
+\begin{pmatrix}
+r & s 
+\end{pmatrix}
+\begin{pmatrix}
+\pi_A \\
+\pi_B 
+\end{pmatrix}
+=f$.
+\end{center}
+
+As a result of the above proposition, in an additive category, finite products and finite coproducts are synonymous.  Given objects $A,B$, we denote $A\oplus B$ to be their product.  We also call it the \emph{direct sum} of $A$ and $B$.
+
+Many preadditive categories are also examples of additive categories.  The category $\textbf{CyclGrp}$ of cyclic groups as the subcategory of the category of abelian groups is an example of a preadditive category that is not additive, for the product of two cyclic groups $\mathbb{Z}/p \mathbb{Z}$ and $\mathbb{Z}/q \mathbb{Z}$ exists in $\textbf{CyclGrp}$ only when $p$ and $q$ are coprime.
+
+%%%%%
+%%%%%
+\end{document}

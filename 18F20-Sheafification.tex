@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sheafification}
+\pmcreated{2013-03-22 12:37:38}
+\pmmodified{2013-03-22 12:37:38}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{sheafification}
+\pmrecord{8}{32889}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18F20}
+\pmclassification{msc}{54B40}
+\pmclassification{msc}{14F05}
+\pmsynonym{associated sheaf}{Sheafification}
+\pmrelated{Sheafification2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\lra}{\longrightarrow}
+\begin{document}
+Let $F$ be a presheaf over a topological space $X$ with values in a category $\A$ for which sheaves are defined. The {\em sheafification} of $F$, if it exists, is a sheaf $F'$ over $X$ together with a morphism $\theta: F \lra F'$ satisfying the following universal property:
+
+\begin{quotation}
+For any sheaf $G$ over $X$ and any morphism of presheaves $\phi: F \lra G$ over $X$, there exists a unique morphism of sheaves $\psi: F' \lra G$ such that the diagram
+$$
+\xymatrix{
+F \ar[r]^{\theta} \ar@/_1pc/[rr]_{\phi} & F' \ar[r]^{\psi} & G
+}
+$$
+commutes.
+\end{quotation}
+In light of the universal property, the sheafification of $F$ is uniquely defined up to canonical isomorphism whenever it exists. In the case where $\A$ is a concrete category (one consisting of sets and set functions), the sheafification of any presheaf $F$ can be constructed by taking $F'(U)$ to be the set of all functions $s: U \lra \bigcup_{p \in U} F_p$ such that
+\begin{enumerate}
+\item $s(p) \in F_p$ for all $p \in U$
+\item For all $p \in U$, there is a neighborhood $V \subset U$ of $p$ and a section $t \in F(V)$ such that, for all $q \in V$, the induced element $t_q \in F_q$ equals $s(q)$
+\end{enumerate}
+for all open sets $U \subset X$. Here $F_p$ denotes the stalk of the presheaf $F$ at the point $p$.
+
+The following quote, taken from~\cite{mumford}, is perhaps the best explanation of sheafification to be found anywhere:
+\begin{quotation}
+$F'$ is ``the best possible sheaf you can get from $F$''. It is easy to imagine how to get it: first identify things which have the same restrictions, and then add in all the things which can be patched together.
+\end{quotation}
+
+\begin{thebibliography}{9}
+\bibitem{mumford}{David Mumford, {\em The Red Book of Varieties and Schemes}, Second Expanded Edition, Springer--Verlag, 1999 (LNM {\bf 1358})}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

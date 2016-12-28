@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfABrandtGroupoid}
+\pmcreated{2013-03-22 18:40:04}
+\pmmodified{2013-03-22 18:40:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{construction of a Brandt groupoid}
+\pmrecord{6}{41412}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B40}
+\pmclassification{msc}{20L05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, we give an example of a Brandt groupoid.  In the example, we started with a non-empty set $I$ and a group $G$, and showed that $I\times G\times I$ has the structure of a Brandt groupoid.  In this entry, we show that every Brandt groupoid may be constructed this way.
+
+\begin{prop}  If $B$ is a Brandt groupoid, then there is a non-empty set $I$, and a group $G$, such that $B$ is isomorphic to $I\times G\times I$.  In other words, there is a bijection $\phi: B\to I\times G\times I$ such that $ab$ is defined in $B$ iff $\phi(a)\phi(b)$ is defined in $I\times G\times I$, and $\phi(ab)=\phi(a)\phi(b)$ whenever the multiplication is defined.
+\end{prop}
+
+To prove this, let us observe the following series of facts: given a Brandt groupoid $B$, let $I$ be the set of idempotents in $B$.
+
+\begin{lem}  Let $H(e,f)$ be the set consisting of all isomorphisms with source $e$ and target $f$.  Then the set $K=\lbrace H(e,f)\mid e,f\in I\rbrace$ partitions $B$. \end{lem}
+\begin{proof} This is clear from the previous discussion, as $B$ can be thought of as a category.  Another way to see this is to define a binary relation $R$ on $B$ so that $aRb$ iff $a,b$ have the same source and target.  Then $R$ is an equivalene relation, and its equivalence classes have the form $H(e,f)$.  \end{proof}
+
+\begin{lem}  The cardinality of $H(e,f)$ is independent of $e$ and $f$.  \end{lem}
+\begin{proof} Define $\phi:H(e,f)\to H(e',f')$, by $\phi(a)=uav$, where $u\in H(f,f')$ and $v\in H(e',e)$.  Notice that $u,v$ exist by condition 6 above.  First, $\phi$ is well-defined, because both $ua$ and $av$ are defined by condition 3, and hence $uav=(ua)v=u(av)$ is defined.  In addition, $\phi$ is a bijection, whose inverse is the map $b\mapsto u^{-1} b v^{-1}$.  \end{proof}
+
+\begin{lem}  $H(e,e)$ is a group for every $e\in I$.  \end{lem}
+\begin{proof}  The multiplication on $H(e,e)$ is just the multiplication on $B$ restricted to $H(e,e)$, which is total (defined for all of $H(e,e)$), and associative, with $e$ its multiplicative identity.  For $a\in H(e,e)$, its inverse is guaranteed by condition 5 above.  \end{proof}
+
+\begin{lem}  $H(e,e)$ is group isomorphic to $H(f,f)$ for every $e,f\in I$.  \end{lem}
+\begin{proof}  The function $\phi:H(e,e)\to H(f,f)$ given by $\phi(a)=uau^{-1}$, where $u\in H(e,f)$, is a well-defined bijection according to the proof of the first observation.  Furthermore, $\phi(ab)= u(ab)u^{-1}= u((ae)b)u^{-1} = u(a(u^{-1}u)b) u^{-1} = u(((au^{-1})u)b)u^{-1}= u((au^{-1})(ub))u^{-1}=(u a u^{-1})(ub u^{-1})=\phi(a)\phi(b)$, hence $\phi$ is a group isomorphism.  \end{proof}
+
+Set $G=H(e,e)$ for some $e\in I$.  We are now ready to prove the proposition.  Notice that the proof involves the axiom of choice.
+\begin{proof}[Proof of Proposition 1.]
+By the axiom of choice, there is a function $\alpha:I\to B$ such that $\alpha(f)\in H(e,f)$ and $\alpha(e)=e$.  For any $a\in B$, set  
+$$\overline{a}:=\alpha(t(a))^{-1} a \alpha(s(a))\in G.$$  
+If $ab$ is defined, then $s(a)=t(b)$, so that 
+\begin{eqnarray*}
+\overline{ab} &=& \alpha(t(ab))^{-1} ab \alpha(s(ab)) \\ &=& \alpha(t(a))^{-1} ab \alpha(s(b)) \\ &=& \alpha(t(a))^{-1} a \alpha(s(a))\alpha(s(a))^{-1} b \alpha(s(b) \\ &=& \alpha(t(a))^{-1} a \alpha(s(a))\alpha(t(b))^{-1} b \alpha(s(b) \\ &=& \overline{a}\overline{b}.
+\end{eqnarray*}
+Now, define $\phi:B\to I\times G\times I$ by 
+$$\phi(a)=(t(a),\overline{a},s(a)).$$  
+This is clearly a well-defined function.  In addition, it is one-to-one: if $\phi(a)=\phi(b)$, then $s(a)=s(b):=f$, $t(a)=t(b):=g$ and $\alpha(g)^{-1} a \alpha(f) = \overline{a} = \overline{b} = \alpha(g)^{-1} b \alpha(f)$.  As a result, $a = \alpha(g) \overline{a} \alpha(f)^{-1} = \alpha(g) \overline{b} \alpha(f)^{-1} = b$.  It is also onto: given $(g,c,f)\in I\times G\times I$, then $\phi(d)=c$, where $d= \alpha(g) c \alpha(f)^{-1}$.
+
+Finally, for $a,b\in B$, the multiplication $ab$ is defined in $B$ iff $s(a)=t(b)$ iff the multiplication $$\phi(a)\phi(b),\quad\mbox{or}\quad (t(a),\overline{a},s(a))(t(b), \overline{b},s(b))$$ is defined in $I\times G\times I$, which is equal to $$(t(a), \overline{a}\overline{b}, s(b))= (t(a),\overline{ab},s(b)) = (t(ab),\overline{ab},s(ab)) = \phi(ab),$$  showing that $\phi$ preserves partial multiplications.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

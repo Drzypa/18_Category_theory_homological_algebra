@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonomorphismsOfCategoryOfSets}
+\pmcreated{2013-03-22 16:42:41}
+\pmmodified{2013-03-22 16:42:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{monomorphisms of category of sets}
+\pmrecord{7}{38927}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+Every monomorphism in the category of sets is an injection.
+\end{theorem}
+
+\begin{proof}
+Assume $f \colon A \to B$ is a monomorphism.  Then, by definition of monomorphism,
+given any two maps $g,h \colon C \to A$, if $f \circ g = f \circ h$, then $g = h$.
+Suppose $x$ and $y$ are two elements of $A$ such that $f(x) = f(y)$.  Let $C$ be 
+a set with one element, let $g$ be the map which sends this one element to $x$ and
+let $h$ be the map which sends this one element to $y$.  Because $f(x) = f(y)$, we
+have $f \circ g = f \circ h$.  Since $f$ is a monomorphism, $g = h$, so $x = y$.
+This implies that $f$ is injective.
+\end{proof}
+
+\begin{theorem}
+Every injection is a split monomorphism.
+\end{theorem}
+
+\begin{proof}
+Assume $f \colon A \to B$ is injection.  If $A$ is empty, the result is 
+trivial, so we assume that $A$ is not empty; let $z$ be an element of $A$.
+Set
+\[
+g = \{ (f(x),x) \mid x \in A \} \cup
+\{(x,z) \mid x \in B \land (\forall y \in A) x \neq f(y)\}
+\]
+We claim that $g$ is a function from $B$ into $A$.  Suppose that $x$ is 
+an element of $B$.  If $x \neq f(y)$ for any $y \in A$, then we have exactly
+one element of $g$ with $x$ as the first element, namely $(x,z)$.  If $x = 
+f(y)$ for some $y \in A$, then we the pair $(x,y)$ with $x$ as first element;
+were there another pair with $x$ as first element, then we would have 
+$(f(x_1),x_1) = (f(x_2),x_2)$ but, as $f$ is an injection, $f(x_1) = f(x_2)$
+would imply $x_1 = x_2$, so this would not be a distinct pair.  Hence $g$ is
+a function.  Furthermore, by construction $g \circ f (x) = x$ for all $x \in A$,
+so $f$ is a split monomorphism.
+\end{proof}
+
+Note that the second theorem is stronger than a simple converse to the first
+theorem --- it states that an injection is not just a monomorphism, but that
+it is actually a split monomorphism.  In particular, this means that, in the
+category of sets, all monomorphisms are actually split monomorphisms.
+%%%%%
+%%%%%
+\end{document}

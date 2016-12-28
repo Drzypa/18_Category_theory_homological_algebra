@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiscreteCategory}
+\pmcreated{2013-03-22 16:15:09}
+\pmmodified{2013-03-22 16:15:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{discrete category}
+\pmrecord{8}{38357}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmdefines{trivial category}
+\pmdefines{empty category}
+\pmdefines{empty functor}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A category $\mathcal{C}$ is said to be a \emph{discrete category} if the only morphisms in $\mathcal{C}$ are the identity morphisms associated with each of the objects in $\mathcal{C}$.
+
+For example, every set can be regarded as a discrete category.  The objects are just the elements of the set.  Furthermore, $\hom(a,a)$ is identified with $\lbrace a\rbrace$, and $\hom(a,b)=\varnothing$ if $a\ne b$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+A discrete category with one object is called a \emph{trivial category}.  For every category $\mathcal{C}$, there is only one functor from $\mathcal{C}$ to a trivial category.  Hence, any trivial category is a terminal object in \textbf{Cat}, the category of small categories.
+\item
+A discrete category with no objects is called the \emph{empty category}.  For every category $\mathcal{C}$, there is only one functor from the empty category to $\mathcal{C}$.  This functor is called the \emph{empty functor}, where both the object and morphism functions are the empty set $\varnothing$.  Thus, the empty category is the initial object in \textbf{Cat}.
+\item
+Given any category $\mathcal{C}$, the smallest subcategory consisting of all objects in $\mathcal{C}$ is discrete, which is also the largest discrete subcategory in $\mathcal{C}$ (largest in the sense that it contains all objects of $\mathcal{C}$).  For every object $X\in \mathcal{C}$, we can associate the trivial category $\mathcal{C}_X$ consisting of one object, $X$, and one morphism $1_X$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupObject}
+\pmcreated{2013-03-22 14:10:48}
+\pmmodified{2013-03-22 14:10:48}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{group object}
+\pmrecord{7}{35606}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D35}
+\pmrelated{Group}
+\pmrelated{Category}
+\pmrelated{GroupScheme}
+\pmdefines{homomorphism of group objects}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\DeclareMathOperator{\id}{id}
+\begin{document}
+A group object is a formalization of the concept of a group with additional structure, such as a topological group, a Lie group, or a group variety. 
+
+Let $C$ be a category with a terminal object $E$. 
+
+\begin{defn}
+A \emph{group object} in $C$ is an object $G$ of $C$ for which the products $G\times G$ and $G\times G\times G$ exist, along with $C$ morphisms 
+\[
+m:G\times G \to G,
+\] 
+\[
+i:G\to G
+\] 
+and 
+\[
+e:E\to G.
+\]
+These morphisms must make the following diagrams commute:
+\begin{description}
+\item[Associativity]
+\[
+\xymatrix{
+(G\times G) \times G \ar@{=}[r] \ar[d]_{m\times\id} & G\times G\times G & G\times (G\times G) \ar@{=}[l] \ar[d]^{\id\times m}\\
+G\times G\ar[dr]^m & & G\times G\ar[dl]_m \\
+ & G & 
+}
+\]
+\item[Identity]
+\[
+\xymatrix{
+G\ar[ddr]_\id\ar[dr] & & G\ar[dl] & E \ar[l]^e\ar[ddll]^e\\
+ & G\times G \ar[d]^m & & \\
+ & G & &
+}
+\]
+and
+\[
+\xymatrix{
+E \ar[r]^e\ar[ddrr]^e & G\ar[dr] & & G\ar[dl]\ar[ddl]^\id \\
+& & G\times G \ar[d]^m & \\
+& & G &
+}
+\]
+\item[Inverse]
+\[
+\xymatrix{
+G \ar[r]^{(\id,i)}\ar[dr] & G\times G \ar[r]^m & G\\
+ & E\ar[ur]^{e} & 
+}
+\]
+and
+\[
+\xymatrix{
+G \ar[r]^{(i,\id)}\ar[dr] & G\times G \ar[r]^m & G\\
+ & E\ar[ur]^{e} & 
+}
+\]
+\end{description}
+\end{defn}
+
+This definition may look unfamiliar if you are not comfortable with category theory, but it becomes much clearer if $G$ has elements.  (In which case,
+$E$ can be taken to be a set with a single element, which we shall denote as ``$*$''.)  Then the commutativity of the first diagram (``Associativity'') is
+exactly the condition 
+\[
+m(m(g_1,g_2),g_3)=m(g_1,m(g_2,g_3)), 
+\]
+that is, $m$ is associative.  Similarly, the second and third diagrams (``Identity'') commute if and only if 
+\[
+m(g,e(*))=g \text{ and } m(e(*),g)=g
+\]
+so that $e(*)$ is an identity element.  The fourth and fifth (``Inverse'') commute if and only if 
+\[
+m(g,i(g))=e(*)\text{ and }m(g,i(g))=e(*)
+\]
+so that $i(g)$ is an inverse of $g$.  
+
+Thus if $C$ is a category of sets with some extra structure, then $G\in C$ is a group object if and only if the group operations respect the structure (that is, are morphisms of $C$).
+
+If $C$ is a suitable category of objects that already have a group structure, (such as a ring, a field, or a vector space) then every object in $C$ is a group object in a natural way, that is, using the associated operations. 
+
+A homomorphism of group objects is defined in the obvious way:
+
+
+\begin{defn}
+A \emph{homomorphism of group objects} $\phi:G\to H$ is a morphism $G\to H$ that commutes with the group operations.  Specifically, $\phi\circ e_G = e_H$, $\phi\circ i_G = i_H \circ\phi$, and the diagram
+\[
+\xymatrix{
+G\times G \ar[d]_{m_G}\ar[r]^{(\phi,\phi)} & H\times H \ar[d]^{m_H} \\
+G \ar[r]^\phi & H
+}
+\]
+%\[
+%a
+%\]
+must commute.
+\end{defn}
+
+Once again, this definition looks much worse than it is; if $G$ has points, this is exactly the familiar definition of a group homomorphism, with the additional condition that $\phi$ must be a morphism in $C$.
+
+This definition, with its many diagrams, may seem unnecessarily complicated since it just reduces to a group with an additional condition.  However, in some categories, the objects do not have points; in others, the points do not tell the same story (there may be several morphisms with the same effect on points). In these categories, the full definition is needed.  One such category is the category of schemes; a group scheme does not have meaningful points in the usual sense.
+
+Finally, it is worth noting that, by Yoneda's lemma, we can view group objects as functors into the category of groups.  This allows one to use results from category theory to give information about group objects.
+%%%%%
+%%%%%
+\end{document}

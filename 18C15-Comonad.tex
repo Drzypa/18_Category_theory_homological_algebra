@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Comonad}
+\pmcreated{2013-03-22 16:27:52}
+\pmmodified{2013-03-22 16:27:52}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{comonad}
+\pmrecord{10}{38623}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18C15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\id}{id}
+\newcommand{\opposite}[1]{{#1}^{\mathrm{op}}}
+\begin{document}
+Let $\mathcal{C}$ be a category.  A \emph{comonad} over $\mathcal{C}$ consists of an endofunctor $T\colon\mathcal{C}\to\mathcal{C}$ along with natural transformations $\Delta\colon T\dot{\to}T\circ T$ and $\varepsilon\colon T\dot{\to}\id_{\mathcal{C}}$.  The natural transformation $\Delta$ is coassociative, in the sense that the diagram
+\[\xymatrix{
+& T\ar[dl]_{\Delta}\ar[dr]^{\Delta} & \\
+T\circ T\ar[dr]_{T\Delta} & & T\circ T\ar[dl]^{\Delta T} \\
+& T\circ T\circ T &
+}\]
+is commutative.  Moreover, $\Delta$ is counitary, in the sense that the diagram
+\[\xymatrix{
+ & T\ar[dl]\ar[dr]\ar[dd]^{\Delta} & \\
+\id_{\mathcal{C}}T & & T\id_{\mathcal{C}} \\
+& G\circ G\ar[lu]^{\varepsilon T}\ar[ru]^{T\varepsilon} &
+}\]
+also commutes.  Observe that the defining diagrams for a comonad are precisely dual to those for a monad.  Thus one could more briefly define a comonad over a category $\mathcal{C}$ as a monad over the opposite category $\opposite{\mathcal{C}}$.
+
+Just as one can define algebras over a monad it is possible to define coalgebras over a comonad. % add more to this later
+
+\begin{thebibliography}{99}
+\bibitem{JoRo}
+S.~A.~Joni and G.-C.~Rota, {\it Coalgebras and bialgebras in combinatorics}, Stud.~Appl.~Math., 61 (1979), pp. 93--139.
+
+\bibitem{Ma}
+S.~Mac~Lane. {\it Categories for the Working Mathematician}, 2nd ed. Springer-Verlag, 1997
+
+\bibitem{MaMo}
+S.~Mac~Lane and I.~Moerdijk. {\it Sheaves and Geometry in Logic: A First Introduction to Topos Theory}, Springer-Verlag, 1992.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

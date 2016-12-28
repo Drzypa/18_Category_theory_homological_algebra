@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactorizationSystem}
+\pmcreated{2013-03-22 18:29:31}
+\pmmodified{2013-03-22 18:29:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{factorization system}
+\pmrecord{5}{41173}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A32}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that any function $f:A\to B$ can be factored as $h\circ g$ where $g:A\to f(A)$ is a surjection and $h:f(A)\to B$ is an injection.  This phenomenon is true in many mathematical systems: homomorphisms between groups, rings, lattices, continuous maps between topological spaces, etc... 
+
+However, in the setting of category theory, while it is still true that a morphism can be factored into the composition of two morphisms (one of them, say, being the identity morphism), the fact that one factor is an epimorphism and the other a monomorphism no longer holds in general.  Categories where such kinds of factorizations exist is of great interest.  Factorization of morphisms in a category can be formalized as follows:
+
+\textbf{Definition}.  Let $\mathcal{C}$ be a category.  An ordered pair $(\mathcal{E},\mathcal{M})$ of classes of morphisms in $\mathcal{C}$ is called a \emph{factorization system} if 
+\begin{itemize}
+\item every morphism $f$ in $\mathcal{C}$ can be ``factored'' as $f=m\circ e$ where $m\in \mathcal{M}$ and $e\in \mathcal{E}$,
+\item $\mathcal{E}$ is orthogonal to $\mathcal{M}$: $\mathcal{E} \perp \mathcal{M}$,
+\item every isomorphism is in both $\mathcal{E}$ and $\mathcal{M}$, and
+\item both $\mathcal{E}$ and $\mathcal{M}$ are closed under composition; in other words, if $x,y$ are both in one class and $x\circ y$ is defined, then $x\circ y$ is in that class too.
+\end{itemize}
+When there is a factorization system $(\mathcal{E},\mathcal{M})$ on a category $\mathcal{C}$, we say that $\mathcal{C}$ \emph{has $(\mathcal{E},\mathcal{M})$-factorization}, and an \emph{$(\mathcal{E},\mathcal{M})$-factorization} of a morphism $f$ is a factorization of $f$: $f=m\circ e$, such that $m\in \mathcal{M}$ and $e\in \mathcal{E}$.
+
+One of the first properties of having a factorization system $(\mathcal{E},\mathcal{M})$ is that the $(\mathcal{E},\mathcal{M})$-factorization of a morphism $f$ is unique up to isomorphism:
+
+\begin{prop} If we have a commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[dr]^f \ar[r]^s \ar[d]_t & C \ar[d]^u \\ D \ar[r]_v & B}$$
+where $s,t\in \mathcal{E}$ and $u,v\in \mathcal{M}$, then $C\cong D$.
+\end{prop}
+\begin{proof}  Because $\mathcal{E}\perp \mathcal{M}$, there are unique morphisms $g:C\to D$ and $h:D\to C$ such that the diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^s \ar[d]_t & C \ar[d]^u \ar@<-0.5ex>[dl]_g \\ D \ar[r]_v \ar@<-0.5ex>[ur]_h & B}$$
+is commutative.  Then $h\circ g\circ s = h \circ t = s$ and $u \circ h\circ g = v \circ g = u$, which means we have a commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^s \ar[d]_s & C \ar[d]^u \ar[dl]|{h\circ g} \\ C \ar[r]_u & B}$$
+But $s\perp u$, so the morphism $h\circ g: C\to C$ making the above diagram commute is uniquely determined.  Since $1_C:C \to C$ is another morphism making the diagram commute, we must have $h\circ g=1_C$.  Similarly, one sees that $g\circ h=1_D$.  This implies that $C\cong D$.
+\end{proof}
+
+More to come...
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

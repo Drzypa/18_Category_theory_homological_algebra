@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalPullback}
+\pmcreated{2013-03-22 14:09:31}
+\pmmodified{2013-03-22 14:09:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{categorical pullback}
+\pmrecord{16}{35579}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmsynonym{pullback}{CategoricalPullback}
+\pmsynonym{pullback diagram}{CategoricalPullback}
+\pmsynonym{categorical pushout diagram}{CategoricalPullback}
+\pmsynonym{pushout diagram}{CategoricalPullback}
+\pmsynonym{amalgamated sum}{CategoricalPullback}
+\pmrelated{FibreProduct}
+\pmrelated{FreeProductWithAmalgamatedSubgroup}
+\pmdefines{pullback square}
+\pmdefines{pushout}
+\pmdefines{categorical pushout}
+\pmdefines{pushout square}
+\pmdefines{generalized pullback}
+\pmdefines{generalized pushout}
+\pmdefines{have pullbacks}
+\pmdefines{have pushouts}
+
+% this is the default PlanetMath preamble.  as your 
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[curve]{xypic}
+
+% there are many more packages, add them here as you need 
+
+% define commands here
+\newcommand{\from}{\leftarrow}
+
+\begin{document}
+\PMlinkescapeword{factor}
+
+\subsection*{Pullbacks}
+
+Let $f:X\to B$ and $g:Y\to B$ be morphisms in a category $\mathcal{C}$.  Then a \emph{pullback diagram}, or \emph{pullback square} of $f$ and $g$ is a commutative diagram
+\[\xymatrix{
+A\ar[d]_p \ar[r]^q & Y\ar[d]^g \\
+X\ar[r]_f       & B.
+}\]
+such that if we have another commutative diagram
+\[\xymatrix{
+Z\ar[d]_r\ar[r]^s & Y\ar[d]^g \\
+X\ar[r]_f       & B.
+}\]
+then there is a unique morphism $h:Z\to A$ with the commutative diagram
+\[\xymatrix{
+Z\ar@/^1ex/[rrd]^s \ar@/_1ex/[rdd]_r \ar@{.>}[rd]|h & & \\
+  & A\ar[d]_p\ar[r]^q & Y\ar[d]^g \\
+  & X\ar[r]_f                 & B.
+}\]
+
+A \emph{pullback} of $(f,g)$ is the ordered triple $(A,q,p)$.  We also say that $p$ is a \emph{pullback of $g$ along $f$}, and $q$ a \emph{pullback of $f$ along $g$}.  When a pullback of $(f,g)$ exists, it is unique up to isomorphism.  The object $A$, and the morphisms $p$ and $q$ in the diagram above are often denoted by $$X\times_B Y,\qquad 1_X \times_B g\qquad \mbox{and} \qquad f\times_B 1_Y$$ respectively, and the uniquely determined morphism $h$ by $$\displaystyle{r \choose s}.$$  It is easy to see that $$X\times_B Y\cong Y\times_B X,$$ whenever one (and hence the other) exists.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The pullback of $f$ and $g$ can be equivalently defined as a limiting cone over the diagram $X\to B\from Y$.  In other words, a pullback diagram is a terminal object in the category of commutative squares of the form 
+\[\xymatrix{
+Z\ar[d] \ar[r] & Y\ar[d]^g \\
+X\ar[r]_f       & B.
+}\]
+\item A category $\mathcal{C}$ is said to \emph{have pullbacks} if every diagram $X \to B \from Y$ can be completed into a pullback diagram.
+\item
+The notion of pullbacks can be generalized: let $\lbrace x_i: C_i \to C \mid i\in I\rbrace$ be a collection of morphisms indexed by set $I$, considered as a small diagram.  The \emph{generalized pullback} of the $x_i$'s is just the limiting cone of the diagram.  Using this definition, the generalized pullback of one morphism $f$ is the identity morphism of $\operatorname{dom}(f)$, the domain of $f$, and the generalized pullback of the empty set is a terminal object.
+\item A pullback is sometimes known as an \emph{amalgamated sum}.
+\end{itemize}
+
+\subsection*{Pushouts}
+
+Dually, given morphisms $f:B\to X$ and $g:B\to Y$, a \emph{pushout square} of $f$ and $g$ is a commutative diagram
+\[\xymatrix{
+B\ar[d]_f \ar[r]^g & Y\ar[d]^s \\
+X\ar[r]_t       & A
+}\]
+such that if we have another commutative diagram
+\[\xymatrix{
+B\ar[d]_f \ar[r]^g & Y\ar[d]^u \\
+X\ar[r]_v       & Z
+}\]
+Then there is a unique morphism $h:A\to Z$ with the following commutative diagram:
+\[\xymatrix{
+B\ar[d]_f \ar[r]^g & Y\ar[d]^s \ar@/^1ex/[ddr]^u & \\
+X\ar[r]_t \ar@/_1ex/[drr]_v & A \ar@{.>}[dr]|-h & \\
+& & Z.
+}\]
+
+The pair $(s,t)$ of morphisms is a \emph{pushout} of $(f,g)$.  $s$ is the the \emph{pushout of $f$ along $g$}, and $t$ the \emph{pushout of $g$ along $f$}.  Like pullbacks, pushouts are unique up to unique isomorphism when they exist.  The object $A$ and the morphisms $s$ and $t$ are typically written $$X\amalg_B Y,\qquad f\amalg_B 1_Y \qquad \mbox{and} \qquad 1_X \amalg_B g,$$ and the unique morphism $h$ is denoted by $$(f \enspace g).$$
+
+\textbf{Remark}.  The pushout of $f$ and $g$ can be thought of as the limiting cocone under the diagram $X \from B \to Y$.  Equivalently, they are initial objects in the category of commutative squares whose top edge is $B\to Y$ and left edge is $B\to X$.  A category is said to \emph{have pushouts} if every diagram $X \from B \to Y$ can be completed to a pushout diagram.  The \emph{generalized pushout} is defined as the limiting cocone under the diagram consisting of morphisms $y_i: B\to B_i$, where $i$ belongs to some set $I$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Equalizer}
+\pmcreated{2013-03-22 14:45:41}
+\pmmodified{2013-03-22 14:45:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{equalizer}
+\pmrecord{19}{36404}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18A30}
+\pmsynonym{difference kernel}{Equalizer}
+\pmsynonym{difference cokernel}{Equalizer}
+\pmsynonym{equaliser}{Equalizer}
+\pmsynonym{coequaliser}{Equalizer}
+\pmsynonym{has equalizers}{Equalizer}
+\pmrelated{PropertiesOfRegularAndExtremalMonomorphisms}
+\pmrelated{EqualizerIsAnInverseLimit}
+\pmdefines{coequalizer}
+\pmdefines{parallel morphisms}
+\pmdefines{have equalizers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal{C}$ be a category.  A family of morphisms in $\mathcal{C}$ is said be \PMlinkescapetext{\emph{parallel}} if they belong to $\operatorname{Hom}(A,B)$, for some objects $A,B$ in $\mathcal{C}$.  
+
+Let $f,g$ be a pair of parallel morphisms in $\operatorname{Hom}(A,B)$.  A morphism $d\colon X\to A$ is said to equalize $f$ and $g$ if $fd=gd$.  In other words, the following diagrams are equal:
+$$\xymatrix@1{X\ar[r]^d&A\ar[r]^f&B}=\xymatrix@1{X\ar[r]^d&A\ar[r]^g&B}$$
+\par
+An \emph{equalizer} of $f$ and $g$ is a morphism $d$ from an object $X \in \mathcal{C}$ to $A$, such that
+\begin{enumerate}
+\item $d$ \emph{equalizes} $f$ and $g$
+\item $d$ is universal among all morphisms that equalize $f$ and $g$.  Specifically, if $e$ is a morphism from an object $Y\in\mathcal{C}$ to $A$ such that $e$ equalizes $f$ and $g$, then there exists a unique morphism $h:Y\to X$ and a commutative diagram:
+$$\xymatrix@1{Y \ar[d]_h \ar[dr]^e \\ X \ar[r]_d & A}$$
+\end{enumerate}
+Reversing all the arrows in the previous paragraphs, we have the dual notion of an equalizer: that of a coequalizer.  To make this statement explicitly, let there be given two morphisms $f,g\in\operatorname{Hom}(A,B)$, a \emph{coequalizer} is a morphism $c$ from $B$ to an object $Z\in\mathcal{C}$ such that
+\begin{enumerate}
+\item $\xymatrix@1{A\ar[r]^f&B\ar[r]^c&Z}=\xymatrix@1{A\ar[r]^g&B\ar[r]^c&Z}$.  Such a morphism is said to \emph{coequalize} $f$ and $g$.
+\item $c$ is universal among all morphisms that coequalizes $f$ and $g$.  This means that given a morphism $r$ from $B$ to an object $Y\in\mathcal{C}$, there exists a unique morphism $r\in\operatorname{Hom}(Z,Y)$ so the following diagram commutes:
+$$\xymatrix@1{B \ar[dr]_e \ar[r]^c & Z \ar[d]^r \\ & Y}$$
+\end{enumerate}
+\par
+\textbf{Remarks}
+\begin{itemize}
+\item An equalizer is a monomorphism (but not the other way around, a monomorphism that is also an equalizer is called a \emph{regular monomorphism}). A coequalizer is an epimorphism (and conversely, an epimorphism that is also a coequalizer is called a \emph{regular epimorphism}).  This follows directly from the above definitions and definitions of monomorphisms and epimorphisms.
+\item If $X\to A$ is an equalizer of $f,g\colon A\to B$, then $[X\to A]$ is a subobject of $A$.  Furthermore, by the universality of the equalizer, it is the ``largest'' such subobject.  Similarly, If $B\to Z$ is a coequalizer of $f,g$, then $[B\to Z]$ is the ``largest" quotient object of $B$.
+\item From the above discussion, we can safely say \emph{the} equalizer of $f$ and $g$ and \emph{the} coequalizer of $f$ and $g$.
+\item The equalizer of a morphism $f:A\to B$ and itself is the identity morphism $1_A$ on $A$.
+\item A category is said to \emph{have equalizers} if every pair of parallel morphisms has an equalizer.
+\end{itemize}
+
+One can also define an equalizer of an arbitrary set of morphisms with a common domain and a common codomain:  if $\lbrace f_i:A\to B\mid i\in I\rbrace$ is a set of morphisms from $A$ to $B$, indexed by a set $I$, then an equalizer of the $f_i$'s is a morphism $d$ from an object $X$ to $A$ such that $d$ equalizes every pair of morphisms $f_i$ and $f_j$ and that $d$ is universal among all morphisms with such a property.
+
+\textbf{Remark}.  An equalizer (coequalizer) is also known as a \emph{difference kernel} (\emph{difference cokernel}).  This name is justifiably given as we recognize that a kernel of a morphism $f$ is, in a way, the ``difference" between $f$ and $o$, the zero morphism.
+%%%%%
+%%%%%
+\end{document}

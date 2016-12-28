@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonomorphicSet}
+\pmcreated{2013-03-22 18:20:50}
+\pmmodified{2013-03-22 18:20:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{monomorphic set}
+\pmrecord{9}{40981}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmdefines{monomorphic pair}
+\pmdefines{epimorphic set}
+\pmdefines{epimorphic pair}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ be a category and $M: = \lbrace f_i: A \to B_i \mid i\in I\rbrace$ a set (indexed by a set $I$) of morphisms with common domain $A$ in $\mathcal{C}$.  Then $M$ is said to be a \emph{monomorphic set} if for any pair of morphisms $g,h: C\to A$, $f_i\circ g = f_i\circ h$ for all $i\in I$ imply that $g=h$.  A \emph{monomorphic pair} is a monomorphic set $M$ such that the cardinality of $M$ is 2.
+
+Monomorphic sets are generalizations of monomorphisms.  Indeed, for if $\lbrace f:A\to B\rbrace$ is a monomorphic set, then $f$ is a monomorphic.
+
+For example, in \textbf{Set}, the category of sets, let $R$ be an $n$-ary relation on a set $A$.  For each $i=1,\ldots, n$, let $p_i$ be the projection of the $i$-th coordinate of $R$ into $A$.  Then $$\lbrace p_i\mid i=1,\ldots, n\rbrace$$ is a monomorphic set in \textbf{Set}.  To see this, observe first that, since $R$ is a subset of $A^n$, any function $f:B\to R$ has $n$ components, $f_i: B\to A$, given by $f_i = p_i\circ f$.  Now, suppose $g,h:B\to R$ are functions, such that $p_i\circ g=p_i\circ h$.  Then $g_i=h_i$ for all $i$.  In other words, all components of $g$ and $h$ match.  Therefore $g=h$.
+
+More generally, a relation $R$ between sets $A_1,\ldots, A_n$ is a subset of the cartesian product $A_1\times \cdots \times A_n$.  The set of projections $\lbrace p_i: R\to A_i\mid i=1,\ldots,n\rbrace$ is also a monomorphic set in $\textbf{Set}$.  Using this concept, one may generalize the notion of a relation on sets to a relation on objects in a category.
+
+\textbf{Remark}.  One can dually define \emph{epimorphic sets} and \emph{epimorphic pairs}.
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Basic Category Theory, Handbook of Categorical Algebra I}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

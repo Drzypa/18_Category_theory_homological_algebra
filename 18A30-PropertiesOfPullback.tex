@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfPullback}
+\pmcreated{2013-03-22 18:28:21}
+\pmmodified{2013-03-22 18:28:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of pullback}
+\pmrecord{11}{41144}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry lists and proves some basic properties of categorical pullbacks.  Fix a category $\mathcal{C}$.
+
+\begin{prop}  If $P$ is a pullback of $f:A\to C$ and $g:B\to C$, then $P$ is unique (up to isomorphism).  This is the justification that $P$ may be written as $A\times_C B$. \end{prop}
+\begin{proof}  Let 
+$$\xymatrix@+=1.5cm{P \ar[r]^-{p_A} \ar[d]_{p_B} & A \ar[d]^f \\ B \ar[r]_g & C }$$ be the corresponding pullback diagram.  First note that if $h:P\to P$ is a morphism such that $p_A=p_A\circ h$ and $p_B=p_B\circ h$, then $h=1_P$.  This follows from the universal property of pullbacks (for more detail, see the proof of the uniqueness of product \PMlinkname{here}{PropertiesOfDirectProduct}).
+
+Now if $Q$ is another pullback of $f:A\to C$ and $g:B\to C$ with pullback diagram
+$$\xymatrix@+=1.5cm{Q \ar[r]^-{q_A} \ar[d]_{q_B} & A \ar[d]^f \\ B \ar[r]_g & T }$$
+then there are unique morphisms $x:P\to Q$ and $y:Q\to P$ such that $p_A=q_A\circ x$, $p_B=q_B\circ x$ and $q_A=p_A\circ y$, $q_B=p_B\circ y$.  So $p_A=p_A\circ (y\circ x)$ and $p_B = p_B\circ (y\circ x)$.  Therefore, $y\circ x=1_P$.  Similarly $x\circ y=1_Q$.  As a result $P$ is isomorphic to $Q$.
+\end{proof}
+
+\begin{prop}  Let $I$ be the disjoint union of non-empty sets $J,K$.  Let $I' = \lbrace x_i:C_i\to C \mid i\in I\rbrace$ be a set of morphisms in $\mathcal{C}$.  Let $X,Y$, and $Z$ be the generalized pullbacks of $I'$, $J' = \lbrace x_i \mid i\in J\rbrace$, and $K' = \lbrace x_i \mid i\in K\rbrace$ respectively.  Then $X\cong Y\times_C Z$.
+\end{prop}
+
+Note: we are not asserting the existence of $X,Y$ and $Z$.  We are merely saying that if they exist, we have an isomorphism.
+
+\begin{proof}[Sketch of Proof.]  This proof is analogous to the proof of a similar property regarding arbitrary products (see \PMlinkname{here}{PropertiesOfDirectProduct}), so we will skip the diagrams and be brief here.  First, note that there are unique morphisms $y:X\to Y$ and $z:X\to Z$, which results in a unique morphism $f:X\to Y\times_C Z$.  On the other hand, the morphisms $Y\to C_j$ and $Z\to C_k$ give us a well-defined collection of morphisms $Y\times_C Z \to C_i$ for all $i\in I$, which results in a unique morphism $g: Y\times_C Z \to X$.  There are a number of commutative diagrams relating $f$ and $g$.  In the end, one proves that $g\circ f = 1_C$ and $f\circ g=1_{Y\times_C Z}$.
+\end{proof}
+
+\begin{cor}  (commutativity of pullbacks) $X\times_C Y\cong Y\times_C X$, provided that one of them (and hence the other) exists.  \end{cor}
+\begin{cor}  (associativity of pullbacks) $X\times_C (Y\times_C Z) \cong X\times_C Y \times_C Z \cong (X\times_C Y) \times_C Z$, provided that they exist.  \end{cor}
+\begin{cor}  If $\mathcal{C}$ has pullbacks, then it has finite generalized pullbacks.  \end{cor}
+
+\begin{prop} Let $\lbrace x_i: C_i\to C\mid i\in I\rbrace$ be a collection of morphisms indexed by a set $I$.  Let $\alpha,\beta:J\to I$ be two surjections.  Suppose $D,E$ are the generalized pullbacks of $\lbrace x_{\alpha(j)} \mid j\in J \rbrace$ and $\lbrace x_{\beta(k)}\mid k\in J \rbrace$ respectively.  Then $D\cong E$. \end{prop}
+\begin{proof}[Sketch of Proof.]  For every $i\in I$, there are $j,k\in J$, such that $\alpha(j)=\beta(k)$.  So $$E\to C_{\beta(k)}=E\to C_{\alpha(j)},$$ and its composition with $x_{\beta(k)}$ is the same as the composition with $x_{\alpha(j)}$.  By the universality of generalized pullbacks, we get a unique morphism $f:E\to D$ with 
+$$E \stackrel{f}{\longrightarrow} D \longrightarrow C_{\beta(k)} = E \to C_{\beta(k)}.$$
+Dually, we have a unique morphism $g:D\to E$ with 
+$$D \stackrel{g}{\longrightarrow} E \longrightarrow C_{\alpha(j)} = D \to C_{\alpha(j)}.$$
+As a result, $f\circ g=1_D$ and $g\circ f=1_E$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

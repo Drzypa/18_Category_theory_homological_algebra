@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFunctorIsAnEquivalenceIffItIsFullyFaithfulAndEssentiallySurjective}
+\pmcreated{2013-03-22 17:39:16}
+\pmmodified{2013-03-22 17:39:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{a functor is an equivalence iff it is fully faithful and essentially surjective}
+\pmrecord{7}{40088}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A22}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+%\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\eqv}{\approxeq}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{9pt plus 0.5ex minus 0.2ex}
+
+\newcommand{\ob}[1]{\mathcal{OB}{#1}}
+\begin{document}
+\begin{prop} A functor is an equivalence iff it is full, faithful and essentially 
+surjective. \end{prop}
+
+\begin{proof}
+$(\Rightarrow)$. Let functor $F\colon C\to D$ be an equivalence. So
+there is a functor $G\colon D\rightarrow C$ such that
+$FG\eqv 1_D$ and $GF\eqv 1_C$, where $\eqv$ means
+naturally isomorphic. For $FG\eqv 1_D$, this means that there
+are natural transformations
+\begin{align*}
+\alpha &\colon FG\Rightarrow1_D \\
+\alpha^* &\colon 1_D\Rightarrow FG
+\end{align*}
+such that for any $\overline{x}\in\ob(D)$,
+$\alpha_{\overline{x}}\,\alpha^*_{\overline{x}}=1_{\overline{x}}$
+and $\alpha^*_{\overline{x}}\,\alpha_{\overline{x}} =
+1_{FG(\overline{x})}$, meaning that $\overline{x}$ and
+$FG(\overline{x})$ are isomorphic (as objects of $D$). Similarly,
+for $GF\eqv 1_C$, there are natural transformations
+\begin{align*}
+\beta & \colon GF\Rightarrow1_C \\
+\beta^* & \colon 1_C\Rightarrow GF
+\end{align*}
+such that for any $x\in\ob(C)$,
+$\beta_x\,\beta^*_x=1_x$ and $\beta^*_x\,\beta_x = 1_{GF(x)}$,
+meaning that $x$ and $GF(x)$ are isomorphic (as objects of $C$).
+
+For any $\overline{x}\in\ob(D)$, let $x=G(\overline{x})$. To show
+that $F(x)\cong\overline{x}$ is the same as showing
+$FG(\overline{x})\cong\overline{x}$. By the previous discussion,
+this is clear. Therefore, $F$ is essentially surjective.
+
+We now show that $F$ is faithful. Let $f\in\hom(x,y)$ for $x,y\in\ob(C)$. Then by the above, there is a commutative diagram
+\[
+\xymatrix@C=1.5cm{
+{x}\ar[r]^{f}\ar[d]^{\beta^*_x} & {y}\ar[d]^{\beta^*_y} \\
+{GF(x)}\ar[r]_{GF(f)}& {GF(y)}
+}
+\]
+Thus $\beta^*_y\,f = GF(f)\,\beta^*_x$; applying $\beta_y$ to both sides we have $f = \beta_y\,GF(f)\,\beta^*_x$. Thus $f$ is determined by $GF(f)$ so that $GF$ must be faithful. Applying the same argument to a morphism $g\in\hom(\overline{x},\overline{y})$ for $\overline{x},\overline{y}\in\ob(D)$ and using $FG$ in place of $GF$ shows that $G$ is faithful as well.
+
+Next we show that $F$ is full. Suppose $g\in \hom(F(x),F(y))$ for $x,y\in\ob(C)$. Let $f = \beta_y\,G(g)\,\beta^*_x$. Then the following diagram commutes for either choice of horizontal arrow on the bottom: the top arrow by definition of $\beta$ and $\beta^*$; the bottom arrow by definition of $f$.
+\[
+\xymatrix@C=1.5cm{
+x \ar[r]^f \ar[d]_{\beta^*_x} & y \ar[d]^{\beta^*_y} \\
+GF(x)\ar@<.5ex>[r]^{GF(f)}\ar@<-.5ex>[r]_{G(g)} & GF(y)
+}
+\]
+It follows that $G(g)\,\beta^*_x = \beta^*_y\, f = GF(f)\,\beta^*_x$; composing on the right with $\beta_x$ gives $G(g) = GF(f)$. Finally, since $G$ is faithful, we have $g=F(f)$ and $F$ is full.
+
+$(\Leftarrow)$. Now, we assume that $F\colon C\to D$ is essentially
+surjective, full and faithful. We want to show that $F$ is an
+equivalence.
+
+Since $F$ is fully faithful, for any $x,y\in \ob(C)$, the hom-sets
+$\hom(x,y)$ and $\hom(F(x),F(y))$ are bijective. In particular,
+since $\hom(x,x)\cong\hom(F(x),F(x))$, $1_x$ gets bijectively mapped
+to $1_{F(x)}$.
+
+Next, let $a,b\in \ob(D)$, we can find $x,y\in \ob(C)$ such that
+$F(x)\cong a$ (via a bijective morphism, say $\alpha\colon F(x)\to
+a$) and $F(y)\cong b$ (via bijection $\beta\colon F(y)\to b$). So,
+given $g\colon a\to b$, we have $\beta^{-1}g\alpha\colon F(x)\to
+F(y)$. Similarly, for $f\colon F(x)\to F(y)$, we have $\beta
+f\alpha^{-1}\colon a\to b$. Therefore, $\hom(a,b)\cong
+\hom(F(x),F(y))\cong\hom(x,y)$. In particular, for any $a\in\ob(D)$
+with $x\in\ob(C)$ such that $F(x)\cong a$, since $\hom(a,a)\cong
+\hom(x,x)$, $1_a$ gets mapped bijectively to $1_x$.
+
+If, for any $a\in\ob(D)$, there are $x_1,x_2\in\ob(C)$ such that
+$F(x_1) \cong a\cong F(x_2)$, then $\hom(x_1,x_2)\cong\hom(a,a)
+\cong\hom(x_2,x_1)$. Suppose $1_a$ gets mapped (bijectively) to $s
+\colon x_1\to x_2$ and to $t\colon x_2\to x_1$. Because $\hom(a,a)
+\cong\hom(a,a)\times\hom(a,a)\cong\hom(x_1,x_2)\times\hom(x_2,x_1)$,
+$1_a$ gets mapped to $st\colon x_1\to x_1$. But $1_a$ is also
+mapped bijectively to $1_{x_1}\colon x_1\to x_1$, this shows that
+$st=1_{x_1}$. Similarly, $ts=1_{x_2}$. So, we have $x_1\cong x_2$.
+
+Define $[x]=\lbrace y\mid y\cong x\rbrace$ and pick a representative
+$x_0$ with a bijection $x\to x_0$. Any $a\in \ob(D)$ can be mapped
+bijective into members of $[x]$ can be mapped bijectively to $x_0$.
+So, for any $a\in[a]\subseteq\ob(D)$, we have a well-defined
+$G(a):=x_0$.
+
+For any morphism $g \colon a\to b$, $a,b\in\ob(D)$, pick
+representatives $a_0\in[a]$ and $b_0\in[b]$, then there is a unique
+morphism $g^*\colon a_0\to b_0$ given by $\xymatrix@C=0.5cm{{a_0}
+\ar[r]&{a} \ar[r]^{g}&{b}\ar[r]&{b_0}}$. Since $\hom(a,b)\cong
+\hom(a_0,b_0)\cong\hom(x_0,y_0)$, $g^*$ in turns gets mapped to a
+unique morphism in $\hom(x_0,y_0)$. We call this $G(g)$.
+
+Now, we are ready to define the functor $G\colon D\to C$. For an
+object $a$, we define $G(a)$ to be the unique $x_0\in\ob(C)$
+discussed two paragraphs ago. For a morphism $g\colon a\to b$, we
+define $G(g)$ to be the unique morphism $f\colon G(a)\to G(b)$ that
+is found in the previous paragraph. In order for this to be a
+functor, we need to check the following:
+\begin{itemize}
+\item $G(1_a)=1_{G(a)}$, and
+\item $G(g_1g_2)=G(g_1)G(g_2)$.
+\end{itemize}
+These can be easily verified, as follows: $1_a$ is mapped to
+$$\xymatrix@C=1cm{{a_0}\ar[r]&{a}\ar[r]^{1_a}&{a}\ar[r]&{a_0}=
+{a_0}\ar[r]^-{1_{a_0}}&{a_0}},$$ and $1_{a_0}$ is mapped to
+$1_{x_0}=1_{G(a)}$. The second property can be verified similarly.
+
+Finally, we want to show that $FG\eqv 1_D$ and $GF\eqv 1_C$.
+This amounts to showing that for each $x\in\ob(C)$, $GF(x)\cong x$,
+and for each $a\in\ob(D)$, $FG(a)\cong a$. For the first part, $x$
+gets mapped to $F(x)$ which is in turn mapped to $GF(x)=x_0$, where
+$F(x_0)\cong F(x)$, which means that $x_0\cong x$, or that
+$GF(x)\cong x$. For the second part, $a$ is mapped first to
+$G(a)=x_0$, where $F(x_0)\cong a$. Then $x_0$ is in turn mapped to
+$F(x_0)$. Thus, $FG(a)=F(x_0)\cong a$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

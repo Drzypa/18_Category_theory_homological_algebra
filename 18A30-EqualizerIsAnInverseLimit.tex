@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EqualizerIsAnInverseLimit}
+\pmcreated{2013-03-22 18:25:53}
+\pmmodified{2013-03-22 18:25:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{equalizer is an inverse limit}
+\pmrecord{4}{41088}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{Equalizer}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} The equalizer of a pair of parallel morphisms $f,g:A\to B$ in a category $\mathcal{C}$ is an inverse limit.  \end{prop}
+
+\begin{proof}  We need to find a category $\mathcal{I}$ and a functor $F:\mathcal{I}\to \mathcal{C}$ such that the equalizer of $f,g$ is the limit of functor $F$.  The idea behind finding $\mathcal{I}$ is to look at the diagram of a pair of parallel morphisms, 
+$$\xymatrix@+=3pc{A \ar@<0.5ex>[r]^f \ar@<-0.5ex>[r]_g & B}
+$$
+and construct $\mathcal{I}$ based on the diagram.  Thus, let $\mathcal{I}$ be the category consisting of two objects $a,b$ and four morphisms $1_a,1_b, r, s$, such that $r,s\in \hom(a,b)$.  Define $F$ to be the functor such that $F(a)=A, F(b)=B, F(r)=f$ and $F(s)=g$.
+
+Suppose $(L,\tau)$ is the limit of $F$.  Identify the constant functor $L$ with its value the object $X$ in $\mathcal{C}$, and the natural transformation $\tau$ a pair of morphisms $i:X\to F(a)$ and $j:X\to F(b)$ in $\mathcal{C}$ such that 
+$$\xymatrix@+=3pc{X \ar[r]^-i & F(a) \ar[r]^{F(r)} & F(b)} = \xymatrix@+=3pc{X \ar[r]^-j & F(b)} = \xymatrix@+=3pc{X \ar[r]^-i & F(a) \ar[r]^{F(s)} & F(b)}.$$
+This is the same as
+$$\xymatrix@+=3pc{X \ar[r]^-i & A \ar[r]^{f} & B} = \xymatrix@+=3pc{X \ar[r]^-i & A \ar[r]^{g} & B}.$$
+So $i:X\to A$ equalizes $f$ and $g$.
+
+Suppose $(Y,\lbrace m:Y\to F(a), n:Y\to F(b)\rbrace)$ is another pair such that  
+$$\xymatrix@+=3pc{Y \ar[r]^-m & F(a) \ar[r]^{F(r)} & F(b)} = \xymatrix@+=3pc{Y \ar[r]^-n & F(b)} = \xymatrix@+=3pc{Y \ar[r]^-m & F(a) \ar[r]^{F(s)} & F(b)}.$$
+Then there is a unique morphism $k:Y\to X$ such that 
+$$\xymatrix@+=3pc{Y \ar[r]^-k & X \ar[r]^i & F(a)} = \xymatrix@+=3pc{Y \ar[r]^-m & F(a)}.$$
+This is the same as saying that whenever $m:Y\to A$ equalizes $f$ and $g$, there is a unique morphism $k:Y\to X$ such that 
+$$\xymatrix@+=3pc{Y \ar[r]^-k & X \ar[r]^i & A} = \xymatrix@+=3pc{Y \ar[r]^-m & A},$$
+which is exactly the statement that $i:X\to A$ is the equalizer of $f$ and $g$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

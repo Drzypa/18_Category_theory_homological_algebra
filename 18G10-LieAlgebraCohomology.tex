@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieAlgebraCohomology}
+\pmcreated{2013-03-22 13:51:06}
+\pmmodified{2013-03-22 13:51:06}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Lie algebra cohomology}
+\pmrecord{13}{34589}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G10}
+\pmclassification{msc}{17B56}
+\pmsynonym{cohomology}{LieAlgebraCohomology}
+\pmrelated{LieAlgebra}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\begin{document}
+\section{Definition.}
+Let $\fg$ be a finite-dimensional Lie algebra over a field $K$, and
+let $M$ be a \PMlinkname{$\fg$-module}{RepresentationLieAlgebra}.  Our goal is to define a cochain complex
+$C^{k}(\fg,M)$, whose cohomology is known as the Lie algebra cohomology
+of $\fg$ with coefficients in $M$.  We define the space of $k$-cochains to be
+\[C^k(\fg,M)=\Hom_K(\Lambda^k \fg,M),\quad k=0,1,\dots,\dim \fg,\]
+the vector space of multilinear, alternating mappings from
+$\overbrace{\fg\times \cdots\times \fg}^{k\text{ times}}$ to $M$.
+\footnote{It should be understood that $C^0(\fg,M)\cong M$.}  
+The coboundary operator 
+$\delta: C^k(\fg,M)\to C^{k+1}(\fg,M)$ is defined to be
+\begin{align*}
+    (\delta \omega)(a_0,a_1,\dots, a_k) =& \sum_{0\leq i\leq k} (-1)^k 
+    a_i \cdot\omega(\dots,\widehat{a_i},\dots) + \\ 
+    &\ +
+    \sum_{0\leq i<j\leq k}
+    (-1)^{i+j} \omega([a_i,a_j],\dots, \widehat{a_i},\dots
+    \widehat{a_j},\dots ),\quad \omega\in C^k(\fg,M),
+\end{align*}
+where $\widehat{a_i}$ indicates the omission of the argument $a_i$.
+We leave it as an exercise for the reader to check that $\delta
+\omega$, as defined above, is multi-linear, and alternating.  Another,
+only slightly more challenging exercise, is to prove that $\delta^2
+=0$.  The proof involves, in an essential way, the Jacobi identity,
+and the commutator identity for the action of $\fg$ on $M$, namely
+\[ a\cdot (b\cdot u) - b\cdot(a\cdot u) = [a,b] \cdot u,\quad a,b\in
+\fg,\; u\in M.\]
+
+If $\fg$ is the tangent space of a Lie group, and $M$ is the reals with $0$ $\fg$- action, then any alternating map on $\fg$ extends to a smooth alternating form on the Lie group, via (left)- translation by the group action.  The above formula for the coboundary gives the exterior derivative with respect to this extension.  
+
+\section{Infinite-dimensional generalizations.}  
+
+The above definition generalizes readily to infinite-dimensional Lie
+algebras.  The notion of a linear mapping with an infinite-dimensional
+domain is quite tricky, and so the key requirement of any such
+generalization is some kind of restriction on the space of cochains.
+Thus, de Rham cohomology of a manifold $X$ can be regarded as
+$H^k(V(X), C^\infty(X))$, the cohomology of the Lie algebra of vector
+fields with coefficients that are smooth functions, with the caveat
+that the cochain spaces $C^k(V(X),C^\infty(X))$ are restricted to
+$\Omega^k(X)$, the smooth differential forms\footnote{The
+  evaluation of a cochain on a list of vector fields is given by
+  contraction.}.  Another interesting infinite-dimensional
+generalization is the Gelfand-Fuchs cohomology of $V(X)$.  Here we are
+allowed cochains that are not simply linear combinations of the
+components of a vector field, but that also include the derivatives of
+these components.
+
+\section{Applications.}
+Owing to numerous and useful various applications, it's useful to list
+the formulas for the first few coboundary operators:
+\begin{align*}
+  (\delta \alpha)(a) =& a\cdot \alpha;\\
+  (\delta \beta)(a,b) =& a\cdot \beta(b) - b\cdot \beta(a)-
+  \beta([a,b]);\\
+  (\delta \gamma)(a,b,c) =& a\cdot \gamma(b,c) +b\cdot\gamma(c,a) +
+  c\cdot\gamma(a,b) - \gamma([a,b],c) - \gamma([b,c],a) - \gamma([c,a],b),
+\end{align*}
+where $a,b,c\in \fg$, and where $\alpha,\beta,\gamma$ are $0, 1$, and
+$2$-cochains, respectively.  In particular, for small $k$, the
+cohomology groups $H^k(\fg,M)$ have certain interesting
+interpretations. 
+
+The first cohomology space, $H^1(\fg,K)$ is isomorphic as a vector
+space to $\fg/[\fg,\fg]$, the abelianization of $\fg$.  More generally
+$H^1(\fg,M)$ classifies, up to natural equivalence, Lie algebras
+consisting of inhomogeneous operators
+\[ a+\beta(a),\quad a\in \fg,\; \beta\in C^1(\fg,M). \] In more fancy
+language, such operators are called derivations of $T(M)$, the tensor
+algebra of $M$.  
+
+The second cohomology space, $H^2(\fg,M)$, is naturally isomorphic to
+the vector space of abelian extensions of $\fg$ by $M$.  Thinking of
+$M$ as an abelian Lie algebra, such an extension is a Lie algebra
+$\hat{\fg}$ that occurs in the short-exact sequence
+\[0\to M\to\hat{\fg}\to\fg\to 0.\]
+
+The third cohomology space has an interesting interpretation in terms
+of deformations of something or other.  This is due to Murray
+Gerstenhaber of U. Penn, but I've forgotten the details.
+
+\section{Homological algebra.}
+Generalizing a bit, Lie algebra cohomology is just the cohomology of a
+particular kind of algebraic theory.  There are analogous cohomology
+theories for groups, associative algebras, and commutative rings.  All
+these theories can be unified by employing the notion of an injective
+resolution.
+
+Broadening the scope even further, we can employ category theory and
+re-conceptualize Lie algebra cohomology as a functor from the category
+of $\fg$-modules to the category of cochain complexes.  One begins with
+the covariant, left-exact functor
+\[ (-)^\fg: M\mapsto M^{\fg}=\{u\in M : \fg \cdot u=0 \}\] from
+the category of $\fg$-modules to the category of $K$-vector spaces.
+One then defines $H^k(\fg,-)$ to be the right-derived functors
+$R^k((-)^{\fg})$.
+
+\section{Historical notes.}
+Lie algebra cohomology was first formalized in an influential 1948
+paper by C. Chevalley and S. Eilenberg\cite{CE48}.  The aim was to
+calculate the cohomology, in the topological sense, of a compact Lie
+group by using the finite-dimensional data of the corresponding Lie
+algebra.  In this they were inspired by an even earlier idea of Elie
+Cartan, who was the first to announce that there was a connection
+between the topology of a Lie group and the algebraic structure of the
+underlying Lie algebra \cite{C28}.  What makes this story particularly
+interesting is that Homological Algebra, as a subject, was launched by
+the remarkable 1956 book\cite{CE56} by Cartan and Eilenberg called,
+oddly enough ``Homological Algebra''.  However the Cartan involved
+this time is not Elie, but Henri, the equally remarkable son of the
+very remarkable Elie.  A survey of the history of homological algebra
+by Charles Weibel is available at the K-theory archive\cite{CW99}.
+\begin{thebibliography}{99}
+\bibitem{C28} E. Cartan, Sur les nombres de Betti des espaces de
+  groupes clos, \textit{C. R. Acad. Sci. (Paris)} \textbf{187} (1928),
+  196--198.
+\bibitem{CE48} C. Chevalley and S. Eilenberg, Cohomology theory of Lie
+  groups and Lie algebras, \textit{Trans. Amer. Math. Soc.} \textbf{63}
+  (1948), 85-124.
+\bibitem{CE56}H. Cartan and S. Eilenberg, \textit{Homological
+    Algebra}, Princeton U. Press, 1956.
+\bibitem{CW99} C. Weibel, History of homological algebra, in
+  \textit{History of topology}, 797--836, North-Holland, Amsterdam,
+  1999. Available online at
+  \PMlinkexternal{http://www.math.uiuc.edu/K-theory/0245/}{http://www.math.uiuc.edu/K-theory/0245/}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

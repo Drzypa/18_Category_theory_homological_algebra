@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GrothendieckCategoryLemma}
+\pmcreated{2013-03-22 18:27:55}
+\pmmodified{2013-03-22 18:27:55}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Grothendieck category lemma}
+\pmrecord{26}{41134}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18E05}
+%\pmkeywords{Grothendieck category Lemma}
+\pmrelated{GrothendieckCategory}
+\pmdefines{proper generator}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Introduction: proper generator}
+\begin{definition}
+
+ Let us recall that a \emph{generator} of a Grothendieck category $\mathcal{G}$ is called \emph{proper} if $U$  has the property that a monomorphism  $i: U' \to U$ induces an isomorphism 
+$$Hom_{\mathcal{G}}(U,U) \cong Hom_{\mathcal{G}}(U',U)$$ if and only if $i$ is an isomorphism (viz. p. 251 in ref.
+\cite{NP65}).
+\end{definition}
+
+
+\subsection{Grothendieck category lemma}
+
+\begin{lemma}
+ Any Grothendieck category $\mathcal{G}$ has a proper generator.
+\end{lemma}
+
+\begin{thebibliography}{9}
+
+\bibitem[AG4]{sga}
+Alexander Grothendieck et al. \emph{S\'eminaires en G\'eometrie Alg\`ebrique- 4}, Tome 1, Expos\'e 1
+(or the Appendix to Expos\'ee 1, by `N. Bourbaki' for more detail and a large number of results.),
+AG4 is \PMlinkexternal{freely available}{http://modular.fas.harvard.edu/sga/sga/pdf/index.html} in French;
+also available here is an extensive
+\PMlinkexternal{Abstract in English}{http://planetmath.org/?op=getobj&from=books&id=158}.
+
+\bibitem{NP65}
+Nicolae Popescu. {\em Abelian Categories with Applications to Rings and Modules.},
+Academic Press: New York and London, 1973 and 1976 edns., ({\em English translation by I. C. Baianu}.)
+
+\bibitem{LS94}
+Leila Schneps. 1994.
+\PMlinkexternal{The Grothendieck Theory of Dessins d'Enfants}{http://planetmath.org/?op=getobj&from=books&id=163}.
+(London Mathematical Society Lecture Note Series), Cambridge University Press, 376 pp.
+
+\bibitem{DHSL2k}
+David Harbater and Leila Schneps. 2000.
+\PMlinkexternal{Fundamental groups of moduli and the Grothendieck-Teichm\"uller group}{http://www.ams.org/tran/2000-352-07/S0002-9947-00-02347-3/home.html}, \emph{Trans. Amer. Math. Soc}. 352 (2000), 3117-3148.
+MSC: Primary 11R32, 14E20, 14H10; Secondary 20F29, 20F34, 32G15.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EssentiallySurjective}
+\pmcreated{2013-03-22 15:18:16}
+\pmmodified{2013-03-22 15:18:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{essentially surjective}
+\pmrecord{13}{37104}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A22}
+\pmsynonym{dense functor}{EssentiallySurjective}
+\pmsynonym{isomorphism-dense in}{EssentiallySurjective}
+\pmsynonym{isomorphism-dense}{EssentiallySurjective}
+\pmrelated{EquivalenceOfCategories}
+\pmdefines{isomorphism-dense subcategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{faithful}
+\PMlinkescapeword{equivalence}
+
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories.  A functor $F\colon \mathcal{C}\to \mathcal{D}$ is \emph{essentially surjective} if for any object $A\in\mathcal{OB}(\mathcal{D})$, there exists an object $X\in\mathcal{OB}(\mathcal{C})$, such that $F(X)\cong A$.  That is, there are morphisms (in $D$) $f \colon F(X)\to A$ and $g\colon A\to F(X)$ such that $fg=1_A$ and $gf=1_{F(X)}$.
+
+\textbf{Remarks.} 
+\begin{itemize}
+\item Clearly, if $F$ is surjective, it is essentially surjective.  But the reverse is not true.
+\item A functor is an \PMlinkname{equivalence}{EquivalenceOfCategories} iff it is \PMlinkname{full}{FullFunctor}, \PMlinkname{faithful}{FaithfulFunctor} and essentially surjective.
+\item \textbf{isomorphism-dense subcategory}.  A full subcategory $\mathcal{S}$ of a category $\mathcal{C}$ is said to be \emph{isomorphism-dense in} $\mathcal{C}$, if the inclusion functor $\mathcal{S}\hookrightarrow \mathcal{C}$ is essentially surjective.  Since $\mathcal{S}$ is full, the inclusion functor is full and faithful.  As a result, $\mathcal{S}$ is isomorphism-dense if the inclusion functor is an equivalence.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

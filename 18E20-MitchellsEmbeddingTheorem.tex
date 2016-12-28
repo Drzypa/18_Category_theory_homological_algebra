@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MitchellsEmbeddingTheorem}
+\pmcreated{2013-03-22 18:29:46}
+\pmmodified{2013-03-22 18:29:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Mitchell's embedding theorem}
+\pmrecord{7}{41180}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E20}
+\pmclassification{msc}{18E10}
+\pmdefines{Freyd-Mitchell embedding theorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{thm}  Every small abelian category admits an \PMlinkname{exact}{ExactFunctor} and \PMlinkname{full}{FullFunctor} \PMlinkname{embedding}{FaithfulFunctor} into the category \textbf{$\mbox{Mod}_R$} of (left) modules over some ring $R$.
+\end{thm}
+
+As a consequence, this theorem says that certain facts about small abelian categories can be proved in the more concrete setting of $\mbox{Mod}_R$ (indeed a concrete category).  For example, in order to prove that a sequence is exact in an abelian category, it is enough to prove it in the context of $\mbox{Mod}_R$, by realizing the fact that objects in $\mbox{Mod}_R$ are sets (with structures) and utilizing the elements therein.  In particular, the diagram chasing technique popular in homological algebra may be formulated in small abelian categories as a result of this theorem.
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Categories and Structures, Handbook of Categorical Algebra II}, Cambridge University Press, Cambridge (1994)
+\bibitem{pf} P. Freyd \emph{Abelian Categories}, Harper and Row, (1964) [\PMlinkexternal{online version}{http://www.emis.de/journals/TAC/reprints/articles/3/tr3.pdf}]
+\bibitem{bm} B. Mitchell \emph{The Full Embedding Theorem}, American Journal of Math, 86, (1964) pp. 619-637
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

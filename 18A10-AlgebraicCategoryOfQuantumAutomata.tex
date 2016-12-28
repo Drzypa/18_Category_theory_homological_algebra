@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicCategoryOfQuantumAutomata}
+\pmcreated{2013-03-22 18:12:17}
+\pmmodified{2013-03-22 18:12:17}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{algebraic category of quantum automata}
+\pmrecord{56}{40784}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A10}
+\pmclassification{msc}{18C10}
+\pmclassification{msc}{03D10}
+\pmclassification{msc}{03D05}
+\pmsynonym{quantum computer}{AlgebraicCategoryOfQuantumAutomata}
+\pmsynonym{quantum algebraic topology object}{AlgebraicCategoryOfQuantumAutomata}
+%\pmkeywords{quantum automata categories}
+%\pmkeywords{categories of quantum computers}
+%\pmkeywords{quantum computation and quantum logic}
+%\pmkeywords{quantum automata and quantum computers}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{QuantumAlgebraicTopology}
+\pmrelated{TopicEntryOnFoundationsOfMathematics}
+\pmrelated{ETAS}
+\pmrelated{SomeExamplesOfUniversalBundles}
+\pmrelated{TopicEntryOnAppliedMathematics}
+\pmrelated{SystemDefinitions}
+\pmrelated{IndexOfCategories}
+\pmrelated{PhysicalMathematicsAndEngineeringTopicOnApplie}
+\pmdefines{quantum automaton}
+\pmdefines{algebraic category of quantum automata}
+\pmdefines{automorphism groupoid of quantum transitions}
+\pmdefines{quantum triple}
+\pmdefines{unitarity preserving mappings}
+
+% this is the default PlanetMath preamble.  
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd,  enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\voffset=-.4in
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+
+\begin{document}
+\section{The Algebraic Category of Quantum Automata}
+
+\begin{definition}
+Let us recall that a \emph{quantum automaton} is defined as a quantum algebraic topology object-- the \emph{quantum
+triple} $Q_A =(\grp,\H -\Re_G, Aut(\grp)$), where $\grp$ is a (locally compact) quantum groupoid, $\H -\Re_G$ are the unitary representations of $\grp$ on rigged Hilbert spaces $\Re_G$ of quantum states and quantum operators on the Hilbert space $\H$, and $Aut(\grp)$ is the transformation, or \emph{automorphism groupoid of quantum transitions} that represents all flip-flop quantum transitions of one cubit each between the permitted quantum states of the quantum automaton.
+\end{definition} 
+
+With the data from above definition we can now define also the category of quantum automata as follows.
+
+\begin{definition} The \emph{category of quantum automata} $\mathcal{\Q}_A$
+is defined as an algebraic category whose objects are triples $(\H, \Delta: \H \rightarrow \H, \mu)$ (where $\H$ is either a Hilbert space or a rigged Hilbert space of quantum states and operators acting on 
+$\H$, and $\mu$ is a measure related to the quantum logic, $LM$, and (quantum) transition probabilities of this quantum system), and whose morphisms are defined between such triples by homomorphisms of Hilbert spaces, 
+$\O: \H \rightarrow \H$, naturally compatible with the operators $\Delta$, and by homomorphisms between the associated Haar measure systems. 
+\end{definition}
+
+An alternative definition is also possible based on Quantum Algebraic Topology (QAT). 
+
+\begin{definition} A quantum algebraic topology definition of the {\em category of quantum algebraic automata} is in terms of the objects specified above in \textbf{Definition 0.1} as quantum automaton triples $(Q_A)$,
+and quantum automata homomorphisms defined between such triples; these $Q_A$ morphisms are defined by
+groupoid homomorphisms $h: \grp \rightarrow \grp ^*$ and $\alpha: Aut(\grp) \rightarrow Aut(\grp ^*)$, together
+with {\em unitarity preserving mappings} $u$ that are defined between unitary representations of $\grp$ on rigged Hilbert spaces (or Hilbert space bundles).
+\end{definition}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChainHomotopyEquivalence}
+\pmcreated{2013-03-22 14:51:11}
+\pmmodified{2013-03-22 14:51:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{chain homotopy equivalence}
+\pmrecord{6}{36525}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmrelated{HomotopyEquivalence}
+\pmdefines{chain homotopic equivalent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{equivalent}
+
+Let $C$ and $D$ be two objects from the abelian category of chain complexes.  A morphism (or chain map) $f\colon C\to D$ is said to be a \emph{chain homotopy equivalence} if there is a morphism $g\colon D\to C$ such that
+
+\begin{enumerate}
+\item there is a chain homotopy between $fg$ and $1\colon D\to D$; and 
+\item there is a chain homotopy between $gf$ and $1\colon C\to C$.
+\end{enumerate}
+
+If a chain homotopy equivalence from a chain complex $C$ to $D$ exists, then $C$ is said to be \emph{chain homotopy equivalent} to $D$.  Chain homotopy equivalence is an equivalence relation among chain complexes.
+%%%%%
+%%%%%
+\end{document}

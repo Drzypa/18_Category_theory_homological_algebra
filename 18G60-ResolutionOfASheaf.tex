@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResolutionOfASheaf}
+\pmcreated{2013-03-22 14:42:49}
+\pmmodified{2013-03-22 14:42:49}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{resolution of a sheaf}
+\pmrecord{8}{36334}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G60}
+\pmrelated{DeRhamWeilTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a sheaf $\mathcal F$ on a topological space $X$ and a pair $(\mathcal F^\bullet, d^\bullet)$ where $\mathcal F^\bullet = \{\mathcal F^q\}_{q\in\mathbb N}$ is a family of sheaves on $X$ and $d^\bullet=\{d^q\}_{q\in\mathbb N}$ is a family of sheaf morphisms
+$$
+d^q\colon\mathcal F^q\to\mathcal F^{q+1},
+$$
+we say that $(\mathcal F^\bullet, d^\bullet)$ is a \emph{resolution} of $\mathcal F$ if there exists an injection $j\colon\mathcal F\to\mathcal F^0$ such that the sequence
+$$
+0\to\mathcal F\overset{j}\to\mathcal F^0\overset{d^0}\to\mathcal F^1\overset{d_1}\to\cdots\to\mathcal F^q\to\dots
+$$
+is exact.
+%%%%%
+%%%%%
+\end{document}

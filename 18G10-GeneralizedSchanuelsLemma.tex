@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedSchanuelsLemma}
+\pmcreated{2013-03-22 17:38:53}
+\pmmodified{2013-03-22 17:38:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized Schanuel's lemma}
+\pmrecord{12}{40079}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G10}
+\pmclassification{msc}{18G20}
+\pmclassification{msc}{16E10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\kernel}{\operatorname{Ker}}
+\newcommand{\image}{\operatorname{Im}}
+\begin{document}
+\begin{thm} Let $R$ be a ring, $A$ and $B$ are projectively equivalent $R$-modules with two projective resolutions:
+\begin{center}
+$P:\xymatrix{\ldots \ar[r]^{\alpha_2}&P_1\ar[r]^{\alpha_1}&P_0\ar[r]^{\alpha_0}&A\ar[r]&0}$
+\end{center}
+\begin{center}
+$Q:\xymatrix{\ldots \ar[r]^{\beta_2}&Q_1\ar[r]^{\beta_1}&Q_0\ar[r]^{\beta_0}&B\ar[r]&0}$
+\end{center}
+Define $[P,Q]_n:=P_n\oplus Q_{n-1}\oplus P_{n-2}\oplus Q_{n-3}\oplus\cdots$.  Then $$\kernel(\alpha_n)\oplus[Q,P]_n\cong\kernel(\beta_n)\oplus[P,Q]_n,$$
+for all $n\geq0$.  In other words, $\kernel(\alpha_n)$ is projective equivalent to $\kernel(\beta_n)$.
+\end{thm}
+
+\begin{proof}
+We proceed by induction on $n$.  If $n=0$, then $[P,Q]_0=P_0$ and $[Q,P]_0=Q_0$.  We have the following two short exact sequences:
+\begin{center}
+$\xymatrix{0\ar[r]&{\kernel(P_0\rightarrow A)}\ar[r]&P_0\ar[r]&A\ar[r]&0}$
+\end{center}
+\begin{center}
+$\xymatrix{0\ar[r]&{\kernel(Q_0\rightarrow B)}\ar[r]&Q_0\ar[r]&B\ar[r]&0}$
+\end{center}
+Therefore, by Schanuel's Lemma,
+\begin{eqnarray*}
+\kernel(\alpha_0)\oplus[Q,P]_0&=&\kernel(\alpha_0)\oplus Q_0 \\
+&=&\kernel(P_0\rightarrow A)\oplus Q_0 \\
+&\cong& \kernel(Q_0\rightarrow B)\oplus P_0 \\
+&=&\kernel(\beta_0)\oplus P_0 \\
+&=&\kernel(\beta_0)\oplus[P,Q]_0,
+\end{eqnarray*}
+since $A$ and $B$ are projectively equivalent.
+
+Next, assume the induction step is true for $n=k$.  To begin, we first notice two short exact sequences:
+\begin{equation}
+\xymatrix{0\ar[r]&{\kernel(\alpha_{k+1})}\ar[r]&P_{k+1}\ar[r]&{\image(\alpha_{k+1})}\ar[r]&0}
+\end{equation}
+\begin{equation}
+\xymatrix{0\ar[r]&{\kernel(\beta_{k+1})}\ar[r]&Q_{k+1}\ar[r]&{\image(\beta_{k+1})}\ar[r]&0}
+\end{equation}
+Since $P$ and $Q$ are exact, $\image(\alpha_{k+1})=\kernel(\alpha_k)$ and $\image(\beta_{k+1})=\kernel(\beta_k)$ and the
+two short exact sequences (4) and (5) can be rewritten as:
+\begin{equation}
+\xymatrix{0\ar[r]&{\kernel(\alpha_{k+1})}\ar[r]&P_{k+1}\ar[r]&{\kernel(\alpha_k)}\ar[r]&0}
+\end{equation}
+\begin{equation}
+\xymatrix{0\ar[r]&{\kernel(\beta_{k+1})}\ar[r]&Q_{k+1}\ar[r]&{\kernel(\beta_k)}\ar[r]&0}
+\end{equation}
+Taking direct sums of the above modules with appropriate $[,]_k$'s, we now have two further short exact sequences:
+\begin{center}
+$\xymatrix{0\ar[r]&{\kernel(\alpha_{k+1})\oplus[0,0]_k}\ar[r]&
+{P_{k+1}\oplus[Q,P]_k}\ar[r]&
+{\kernel(\alpha_k)\oplus[Q,P]_k}\ar[r]&0}$
+\end{center}
+\begin{center}
+$\xymatrix{0\ar[r]&{\kernel(\beta_{k+1})\oplus[0,0]_k}\ar[r]&
+{Q_{k+1}\oplus[P,Q]_k}\ar[r]&
+{\kernel(\beta_k)\oplus[P,Q]_k}\ar[r]&0}$
+\end{center}
+where the $0$ in $[0,0]_k$ denotes the zero resolution.  First,
+$$\kernel(\alpha_{k+1})\oplus[0,0]_k\cong\kernel(\alpha_{k+1})\mbox{ and }
+\kernel(\beta_{k+1})\oplus[0,0]_k\cong\kernel(\beta_{k+1}).$$  Second,
+$$P_{k+1}\oplus[Q,P]_k=[P,Q]_{k+1}\mbox{ and }Q_{k+1}\oplus[P,Q]_k=[Q,P]_{k+1}$$ are both projective.  Finally,
+$$\kernel(\alpha_k)\oplus[Q,P]_k\cong\kernel(\beta_k)\oplus[P,Q]_k$$ by the induction hypothesis.  Hence, again, by
+Schanuel's Lemma,
+\begin{eqnarray*}
+\kernel(\alpha_{k+1})\oplus[Q,P]_{k+1}&\cong&\kernel(\alpha_{k+1})\oplus[0,0]_k\oplus[Q,P]_{k+1}\\
+&=&\kernel(\alpha_{k+1})\oplus[0,0]_k\oplus Q_{k+1}\oplus[P,Q]_k\\
+&\cong&\kernel(\beta_{k+1})\oplus[0,0]_k\oplus P_{k+1}\oplus[Q,P]_k\\
+&=&\kernel(\beta_{k+1})\oplus[0,0]_k\oplus[P,Q]_{k+1}\\
+&\cong&\kernel(\beta_{k+1})\oplus[P,Q]_{k+1}
+\end{eqnarray*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

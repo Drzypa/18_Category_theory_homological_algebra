@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularCategory}
+\pmcreated{2013-03-22 18:27:41}
+\pmmodified{2013-03-22 18:27:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regular category}
+\pmrecord{9}{41129}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+\pmsynonym{exact fork}{RegularCategory}
+\pmrelated{QuotientCategory}
+\pmdefines{exact sequence}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A category $\mathcal{C}$ is called a \emph{regular category} if 
+\begin{enumerate}
+\item every morphism has a kernel pair,
+\item every kernel pair has a coequalizer, and
+\item the pullback of every regular epimorphism along any morphism exists and is again regular.  This means the following: if $f:A\to B$ is a regular epimorphism, and $g:C\to B$ is any morphism, then the pullback diagram below
+$$
+\xymatrix@+=1.5cm{D \ar[r]^h \ar[d] & C \ar[d]^g \\ A \ar[r]_f & B}
+$$
+exists, and $h$ is again a regular epimorphism.
+\end{enumerate}
+
+Some examples of regular categories are: any abelian category, the category of sets, and the category of groups.  On the other hand, the category of topological spaces and the category of small categories are not regular.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item If a category $\mathcal{C}$ is finitely complete, it can be shown that $\mathcal{C}$ is regular iff the strong epimorphisms are stable under pullbacks, and every morphism has a mono-strong-epi factorization: for every morphisms $f$, we have $f=g\circ h$ where $g$ is a monomorphism and $h$ is a strong epimorphism.
+\item
+Regular categories are generalizations of abelian categories, so that the exactness conditions can be defined without the requirement that the categories be additive.  More precisely, in a regular category $\mathcal{C}$, we define an \emph{exact sequence}, or \emph{exact fork}, to be a 6-tuple $(A,B,C,f,g,h)$ where 
+\begin{itemize}
+\item $A,B,C$ are objects
+\item $f,g:A\to B$ and $h:B\to C$ are morphisms: $\xymatrix@+=2cm{A \ar@<0.5ex>[r]^f \ar@<-0.5ex>[r]_g & B \ar[r]^h & C}$
+\end{itemize}
+such that $(f,g)$ is the kernel pair of $h$ and $h$ is the coequalizer of $f$ and $g$.  $h$ is the coequalizer portion of the exact sequence, and $(f,g)$ is the kernel pair portion of the exact sequence.
+
+One of the first consequences of the above definition is: every regular epimorphism in a regular category is the coequalizer portion of an exact sequence.
+
+The main result, however, is that, in an abelian category, the two notions of the exactness coincide in the following sense: $(A,B,C,f,g,h)$ is exact precisely when 
+$$\xymatrix@+=2cm{0 \ar[r] & A \ar[r]^-{f \choose g} & B\oplus B \ar[r]^-{(h \enspace -h)} & C \ar[r] & 0}$$
+is a short exact sequence.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{fb} F. Borceux \emph{Categories and Structures, Handbook of Categorical Algebra II}, Cambridge University Press, Cambridge (1994)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

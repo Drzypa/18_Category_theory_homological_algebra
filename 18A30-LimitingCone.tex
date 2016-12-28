@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitingCone}
+\pmcreated{2013-03-22 16:15:01}
+\pmmodified{2013-03-22 16:15:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{limiting cone}
+\pmrecord{10}{38355}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{UniversalProperty}
+\pmrelated{DirectLimit}
+\pmdefines{cone over}
+\pmdefines{cone under}
+\pmdefines{cone}
+\pmdefines{cocone}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category and $D$ a \PMlinkname{diagram}{CommutativeDiagram} in $\mathcal{C}$.  A \emph{cone over} $D$ consists of the following:
+
+\begin{enumerate}
+\item an object $a$ of $\mathcal{C}$,
+\item a morphism $f:a\to d$ for each object $d$ in $D$,
+\item a commutative triangle 
+$$\xymatrix{
+& a \ar[dl]_{f_1} \ar[dr]^{f_2} & \\
+d_1 \ar[rr]^g && d_2
+}
+$$
+for every morphism $g:d_1\to d_2$ in $D$.
+\end{enumerate}
+
+A cone over $D$ is denoted by $\lbrace a\to d\mid d\in D\rbrace$, or simply $a\to D$.
+
+A \emph{limiting cone} over $D$ is a cone over $D$, $c\to D$, such that for any cone $a\to D$, there is a unique morphism $h: a\to c$ such that the diagram 
+$$\xymatrix{
+a \ar[rr]^h \ar[dr]_{x} && c \ar[dl]^{y} \\
+& d & 
+}
+$$
+is commutative for every object $d$ of $D$.  If a diagram $D$ has a limiting cone, then $D$ is said to have a \emph{limit}.  
+
+\textbf{Remarks}.
+\begin{itemize}
+\item If $D$ is a subcategory of $\mathcal{C}$, then a cone over $D$ is the comma category $(a,D)$, where objects are identified with morphisms $a\to d$ for each $d\in D$, morphisms are identified with morphisms $f:d_1\to d_2$ in $D$.  The identity morphism for each $d\in D$ is $1_d$, and composition of morphisms is defined in terms of composition of morphisms in $D$.
+\item Any two limiting cones of a diagram $D$ are isomorphic in the sense that if $c_1\to D$ and $c_2\to D$ are limiting cones, then there are morphisms $p:c_1\to c_2$ and $q:c_2\to c_1$ such that $pq=1_{c_2}$ and $qp=1_{c_1}$.
+\item We may form a category from the collection of all cones over a diagram $D$  as follows:
+\begin{itemize}
+\item objects are cones over $D$,
+\item a morphism from a cones $a\to D$ and a cone $b\to D$ is a morphism $h: a\to b$ such that 
+$$\xymatrix{
+a \ar[rr]^h \ar[dr]_{x} && b \ar[dl]^{y} \\
+& d & 
+}
+$$
+is a commutative triangle.
+\end{itemize}
+Clearly, identity morphisms and compositions of morphisms can then be defined accordingly.
+\item From the above construction of the category of cones over $D$, a limiting cone is just a terminal object in that category.
+\end{itemize}
+
+\textbf{Examples}
+\begin{enumerate}
+\item If $D$ consists of a single object $d$, then a limiting cone, which always exists, is the identity morphism $1_d:d\to d$.
+\item If $D$ is the empty set (no objects and no morphisms), a limiting cone over $D$ is just a terminal object in $\mathcal{C}$.
+\item If $D$ consists of two objects $a,b$ without any morphisms, then the limiting cone is the product of the two objects $a\times b$.
+\item If $D$ has the following diagram 
+$$\xymatrix{
+&  a\ar[d]^x \\
+b\ar[r]^y & c
+}$$
+then the limiting cone is the pullback, written $a\times_c b$.  If $c$ is a terminal object, then $a\times_c b \cong a\times b$.
+\item If $D$ consists of a pair of morphisms $x,y$ from $a$ to $b$, then the limiting cone over $D$ is the equalizer of $x$ and $y$.
+\end{enumerate}
+
+\textbf{Remarks.}  
+\begin{itemize}
+\item If all arrows (morphisms) are reversed, we have a cone under a diagram $D$.  A cone under a diagram $D$ is also known as a \emph{cocone} for $D$.  The dual concept of a limiting cone is thus a limiting cocone, which is an initial object in the category of cocones.  All of the examples cited above can be dualized, and the respective results are an identity morphism, an initial object, a coproduct, a pushout, and a coequalizer.
+\item All of the above concepts can be generalized, and we may speak of the limit of a functor, more commonly known as the inverse limit.  The dual notion is that of a direct limit.  Refer to \PMlinkescapetext{links} for more details.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

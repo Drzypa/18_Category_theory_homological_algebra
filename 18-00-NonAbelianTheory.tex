@@ -1,0 +1,269 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonAbelianTheory}
+\pmcreated{2013-03-22 18:12:31}
+\pmmodified{2013-03-22 18:12:31}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{non-Abelian theory}
+\pmrecord{57}{40789}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{03G12}
+\pmclassification{msc}{03G30}
+\pmclassification{msc}{03G20}
+\pmsynonym{non-Abelian}{NonAbelianTheory}
+\pmsynonym{nonabelian}{NonAbelianTheory}
+%\pmkeywords{quantum non--Abelian algebraic topology (QNAAT)}
+\pmrelated{NonAbelianStructures}
+\pmrelated{AbelianCategory}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmrelated{GeneralizedVanKampenTheoremsHigherDimensional}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{CategoricalOntology}
+\pmrelated{NonCommutingGraphOfAGroup}
+\pmrelated{TopicEntryOnTheAlgebra}
+\pmdefines{non-Abelian character}
+\pmdefines{non-Abelian theories}
+\pmdefines{nonabelian examples}
+
+ 
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in %%ps format
+%\hoffset=-1.0in %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}  
+\begin{document}
+\begin{definition}
+A {\em non-Abelian theory} is one that does not satisfy one, several, or all of the axioms
+of an Abelian theory, such as, for example, those for an Abelian category theory. 
+\end{definition}
+
+\subsection{Examples}  
+ETAC and ETAS axiom interpretations that do not satisfy--in addition to the ETAC or ETAS axioms-- the $Ab1$ to $Ab6$ axioms for an \PMlinkname{abelian category}{AbelianCategory} are all examples on non-Abelian categories; a more detailed list is also presented next.
+
+\begin{remark}
+ In a general sense, any Abelian category (or {\em abelian category}) can be regarded as a `good' model for the category of Abelian, or commutative, groups. Furthermore, in an Abelian category $Ab$ every class, or set, of morphisms
+$Hom_{Ab}(-,-)$ forms an Abelian (or commutative) group. There are several strict definitions of Abelian
+categories involving 3, 4 or up to 6 axioms defining the Abelian character of a category. 
+To illustrate non-Abelian theories it is useful to consider non-Abelian structures so that
+specific properties determined by the non-Abelian set of axioms become `transparent' in terms
+of the properties of objects for example for concrete categories that have objects; such examples
+are presented separately as {\em non-Abelian structures}. 
+\end{remark}
+
+\subsection{Further examples of non-Abelian theories}
+
+ The following is only a short list of non-Abelian theories:
+
+\begin{enumerate}
+
+\item Non-Abelian algebraic topology, including also non-Abelian homological algebra;
+\PMlinkexternal{non-Abelian algebraic topology overview}{http://www.bangor.ac.uk/~mas010/nonab-a-t.html} and
+\PMlinkexternal{R. Brown 2008 preprint}{http://arxiv.org/abs/math/0212274}, (\cite{RBetal2k7,RB2k8}).\\
+(See also the \PMlinkexternal{recent book exposition}{2008 http://planetmath.org/?op=getobj&from=lec&id=75} with the title {\em ``Nonabelian Algebraic Topology''} vol. 1 by Brown and Sivera,(respectively, vol. 2 with Higgins, \emph{in preparation}). 
+
+\item Non-Abelian quantum algebraic topology;
+
+\item Non-Abelian gauge field theory (in Quantum Physics);
+
+\item Noncommutative geometry;
+
+\item The axiomatic theory of supercategories (ETAS); 
+
+\item Higher dimensional algebra (HDA)
+\item $LM_n$ Logic algebras;
+
+\item Non-Abelian categorical ontology (\cite{BBG2k7}). 
+
+\end{enumerate}
+
+\subsection{Remarks}
+ The following alternative definition by Barry Mitchell of an Abelian category should also be mentioned as {\em ``an exact additive category with finite products.''}. 
+
+ He also published in his textbook the following theorem:
+(\textbf{Theorem 20.1}, on p.33 of Barry Mitchell in ``Theory of Catgeories'', 1965, Academic Press: 
+New York and London): 
+
+\begin{theorem} 
+ ``{\em The following statements are equivalent}:
+\begin{itemize}
+\item (a) $Ab$ is an abelian category; 
+\item (b) $Ab$ has kernels, cokernels, finite products, finite coproducts,
+ and is both normal and conormal; 
+\item (c) $Ab$ has pushouts and pullbacks and is both normal and conormal.''
+\end{itemize}
+\end{theorem}
+
+\begin{thebibliography}{9}
+
+\bibitem{RBetal2k7}
+R. Brown et al. 2008. {\em ``Non-Abelian Algebraic Topology''}. vols. 1 and 2. ({\em Preprint}).
+
+\bibitem{RB2k8}
+R. Brown. 2008. {\em Higher Dimensional Algebra Preprint as pdf and ps docs. at $arXiv:math/0212274v6 [math.AT]$}
+
+\bibitem{BBG2k7}
+I. C. Baianu, R. Brown and J. F. Glazebrook. 2007,  A Non--Abelian Categorical Ontology and Higher Dimensional Algebra of Spacetimes and Quantum Gravity., {\em Axiomathes }, \textbf{17}: 353-408. 
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

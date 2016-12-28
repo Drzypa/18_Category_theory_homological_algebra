@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LongExactSequenceInCohomology}
+\pmcreated{2013-03-22 19:03:49}
+\pmmodified{2013-03-22 19:03:49}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{long exact sequence in cohomology}
+\pmrecord{5}{41947}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmdefines{morphism of cochain complexes}
+\pmdefines{map of cochain complexes}
+\pmdefines{exact sequence of cochain complexes}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\DeclareMathOperator{\im}{im}
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{square}
+\begin{defn} If $\mathcal{A}$ and $\mathcal{B}$ are cochain complexes, a morphism $f:\mathcal{A}\to\mathcal{B}$ is a collection of maps $f_n : A^n \to B^n$ such that for every $n$, the following diagram commutes:
+\[\xymatrix{
+  \cdots \ar[r] & A^n \ar[r]\ar[d]^{f_n} & A^{n+1} \ar[r]\ar[d]^{f_{n+1}} & \cdots \\
+  \cdots \ar[r] & B^n \ar[r] & B^{n+1} \ar[r] & \cdots
+ }
+\]
+\end{defn}
+
+\begin{thm} A morphism of cochain complexes $f:\mathcal{A} \to \mathcal{B}$ induces group homomorphisms $H^n(\mathcal{A}) \to H^n(\mathcal{B})$ for every $n$.
+\end{thm}
+\begin{proof} This follows trivially from the fact that images and kernels of the cochain maps of $\mathcal{A}$ are mapped under $f$ to the images and kernels of the cochain maps of $\mathcal{B}$.
+\end{proof}
+
+\begin{defn} If $\alpha : \mathcal{A}\to\mathcal{B}$ and $\beta : \mathcal{B}\to\mathcal{C}$ are morphisms of cochain complexes, we say that
+\[
+  0 \to \mathcal{A} \xrightarrow{\alpha} \mathcal{B} \xrightarrow{\beta} \mathcal{C} \to 0
+\]
+is a short exact sequence of cochain complexes if for every $n$,
+\[
+  0 \to A^n \xrightarrow{\alpha_n} B^n \xrightarrow{\beta_n} C^n \to 0
+\]
+is short exact.
+\end{defn}
+
+\begin{thm} Let
+\[
+  0 \to \mathcal{A} \to \mathcal{B} \to \mathcal{C} \to 0
+\]
+be a short exact sequence of cochain complexes with $A^n = B^n = C^n = 0$ for $n<0$. Then there is a long exact sequence of cohomology groups
+\[
+  0 \to H^0(\mathcal{A}) \to H^0(\mathcal{B}) \to H^0(\mathcal{C}) \to H^1(\mathcal{A}) 
+      \to H^1(\mathcal{B}) \to H^1(\mathcal{C}) \to H^2(\mathcal{A}) \to \cdots
+\]
+
+\end{thm}
+
+The proof that for each $n$, $H^n(\mathcal{A}) \to H^n(\mathcal{B}) \to H^n(\mathcal{C})$ is exact is straightforward from the above. The interesting part of the proof is in defining the \emph{connecting homomorphism}
+\[
+  \delta_n : H^n(\mathcal{C}) \to H^{n+1}(\mathcal{A})
+\]
+To define $\delta_n$, consider the following portion of the diagram:
+\[\xymatrix{
+                & 0 \ar[d]         & 0 \ar[d]           & 0 \ar[d]\\
+  \cdots \ar[r] & A^n \ar[r]^{d_n}\ar[d]^{\alpha_n} & A^{n+1} \ar[r]^{d_{n+1}}\ar[d]^{\alpha_{n+1}} & A^{n+2} \ar[r]\ar[d]^{\alpha_{n+2}} & \cdots \\
+  \cdots \ar[r] & B^n \ar[r]^{d_n}\ar[d]^{\beta_n} & B^{n+1} \ar[r]^{d_{n+1}}\ar[d]^{\beta_{n+1}} & B^{n+2} \ar[r]\ar[d]^{\beta_{n+2}} & \cdots \\
+  \cdots \ar[r] & C^n \ar[r]^{d_n}\ar[d] & C^{n+1} \ar[r]^{d_{n+1}}\ar[d] & C^{n+2} \ar[r]\ar[d] & \cdots \\
+                & 0                & 0                          & 0
+ }
+\]
+Given an element $\bar{c}$ of $H^n(\mathcal{C})$, choose a representative $c\in \ker d_n\subset C^n$. Since the vertical map from $B^n$ is surjective, choose $b\in B^n$ with $\beta_n(b)=c$. Then $d_n(b)\in\ker\beta_{n+1}$ since the square commutes and $c\in\ker d_n$; thus $d_n(b)\in\im \alpha_{n+1}$. Let $a\in A^{n+1}$ be the unique preimage of $d_n(b)$. Note that
+\[
+  \alpha_{n+2}d_{n+1}(a)= d_{n+1}\alpha_{n+1}(a) = d_{n+1}d_n(b)=0
+\]
+Since $\alpha_{n+2}$ is injective, $a\in\ker d_{n+1}$. Then define $\delta_n(\bar{c})$ to be the equivalence class of $a$ in $H^{n+1}(\mathcal{A})$. It is a straightforward diagram chase to verify that the result is independent of the choice of representative of $\bar{c}$ and of preimage of $c$.
+%%%%%
+%%%%%
+\end{document}

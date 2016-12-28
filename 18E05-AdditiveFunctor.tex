@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditiveFunctor}
+\pmcreated{2013-03-22 18:08:36}
+\pmmodified{2013-03-22 18:08:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{additive functor}
+\pmrecord{5}{40698}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E05}
+\pmrelated{PreAdditiveFunctors}
+\pmrelated{CategoryOfAdditiveFractions}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{A}$ and $\mathcal{B}$ be ab-categories.  A functor $F:\mathcal{A}\to \mathcal{B}$ is called an \emph{additive functor} if, for any objects $A,B$ in $\mathcal{A}$, the function $$F_{(A,B)}: \hom(A,B)\to \hom(F(A),F(B))$$ given by $F_{(A,B)}(f)=F(f)$ is a group homomorphism.  In other words, if $f,g: A\to B$ are two morphisms with common domain $A$ and codomain $B$, then $$F(f+g)=F(f)+F(g).$$
+
+For example, the hom functor $\hom(A,-)$ where $A$ is an object in an abelian category, is additive.
+
+\textbf{Remark}.  It can be shown that any exact functor between abelian categories is additive.
+
+More to come...
+%%%%%
+%%%%%
+\end{document}

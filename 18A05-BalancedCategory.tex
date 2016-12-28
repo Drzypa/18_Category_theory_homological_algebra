@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BalancedCategory}
+\pmcreated{2013-03-22 18:23:25}
+\pmmodified{2013-03-22 18:23:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{balanced category}
+\pmrecord{7}{41035}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmdefines{balanced}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A category is said to be \emph{balanced} in case that every bimorphism is an isomorphism.
+
+For example, \textbf{Set} (the cateogry of sets), \textbf{Grp} (the category of groups), and \textbf{Top} (the category of topological spaces) are all balanced.  In these categories, morphisms that are monomorphic are injective, and those that are epimorphic are surjective.  Injective and surjective morphisms are bijective, implying having two-sided inverses, and therefore isomorphisms.
+
+On the other hand, the category \textbf{DivAbGrp}, the category of divisible abelian groups, is not balanced.  The canonical projection $p:\mathbb{Q}\to \mathbb{Q/Z}$ is clearly epimorphic, as well as monomorphic (see \PMlinkname{here}{ExamplesOfMonics}), and therefore bimorphic.  However, $p$ is not an isomorphism. 
+
+As another example of a category that is not balanced, take the category of commutative rings with 1, \textbf{CommRng}.  The canonical injection $i:\mathbb{Z}\to \mathbb{Q}$ is clearly monomorphic, as well as epimorphic (see \PMlinkname{here}{ExamplesOfEpis}), and therefore bimorphic.  But $i$ is not an isomorphism.
+
+\begin{thebibliography}{9}
+\bibitem{cf} C. Faith \emph{Algebra: Rings, Modules, and Categories I}, Springer-Verlag, New York (1973)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

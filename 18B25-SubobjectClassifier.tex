@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubobjectClassifier}
+\pmcreated{2013-03-22 16:36:31}
+\pmmodified{2013-03-22 16:36:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subobject classifier}
+\pmrecord{8}{38805}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B25}
+\pmrelated{PowerObject}
+\pmdefines{truth object}
+\pmdefines{characteristic morphism}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newcommand{\Sub}{{\mathrm{Sub}}}
+\begin{document}
+\subsubsection*{Motivation}
+
+Consider a set $A$ and a subset $B\subseteq A$.  $B$ can be thought of as a property of $A$: there is a function $\chi_B:A\to \lbrace 0,1\rbrace$, such that $\chi_B(x)=1$ iff $x\in B$.  This function can be seen to be uniquely determined by the subset $B$, and conversely.  If we denote $P(A)$ the set of all subsets of $A$ (the power set of $A$), and $2^A$ the set of all functions from $A$ to $2:=\lbrace 0,1\rbrace$, then $P(A)\cong 2^A$.
+
+In fact, we have established a commutative diagram
+\[\xymatrix@+=4pc{
+B \ar[r]^{k}\ar[d]_{inc}& \lbrace 1\rbrace \ar[d]^i \\
+A \ar[r]_{\chi_B}& 2
+}
+\]
+where $inc$ and $i$ are inclusion functions and $k$ is the unique constant function.  Any function $A\to 2$ gives rise to a unique set $B$ making the above diagram commute.
+
+\subsubsection*{Definition}
+
+In category theory, a \emph{subobject classifier} is the generalization of the above example, where $A$ is an object of a certain given category $\mathcal{C}$ and $B$ is a subobject of $A$, $\lbrace 1\rbrace$ is replaced by a terminal object, and $2$ is replaced by what is known as a \emph{subobject classifier}, or a \emph{truth object}.  If we think of the category \textbf{Set}, $2$ ``classifies'' elements of a given set as to whether they belong to a certain subset or not, via a characteristic function.  If the value of the function is $1$, then the element is in that subset, otherwise it is not.
+
+Formally, let $\mathcal{C}$ be a category with a terminal object $1$.  A \emph{subobject classifier} is an object $\Omega$ in $\mathcal{C}$ such that, for any monomorphism $f:B\to A$, there exists a \emph{unique} morphism $\chi_B$ such that 
+\[\xymatrix@+=4pc{
+B \ar[r] \ar[d]_f & 1 \ar[d]^{\top}\\
+A \ar@{.>}[r]^{\chi_B} & \Omega
+}
+\]
+is a pullback diagram.  $\chi_B$ is called the \emph{characteristic morphism} of $f$ and $\top$ is a \emph{truth morphism}.
+
+In a category with a terminal object 1, a subobject classifier may or may not exist.  If it does, it is unique up to isomorphism.  Suppose $C$ has a terminal object $1$, has pullbacks, and has a subobject $\Omega$.  Then for any object $X$ in $\mathcal{C}$, any morphism $f:X\to \Omega$ gives rise to a unique monomorphism $g:A\to X$ via the pull back of $f$ and $\top$:
+\[\xymatrix@+=4pc{
+A \ar[r] \ar[d]_g & 1 \ar[d]^{\top}\\
+X \ar[r]^f & \Omega
+}
+\]
+Since $\Omega$ is a subobject classifier, $g$ determines $f$ uniquely as well.  So what we have is a one-to-one correspondence
+$$\Sub(X)\cong \hom(X,\Omega)$$
+between the subobject functor and hom functor.  It can be verified that the bijection is actually a natural isomorphism, so that $\Sub$ is a representable functor.  Conversely, it may be shown that if $\Sub$ is representable, then $C$ has a subobject classifier.
+%%%%%
+%%%%%
+\end{document}

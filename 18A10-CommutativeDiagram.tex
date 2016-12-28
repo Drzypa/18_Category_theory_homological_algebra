@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutativeDiagram}
+\pmcreated{2013-03-22 13:24:55}
+\pmmodified{2013-03-22 13:24:55}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{commutative diagram}
+\pmrecord{13}{33962}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A10}
+\pmclassification{msc}{18A05}
+\pmrelated{WeakHopfCAlgebra}
+\pmrelated{CategoricalDiagramsAsFunctors}
+\pmrelated{CategoricalSequence}
+\pmdefines{diagram}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+\usepackage{amsthm,latexsym}
+
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+\begin{defn}
+Let $\mathcal{C}$ be a category. A \emph{diagram} in $\CC$ is a
+directed graph $\GG$ with vertex set $V$ and  edge set $E$, (``loops''
+and ``parallel edges'' are allowed) together with two maps 
+$o\co V\to\mathrm{Obj}(\CC)$, $m\co E\to \mathrm{Morph}(\CC)$ such that
+if $e\in E$ has source $s(e)\in V$ and target $t(e)\in V$ then 
+$m(e) \in \text{Hom}_{\CC}\left(o\left(s(e)\right),o\left(t(e)\right)\right)$.
+\end{defn}
+
+Usually diagrams are denoted by drawing the corresponding graph
+and labeling its vertices (respectively edges) with their images under $o$
+(respectively $m$), for example if $f\co A\to B$ is a morphism
+$$\xymatrix@1{ {A}\ar[r]^f&{B} }$$
+is a diagram. Often (as in the previous example) the vertices themselves are
+not drawn since their position can be deduced by the position of their
+labels.
+
+\begin{defn}
+  Let $D=(\GG,o,m)$ be a diagram in the category $\CC$ and $\Gg=(e_1,\ldots,e_n)$
+be a path in $\GG$. Then the \emph{composition along} $\Gg$ is the following
+morphism of $\CC$
+$$\circ(\Gg):=m(e_n)\circ\cdots\circ m(e_1)\,.$$  
+ We say that $D$ is
+  \emph{commutative} or that it \emph{commutes} if for any two objects in
+  the image of $o$, say $A=o(v_1)$ and $B=o(v_2)$, and any two paths $\Gg_1$
+ and $\Gg_2$ that connect $v_1$ to $v_2$ we have
+$$\circ(\Gg_1)=\circ(\Gg_2)\,.$$ 
+\end{defn}
+
+For example the commutativity of the triangle
+$$\xymatrix{
+{A}\ar[rr]^{f}\ar[dr]_{h}&&{B}\ar[dl]^{g}\\
+&{C}&
+}
+$$ 
+translates to $h=g\circ f$, while the commutativity of the square
+$$\xymatrix{
+{A}\ar[r]^{f}\ar[d]_{k}&{B}\ar[d]^{g}\\
+{C}\ar[r]_{h}&{D}
+}
+$$
+translates to $g\circ f=h\circ k$.
+%%%%%
+%%%%%
+\end{document}

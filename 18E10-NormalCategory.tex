@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalCategory}
+\pmcreated{2013-03-22 18:20:31}
+\pmmodified{2013-03-22 18:20:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{normal category}
+\pmrecord{8}{40975}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+\pmsynonym{normal monic}{NormalCategory}
+\pmsynonym{conormal epi}{NormalCategory}
+\pmdefines{normal}
+\pmdefines{normal monomorphism}
+\pmdefines{normal subobject}
+\pmdefines{conormal}
+\pmdefines{conormal epimorphism}
+\pmdefines{conormal category}
+\pmdefines{conormal quotient object}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A monomorphism is a category is said to be \emph{normal} if it is a kernel (of a morphism).  A subobject of an object is \emph{normal} if any (and hence all) of its representing monomorphisms is normal.
+
+For example, in \textbf{Grp}, the category of groups, the inclusion of a subgroup $H\subseteq G$ into $G$ is normal iff $H$ is a normal subgroup of $G$.
+
+A category is said to be \emph{normal} if every monic is a kernel.  Equivalently, a normal category is a category in which every subobject of every object is normal.
+
+Dually, an epimorphism is \emph{conormal} if it is a cokernel (of a morphism).  A quotient object of an object is \emph{conormal} if any (and hence all) of its representing epimorphisms is conormal.  A category is said to be \emph{conormal} if every epimorphism is conormal.
+
+The category $\textbf{AbGrp}$ of abelian groups, and more generally, any abelian category, is normal and conormal.
+
+\begin{thebibliography}{9}
+\bibitem{cf} C. Faith \emph{Algebra: Rings, Modules, and Categories I}, Springer-Verlag, New York (1973)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

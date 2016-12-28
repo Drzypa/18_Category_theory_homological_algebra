@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectLimitOfSets}
+\pmcreated{2013-03-22 16:52:36}
+\pmmodified{2013-03-22 16:52:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{direct limit of sets}
+\pmrecord{11}{39127}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmsynonym{direct system}{DirectLimitOfSets}
+\pmsynonym{inverse system}{DirectLimitOfSets}
+\pmsynonym{projective system}{DirectLimitOfSets}
+\pmrelated{DirectLimitOfAlgebraicSystems}
+\pmdefines{direct family}
+\pmdefines{inverse family}
+\pmdefines{inverse limit of sets}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+Let $\mathcal{A}=\lbrace A_i\mid i\in I\rbrace$ be a family of sets indexed by a non-empty set $I$.  $\mathcal{A}$ is said to be a \emph{direct family} if 
+\begin{enumerate}
+\item $I$ is a directed set,
+\item whenever $i\le j$ in $I$, there is a function $\phi_{ij}:A_i\to A_j$,
+\item $\phi_{ii}$ is the identity function on $A_i$,
+\item if $i\le j\le k$, then $\phi_{jk}\circ \phi_{ij}=\phi_{ik}$.
+\end{enumerate}
+
+In the last condition, if we write $a \phi_{ij}:=\phi_{ij}(a)$ for $a\in A_i$, then the equation can be rewritten as $\phi_{ij}\phi_{jk}=\phi_{ik}$.
+
+For example, the natural numbers $\mathbb{N}=\lbrace 1,2,\ldots, n,\ldots \rbrace$ can be regarded as a direct family.  Here, for any $i\le j$, $\phi_{ij}:i\to j$ is given by the natural injection $\phi_{ij}(\ell):=\ell$ for any $\ell \in i$.
+
+Let $\mathcal{A}$ be a direct family of sets, indexed by $I$.  Take the disjoint union of the members of $\mathcal{A}$ and call it $A$ (this can be achieved even when the members themselves have non-empty intersections, simply form the product $A_i\times \lbrace i\rbrace$ first before taking the union).  Therefore, $A$ has the properties that 
+\begin{itemize}
+\item for any $a\in A$, $a\in A_i$ for some $i\in I$, and 
+\item if $a\in A_i$ and $b\in A_j$ and $i\ne j$, then $a\ne b$.
+\end{itemize}
+Define a binary relation $\sim$ on $A$ as follows: given that $a\in A_i$ and $b\in A_j$, $a\sim b$ iff there is $A_k$ such that $\phi_{ik}(a)=\phi_{jk}(b)$.
+
+\begin{prop} $\sim$ on $A$ is an equivalence relation. \end{prop}
+\begin{proof}  Clearly, $\sim$ is symmetric.  By condition 2 of a direct family, $\sim$ is also reflexive.  Now, suppose $a\sim b$ and $b\sim c$ with $a\in A_i$, $b\in A_j$ and $c\in A_k$.  So there are $p,q\in I$ such that $\phi_{ip}(a)=\phi_{jp}(b)$ and $\phi_{jq}(b)=\phi_{kq}(c)$.  Since $I$ is directed, there is $r\in I$ such that $p,q\le r$.  From this, we have $\phi_{ir}(a)=\phi_{pr}(\phi_{ip}(a))=\phi_{pr}(\phi_{jp}(b))=\phi_{jr}(b)$.  Similarly, $\phi_{kr}(c)=\phi_{qr}(\phi_{kq}(c))=\phi_{qr}(\phi_{jq}(b))$.  Hence $a\sim c$.
+\end{proof}
+
+\textbf{Definition}.  Let $\mathcal{A}$ be a direct family of sets indexed by $I$.  Let $A$ and $\sim$ be defined as above.  Then the quotient $A/\sim$ is called the \emph{direct limit} of the sets in $\mathcal{A}$.  The direct limit of sets $A_i$ is sometimes written $A_{\infty}$, or $\varinjlim A_i$.  Elements of $A_{\infty}$ are sometimes denoted by $[a]_I$ or $[a]$ whenever there is no confusion.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+This definition is consistent with the formal definition of direct limits in a category.  The index $I$, being a directed set, can be viewed as a category whose objects are elements of $I$ and morphisms defined by the partial order on $I$.
+\item
+The notation $A_{\infty}$ comes from the following fact: if $|I|=n<\infty$, then $\varinjlim A_i\cong A_n$.  Here, $\cong$ stands for bijection.
+\item
+For every $i\in I$, there is a natural mapping $A_i\to A_{\infty}$, given by $a\mapsto [a]_I$.  This map may be variously denoted by $\phi_{i}$, $\phi_{i\infty}$, or $\phi_{iI}$.
+\item 
+Let $J$ be a subset of a directed set $I$.  Let $\mathcal{A}$ be a direct family indexed by $I$ and $\mathcal{A}'\subseteq \mathcal{A}$ indexed by $J$.  Form the direct limit $A'_{\infty}$ of sets in $\mathcal{A}'$.  Then there is a natural mapping $\phi_{JI}:A'_{\infty}\to A_{\infty}$ such that for any $j\in J$, $\phi_{JI}\circ \phi_{jJ}=\phi_{jI}$.
+\end{itemize}
+
+The dual notion of a direct limit of sets is that of an inverse limit.  Instead of starting from a direct family of sets, we start with an \emph{inverse family} of sets, which is defined similarly to that to of a direct family, except $I$ is a filtered set, and the mappings $\phi_{ij}:A_i\to A_j$ is defined whenever $j\le i$.  An inverse family is also known as an \emph{inverse system}, or a \emph{projective system}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Congruence}
+\pmcreated{2013-03-22 11:43:15}
+\pmmodified{2013-03-22 11:43:15}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{congruence}
+\pmrecord{27}{30101}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18C10}
+\pmclassification{msc}{11A07}
+\pmclassification{msc}{11A05}
+\pmclassification{msc}{92B20}
+\pmclassification{msc}{92B05}
+\pmclassification{msc}{55M05}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{18-00}
+\pmsynonym{congruent}{Congruence}
+%\pmkeywords{number theory}
+%\pmkeywords{integers}
+%\pmkeywords{divisibility}
+\pmrelated{Congruence2}
+\pmrelated{GCD}
+\pmrelated{ExampleOfGcd}
+\pmrelated{MathbbZ_n}
+\pmrelated{CongruenceModuloAnIdeal}
+\pmrelated{CongruenceInAlgebraicNumberField}
+\pmrelated{NumberTheory}
+\pmdefines{number congruence}
+\pmdefines{residue class}
+\pmdefines{residue class ring}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%%%%%%%\usepackage{xypic}
+\begin{document}
+Let $a$, $b$ be integers and $m$ a non-zero integer.\, We say that \emph{$a$ is congruent to $b$ modulo $m$}, if $m$ divides $b-a$ (the word {\em modulo} is the dative case of the Latin noun \PMlinkescapetext{{\em modulus}} meaning the 'module').\, We write this {\em number congruence} or shortly {\em congruence} as
+                         $$a\equiv b\pmod{m}.$$
+
+If $a$ and $b$ are congruent modulo $m$, it means that both numbers leave the same residue when divided by $m$.
+
+Congruence with a fixed module is an equivalence relation on $\mathbb{Z}$.\, The set of equivalence classes, the so-called {\em residue classes}, is a cyclic group of order $m$ (assuming it positive) with respect to addition and a ring if we consider also the multiplication modulo $m$.\, This ring is usually denoted as 
+$$\frac{\mathbb{Z}}{m\mathbb{Z}}$$
+and called the {\em residue class ring} modulo $m$.
+This ring is also commonly denoted as\, $\mathbb{Z}_m$,\, $\mathbb{Z}/(m)$.\, However, when\, $m = p$\, is a prime number, notation $\mathbb{Z}_p$ is also used to denote $p$-adic numbers.\\
+
+\textbf{\PMlinkescapetext{Properties} of congruences}
+\begin{enumerate}
+\item If\; $a\equiv b\pmod{m}$,\, then\, $a\!+\!c\equiv b\!+\!c\pmod{m}$\, and 
+$ac\equiv bc\pmod{m}$.
+\item If\; $a\equiv b\pmod{m}$\, and\, $c\equiv d\pmod{m}$,\, then\,
+$a\!\pm\!c\equiv b\!\pm\!d\pmod{m}$\, and\, $ac\equiv bd\pmod{m}$.
+\item If\; $a\equiv b\pmod{m}$\, and $f$ is a polynomial with integer coefficients, then\, $f(a)\equiv f(b)\pmod{m}$.
+\item If\; $ac\equiv bc\pmod{m}$\, and\, $\gcd(c,\,m) = 1$,\, then\, 
+$a\equiv b\pmod{m}$.
+\item If\; $ac \equiv bc \pmod{m}$,\; then\; $a \equiv b \pmod{\frac{m}{\gcd(c,\,m)}}$.\\
+\end{enumerate}
+
+
+{\em Proof of} 5.\, Let\; $\gcd(c,\,m) := d,\;\; c := c'd,\;\; m := m'd$,\, where\; $\gcd(c',\,m') = 1$.\; The given congruence means that\, $m \mid (a\!-\!b)c$, whence\; $m' \mid (a\!-\!b)c'$.\; Since $c'$ and $m'$ are coprime, we infer that\; 
+$m' \mid a\!-\!b$,\; i.e.\; $a \equiv b \pmod{m'}$.\, Q.E.D.\\
+
+\textbf{Remark.}\, For justifying the latter asserted congruence of 2, one forms the sum $(a-b)c+(c-d)b$ in which the both differences are supposed divisible by $m$.\, Since the sum is simply $ac-bd$ and divisible by $m$, one obtains the asserted congruence.\, By induction, it is generalised to the case with any number $n$ of factors on both \PMlinkescapetext{sides}; hence one infers also the result\; $a^n \equiv b^n \pmod{m}$.
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

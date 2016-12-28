@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitOfAdjunction}
+\pmcreated{2013-03-22 17:25:50}
+\pmmodified{2013-03-22 17:25:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{unit of adjunction}
+\pmrecord{16}{39806}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A40}
+\pmsynonym{co-unit}{UnitOfAdjunction}
+\pmrelated{UniversalProperty}
+\pmdefines{unit}
+\pmdefines{counit}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C},\mathcal{D}$ be categories and $(T,S,\nu)$ be an adjunction from $\mathcal{C}$ to $\mathcal{D}$.  For every pair of objects $C\in\mathcal{C}$ and $D\in\mathcal{D}$, we have a bijection
+\begin{equation}
+\nu_{C,D}:\hom_{\mathcal{D}}(T(C),D) \longrightarrow \hom_{\mathcal{C}}(C,S(D))
+\end{equation}
+that is natural in each variable.
+
+If we set $D=T(C)$, and write $\nu_C$ for $\nu_{C,T(C)}$, then we get a bijection 
+$$\nu_C:\hom_{\mathcal{D}}(T(C),T(C)) \longrightarrow \hom_{\mathcal{C}}(C,ST(C))$$ where $ST$ is the abbreviation of $S\circ T$.
+
+As $1_{T(C)}$ is the identity morphism in $\hom_{\mathcal{D}}(T(C),T(C))$, define 
+\begin{equation}
+\eta_C:=\nu_C(1_{T(C)}).
+\end{equation}  
+Note that $\eta_C$ is a morphism in $\mathcal{C}$ from $C$ to $ST(C)$.  Also, naturality in $C$ means that if $f:C'\to C$ and $g:T(C)\to T(C')$, then 
+\begin{equation}
+Sg\circ \eta_c \circ f=\nu_{C'}(g\circ Tf).
+\end{equation}
+
+\begin{thm} $(T(C),\eta_C)$ is a universal arrow from $C$ to $S$. \end{thm}
+\begin{proof}  Let $Y$ be an object in $\mathcal{D}$ and $f:C\to S(Y)$ a morphism in $\mathcal{C}$.  We want to find a morphism $g:T(C)\to Y$ in $\mathcal{D}$ such that 
+$$
+\xymatrix{
+& C \ar[dr]^{f} \ar[dl]_{\eta_C} & \\
+ ST(C) \ar[rr]_{S(g)} && S(Y) }$$
+is a commutative diagram.  The existence and uniqueness of $g$ is guaranteed by the bijection 
+$$\nu_{C,Y}:\hom_{\mathcal{D}}(T(C),Y) \longrightarrow \hom_{\mathcal{C}}(C,S(Y)),$$ where $f=\nu_{C,Y}(g)$, and the commutativity of the triangle above is guaranteed by the naturality in the second variable
+$$
+\xymatrix{
+\hom_{\mathcal{D}}(T(C),T(C)) \ar[d]_{\hat{g}} \ar[rr]^{\nu_C} && \hom_{\mathcal{C}}(C,ST(C)) \ar[d]^{\overline{g}} \\
+\hom_{\mathcal{D}}(T(C),Y) \ar[rr]_{\nu_{C,Y}} && \hom_{\mathcal{C}}(C,S(Y)), }$$
+where $\hat{g}:=\hom_{\mathcal{D}}(1_{T(C)},g)$ and $\overline{g}:=\hom_{\mathcal{C}}(1_C,S(g))$, as $$\overline{g}\circ \nu_C(1_{T(C)})=\hom_{\mathcal{C}}(C,S(g))\circ \eta_C=S(g)\circ \eta_C$$ on the one hand, and $$\nu_{C,Y}\circ \hat{g}(1_{T(C)})=\nu_{C,Y}\circ \hom(T(C),g)(1_{T(C)})=\nu_{C,Y}(g\circ 1_{T(C)})=\nu_{C,Y}(g)=f$$ on the other, and the two are equal.
+\end{proof}
+\begin{thm} $\eta: C \mapsto \eta_C$ is a natural transformation from the identity functor $I_{\mathcal{C}}$ to $ST$.  \end{thm}
+\begin{proof}
+Suppose $f:A\to B$ is a morphism in $\mathcal{C}$.  We want to show that
+$$\xymatrix{
+A \ar[d]_{\eta_A} \ar[rr]^f && B \ar[d]^{\mu_B} \\
+ST(A) \ar[rr]_{ST(f)} && ST(B) }$$
+is commutative.  To see this, write out the expressions 
+\begin{alignat*}{2}
+\eta_B\circ f &= 1_{ST(B)}\circ \eta_B\circ f & \mbox{property of identity morphism} \\ 
+&= S(1_{T(B)})\circ \eta_B\circ f & \qquad\qquad\qquad \mbox{property of functor on identity morphism} \\ 
+&= \nu_A(1_{T(B)}\circ T(f)) & \mbox{by equation (3) above}\\
+&= \nu_A(T(f)\circ 1_{T(A)}) & T(f)\mbox{ commutes with identity morphisms}\\
+&= \nu_A(T(f)\circ T(1_A)) & \mbox{property of functor on identity morphism}\\
+&= ST(f)\circ \eta_A\circ 1_A & \mbox{by equation (3) above}\\
+&= ST(f)\circ \eta_A & \mbox{property of identity morphisms}.
+\end{alignat*}
+\end{proof}
+
+\textbf{Definition}.  The natural transformation $\eta:I_{\mathcal{C}}\dot{\to} ST$ defined above is called the \emph{unit} of the adjunction $(T,S,\nu)$ from $\mathcal{C}$ to $\mathcal{D}$.
+
+Dually, one can find a natural transformation $\epsilon:TS \dot{\to} I_{\mathcal{D}}$ called the \emph{counit} of the adjunction $(T,S,\nu):\mathcal{C}\to\mathcal{D}$.  To do this, set $C=S(D)$ and use equation (1) to get a bijection $\nu_D:=\nu_{S(D),D}$ and subsequently define 
+\begin{equation}
+\epsilon_D:=\nu_D(1_{S(D)}).
+\end{equation}
+As in the previous theorems, one can, by reversing all the arrows, show that $(S(D),\epsilon_D)$ is a universal arrow from $D$ to $T$, and that $\epsilon$ is indeed a natural transformation from $TS$ to $I_{\mathcal{D}}$.
+
+\begin{thebibliography}{9}
+\bibitem{Ma}S. Mac Lane, \emph{Categories for the Working Mathematician} (2nd edition), Springer-Verlag, 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

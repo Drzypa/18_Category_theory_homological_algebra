@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WellpointedTopos}
+\pmcreated{2013-03-22 16:36:54}
+\pmmodified{2013-03-22 16:36:54}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{well-pointed topos}
+\pmrecord{4}{38812}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A15}
+\pmsynonym{well-pointed topoi}{WellpointedTopos}
+\pmsynonym{well-pointed}{WellpointedTopos}
+\pmdefines{complemented}
+\pmdefines{supports split}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{satsifies}
+
+The concept of well-pointed topoi was introduced by Freyd in~\cite{Fr}.  A topos is \emph{well-pointed} if it satisfies either the following equivalent conditions:
+\begin{enumerate}
+\item
+The terminal object $1$ distinguishes morphisms in the sense that if the diagram
+\[\xymatrix{
+1\ar[r]^x & A\ar@<1ex>[r]^f\ar@<-1ex>[r]_g & B
+}\]
+commutes for every morphism $x\colon 1\to A$, then in fact 
+\[\xymatrix{
+A\ar@<1ex>[r]^f\ar@<-1ex>[r]_g & B
+}\]
+commutes, that is, $f=g$.  Moreover, $1$ is not isomorphic to the initial object.
+
+\item
+The topos $\mathcal{T}$ is complemented and supports split, and the truth object $\Omega$ of $\mathcal{T}$ has exactly two elements, $\top\colon 1\to\Omega$, and $\bot\colon 1\to\Omega$.  To say that $\mathcal{T}$ is \emph{complemented} means that if $m\colon X\to Y$ is a monomorphism, then there exists a monomorphism $m'\colon X'\to Y$ such that $m\sqcup m'\colon X\sqcup X'\to Y$ is an isomorphism.  To say that $\mathcal{T}$ \emph{supports split} means that every subobject of $1$ is projective.
+\end{enumerate}
+
+Every well-pointed topos is a Boolean topos.
+
+\begin{thebibliography}{99}
+\bibitem{Fr}
+P.~Freyd.  Aspects of topoi.  {\it Bull. Austral. Math. Soc.} {\bf 7} (1972), 1--76.
+
+\bibitem{Jo}
+P.~T.~Johnstone.  {\it Topos theory}.  Academic Press, 1977.
+
+\bibitem{MaMo}
+S.~Mac~Lane and I.~Moerdijk. {\it Sheaves and Geometry in Logic: A First Introduction to Topos Theory}, Springer-Verlag, 1992.
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

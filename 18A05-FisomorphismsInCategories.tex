@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FisomorphismsInCategories}
+\pmcreated{2013-03-22 18:28:36}
+\pmmodified{2013-03-22 18:28:36}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{F-isomorphisms in categories}
+\pmrecord{7}{41149}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmrelated{WeakHomotopyDoubleGroupoid}
+\pmrelated{WeakHomotopyAdditionLemma}
+\pmrelated{ThinEquivalenceRelation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories, $F:\mathcal{C}\to\mathcal{D}$ be a (covariant or contravariant) functor and let $\alpha\in\mathrm{Hom}(A,B)$ be a morphism, where $A,B\in\mathrm{Ob}(\mathcal{C})$.\\
+
+\textbf{Definition}. A morphism $\alpha:A\to B$ is an $F$\textit{-isomorphism} if $F(\alpha)$ is an isomorphism in $\mathcal{D}$.\\
+
+Note that each isomorphism in $\mathcal{C}$ is an $F$-isomorphism for each functor $F$. The converse is true in the following sense: if $\alpha$ is an $F$-isomorphism for each functor $F$ then $\alpha$ is an isomorphism. On the other hand there are $F$-isomorphisms which are not isomorphisms.
+
+Also note, that if $\alpha:X\to Y$ is an $F$-isomorphism, then there does not have to exist morphism $\beta:Y\to X$ which is ,,$F$-inverse'' to $\alpha$. Indeed, there may be no $F$-isomorphism from $Y$ to $X$, see examples:\\
+
+\textbf{Example}. $1)$ Let $X$ be an object in $\mathcal{D}$ and define $F_{X}:\mathcal{C}\to\mathcal{D}$ as follows: for $A\in\mathrm{Ob}(\mathcal{C})$ put $F_{X}(A)=X$ and for $\alpha\in\mathrm{Hom}(A,B)$ put $F_{X}(\alpha)=\mathrm{id}_{X}$. This is the constant functor and every morphism in $\mathcal{C}$ is an $F_{X}$-isomorphism (although it does not have to be an isomorphism).
+\indent In particular, it may happen that for some objects $X$ and $Y$ in $\mathcal{C}$ there is a morphism from $X$ to $Y$ but no morphism from $Y$ to $X$. In this case there is an $F_X$-isomorphism from $X$ to $Y$ but not vice versa.\\ \\
+$2)$ Let $\mathcal{T}\mathrm{op}^{*}$ be the category of pointed topological spaces and continous maps preserving based point, $\mathcal{S}\mathrm{et}$ be the category of sets and functions, $\mathcal{G}\mathrm{r}$ be the category of groups and homomorphisms. Consider the functor $\pi:\mathcal{T}\mathrm{op}^{*}\to\mathcal{S}\mathrm{et}\times\mathcal{G}\mathrm{r}\times\mathcal{G}\mathrm{r}\times\cdots$ defined by:
+$$\pi(X,x_{0})=(\pi_{0}(X,x_{0}),\pi_{1}(X,x_{0}),\pi_{2}(X,x_{0}),\pi_{3}(X,x_{0}),\ldots);$$
+$$\pi(f)=(\pi_{0}(f),\pi_{1}(f),\pi_{2}(f),\pi_{3}(f),\ldots),$$
+where $\pi_{n}$ is the $n$-th homotopy group functor. Then $\pi$-isomorphism is a weak homotopy equivalence and it is known (due to Whitehead) that each weak homotopy equivalence between pointed $\mathrm{CW}$-complexes is the homotopy equivalance. On the other hand there are weak homotopy equivalences which are not homotopy equivalences.
+
+The concept of $F$-isomorphism is especially important in representation theory, where $F$ is the homology functor from category of complexes over an abelian category $\mathcal{C}$ to $\mathcal{C}$.
+%%%%%
+%%%%%
+\end{document}

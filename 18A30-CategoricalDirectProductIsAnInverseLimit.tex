@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalDirectProductIsAnInverseLimit}
+\pmcreated{2013-03-22 14:11:26}
+\pmmodified{2013-03-22 14:11:26}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{categorical direct product is an inverse limit}
+\pmrecord{4}{35620}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{CategoricalDirectSum}
+\pmrelated{CategoricalDirectProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{mathrsfs}
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+
+\newcommand{\Univ}{\mathscr{U}}
+\DeclareMathOperator{\liminv}{\varprojlim}
+\DeclareMathOperator{\limdir}{\varinjlim}
+\DeclareMathOperator{\Funct}{Funct}
+\DeclareMathOperator{\Hom}{Hom}
+\begin{document}
+\begin{theorem}
+The categorical direct product can be realized as an example of an inverse limit.
+\end{theorem}
+\begin{proof}
+Suppose we have a direct product of $\{C_i\}_{i\in I}$ for some ($\Univ$) set $I$. 
+Consider $I$ as a category whose arrows are only the identity arrows.  Then we can 
+define a functor $G$ by $G(i)=C_i$.  It is then clear that the universal property 
+of an inverse limit is equivalent to the universal property defining a categorical 
+direct product.
+\end{proof}
+
+Reversing the arrows, it is also clear that the categorical direct sum is an example of a direct limit.
+
+These results are of interest when one is looking to prove exactness of sums and products in a category: often it is easier to address exactness of direct and inverse limits, and the result then applies to many other constructions as well.
+%%%%%
+%%%%%
+\end{document}

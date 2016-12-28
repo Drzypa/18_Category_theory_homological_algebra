@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PreadditiveCategory}
+\pmcreated{2013-03-22 15:54:36}
+\pmmodified{2013-03-22 15:54:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{preadditive category}
+\pmrecord{9}{37913}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E05}
+\pmrelated{AdditiveCategory}
+\pmrelated{PreAdditiveFunctors}
+\pmrelated{CategoryOfAdditiveFractions}
+\pmdefines{ab-category}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+\subsection{Ab-Category}
+A category $\mathcal{C}$ is an \emph{ab-category} or \emph{\textbf{ab}-category} if
+\begin{enumerate}
+\item for every pair of objects $A,B$ of $\mathcal{C}$, there is a binary operation called addition, written $+_{(A,B)}$ or simply $+$, defined on $\operatorname{hom}(A,B)$,
+\item the set $\hom(A,B)$, together with $+$ is an abelian group, 
+\item (left distributivity) if $f,g\in \hom(A,B)$ and $h\in 
+\hom(B,C)$, then $h(f+g)=hf+hg$,
+\item (right distributivity) if $f,g\in \hom(A,B)$ and $h\in 
+\hom(C,A)$, then $(f+g)h=fh+gh$.
+\end{enumerate}
+In a nutshell, an \emph{ab-category} is a category in which every hom set in $\mathcal{C}$ is an abelian group such that morphism composition distributes over addition.  Ab in the name stands for abelian, clearly indicative of the second condition above.  
+
+Since a group has a multiplicative (or additive if abelian) identity, $\hom(A,B)\neq\varnothing$ for every pair of objects $A,B$ in $\mathcal{C}$.  Furthermore, each $\hom(A,B)$ contains a unique morphism, written $0_{(A,B)}$, as the additive identity of $\hom(A,B)$.  Because the subset 
+$$\lbrace f\cdot 0_{(A,B)}\mid f\in\hom(B,C)\rbrace$$
+of $\hom(A,C)$ is also a subgroup by right distributivity, and the additive identity of a subgroup coincides with the additive identity of the group, we have the following identity $$0_{(B,C)}0_{(A,B)}=0_{(A,C)}.$$
+
+There are many examples of ab-categories, including the category of abelian groups, the category of $R$-modules ($R$ a ring), the category of chain complexes, and the category of rings (not necessarily containing a multiplicative identity).  However, the category of rings with 1 is not an ab-category (see below for more detail).  Nevertheless, a unital ring $R$ itself considered as a category is an ab-category, as the ring of endomorphisms clearly forms an abelian group.  It is in fact a ring!  This can be seen as a special case of the fact that, in an ab-category, $\operatorname{End}(A)=\hom(A,A)$ is always a ring (with 1).  So, conversely, an ab-category with one object is a ring with 1, whose morphisms are elements of the ring.
+
+\subsection{Preadditive Category}
+If an ab-category has an initial object, that object is also a terminal object.  By duality, the converse is also true.  Therefore, in an ab-category, initial object, terminal object, and zero object are synonymous.  In the category $\mathcal{R}$ of unital rings, $\mathbb{Z}$ is an initial object, but it has no terminal object, therefore $\mathcal{R}$ is not an ab-category.
+
+An ab-category with a zero object $O$ is called a \emph{preadditive category}.
+
+In a preadditive category, the groups $\hom(A,O)$ and $\hom(O,B)$ are trivial groups by the definition of the zero object $O$.  Therefore, the zero morphism in $\hom(A,B)$ is also the additive identity of $\hom(A,B)$:
+$$0_{(A,B)}=0_{(O,B)}0_{(A,O)}=A\longrightarrow O\longrightarrow B.$$
+
+Most of the examples of ab-categories are readily seen to be preadditive.  If a preadditive category $R$ has only one object, we see from above that it must be a ring.  But this object must also be a zero object, so that $\operatorname{End}(R)$ must be trivial, which means $R$ itself must be trivial too, $R=0$!
+
+\textbf{Remark}.  In some literature, a preadditive category is an ab-category, and some do not insist that a preadditive category contains a zero object.  Here, we choose to differentiate the two.
+%%%%%
+%%%%%
+\end{document}

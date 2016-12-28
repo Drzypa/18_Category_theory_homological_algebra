@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompositionsOfNaturalTransformations}
+\pmcreated{2013-03-22 18:27:02}
+\pmmodified{2013-03-22 18:27:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{compositions of natural transformations}
+\pmrecord{6}{41112}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18A25}
+\pmclassification{msc}{18A05}
+\pmsynonym{Godemont product}{CompositionsOfNaturalTransformations}
+\pmdefines{vertical composition}
+\pmdefines{horizontal composition}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage [2cell]{xy}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The usual way to compose two natural transformation is what is known as the \emph{vertical composition}.  Given categories $\mathcal{C},\mathcal{D}$, functors $R,S,T$ from $\mathcal{C}$ to $\mathcal{D}$, and natural transformations $\tau:R\Rightarrow S$ and $\eta:S\Rightarrow T$, we have a natural transformation $\eta\bullet \tau:R\Rightarrow T$ given by $$(\eta \bullet \tau)_A:=\eta_A\circ \tau_A$$
+The reason for calling $\bullet$ the ``vertical'' composition is illustrated by the diagram below:
+
+\begin{Large}
+$$
+\UseAllTwocells
+\xymatrix @+=3cm{\mathcal{C} \ruppertwocell<4.5>^{\stackrel{R}{}}{<0>_{\quad \eta\bullet\tau}} \rlowertwocell<-4.5>_{\stackrel{}{T}}{\omit} & \mathcal{D}} \quad{:=}\quad
+\xymatrix @+=3cm{\mathcal{C} \ruppertwocell<9>^{\stackrel{R}{}}{<-2.5>_{\mbox{   } \tau}} \ar[r]|S \rlowertwocell<-9>_{\stackrel{}{T}}{<2.5>^{\mbox{  }\eta}} & \mathcal{D}}
+$$
+\end{Large}
+
+However, there is another way to compose natural transformations: the so-called \emph{horizontal composition}.  Given categories, $\mathcal{B},\mathcal{C},\mathcal{D}$, functors $S_1,T_1: \mathcal{B}\to \mathcal{C}$, $S_2,T_2:\mathcal{C}\to \mathcal{D}$, and natural transformations, $\tau: S_1\Rightarrow T_1$ and $\eta: S_2 \Rightarrow T_2$ as in the following diagram
+
+\begin{Large}
+$$
+\UseAllTwocells
+\xymatrix @+=3cm{\mathcal{B} \ruppertwocell<5>^{\stackrel{S_2 S_1}{}}{<0>_{\quad \eta\circ \tau}} \rlowertwocell<-5>_{\stackrel{}{T_2 T_1}}{\omit} & \mathcal{D}} \quad{:=}\quad
+\xymatrix @+=3cm{\mathcal{B} \ruppertwocell<4.5>^{\stackrel{S_1}{}}{<0>_{\quad \tau}} \rlowertwocell<-4.5>_{\stackrel{}{T_1}}{\omit} & \mathcal{C} \ruppertwocell<4.5>^{\stackrel{S_2}{}}{<0>_{\quad \eta}} \rlowertwocell<-4.5>_{\stackrel{}{T_2}}{\omit} & \mathcal{D}}
+$$
+\end{Large}
+
+we define the \emph{horizontal composition}, or \emph{Godemont product}, of $\eta$ and $\tau$, written $\eta\circ \tau: S_2S_1\to T_2T_1$, as follows: first, pick any object $A$ in $\mathcal{B}$.  Because $\eta$ is a natural transformation, we have a commutative diagram (solid arrows) below
+$$
+\xymatrix @+=2cm{S_2S_1(A) \ar[r]^{\eta_{S_1(A)}} \ar[d]_{S_2(\tau_A)} \ar@{-->}[dr]^{(\eta\circ\tau)_A} & T_2S_1(A) \ar[d]^{T_2(\tau_A)} \\ 
+S_2T_1(A) \ar[r]_{\eta_{T_1(A)}} & T_2T_1(A)}
+$$
+From this, we set $(\eta\circ \tau)_A$ to be the ``diagonal'' morphism (dotted arrow) from $S_2S_1(A)$ to $T_2T_1(A)$ in the diagram above:
+$$(\eta\circ \tau)_A:= T_2(\tau_A)\circ \eta_{S_1(A)} = \eta_{T_1(A)}\circ S_2(\tau_A).$$
+
+Below are some properties of $\circ$:
+\begin{enumerate}
+\item $\eta\circ \tau$ is a natural transformation.
+\item $\circ$ is associative.
+\item $\eta\circ 1_S=\eta$, and $1_S\circ \tau =\tau$, where $\eta$ and $\tau$ are described in the diagram above, and $1_S$ is the identity transformation on the functor $S:\mathcal{B}\to \mathcal{C}$, and $1_T$ is the identity transformation on the functor $T:\mathcal{C}\to \mathcal{D}$.
+\item $\circ$ and $\bullet$ satisfy the interchange law.
+\end{enumerate}
+
+In fact, the first three properties above turn $\textbf{Cat}$, the category of small categories, into a category where the objects are small categories, morphisms are natural transformations, and the composition of morphisms is the horizontal composition.
+%%%%%
+%%%%%
+\end{document}

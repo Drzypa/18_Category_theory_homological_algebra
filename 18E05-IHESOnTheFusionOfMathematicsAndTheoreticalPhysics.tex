@@ -1,0 +1,273 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IHESOnTheFusionOfMathematicsAndTheoreticalPhysics}
+\pmcreated{2013-03-22 18:28:18}
+\pmmodified{2013-03-22 18:28:18}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{IHES: on the fusion of mathematics and theoretical physics}
+\pmrecord{50}{41143}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{01-02}
+\pmclassification{msc}{01A05}
+\pmsynonym{IHES}{IHESOnTheFusionOfMathematicsAndTheoreticalPhysics}
+%\pmkeywords{Pierre Cartier: on the fusion of mathematics and mathematical physics an IHES}
+\pmrelated{CrafoordPrize}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\subsection{IHES: on the fusion of mathematics and theoretical physics}
+
+\subsubsection{Introduction}
+  Recent, important developments in mathematical physics that are closely related to both mathematics and quantum physics have been considered as a strong indication of the possibility of a `fusion between mathematics
+and theoretical physics'; this viewpoint emerges from current results obtained at IHES in Paris, France,
+the international institute that has formerly served well the algebraic geometry and category theory community
+during Alexander Grothendieck's tenure at this institute. Brief excerpts of published reports by two established
+mathematicians, one from France and the other from UK, are presented next together with the 2008 announcement
+of the Crafoord prize in mathematics for recent results obtained at IHES and in the US in this `fusion area' between mathematics and theoretical physics 
+\PMlinkexternal{(quantum theory and AQFT)}{http://planetphysics.org/encyclopedia/UnitalCAlgebra.html}. Time will tell if this `fusion' trend will be followed by many more mathematicians and/or theoretical physicists elsewhere, even though a precedent already exists in the application of non-commutative geometry to SUSY extension in modern physics that was initiated by Professor A. Connes. 
+
+\subsubsection{Pierre Cartier : ``{\em On the Fusion of Mathematics and Theoretical Physics at IHES}''}
+
+A verbatim quote from : \PMlinkexternal{``\emph{The Evolution of Concepts of Space and Symmetry--
+A Mad Day's Work: From Grothendieck to Connes and Kontsevich*:}''}{http://www.math.jussieu.fr/~leila/grothendieckcircle/madday.pdf}
+
+
+``...I am in no way forgetting the facilities for work provided by the
+\PMlinkexternal{Institut des Hautes \'Etudes Scientifiques (IHES)}{http://www.ihes.fr/jsp/site/Portal.jsp} for so many years, particularly the constantly renewed opportunities for meetings and exchanges. While there have
+been some difficult times, there is no point in dwelling on them.
+\emph{One of the great virtues of the institute was that it erected no barriers between
+mathematics and theoretical physics. There has always been a great deal of interpenetration
+of these two areas of interest, which has only increased over time.}
+From the very beginning Louis Michel was one of the bridges due to his devotion to
+\PMlinkname{group}{Group} theory. At present, when the scientific outlook has changed so greatly over
+the past forty years, \emph{the fusion seems natural and no one wonders whether Connes
+or Kontsevich are physicists or mathematicians. I moved between the two fields for a long time when to do so was to run counter to the current trends, and I welcome the present synthesis.}
+Alexander Grothendieck dominated the first ten years of the institute, and I hope
+no one will forget that. I knew him well during the 50s and 60s, especially through
+Bourbaki, but we were never together at the institute, he left it in September 1970
+and I arrived in July 1971. Grothendieck did not derive his inspiration from physics
+and its mathematical problems. Not that his mind was incapable of grasping this
+area|he had thought about it secretly before 1967, but the moral principles that
+he adhered to relegate physics to the outer darkness, \emph{especially after Hiroshima}. 
+It is surprising that \emph{some of Grothendieck's most fertile ideas regarding the nature of
+space and symmetries have become naturally wed to the new directions in modern
+physics.} ''
+
+\subsubsection{S. Majid: On the Relationship between Mathematics and Physics:}
+
+In ref. \cite{SM91}, S. Majid presents the following `thesis' : ``(roughly speaking) physics polarises down the middle into two parts, one which represents the other, but that the latter equally represents the former, i.e. the two should be treated on an equal footing. The starting point is that {\em Nature after all does not know or care what mathematics is already in textbooks}. Therefore the quest for the ultimate theory may well entail, probably does entail, inventing entirely new mathematics in the process. In other words, at least at some intuitive level, {\em a theoretical physicist also has to be a pure mathematician}. Then one can phrase the question `what is the ultimate theory of physics ?' in the form `in the tableau of all mathematical concepts past present and future, is there some constrained surface or subset which is called physics ?' Is there an equation for physics itself as a subset of mathematics? I believe there is and if it were to be found it would be called the ultimate theory of physics. Moreover, I believe that it can be found and that it has a lot to do with what is different about the way a physicist looks at the world compared to a mathematician...We can then try to elevate the idea to a more general principle of representation-theoretic self-duality, that a fundamental theory of physics is incomplete unless such a role-reversal is possible. We can go further and hope to fully determine the (supposed) structure of fundamental laws of nature among all mathematical structures by this self-duality condition. Such duality considerations are certainly evident in some form in the context of quantum theory and gravity. The situation is summarised to the left in the following diagram. For example, Lie groups provide the simplest examples of Riemannian geometry, while the representations of similar Lie groups provide the quantum numbers of elementary particles in quantum theory. Thus, both quantum theory and non-Euclidean geometry are needed for a self-dual picture. Hopf algebras (quantum groups) precisely serve to unify these mutually dual structures.'' 
+(The reader may also wish to see the original document 
+\PMlinkexternal{on line}{http://www.maths.qmul.ac.uk/~majid/pessay.html}.)
+
+
+
+** \PMlinkexternal{Maxim Kontsevich received the Crafoord Prize in 2008}{http://www.ihes.fr/jsp/site/Portal.jsp?page_id=251#}:
+``Maxim Kontsevich, Daniel Iagolnitzer Prize, Prix Henri Poincar\'e Prize in 1997, Fields Medal in 1998, member of the Academy of Sciences in Paris, is a French mathematician of Russian origin and is a permament professor at IHES (since 1995). He belongs to a new generation of mathematicians who have been able to integrate in their area of work aspects of \emph{quantum theory}, opening up radically new perspectives. On the mathematical side, he drew on the systematic use of known algebraic structure deformations and on the introduction of new ones, such as the `triangulated categories' that turned out to be relevant in many other areas, with no obvious link, such as image processing.''
+
+ `The Crafoord Prize in astronomy and mathematics, biosciences, geosciences or polyarthritis research is awarded by the Royal Swedish Academy of Sciences annually according to a rotating scheme. The prize sum of USD 500,000 makes the Crafoord one of the world' s largest scientific prizes'. 
+
+ ``Mathematics and astrophysics were in the limelight this year, with the joint award of the Mathematics Prize to Maxim Kontsevitch, (French mathematician), and Edward Witten, (US theoretical physicist), `for their important contributions to mathematics inspired by modern theoretical physics', and the award of the Astronomy Prize to Rashid Alievich Sunyaev (astrophysicist) `for his decisive contributions to high-energy astrophysics and cosmology'.'' 
+
+
+\begin{thebibliography}{99}
+
+\bibitem{AMS2k1}
+\emph{* Bulletin (New Series) of the American Mathematical Society}, Volume 38, Number 4, Pages 389--408.,
+S 0273-0979(01)00913-2, Article published electronically on July 12, 2001, ({\em thus anticipating the Crafoord
+prize award by seven years}).
+
+\bibitem{MKYCAS2k5}
+Maxim Kontsevich, Y. Chen, and A. Schwartz. Symmetries of WDVV Equations
+{\em Nucl. Phys. B}, 730 (2005), 352--363.
+
+\bibitem{MKABK2k5}
+Maxim Kontsevich and A. Belov-Kanel. Automorphisms of the Weyl Algebra
+{\em Lett. Math. Phys.} 74 (2005), 181--199.
+
+\bibitem{MK2k8}
+Maxim Kontsevich. 2008. The Jacobian Conjecture is Stably Equivalent to the Dixmier Conjecture
+Preprint, $arxiv--math/0512171$.
+
+\bibitem{MKYS2k5}
+Maxim Kontsevich and Y. Soibelman. Integral affine structures
+In: \emph{The Unity of Mathematics in honor of the 90th birthday of I.M. Gelfand}, Progress in Mathematics 244, Birkha\"user (2005), 321--386.
+
+\bibitem{MKCF2k8}
+Maxim Kontsevich and C. Fronsdal. Quantization on Curves. Preprint $arxiv math--ph/0507021$.
+
+\bibitem{SM91}
+S. Majid, Principle of representation-theoretic self-duality, \emph{Phys. Essays}. 4 (1991) 395-405.
+
+\bibitem{PM2k5}
+PlanetMath 2005 Free Encyclopedia Book in \PMlinkexternal{PlanetMath.org entry in Wikipedia}{http://en.wikipedia.org/wiki/PlanetMath}
+
+\end{thebibliography}
+
+
+**Source: Crafoord Prize official website.
+
+%%%%%
+%%%%%
+\end{document}

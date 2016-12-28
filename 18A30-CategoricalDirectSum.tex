@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalDirectSum}
+\pmcreated{2013-03-22 12:36:17}
+\pmmodified{2013-03-22 12:36:17}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{categorical direct sum}
+\pmrecord{7}{32859}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmsynonym{direct sum}{CategoricalDirectSum}
+\pmsynonym{coproduct}{CategoricalDirectSum}
+\pmrelated{CategoricalDirectProduct}
+\pmrelated{DirectSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\{C_i\}_{i \in I}$ be a set of objects in a category $\mathcal{C}$. A {\em direct sum} of the collection $\{C_i\}_{i \in I}$ is an object $\coprod_{i \in I} C_i$ of $\mathcal{C}$, with morphisms $\iota_i: C_i \longrightarrow \coprod_{j \in I} C_j$ for each $i \in I$, such that:
+
+For every object $A$ in $\mathcal{C}$, and any collection of morphisms $f_i: C_i \longrightarrow A$ for every $i \in I$, there exists a unique morphism $f: \coprod_{i \in I} C_i \longrightarrow A$ making the following diagram commute for all $i \in I$.
+$$
+\xymatrix{
+C_i \ar[dr]_{\iota_i} \ar[rr]^{f_i} & & A \\
+& \coprod_{j \in I} C_j \ar@{-->}[ur]_{f}
+}
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelianCategory}
+\pmcreated{2013-03-22 12:36:31}
+\pmmodified{2013-03-22 12:36:31}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{abelian category}
+\pmrecord{13}{32865}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18E10}
+\pmrelated{AxiomsForAnAbelianCategory}
+\pmdefines{monomorphism}
+\pmdefines{epimorphism}
+\pmdefines{kernel}
+\pmdefines{cokernel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cok}{\operatorname{cok}}
+\begin{document}
+An \emph{abelian category} is a category $\A$ satisfying the following axioms. Because the later axioms rely on terms whose definitions involve the earlier axioms, we will intersperse the statements of the axioms with such auxiliary definitions as needed.
+
+\textbf{Axiom 1.} For any two objects $A,B$ in $\A$, the set of morphisms $\Hom(A,B)$ admits an abelian group structure, with group operation denoted by $+$, satisfying the following naturality requirement: given any diagram of morphisms
+$$
+\xymatrix{
+A \ar[r]^{f} & B \ar@/_/[r]_{g_2} \ar@/^/[r]^{g_1} & C \ar[r]^h & D
+}
+$$
+we have $(g_1+g_2) f = g_1 f + g_2 f$ and $h (g_1 + g_2) = h g_1 + h g_2$.
+That is, composition of morphisms must distribute over addition in $\Hom(\cdot,\cdot)$.
+
+The identity element in the group $\Hom(\cdot,\cdot)$ will be denoted by $0$.
+
+\textbf{Axiom 2.} $\A$ has a zero object.
+
+\textbf{Axiom 3.} For any two objects $A,B$ in $\A$, the categorical direct product $A \times B$ exists in $\A$.
+
+Given a morphism $f\colon A \to B$ in $\A$, a \emph{kernel} of $f$ is a morphism $i\colon X \to A$ such that:
+
+\begin{itemize}
+\item $fi = 0.$
+\item For any other morphism $j\colon X' \to A$ such that $fj = 0$, there exists a unique morphism $j'\colon X' \to X$ such that the diagram
+$$
+\xymatrix{
+& X' \ar[d]^j \ar@{-->}[dl]_{j'} \\
+X \ar[r]^i & A \ar[r]^f & B
+}
+$$
+commutes.
+\end{itemize}
+Likewise, a \emph{cokernel} of $f$ is a morphism $p\colon B \to Y$ such that:
+\begin{itemize}
+\item $pf = 0.$
+\item For any other morphism $j\colon B \to Y'$ such that $jf = 0$, there exists a unique morphism $j'\colon Y \to Y'$ such that the diagram
+$$
+\xymatrix{
+A \ar[r]^f & B \ar[r]^p \ar[d]_j & Y \ar@{-->}[dl]^{j'} \\
+& Y'
+}
+$$
+commutes.
+\end{itemize}
+
+\textbf{Axiom 4.} Every morphism in $\A$ has a kernel and a cokernel.
+
+The kernel and cokernel of a morphism $f$ in $\A$ will be denoted $\ker(f)$ and $\cok(f)$, respectively. (Some texts use the notation $\operatorname{coker}(f)$ for cokernel.) By the universal properties above, the kernel and cokernel of $f$ are only unique up to isomorphism, but by abuse of notation we write $\ker(f)$ for a representative element of this isomorphism class.
+
+A morphism $f\colon A \to B$ in $\A$ is called a \emph{monomorphism} if, for every morphism $g\colon X \to A$ such that $fg = 0$, we have $g=0$. Similarly, the morphism $f$ is called an \emph{epimorphism} if, for every morphism $h\colon B \to Y$ such that $hf = 0$, we have $h=0$.
+
+\textbf{Axiom 5.} $\ker(\cok(f)) = f$ for every monomorphism $f$ in $\A$.
+
+\textbf{Axiom 6.} $\cok(\ker(f)) = f$ for every epimorphism $f$ in $\A$.
+
+\textbf{Remark}.  Equivalently, an abelian category is an additive category such that Axioms 4-6 are satisfied.
+%%%%%
+%%%%%
+\end{document}

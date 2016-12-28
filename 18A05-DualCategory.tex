@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualCategory}
+\pmcreated{2013-03-22 12:28:44}
+\pmmodified{2013-03-22 12:28:44}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{dual category}
+\pmrecord{9}{32689}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmsynonym{opposite category}{DualCategory}
+\pmsynonym{opposite}{DualCategory}
+\pmsynonym{opposite morphism}{DualCategory}
+\pmrelated{OppositeRing}
+\pmdefines{opposite functor}
+\pmdefines{opposite arrow}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\op}{op}
+\begin{document}
+Let $\mathcal{C}$ be a category. The \emph{dual category} $\mathcal{C}^{*}$ of $\mathcal{C}$ is the category which has the same objects as $\mathcal{C}$, but in which all morphisms are ``reversed''. That is to say if $A,B$ are objects of $\mathcal{C}$ and we have a morphism $f: A \to B$, then we formally define an arrow $f^{*}: B \to A$ in $\mathcal{C}^{*}$.   $f^*$ is called the \emph{opposite arrow}, or \emph{opposite morphism} of $f$.  The composition $f^{*}\circ g^{*}$ is then defined to be $(g\circ f)^{*}$. The dual category is sometimes called the \emph{opposite category} and is denoted $\mathcal{C}^{\op}$.
+
+The category of Hopf algebras over a field $k$ is (equivalent to) the opposite category of affine group schemes over $\operatorname{spec} k$.
+
+Categorical properties of $\mathcal{C}$ lead directly to categorical properties of $\mathcal{C}^{\op}$; constructions on $\mathcal{C}$ become constructions on $\mathcal{C}^{\op}$.  Usually such a construction is indicated with the prefix ``co-''.  For example, a coproduct is a product on the opposite category; this can be seen by looking at the commutative diagram that completely specifies a coproduct, and noting that it is the same as the diagram specifying a product with the arrows reversed. More generally, an inverse limit is a direct limit on the opposite category; for this reason, it is sometimes called a colimit. A cokernel is a kernel in the opposite category.  Many other similar concepts exist.
+
+If $F$ is a covariant functor from $\mathcal{C}$ to some other category $\mathcal{D}$, then we can define, in a natural way, a contravariant functor $F^{\op}$ from $C^{\op}$ to $D$, called the \emph{opposite functor} of $F$. In fact, this is often how contravariant functors are defined, and it is why most categorical theorems and constructions need not explicitly consider both cases.
+%%%%%
+%%%%%
+\end{document}

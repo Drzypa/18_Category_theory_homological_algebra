@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTensorProduct}
+\pmcreated{2013-03-22 17:21:06}
+\pmmodified{2013-03-22 17:21:06}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{properties of tensor product}
+\pmrecord{10}{39709}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{13-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+
+
+\begin{document}
+\begin{theorem}
+ Let $V_1,V_2$ be two vector spaces over a field $F$.
+ If $x_1,\ldots,x_n\in V_1$ are linearly independent and $y_1,\ldots,y_n\in V_2$ then
+$$
+\sum x_i \otimes y_i =0 \Rightarrow y_i=0,\mbox{ for all } i$$\end{theorem}
+\begin{proof}
+ Take the dual vectors $x_i^{*}$ to the vectors $x_i$, i.e. $x_i^{*}(x_j)=\delta_{i,j}$. Given arbitrary linear functionals $f_i:V_2 \rightarrow F$, define a bilinear form $f:V_1\times V_2\rightarrow F$ by
+$$ f(x,y)=\sum_{j=1}^n x_{j}^{*}(x)f_j(y)$$
+ By the definition of tensor product there exists a unique linear functional $\phi:V_1\otimes V_2\rightarrow F$ such that $\phi \circ \iota =f$. Therefore
+\begin{eqnarray*} 
+0&=&\phi\left(\sum_{i} x_i\otimes y_i\right) \\
+&=&\sum_{i} \phi\circ \iota (x_i,y_i) \\
+ &=&\sum_{i} f(x_i,y_i) \\
+&=&\sum_i \sum_j x_{j}^{*}(x_i)f_j(y_i)\\
+& =&\sum_{i} f_i(y_i).
+\end{eqnarray*}
+
+ Since the $f_i$ are arbitrary, it follows that $y_i=0$ for all $i$.
+
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

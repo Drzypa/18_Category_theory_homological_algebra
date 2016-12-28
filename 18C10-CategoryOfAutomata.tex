@@ -1,0 +1,233 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfAutomata}
+\pmcreated{2013-03-22 18:12:11}
+\pmmodified{2013-03-22 18:12:11}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{category of automata}
+\pmrecord{57}{40782}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18C10}
+\pmclassification{msc}{03D10}
+\pmclassification{msc}{03D05}
+\pmclassification{msc}{18B20}
+\pmsynonym{automata category}{CategoryOfAutomata}
+\pmsynonym{category of sequential machines}{CategoryOfAutomata}
+\pmsynonym{automata category}{CategoryOfAutomata}
+\pmsynonym{abstract automata}{CategoryOfAutomata}
+\pmsynonym{robots}{CategoryOfAutomata}
+\pmsynonym{machines}{CategoryOfAutomata}
+\pmsynonym{category of sequential machines or automata}{CategoryOfAutomata}
+%\pmkeywords{categories of automata and their transformations}
+%\pmkeywords{algebraic theories}
+%\pmkeywords{structure and semantics}
+%\pmkeywords{universal Turing machines}
+%\pmkeywords{variable automata}
+%\pmkeywords{fuzzy automata}
+%\pmkeywords{semigroups}
+%\pmkeywords{semigroup homomorphisms}
+%\pmkeywords{automata homomorphisms}
+%\pmkeywords{Cartesian closed category}
+\pmrelated{CategoryOfQuantumAutomata}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{SystemDefinitions}
+\pmrelated{IndexOfCategories}
+\pmdefines{automaton homomorphism}
+\pmdefines{automata category}
+\pmdefines{s-automaton}
+\pmdefines{stable automaton}
+\pmdefines{categorical automaton}
+\pmdefines{state semigroup}
+\pmdefines{state space}
+\pmdefines{category of reversible automata}
+\pmdefines{category of abstract automata}
+\pmdefines{automata homomorphisms}
+\pmdefines{semigroup transformation}
+\pmdefines{semigroup homom}
+
+% this is the default PlanetMath preamble. 
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd,  enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+
+\begin{document}
+\section{The Category of Automata}
+
+\begin{definition}
+A {\em classical automaton, s-automaton} $\A$, or sequential machine, is defined as a quintuple of three sets: $I$,$O$ and $S$, and two set-theoretical mappings:
+
+$$(I, O, S, \delta: I \times S \rightarrow S; \lambda: S \times S \rightarrow O),$$
+
+where $I$ is the set of s-automaton inputs, $S$ is the set of states (or the state space of the s-automaton), $O$ is the set of s-automaton outputs, $\delta$ is the {\em transition function} that maps a s-automaton state $s_j$ onto its next state $s_{j+1}$ in response to a specific s-automaton input $j \in I$, and $\lambda$ is the \emph{output function} that maps couples of consecutive (or sequential) s-automaton states $(s_i, s_{i+1})$ onto s-automaton outputs $o_{i+1}$ 
+($(s_i, s_{i+1}) \mapsto o_{i+1}$, hence the older name of sequential machine for an s-automaton).
+\end{definition}
+
+\begin{definition}
+ A categorical automaton can also be defined by a commutative square diagram containing all of the above components.
+
+\end{definition}
+
+ With the above automaton definition(s) one can now also define morphisms between automata and their composition.
+
+\begin{definition} A \emph{homomorphism of automata} or {\em automaton homomorphism} is a morphism of automata quintuples that preserves commutativity of the set-theoretical mapping compositions of both the transition
+function $\delta$ and the output function $\lambda$. 
+\end{definition}
+
+ With the above two definitions one now has sufficient data to define the category of automata
+and automata homomorphisms.
+ 
+\begin{definition}
+ A \emph{category of automata} is defined as a category of quintuples
+$(I, O, X, \delta: I \times X \rightarrow X; \lambda: X \times S \rightarrow O)$ and
+automata homomorphisms $h:{\A}_i \rightarrow {\A}_j$,
+such that these homomorphisms commute with both the transition and the output functions of any automata ${\A}_i$ and ${\A}_j$.
+\end{definition}
+
+\subsection{Remarks:} 
+\begin{enumerate}
+\item \emph{Automata homomorphisms} can be considered also as automata transformations
+or as semigroup homomorphisms, when the state space, $X$, of the automaton is defined
+as a \emph{semigroup} $S$. 
+
+\item Abstract automata have numerous realizations in the real world as : machines, robots, devices,
+computers, supercomputers, always considered as \emph{discrete} state space sequential machines.
+\item Fuzzy or analog devices are not included as standard automata.
+\item Similarly, \emph{variable (transition function)} automata are not included, but Universal Turing machines are.
+\end{enumerate}
+
+\begin{definition} An alternative definition of an automaton is also in use:
+as a five-tuple $(S, \Sigma, \delta, I, F)$, where $\Sigma$ is a non-empty set of symbols
+$\alpha$ such that one can define a {\em configuration} of the automaton as a couple
+$(s,\alpha)$ of a state $s \in S $ and a symbol $\alpha \in \Sigma $. Then $\delta$
+defines a ``next-state relation, or a transition relation'' which associates to each configuration
+$(s, \alpha)$ a subset $\delta (s,\alpha)$ of S- the state space of the automaton.
+With this formal automaton definition, the \emph{category of abstract automata} can be defined by specifying automata homomorphisms in terms of the morphisms between five-tuples representing such abstract automata.
+\end{definition}
+
+
+\begin{example} A special case of automaton is that of a {\em stable automaton} when all its state transitions are {\em reversible}; then its state space can be seen to possess a groupoid (algebraic) structure. The {\em category of reversible automata} is then a 2-category, and also a subcategory of the 2-category of groupoids, or the groupoid category.  
+\end{example}
+
+\subsection{Note:}
+Other definitions of automata, sequential machines, semigroup automata or cellular automata lead to subcategories of the category of automata defined above. On the other hand, the category of quantum automata is not a subcategory of the automata category defined here.
+
+%%%%%
+%%%%%
+\end{document}

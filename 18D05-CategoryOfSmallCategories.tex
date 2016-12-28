@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfSmallCategories}
+\pmcreated{2013-03-22 18:27:24}
+\pmmodified{2013-03-22 18:27:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{category of small categories}
+\pmrecord{13}{41120}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18D05}
+\pmclassification{msc}{18B99}
+\pmdefines{Cat}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The category \textbf{Cat} of small categories consists of all small categories as objects, and, functors between small categories as morphisms.  The composition of morphisms in \textbf{Cat} is the functor composition, and, associated with each small category, the identity functor acts as the identity morphism.  Now, \textbf{Cat} is indeed a category, since $\hom(\mathcal{C},\mathcal{D})$, the class of all functors from $\mathcal{C}$ to $\mathcal{D}$ is a set.  The proof of this fact can be found \PMlinkname{here}{FunctorCategory}.
+
+Here are some of the basic properties of \textbf{Cat}:
+\begin{enumerate}
+\item It has \PMlinkname{arbitrary products}{ProductOfCategories}
+\item It has \PMlinkname{arbitrary coproducts}{DisjointUnionOfCategories}
+\item Initial object exists: the initial object is the empty category and the associated empty functor.
+\item Terminal object exists: the terminal object is any trivial category and the associated constant functor into the trival category.
+\item It has pullbacks.  See \PMlinkname{this entry}{ExamplesOfPullbacks}.  So it has equalizers, and therefore, it is complete.
+\item however, it does have coequalizers.  This, together with 2 above, shows that it is cocomplete.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+If we replace functors in $\hom(\mathcal{C},\mathcal{D})$ by natural transformations between pairs of functors from $\mathcal{C}$ to $\mathcal{D}$, and composition of morphisms the horizontal composition $\circ$ of natural transformations, then we again end up with a category (provided that both $\mathcal{C}$ and $\mathcal{D}$ are small).  Indeed, every natural transformation $\eta$ between two functors from $\mathcal{C}$ to $\mathcal{D}$ is a set function from the \emph{set} of objects of $\mathcal{C}$ to the \emph{set} of morphisms of $\mathcal{D}$.  As a result, $\hom(\mathcal{C},\mathcal{D})$ is a subcollection of the \emph{set} of \emph{all} functions from $\operatorname{Ob}(\mathcal{C})$ to $\operatorname{Mor}(\mathcal{D})$, and hence a set.  For more detail, please see \PMlinkname{this entry}{CompositionsOfNaturalTransformations}.
+\item
+In fact, \textbf{Cat} has the structure of a 2-category, where the small categories are the $0$-cells, the functors between them are the $1$-cells, and the natural transformations between parallel functors are the $2$-cells.
+\item
+If we remove the requirement that each object in \textbf{Cat} be small, then $\hom(\mathcal{C},\mathcal{D})$ may no longer be a set, and we end up with a large category.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

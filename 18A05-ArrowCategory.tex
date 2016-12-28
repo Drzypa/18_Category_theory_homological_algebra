@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArrowCategory}
+\pmcreated{2013-03-22 12:42:04}
+\pmmodified{2013-03-22 12:42:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{arrow category}
+\pmrecord{14}{32983}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmsynonym{morphism category}{ArrowCategory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amscd}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{C}$ be a category.  The \emph{arrow category} of $\mathcal{C}$ is the functor category $\mathcal{C}^\textbf{2}$.  Here, $\textbf{2}$ is the ordinal category consisting of $0,1$.  Specifically, the contents of $\mathcal{C}^\textbf{2}$ are:
+\begin{enumerate}
+\item an object of $\mathcal{C}^\textbf{2}$ is an arrow (morphism) of $\mathcal{C}$
+\item given two objects of $\mathcal{C}^\textbf{2}$, say $A \stackrel{f}{\longrightarrow} B$ and $A' \stackrel{g}{\longrightarrow} B'$, a morphism (of $\mathcal{C}^\textbf{2}$) from $f$ to $g$ consists of an ordered pair $(h,k)$, where $A \stackrel{h}{\longrightarrow} A'$ and $B \stackrel{k}{\longrightarrow} B'$, such that the following diagram
+$$\xymatrix{
+ A \ar[r]^h \ar[d]_{f} & A' \ar[d]^g \\ 
+ B \ar[r]_k & B'}
+$$
+is a commutative diagram.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

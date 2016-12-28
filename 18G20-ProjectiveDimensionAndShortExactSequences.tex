@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectiveDimensionAndShortExactSequences}
+\pmcreated{2013-03-22 19:18:32}
+\pmmodified{2013-03-22 19:18:32}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{projective dimension and short exact sequences}
+\pmrecord{7}{42246}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G20}
+\pmclassification{msc}{13D05}
+\pmclassification{msc}{16E10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\pd}{\mathrm{pd}_R}
+\newcommand{\id}{\mathrm{id}_R}
+\newcommand{\Ext}[1]{\mathrm{Ext}^{#1}_{R}}
+\newcommand{\Hom}{\mathrm{Hom}_{R}}
+\begin{document}
+Let $R$ be a ring and let $M$ be an $R$-module. Recall that if $\pd M$ denotes the projective dimension of $M$, then
+$$\pd M\leqslant n$$
+if and only if
+$$\Ext{m}(M,-)=0$$
+for $m>n$. Here $\mathrm{Ext}$ denotes the derived functor of $\mathrm{Hom}$.
+
+\textbf{Proposition 1.} Assume that
+$$\xymatrix{
+0\ar[r] & A\ar[r] & B\ar[r] & C\ar[r] & 0
+}$$
+is a short exact sequence of $R$-modules such that the projective dimension of each $A$, $B$, $C$ is finite. Then
+$$\pd A\leqslant\mathrm{max}\{\ \pd B,\ \pd C - 1\ \};$$
+$$\pd B\leqslant\mathrm{max}\{\ \pd A,\ \pd C\ \};$$
+$$\pd C\leqslant\mathrm{max}\{\ \pd B,\ \pd A + 1\ \}.$$
+
+\textit{Proof.} Let $T(X)=\Hom(X,-)$ be a functor from the category of $R$-modules to the category of functors. This functor is contravariant and induces the following long exact sequence:
+$$\xymatrix{
+\cdots\ar[r] & \Ext{n}(C,-)\ar[r] & \Ext{n}(B,-)\ar[r] & \Ext{n}(A,-)\ar[r] &\Ext{n+1}(C,-)\ar[r] & \cdots
+}$$
+Assume that $\pd B\leqslant m$ and $\pd C\leqslant m+1$ (i.e. $m\geqslant\mathrm{max}\{\ \pd B,\ \pd C-1\ \}$). Then the above sequence (together with the remark at the begining) gives us 
+$$\Ext{k}(A,-)=0$$
+for $k>m$. In particular $\pd A\leqslant m$ and thus
+$$\pd A\leqslant\mathrm{max}\{\ \pd B,\ \pd C - 1\ \}.$$
+The proof for other inequalities is analogous. $\square$ \\[10pt]
+We can state similar facts for injective dimension:\\[10pt]
+\textbf{Proposition 2.} Assume that 
+$$\xymatrix{
+0\ar[r] & A\ar[r] & B\ar[r] & C\ar[r] & 0
+}$$
+is a short exact sequence of $R$-modules such that the injective dimension of each $A$, $B$, $C$ is finite. Then
+$$\id A\leqslant\mathrm{max}\{\ \id B,\ \id C + 1\ \};$$
+$$\id B\leqslant\mathrm{max}\{\ \id A,\ \id C\ \};$$
+$$\id C\leqslant\mathrm{max}\{\ \id B,\ \id A - 1\ \}.$$
+\textit{Proof.} The proof is analogous to the proof of Proposition 1. We just use $\Ext{*}(-,M)$ instead of $\Ext{*}(M,-)$. Note that in this case $\mathrm{Ext}$ is a covariant functor which gives us ,,dual'' inequalities. $\square$
+%%%%%
+%%%%%
+\end{document}

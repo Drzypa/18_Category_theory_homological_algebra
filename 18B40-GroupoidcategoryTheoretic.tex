@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupoidcategoryTheoretic}
+\pmcreated{2013-03-22 13:08:17}
+\pmmodified{2013-03-22 13:08:17}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{groupoid (category theoretic)}
+\pmrecord{19}{33575}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B40}
+\pmclassification{msc}{20L05}
+\pmsynonym{groupoid}{GroupoidcategoryTheoretic}
+\pmsynonym{virtual group}{GroupoidcategoryTheoretic}
+\pmrelated{BrandtGroupoid}
+\pmdefines{composable pair}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+
+\begin{document}
+\PMlinkescapeword{name}
+A \emph{groupoid}, also known as a \emph{virtual group}, is a small category where every morphism is invertible.  We can give a more explicit, algebraic definition: start with a set $G$, and a partial binary operation $\circ$ on $G$.  Call a pair $(x,y)$ of elements of $G$ a \emph{composable pair} if $(x,y)\in\operatorname{dom}(\circ)$.  A \emph{groupoid} is the pair $(G,\circ)$, together with two unary operations $e_L$ and $e_R$ on it, satisfying  the following conditions:
+\begin{enumerate}
+\item $(x,y)$ is a composable pair iff $e_R(x)=e_L(y)$.
+\item $(x,y)$ and $(x\circ y, z)$ are composable pairs iff $(y,z)$ and $(x,y\circ z)$ are, and if one of these is true, then $(x\circ y)\circ z=x\circ (y\circ z)$.
+\item $(e_L(x),x)$ and $(x,e_R(x))$ are composable pairs and $x=e_L(x)\circ x=x\circ e_R(x)$.
+\item for each $x\in G$, there exists $y\in G$ such that $(x,y)$ and $(y,x)$ are composable pairs, and $e_L(x)=x\circ y$ and $e_R(x)=y\circ x$.
+\end{enumerate}
+
+Below are some properties:
+\begin{enumerate}
+\item In condition 4 above, $e_L(x)=e_R(y)$ and $e_R(x)=e_L(y)$.  This is true by condition 1, since both $(x,y)$ and $(y,x)$ are composable pairs.
+\item Again, in condition 4, $y$ is unique.  To see this, suppose $z\in G$ satisfies condition 4 (in place of $y$).  Then $y= y\circ e_R(y)= y\circ e_L(x) = y\circ (x\circ y)=y\circ (x\circ z)=(y\circ x)\circ z= (z\circ x)\circ z=e_R(x)\circ z = e_L(z)\circ z = z$.  Notice property 1 is used in the proof.  We call $y$ the \emph{inverse} of $x$, and write $x^{-1}$.
+\item In view of condition 4, both $e_L$ and $e_R$ are unique.  In other words, if $f_L,f_R:G\to G$ are unary operators on $G$ satisfying conditions 3 and 4 above (in place of $e_L$ and $e_R$), then $f_L=e_L$ and $f_R=e_R$.  In fact, $e_L(x)=x\circ x^{-1}$ and $e_R(x)=x^{-1}\circ x$.
+\item Since $x=e_L(x)\circ x=e_L(x)\circ (e_L(x)\circ x)=(e_L(x)\circ e_L(x))\circ x$, we see that $e_L(x)$ is composable with itself, and that $e_L(x)\circ e_L(x)=e_L(x)$ by the previous property.  Similarly, $e_R(x)\circ e_R(x)=e_R(x)$.  This shows that $e_R(x)$ and $e_L(x)$ are idempotent with respect to $\circ$ for every $x\in G$.
+\item Since $(e_L(x),x)$ is a composable pair, $e_R(e_L(x))=e_L(x)$ for any $x\in G$.  Similarly, $e_L(e_R(x))=e_R(x)$.  Hence $e_R(e_R(x))= e_R(e_L(e_R(x)))=e_L(e_R(x))=e_R(x)$.  Similarly, $e_L(e_L(x))=e_L(x)$.  This shows that $e_R$ and $e_L$ are idempotent with respect to functional compositions.
+\item (Cancellation property): if $x\circ y= x\circ z$, then $y=z$; if $y\circ x=z\circ x$, then $y=z$.
+\begin{proof}
+Since $(x,y)$ is a composable pair, $e_R(x)=e_L(y)$.  But $e_R(e_R(x))=e_R(x)$, we have $e_R(e_R(x))=e_L(y)$ so that $(e_R(x),y)=(x^{-1}\circ x,y)$ is a composable pair, hence $(x^{-1},x\circ y)$ is a composable pair and $x^{-1}\circ (x\circ y)=(x^{-1}\circ x)\circ y=e_R(x)\circ y$.  Since $(e_R(x),y)$ is a composable pair, $e_R(x)=e_R(e_R(x))=e_L(y)$.  As a result, $x^{-1}\circ (x\circ y)=e_L(y)\circ y =y$.  Similarly $x^{-1}\circ (x\circ z)=z$.  By assumption, we deduce that $y=z$.  The other statement is proved similarly.
+\end{proof}
+\item The algebraic definition given can be easily turned into a categorical definition (using objects and morphisms).  The details are left for the reader.
+\end{enumerate}
+
+If $e_R$ and $e_L$ are constant functions, then $G$ is a group.
+
+\textbf{Remark}.  There is also a \PMlinkname{group-theoretic concept}{Groupoid} with the same name.
+%%%%%
+%%%%%
+\end{document}

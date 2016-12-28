@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfInitialObjectsAndTerminalObjectsAndZeroObjects}
+\pmcreated{2013-03-22 12:48:44}
+\pmmodified{2013-03-22 12:48:44}
+\pmowner{AxelBoldt}{56}
+\pmmodifier{AxelBoldt}{56}
+\pmtitle{examples of initial objects and terminal objects and zero objects}
+\pmrecord{19}{33132}
+\pmprivacy{1}
+\pmauthor{AxelBoldt}{56}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[all]{xypic}
+\begin{document}
+\PMlinkescapeword{commutative}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{fix}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{graph}
+\PMlinkescapeword{graphs}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{limits}
+\PMlinkescapeword{loops}
+\PMlinkescapeword{property}
+\PMlinkescapeword{ring of integers}
+\PMlinkescapeword{term}
+
+Examples of initial objects, terminal objects and zero objects of categories include:
+
+\begin {itemize}
+
+\item The empty set is the unique initial object in the category of sets; every one-element set is a terminal object in this category; there are no zero objects.
+Similarly, the empty space is the unique initial object in the category of topological spaces; every one-point space is a terminal object in this category.
+
+\item In the category of non-empty sets, there are no initial objects. The singletons are not initial: while every non-empty set admits a function from a singleton, this function is in general not unique.
+
+\item In the category of pointed sets (whose objects are non-empty sets together with a distinguished point; a morphism from $(A,a)$ to $(B,b)$ is a function $f : A \to B$ with $f(a)=b$) every singleton serves as a zero object. Similarly, in the category of pointed topological spaces, every singleton is a zero object.
+
+\item In the category of groups, any trivial group (consisting only of its identity element) is a zero object. The same is true for the category of abelian groups as well as for the category of modules over a fixed ring. This is the origin of the term ``zero object''.
+
+\item In the category of rings with identity, the \PMlinkname{ring of integers}{Integer} (and any ring isomorphic to it) serves as an initial object. The trivial ring consisting only of a single element $0=1$ is a terminal object.
+
+\item In the category of schemes, the prime spectrum of the integers $\operatorname{spec}(\Bbb{Z})$ is a terminal object. The empty scheme (which is the prime spectrum of the zero ring) is an initial object.
+
+\item In the category of fields, there are no initial or terminal objects.
+
+\item Any partially ordered set $(P,\le)$ can be interpreted as a category: the objects are the elements of $P$, and there is a single morphism from $x$ to $y$ if and only if $x\le y$. This category has an initial object if and only if $P$ has a smallest element; it has a terminal object if and only if $P$ has a largest element. This explains the terminology.
+
+\item In the category of \PMlinkname{graphs}{Graph}, the null graph is an initial object. There are no terminal objects, unless we allow our graphs to have loops (edges starting and ending at the same vertex), in which case the one-point-one-loop graph is terminal.
+
+\item Similarly, the category of all \PMlinkname{small}{Small} categories with functors as morphisms has the empty category as initial object and the one-object-one-morphism category as terminal object.
+
+\item Any topological space $X$ can be viewed as a category $\hat{X}$ by taking the open sets as objects, and a single morphism between two open sets $U$ and $V$ if and only if $U\subset V$. The empty set is the initial object of this category, and $X$ is the terminal object. 
+
+\item If $X$ is a topological space and $\cal{C}$ is some small category, we can form the category of all contravariant functors from $\hat{X}$ to $\cal{C}$, using natural transformations as morphisms. This category is called the \emph{category of presheaves on $X$ with values in $\cal{C}$}. If $\cal{C}$ has an initial object $c$, then the constant functor which sends every open set to $c$ is an initial object in the category of presheaves. Similarly, if $\cal{C}$ has a terminal object, then the corresponding constant functor serves as a terminal presheave.
+
+\item If we fix a homomorphism $f:A\rightarrow B$ of abelian groups, we can consider the category $\cal{C}$ consisting of all pairs $(X,\phi)$ where $X$ is an abelian group and $\phi:X\rightarrow A$ is a group homomorphism with $f\phi=0$. A morphism from the pair $(X,\phi)$ to the pair $(Y,\psi)$ is defined to be a group homomorphism $r:X\rightarrow Y$ with the property $\psi r=\phi$:
+$$
+\xymatrix@R-=2pt{%
+X\ar[dr]^\phi\ar@{.>}[dd]_r\\
+&A\ar[r]^f& B\\
+Y\ar[ur]_\psi
+}
+$$
+The kernel of $f$ is a terminal object in this category; this expresses the universal property of kernels. With an analogous construction, cokernels can be retrieved as initial objects of a suitable category.
+
+\item The previous example can be generalized to arbitrary limits of functors: if $F:\cal{I}\rightarrow\cal{C}$ is a functor, we define a new category $\hat{F}$ as follows: its objects are pairs $(X,(\phi_i))$ where $X$ is an object of $\cal{C}$ and for every object $i$ of $\cal{I}$, $\phi_i:X\rightarrow F(i)$ is a morphism in $\cal{C}$ such that for every morphism $\rho:i\rightarrow j$ in $\cal{I}$, we have $F(\rho)\phi_i=\phi_j$. A morphism between pairs $(X,(\phi_i))$ and $(Y,(\psi_i))$ is defined to be a morphism $r:X\rightarrow Y$ such that $\psi_i r=\phi_i$ for all objects $i$ of $\cal{I}$. The universal property of the limit can then be expressed as saying: any terminal object of $\hat{F}$ is a limit of $F$ and vice versa (note that $\hat{F}$ need not contain a terminal object, just like $F$ need not have a limit).
+
+\end {itemize}
+%%%%%
+%%%%%
+\end{document}

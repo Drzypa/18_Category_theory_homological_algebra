@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaugeFieldsAndGaugeGroup}
+\pmcreated{2013-03-22 19:31:11}
+\pmmodified{2013-03-22 19:31:11}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{gauge fields and gauge group}
+\pmrecord{16}{42495}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Gauge and Gauge Fields}
+
+A \emph{gauge} $\delta$ is a function which assigns to every real number $x$ an interval $\delta (x)$ such that $x \in \delta (x)$.
+
+'Physical' {\em gauge $fields$} are certain `virtual fields' that are described by a gauge, as defined above,
+and that play important roles in certain physical theories such as the Non-Abelian Gauge Theory. 
+Thus, an {\em ordinary gauge theory} is a quantum field theory whose field configurations are {\em vector bundles with connection}.
+
+\subsection{Additional Examples of Gauge Fields:}
+
+Most notably, the $fields$ that carry the three fundamental forces of the standard model of particle physics are $gauge~ fields$:
+
+1. Ordinary electromagnetism--considered without any magnetic charges-- is a gauge theory of $U(1)$-symmetry-principal bundles with connection.
+
+2. The $fields$ in the Yang-Mills theory-as stated in the standard model of particle physics ($SUSY$ and in $GUT$s) are also {\em vector bundles with connection}.
+
+
+3. {\em Dijkgraaf-Witten theory} is a gauge theory whose $field$ configurations are $G$-principal bundles with $G$ being a finite group (these configurations come with a {\bf unique connection}, so that in this case the connection does not  require any additional specification).  The group $G$ in such examples is called the {\em gauge group} of the theory.
+
+4. Other examples  such as #3 above include formal physical models.
+
+\subsection{Generalized Riemann Integral}
+
+Given a gauge $\delta$, a partition ${U_i}_{i=1}^n$ of an interval $[a,b]$ is said to be $\delta$-fine if, for every point $x \in [a,b]$, the set $U_i$ containing $x$ is a subset of $\delta (x)$
+
+A function $f : [a, b] \rightarrow \mathbb{R}$ is said to be \textbf{generalized Riemann integrable} on $[a,b]$ if there exists a number $L \in \mathbb{R}$ such that for every $\epsilon > 0$ there exists a gauge $\delta_{\epsilon}$ on $[a,b]$ such that if $\dot{\mathcal{P}}$ is any $\delta_{\epsilon}$-fine partition of $[a,b]$, then
+\[| S(f ; \dot{\mathcal{P}}) - L | < \epsilon,\]
+where $S(f ; \dot{\mathcal{P}})$ is any Riemann sum for $f$ using the partition $\dot{\mathcal{P}}$. The collection of all generalized Riemann integrable functions is usually denoted by $\mathcal{R}^{*}[a,b]$.
+
+If $f \in \mathcal{R}^{*}[a,b]$ then the number $L$ is uniquely determined, and is called the \textbf{generalized Riemann integral} of $f$ over $[a,b]$.
+
+The reason that this is called a generalized Riemann integral is that, in the special case where $\delta (x) = [x - y, x + y]$ for some number $y$, we recover the Riemann integral as a special case.
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{riemann.eps}
+\caption{Riemann sum over a $\delta$-fine partition}
+\end{center}
+\end{figure}
+
+\subsection{Acknowledgement:}
+
+{\bf The PM entry on the `generalized Riemann integral' is owned by Raymond Puzio, Oscar Randal-Williams, Steve Cheng.}
+
+
+\section{Gauge Group}
+Let us start with two vector bundles $ E $ and $ F $ over a space $ B $
+\begin{equation*}
+E = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \mathbb{R}^{n} \Bigr ) /\{g_{\alpha \beta} \}
+\end{equation*}
+and
+\begin{equation*}
+F = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \mathbb{R}^{m} \Bigr) /\{h_{\alpha \beta} \}
+\end{equation*}
+
+The first objective is to show how to create a bundle called $ \Hom(E,F) $. There are two different ways to do this. The first way is to observe that since for vector spaces $ V, W $ that $ \Hom(V,W) \cong W \otimes V^{\ast} $ (here just meaning the module of homomorphisms from $ V $ to $ W $) thus if we take the bundle $ \Hom(E,F) := F \otimes E^{\ast} $ then we have that since the fibers $ (F\otimes E^{\ast})_{b} = F_{b} \otimes E^{\ast}_{b} $ we have what we want.
+
+Another way of looking at the creation of the bundle $ \Hom(E,F) $ is to look at representations and what we would ideally like our bundle to look like. If we have that the bundle that represents $ F $ is given by taking the principle $ \Gl (m,\mathbb{R}) $ bundle
+\begin{equation*}
+P_{F} = \Bigl( \coprod_{\alpha} U_{\alpha} \times \Gl(m, \mathbb{R}) \Bigl)/\{h_{\alpha \beta} \}
+\end{equation*}
+and a trivial representation then the bundle afforded by the trivial representation is simply $ F $. The same thing is true with the bundle $ E $. We then have that if we look at the structure group of our proposed new bundle it should be $ \Gl(m,\mathbb{R}) \times \Gl(n,\mathbb{R}) $. The fibers of our proposed new bundle definitely should be $ \Hom(\mathbb{R}^{n},\mathbb{R}^{m}) $ thus we have that the representation we are looking for should take something in our structure group and something in the fiber and give us something new in the fiber. The proposed representation is $ \rho(A,B)(U) = A \circ U \circ B^{-1} $. Then looking at the bundle associated to the representation of $ \rho $ gives us that if
+\begin{equation*}
+P = P_{F} \times P_{E} = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \Gl(m, \mathbb{R}) \times \Gl(n,\mathbb{R}) \Bigr)/\{h_{\alpha \beta} \times g_{\alpha \beta} \}
+\end{equation*}
+then
+\begin{equation*}
+\Hom(E,F) \equiv P \times_{\rho} \Hom(\mathbb{R}^{n},\mathbb{R}^{m})
+\end{equation*}
+we can similarly define
+\begin{equation*}
+\Aut(E) = P_{E} \times_{\rho} \Gl(n,\mathbb{R})
+\end{equation*}
+
+The group of sections of $ \Aut(E) $ is called the \emph{gauge group}. It is a group since we have that if $ (f,f^{\prime}) $ is a section of $ \Aut(E) $ and $ (\tau,\tau^{\prime}) $ is also a section of $ \Aut(E) $ then we have a group operation given by composition:
+\begin{equation*}
+\xymatrix{
+E \ar[r]^{\tau} \ar[d]^{\pi} & E \ar[r]^{f} \ar[d]^{\pi} & E \ar[d]^{\pi} \\
+B \ar[r]^{\tau^{\prime}} & B \ar[r]^{f^{\prime}} & B
+}
+\end{equation*}
+The fact that these bundle maps are isomorphisms of bundles gives the existence of an inverse. The reason for this is that for each section $ (f,f^{\prime}) $, $ E_{b} \cong E_{f^{\prime}(b)} $ since $ f_{b} $ is a vector space isomorphism. Thus we now have that if we look at the bundle map given by taking $ \Bigl (f^{-1}, (f^{\prime})^{-1}) \Bigr ) $ (where $ f^{-1} $ means $ (f_{b})^{-1} $ for each $ b \in B $). Associativity is clear by composition of functions being associative and the identity map acts as the identity element.
+
+{\bf The PM entry on the  gauge group is owned by Stephen Maguire, Warren Buck.}
+
+\begin{thebibliography}{9}
+
+\bibitem{NR}
+Nicolai Reshitikhin, Lectures on quantization of gauge systems (pdf). Quantized gauge system $http://staff.science.uva.nl/~nresheti/Holb-Quant-Gauge.pdf$
+(An introduction to concepts in the quantization of gauge theories}
+
+\bibitem{MH95}
+Marc Henneaux, Claudio Teitelboim, Quantization of gauge systems. Princeton University Press.
+(A standard textbook on the BV-BRST formalism for the quantization of gauge systems.) 
+$http://www.ulb.ac.be/sciences/ptm/pmif/membres/henneaux.html$ and $http://arXiv.org/ps/hep-th/9405109$
+Commun.Math.Phys.174:57-92,1995
+
+\bibitem{GB-FH-MH94}
+G. Barnich, F. Brandt, M. Henneaux.. 1994. Local BRST cohomology in the antifield formalism: I. General theorems
+Commun.Math.Phys.174:57-92,1995
+(Submitted to arXiv on 17 May 1994 (v1), last revised 13 Jun 1994 (this version, v2))
+
+\bibitem{MH85}
+M. Henneaux. 1985. Hamiltonian Form of the Path Integral for Theories with a Gauge Freedom. Physics Reports, 126:1-66 (1985).
+
+\bibitem{Dan Freed}
+Dan Freed. Dirac charge quantization and generalized differential cohomology. (A discussion of Abelian higher-gauge theory in terms of {\em differential cohomology})
+
+\bibitemAV}
+Alessandro Valentino. Differential cohomology and quantum gauge fields (pdf)
+
+\bibitem(USnlab)
+See also: \PMlinkexternal{USnLab}{http://ncatlab.org/nlab/show/gauge+theory} (Revised and published on December 21, 2011 01:08:09 by Urs Schreiber (83.91.122.110)-$http://ncatlab.org/nlab/show/gauge+theory$);
+
+\end{bibliography}
+\subsection{References}
+
+MARC HENNEAUX  -  Selected publications
+E10, BE10 and arithmetical chaos in superstring cosmology.
+T. Damour and M. Henneaux.
+Phys. Rev. Lett. 86, 4749-4752  (2001),   e-Print Archive: hep-th/0012172.
+
+Local BRST Cohomology in the Antifield Formalism : I. General Theorems.
+G. Barnich, F. Brandt and M. Henneaux. Commun. Math. Phys. 174, 57-92 (1995),  e-Print Archive: $http://arXiv.org/abs/hep-th/9405109$.
+
+Geometry of the 2+1 Black Hole. 
+M. Barboux, M. Henneaux, C. Teitelboim and J. Zanelli. 
+Phys.Rev. D48 (1993) 1506-1525,  e-Print Archive: gr-qc/9302012.
+
+Central Charges in the Canonical Realization of Asymptotic Symmetries : An example from Three-Dimensional Gravity.   
+J. D. Brown and M. Henneaux.
+Commun. Math. Phys. 104, 207-226 (1986).
+
+Hamiltonian Form of the Path Integral for Theories with a Gauge Freedom.
+M. Henneaux, Physics Reports 126, 1-66 (1985).
+
+\subsection{Abstracts}
+
+{\em Establishes ``general theorems on the cohomology $H^*(s|d)$ of the BRST differential modulo the spacetime exterior derivative, acting in the algebra of local $p$-forms depending on the fields and the antifields (=sources for the BRST variations). It is shown that $H^{-k}(s|d)$ is isomorphic to $H_k(\delta |d)$ in negative ghost degree $-k\ (k>0)$, where $\delta$ is the Koszul-Tate differential associated with the stationary surface. The cohomological group $H_1(\delta |d)$ in form degree $n$ is proved to be isomorphic to the space of constants of the motion, thereby providing a cohomological reformulation of Noether theorem. More generally, the group $H_k(\delta|d)$ in form degree $n$ is isomorphic to the space of $n-k$ forms that are closed when the equations of motion hold. The groups $H_k(\delta|d)$ $(k>2)$ are shown to vanish for standard irreducible gauge theories. The group $H_2(\delta|d)$ is then calculated explicitly for electromagnetism, Yang-Mills models and Einstein gravity. The invariance of the groups $H^{k}(s|d)$ under the introduction of non minimal variables and of auxiliary."}.
+
+Comments:       48 pages LaTeX file, ULB-PMIF-94/06 NIKEF-H 94-13 (minor changes in section 10)
+Subjects:       High Energy Physics - Theory (hep-th)
+Journal reference:      Commun.Math.Phys.174:57-92,1995
+DOI:    10.1007/BF02099464
+Cite as:        arXiv:hep-th/9405109v2
+
+%%%%%
+%%%%%
+\end{document}

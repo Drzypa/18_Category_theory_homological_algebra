@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstantFunctor}
+\pmcreated{2013-03-22 17:35:55}
+\pmmodified{2013-03-22 17:35:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{constant functor}
+\pmrecord{10}{40012}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories.  A \emph{constant functor} from $\mathcal{C}$ to $\mathcal{D}$ is a functor $k:\mathcal{C\to D}$ such that there is an object $A\in \mathcal{D}$ such that 
+\begin{itemize}
+\item for all objects $X$ in $\mathcal{C}$, $k(X)=A$, and
+\item for all morphisms $X\to Y$ in $\mathcal{C}$, $k(X\to Y)=1_A$, the identity morphism of $A$. 
+\end{itemize}
+To see that this is indeed a functor, we merely need to verify that $$k\big((X\to Y)\circ (Y\to Z)\big)=k(X\to Y)\circ k(Y\to Z).$$  But this is obvious, as the left hand side is $k(X\to Z)=1_A$, while the right hand side is $1_A\circ 1_A=1_A$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+For the constant functor $k$ considered above, the object $A$ is the \emph{fixed value} of $k$.  To identify $k$ with $A$, we often write $k_A:=k$, or simply $A$ when no confusion arises.
+\item
+Composing a functor with a constant functor gives us a constant functor.  More precisely, let $k_A:\mathcal{C\to D}$ be the constant functor with fixed value $A$.  If $F:\mathcal{B\to C}$ is a functor, then $k_A\circ F:\mathcal{B\to D}$ is the constant functor $(k\circ F)_A$ with fixed value at $A$.  Moreover, if $G:\mathcal{D\to E}$ is a functor, then $G\circ k_A:\mathcal{C\to E}$ is the constant functor $(G\circ k)_{G(A)}$ valued at $G(A)$.
+\item
+Given any functor $T:\mathcal{C\to D}$, any natural transformation $\tau_A: k_A\dot{\to} T$ takes any object $X\in \mathcal{C}$ to a morphism $A\to T(X)$, and, for any morphism $\alpha: X\to Y$ in $\mathcal{C}$, a commutative triangle 
+$$\xymatrix@R=7pt@C=1.5cm{
+& T(X) \ar[dd]^{T(\alpha)} \\
+A \ar[dr] \ar[ur] & \\
+& T(Y)
+}
+$$ 
+in $\mathcal{D}$.  Similarly, any natural transformation $\sigma_A:T\dot{\to} k_A$ takes any object $X$ to $T(X)\to A$ and any morphism $\alpha: X\to Y$ to a commutative triangle
+$$\xymatrix@R=7pt@C=1.5cm{
+T(X) \ar[dd]_{T(\alpha)} \ar[dr] & \\
+& A \\
+T(Y) \ar[ur] &
+}
+$$
+\item
+If $\alpha:A\to B$ is any morphism in $\mathcal{D}$, then the natural transformation $\tau:k_A\dot{\to} k_B$ given by sending every object $X\in \mathcal{C}$ to the morphism $\tau_X: A\to B:=\alpha$ can be thought of as a ``constant'' natural transformation, since, for any morphism $\beta:X\to Y$ in $\mathcal{C}$, the commutative diagram 
+$$
+\xymatrix@R=1.25cm@C=2cm{
+k_A(X) \ar[d]_{k_A\beta} \ar[r]^{\tau_X} & \ar@{}[dr]|{=} k_B(X) \ar[d]^{k_B\beta} & A \ar[d]_{1_A} \ar[r]^{\alpha} & B \ar[d]^{1_B} \\
+k_A(Y) \ar[r]^{\tau_Y} & k_B(Y) & A \ar[r]^{\alpha} & B
+}
+$$
+reduces to $\alpha$.  
+\item
+As above, denote $\tau$ by $\tau_{\alpha}$.  Let $\sigma_A: T\dot{\to} k_A$ be a natural transformation.  Then the transformation $\tau_{\alpha}\circ \sigma_A:T\dot{\to} k_B$ sends any object $X$ in $\mathcal{C}$ to the morphism $$T(X)\to A \stackrel{\alpha}{\to} B$$ in $\mathcal{D}$, and any morphism $\beta:X\to Y$ to the commutative diagram
+$$\xymatrix@R=7pt@C=1.5cm{
+T(X) \ar[dd]_{T(\beta)} \ar[dr] & & \\
+& A \ar[r]^{\alpha} & B \\
+T(Y) \ar[ur] & &
+}
+$$
+For any natural transformation $\gamma_B: k_B\dot{\to} T$, the composition $\sigma_B\circ \tau_{\alpha}$ works similarly.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Ma}S. Mac Lane, \emph{Categories for the Working Mathematician} (2nd edition), Springer-Verlag, 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

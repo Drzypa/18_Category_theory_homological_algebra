@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AttachingPullbackSquares}
+\pmcreated{2013-03-22 17:09:07}
+\pmmodified{2013-03-22 17:09:07}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{attaching pullback squares}
+\pmrecord{7}{39461}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A30}
+\pmrelated{CWComplexDefinitionRelatedToSpinNetworksAndSpinFoams}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\newcommand{\from}{\leftarrow}
+\begin{document}
+Pullback squares can be attached together to form larger pullback
+squares.  The following proposition describes the main step involved
+in this attaching procedure.
+
+\begin{proposition*}
+Let a commutative diagram
+\[\xymatrix{
+A\ar[r]\ar[d] & B\ar[r]\ar[d] & C\ar[d] \\
+D\ar[r]       & E\ar[r]       & F
+}\]
+be given.
+
+Assume that $B$ is a pullback for $E\to F\from C$.  Then the following
+are equivalent:
+
+\begin{itemize}
+\item
+$A$ is a pullback for $D\to E\from B$.
+
+\item
+$A$ is a pullback for $D\to F\from C$, where $D\to F$ is the composition $D\to E\to F$.
+\end{itemize}
+\end{proposition*}
+
+\begin{proof}
+
+First assume that $A$ is a pullback for $D\to E\from B$.  Let $Z$ be
+the vertex of a limiting cone $D\from Z\to C$ over $D\to F\from C$.
+We must find a unique filler for the diagram
+\[\xymatrix{
+Z\ar[rdd]\ar[rrrd]\ar@{.>}[rd] &               &               &         \\
+                               & A\ar[r]\ar[d] & B\ar[r]\ar[d] & C\ar[d] \\
+                               & D\ar[r]       & E\ar[r]       & F
+}\]
+If we let $Z\to E$ denote the composition $Z\to D\to E$, then $Z$ is
+the vertex of a limiting cone $E\from Z\to C$ over $E\to F\from C$.
+Since $B$ is a pullback for $E\to F\from C$, it follows that $Z$ must
+factor uniquely through $B$, that is, there is a unique filler $Z\to
+B$ for the diagram
+\[\xymatrix{
+Z\ar[rdd]\ar[rrrd]\ar@{.>}[rrd] &               &               &         \\
+                                &               & B\ar[r]\ar[d] & C\ar[d] \\
+                                & D\ar[r]       & E\ar[r]       & F
+}\]
+But now observe that $D\from Z\to B$ is a limiting cone over $D\to
+E\from B$.  Since we assumed that $A$ is a pullback for $D\to E\from
+B$, we find that $Z$ must factor through $A$.  The commutativity of
+the intermediate diagrams implies that this filler $Z\to A$ completes
+\[\xymatrix{
+Z\ar[rdd]\ar[rrrd]\ar[rrd]\ar@{.>}[rd] &               &               &         \\
+                                       & A\ar[r]\ar[d] & B\ar[r]\ar[d] & C\ar[d] \\
+                                       & D\ar[r]       & E\ar[r]       & F
+}\]
+to a commutative diagram.  Hence $A$ is a pullback for $D\to F\from C$.
+
+Now we must prove the converse.  The reasoning is similar.  Assume
+that $A$ is a pullback for $D\to F\from C$.  Suppose $Z$ is the vertex
+of a limiting cone $D\from Z\to B$ over $D\to E\from B$.  By composing
+$Z\to B$ with $B\to C$, we get that $D\from Z\to C$ is a limiting cone
+over $D\to F\from C$.  Applying the assumption that $A$ is a pullback
+from $D\to F\from C$, it follows that there is a unique filler $Z\to
+A$ for the diagram
+\[\xymatrix{
+Z\ar[rdd]\ar[rrrd]\ar@{.>}[rd] &               &               &         \\
+                               & A\ar[r]\ar[d] & B\ar[r]\ar[d] & C\ar[d] \\
+                               & D\ar[r]       & E\ar[r]       & F
+}\]
+Since $Z\to C$ is just the composition $Z\to B\to C$, we conclude that in fact $Z\to A$ is the unique filler
+for the diagram
+\[\xymatrix{
+Z\ar[rdd]\ar[rrd]\ar@{.>}[rd] &               &         \\
+                              & A\ar[r]\ar[d] & B\ar[d] \\
+                              & D\ar[r]       & E       
+}\]
+Hence $A$ is a pullback for $D\to E\from B$.
+\end{proof}
+
+The left-to-right half of this proposition states that if two
+pullback squares are attached along a common edge, the outer rectangle
+of the resulting commutative diagram is also a pullback square.  The
+right-to-left half says that if two commutative squares are attached
+so that the outer rectangle and the right square are both pullback
+squares, then the left square is a pullback square too.  It is
+important to note what this does \emph{not} say.  One might ask
+whether we could assume instead that the outer rectangle and the
+\emph{left} square are pullback squares and obtain that the right
+square is a pullback square.  In this case we would need to find a
+filler for the diagram
+\[\xymatrix{
+Z\ar[rdd]\ar[rrd]\ar@{.>}[rd] &               &         \\
+                              & B\ar[r]\ar[d] & C\ar[d] \\
+                              & E\ar[r]       & F
+}\]
+
+In order to apply the assumption that the outer rectangle is a
+pullback square, we would need to find a morphism $Z\to D$, and to be
+able to exploit the commutativity of the diagram, this morphism must
+be compatible with $Z\to E$ above.  These requirements together amount
+to demanding that there is a lifting 
+\[\xymatrix{
+                    & D\ar[d] \\
+Z\ar[r]\ar@{.>}[ur] & E
+}\]
+of $Z\to E$ to a morphism $Z\to D$.  But not every morphism can be
+lifted, so this task is impossible in general.
+
+\PMlinkescapeword{commutative}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{edge}
+\PMlinkescapeword{factor}
+\PMlinkescapeword{moment}
+\PMlinkescapeword{order}
+\PMlinkescapeword{outer}
+\PMlinkescapeword{rectangle}
+\PMlinkescapeword{right}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{square}
+\PMlinkescapeword{squares}
+
+%%%%%
+%%%%%
+\end{document}

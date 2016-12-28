@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfOrthogonalityOnMorphisms}
+\pmcreated{2013-03-22 18:29:42}
+\pmmodified{2013-03-22 18:29:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of orthogonality on morphisms}
+\pmrecord{5}{41179}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A32}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+This entry lists and proves some of the basic properties of the orthogonality relations on morphisms.
+
+\begin{prop} For an arbitrary $f$, $f\perp g$ for any isomorphism $g$.  Dually, if $g$ is arbitrary, then $f\perp g$ for any isomorphism $f$.  \end{prop}
+
+\begin{proof}
+Suppose $x\circ f = g\circ y$, and $z\circ g=1_C$ and $g\circ z=1_D$.  Then by defining $h:=z \circ x$, we get $h\circ f= z\circ x \circ f= z \circ g\circ y = 1_C \circ y = y$, and $g\circ h= g\circ z\circ x=1_D \circ x = x$.  This shows the existence of $h$.
+
+If $h':B\to C$ is another morphism such that $h'\circ f = y$ and $g\circ h'=x$.  Then $h = z\circ x = z \circ g\circ h' = 1_C \circ h' = h'$, showing that $h$ is unique.
+
+The proof of the dual statement is similar.
+\end{proof}
+
+\begin{prop} If $f\perp f$, then $f$ is an isomorphism. \end{prop}
+\begin{proof}
+This follows from the commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^f \ar[d]_{1_A} & B \ar[d]^{1_B} \ar@{.>}[dl]|g \\ A \ar[r]_f & B}$$
+So we get a ``diagonal'' morphism $g:B\to A$ making the resulting diagram commutative again.  So, $f\circ g=1_B$ and $g\circ f=1_A$, or $f$ is an isomorphism.
+\end{proof}
+
+In addition, $\perp$ preserves morphism composition, in the following sense:
+
+\begin{prop} Suppose $(g,h)$ is a composable pair of morphisms ($h\circ g$ exists).  If $f\perp g$ and $f\perp h$, then $f\perp (h\circ g)$.  Similarly, if $g\perp f$ and $h\perp f$, then $(h\circ g)\perp f$. \end{prop}
+\begin{proof}
+Suppose $f:A\to B$, $g:C\to D$ and $h:D\to E$ are morphisms as described above, and have a commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^f \ar[d]_x & B \ar[d]^y="1" &
+A \ar[rr]^f \ar[d]_x="2" \ar[dr]^{g\circ x} & & B \ar[d]^y 
+\\ C \ar[r]_{h\circ g} & E & 
+C \ar[r]_g & D \ar[r]_h & E
+\ar@{}"1";"2"|{=}
+}$$
+Because $f\perp h$, we get a unique morphism $s:B\to D$ and a commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^f \ar[d]_{g\circ x} & B \ar[d]^y="1" \ar@{.>}[dl]|s &
+A \ar[r]^f \ar[d]_x="2" & B \ar@{.>}[d]^s="3" \ar[dr]^y & 
+\\ D \ar[r]_h & E &
+C \ar[r]_g & D \ar[r]_h & E
+\ar@{}"1";"2"|{=}
+\ar@{}"2";"3"|{\mbox{I}}
+}$$
+Because $f\perp g$, we have a unique morphism $t:B\to C$, so the commutative square I above becomes
+$$\xymatrix@+=1.5cm{A \ar[r]^f \ar[d]_x & B \ar[d]^s \ar@{.>}[dl]|t \\ C \ar[r]_g & D }$$
+Since $(h\circ g)\circ t = h\circ (g\circ t) = h\circ s = y$, we get a commutative diagram
+$$\xymatrix@+=1.5cm{A \ar[r]^f \ar[d]_x & B \ar[d]^y \ar@{.>}[dl]|t \\ C \ar[r]_{h\circ g} & E }$$
+showing that $f\perp (h\circ g)$.  The dual statement of this is proved similarly.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

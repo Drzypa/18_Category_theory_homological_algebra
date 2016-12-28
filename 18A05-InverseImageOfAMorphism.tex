@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InverseImageOfAMorphism}
+\pmcreated{2013-03-22 18:20:37}
+\pmmodified{2013-03-22 18:20:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{inverse image of a morphism}
+\pmrecord{9}{40977}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmdefines{inverse image}
+\pmdefines{inverse coimage}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coim}{\operatorname{coim}}
+\begin{document}
+Let $f:A\to B$ be a morphism in a category $\mathcal{C}$.  Let $\im(f)$ be the image of $f$ and $i:\im(f)\to B$ be a  representing monomorphism.  The inverse image of $f$ is the pullback of $f:A\to B$ and $i: \im(f) \to B$:
+$$\xymatrix@+=3pc{
+{C}\ar[r] \ar[d] &{A}\ar[d]^{f} \\
+{\im(f)}\ar[r]^i &{B}
+}
+$$
+$C$ is sometimes denoted by $f^{-1}(B)$.  Since the diagram is a pullback and $i$ is monomoprhic, the inverse image $f^{-1}(B)$ is a subobject of $A$ (see \PMlinkname{this entry}{PullbackOfAMonomorphismIsAMonomorphism} for more detail.)
+
+For example, in $\textbf{Set}$, the category of sets, the inverse image, in the sense above, of a morphism $f:A\to B$ is just the \PMlinkname{inverse image}{InverseImage} of $f$ as a function: clearly, $$f^{-1}(B)=\lbrace a\in A\mid f(a)\in B\rbrace$$ is a set (a subset of $A$).  Let $j:f^{-1}(B)\to A$ be the canonical inclusion, and $\overline{f}: f^{-1}(B)\to \im(f)$ be the induced function by restricting the domain of $f$ to $f^{-1}(B)$ and the range to $\im(f)$.  The diagram above is clearly commutative.  Suppose there is a set $S$ and two functions $g:S\to A$ and $h:S\to \im(f)$ such that $f\circ g= i\circ h$.  Define $k:S\to f^{-1}(B)$ by $k(s)=g(s)$.  This is a well-defined function, since $f(g(s))=i(h(s))=h(s)\in B$, or $g(s)\in f^{-1}(B)$.  Furthermore, $j(k(s))=j(g(s))=g(s)$, and $\overline(f)(k(s))=f(k(s))=f(g(s))=i(h(s))=h(s)$.  Finally, it is easy to see that $k$ is unique.
+
+\textbf{Remark}.  The \emph{inverse coimage} of a morphism is dually defined.
+
+\begin{thebibliography}{9}
+\bibitem{cf} C. Faith \emph{Algebra: Rings, Modules, and Categories I}, Springer-Verlag, New York (1973)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

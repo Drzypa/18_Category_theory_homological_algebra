@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientCategory}
+\pmcreated{2013-03-22 18:31:11}
+\pmmodified{2013-03-22 18:31:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{quotient category}
+\pmrecord{23}{41208}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A32}
+\pmrelated{QuotientCategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Quotient categories are a generalization of quotient structures found in many mathematical systems, such as sets and groups.  For example, if we have a set $S= \lbrace a,b,c \rbrace$, by identifying $a$ and $c$ as being the ``same'', we obtain a two-element set $\lbrace \lbrace a,c\rbrace ,b\rbrace$, called the quotient set of $A$ by identifying $a$ and $b$.  Here is a more useful example: take the set $S$ of integers.  Identify integers $m$ and $n$ if their difference is divisible by $2$.  Then we obtain a quotient of $S$ consisting of two elements: the set of odd numbers and the set of even numbers.
+
+In both of the examples above, we start with a set $S$ and a binary relation $R$ (in the first example, $R$ is the singleton $\lbrace (a,b)\rbrace$, and in the second, $R$ consists of pairs of integers $(m,m\!+\!2n)$, where $m,n$ are integers) on $S$.  The quotient $Q$ of $S$ by $R$ then satisfies the following functional properties: 
+\begin{enumerate}
+\item
+there is an onto map $p:S\to Q$ such that $aRb$ implies $p(a)=p(b)$, and 
+\item
+if we have another onto map $q:S\to T$ satisfying 1 above, then there is a unique map $f:Q\to T$ such that $f\circ p=q$.
+\end{enumerate}
+
+The two properties above are exactly what we need to define the quotient of a category $\mathcal{C}$ by a binary relation $R$ on $\mathcal{C}$.  But what is $R$ precisely?  We define a binary relation on a category $\mathcal{C}$ to be a binary relation $R$ on $\operatorname{Mor}(\mathcal{C})$, the class of morphisms of $\mathcal{C}$.  In other words, $R$ is a class consisting of pairs $(f,g)$ where $f$ and $g$ are morphisms in $\mathcal{C}$.  If $(f,g)$ is in $R$, we write $fRg$.
+
+\textbf{Definition}.  Let $\mathcal{C}$ be a category and $R$ a binary relation on $\mathcal{C}$.  Then a \emph{quotient} of $\mathcal{C}$ by $R$ is a pair $(\mathcal{Q},P)$ where $\mathcal{Q}$ is a category and $P:\mathcal{C} \to \mathcal{Q}$ is a functor, satisfying the following two conditions:
+\begin{enumerate}
+\item $P$ is a surjection on objects; that is, for every object $Q$ in $\mathcal{Q}$, there is a object $C$ in $\mathcal{C}$, such that $P(C)=Q$.
+\item if $fRg$, then $P(f)=P(g)$,
+\item if $(\mathcal{D},F)$ is another pair satisfying conditions 1 and 2 above, then there is a unique functor $G:\mathcal{Q}\to \mathcal{D}$ such that $G\circ P = F$.
+\end{enumerate}
+It is easy to see that $\mathcal{Q}$ is unique up to natural isomorphism, if it exists.  The category $\mathcal{Q}$ is called the \emph{quotient category} of $\mathcal{C}$ by $R$, written $\mathcal{C}/R$.
+
+To see how $\mathcal{C}/R$ may possibly be constructed, we make the following few observations:
+\begin{itemize}
+\item First, if we take the reflexive, symmetric, and transitive closure $R^*$ of $R$ (so that $R^*$ is the smallest equivalence relation containing $R$), then $f R^* g$ implies $P(f)=P(g)$.  
+\item In addition, if $f_1 R^* g_1$ and $f_2 R^* g_2$ such that $f_1 \circ f_2$ and $g_1\circ g_2$ are both defined, then $P(f_1\circ f_2) = P(g_1\circ g_2)$.  This means that we may reduce $R^*$ to a congruence relation $R'$ with respect to morphism composition.  Once again, $f R' g$ implies $P(f)=P(g)$.
+\item Furthermore, if $f:A\to B$ and $g:C\to D$ and $f R' g$, then $P(f)=P(g)$ forces $P(A)=P(C)$ and $P(B)=P(D)$.  In other words, the domains of $f$ and $g$ are identified under $P$.  The same is true for the corresponding codomains.  This implies that, if $[f]$ denotes the equivalence class of $f$ under $R'$, then the domains (codomains) of all $g\in [f]$ are identified as one object in $\mathcal{C}/R$, if it exists.  
+\item As a result, all the corresponding identity morphisms are identified as well, for if $P(A)=P(B)$, then $P(1_A)=1_{P(A)} = 1_{P(B)}= P(1_B)$.  This means we can further reduce $R'$ to $R''$ by such identifications.  Note that $R''$ is still a congruence relation.
+\end{itemize}
+Note, however, the construction above does not guarantee that $\mathcal{C}/R$ in fact exists.  This is mainly due to the identification of objects in $\mathcal{C}$, which may result in blowing up some hom sets into proper classes.  However, if 
+\begin{enumerate}
+\item $R$ is a set, or 
+\item if $f R g$ implies that $f$ and $g$ are parallel (they have the same domain and codomain), 
+\end{enumerate}
+then $\mathcal{C}/R$ exists.  In the first case, every equivalence class with respect to $R''$ is a set, so that hom sets remain sets.  In the second, $R''$ is not even needed, so that no two objects are identified, and there is no danger in hom sets being blown up into classes.  In fact, the second condition is how \cite{Ma} defines a quotient category.  Note that in this case, $P$ is a bijection on objects between $\mathcal{C}$ and $\mathcal{C}/R$.
+
+In the following discussion, we denote objects and morphisms in $\mathcal{C}/R$ by $[A]_R$ and $[f]_R$ (images of $A$ and $f$ under $P$), or simply $[A]$ and $[f]$ when there is no confusion.
+
+Suppose $\mathcal{C}$ is a category with a binary relation $R$ on its morphisms.  Below are some examples, as well as a non-example:
+\begin{enumerate}
+\item Suppose $\mathcal{C}$ is generated by four objects $A,B,C,D$ and three morphisms $f:A\to B$, $g:C\to D$, and $h: B\to C$.  Furthermore, suppose $R=\lbrace (f,g)\rbrace$.  Then $\mathcal{C}/R$ exists and is generated by objects $X=[A]=[C]$ and $Y=[B]=[D]$, and morphisms $\alpha=[f]:X\to Y$ and $\beta=[h]:Y\to X$.  Note that whereas $\mathcal{C}$ has only a finite number of morphisms ($f,g,h$ and four identities), the quotient $\mathcal{C}/R$ has infinitely many.  For example, on $X$, the morphisms are $(\beta\alpha)^n$, for any non-negative integer $n$.
+\item If $R$ is defined so that $f R g$ iff $f$ is parallel to $g$, then $R$ is easily seen to be a congruence relation.  Then $\mathcal{C}/R$ is the category whose objects are objects of $\mathcal{C}$, such that each hom set has at most one element.  As a result, if both $\hom(A,B)$ and $\hom(B,A)$ are non-empty, then $A$ is isomorphic to $B$.
+\item The two examples above are artificial, here's a concrete one: let $\mathcal{C}$ be the category of topological spaces and continuous maps, define $R$ so that $f R g$ whenever $f$ is homotopic to $g$.  Then $\mathcal{C}/R$ is the category of topological spaces with homotopic classes of continuous maps.
+\item Here's an example where $\mathcal{C}/R$ does not exist.  Let $\mathcal{C}$ be a category whose collection of objects is a proper class, and there is a non-identity morphism $h_A$ on each object $A$.  Define $R$ so that $f R g$ iff there are objects $A,B$ with $f=1_A$ and $g=1_B$.  Then if $\mathcal{C}/R$ were to exist, it would have only one object, say $X$.  Furthermore, $\hom(X,X)$ contains a morphism $[h_A]$ for every $A$ in $\mathcal{C}$.  Since $[h_A]=[h_B]$ iff $A=B$, $\hom(X,X)$ is not a set.  Therefore, $\mathcal{C}/R$ is not well-defined.
+\end{enumerate}
+
+\begin{thebibliography}{99}
+\bibitem{Ma} S.~Mac~Lane. {\it Categories for the Working Mathematician}, 2nd ed. Springer-Verlag, 1997
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

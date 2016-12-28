@@ -1,0 +1,322 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedVanKampenTheoremsHDVKTHigherDimensional}
+\pmcreated{2013-03-22 18:10:40}
+\pmmodified{2013-03-22 18:10:40}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{generalized Van Kampen theorems (HD-VKT), higher dimensional}
+\pmrecord{76}{40748}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A25}
+\pmclassification{msc}{18A20}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{08A99}
+\pmclassification{msc}{55U35}
+\pmsynonym{VKT}{GeneralizedVanKampenTheoremsHDVKTHigherDimensional}
+%\pmkeywords{higher dimensional algebra (HDA)}
+%\pmkeywords{van Kampen theorem}
+%\pmkeywords{double groupoids}
+%\pmkeywords{fundamental groupoids}
+\pmrelated{HigherDimensionalAlgebraHDA}
+\pmrelated{GroupoidCategory}
+\pmrelated{NonAbelianTheories}
+\pmrelated{NonAbelianStructures}
+\pmrelated{GeneralizedToposesTopoiWithManyValuedLogicSubobjectClassifiers}
+\pmrelated{CategoricalAlgebras}
+\pmrelated{TopicEntryOnTheAlgebraicFoundationsOfMathematics}
+\pmrelated{JordanBanachAndJordanLieAlgebra}
+\pmdefines{higher dimensional algebra (HDA) homotopies}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Higher dimensional, generalized Van Kampen theorems (HD-GVKT)}
+
+   There are several generalizations of the original van Kampen theorem, such as its 
+extension to crossed complexes, its extension in categorical form in terms of colimits, and 
+its generalization to higher dimensions, i.e., its extension to 2-groupoids, 2-categories and double 
+groupoids \cite{BHKP}.
+
+  With this HDA-GVKT approach one obtains comparatively quickly not only classical results such as the 
+Brouwer degree and the relative Hurewicz theorem, but also \emph{non--commutative} results on 
+second relative homotopy groups, as well as \emph{higher dimensional} results involving the 
+action of, and also presentations of, the \emph{fundamental group}. For example, 
+\emph{the fundamental crossed complex} $\Pi X_*$ of the skeletal filtration of a $CW$--complex $X$ is a 
+useful generalization of the usual cellular chains of the universal cover of $X$. It also 
+gives a replacement for singular chains by taking $X$ to be the geometric realization of a 
+singular complex of a space. Non-Abelian higher homotopy (and homology) results in higher dimensional algebra (HDA) were proven by Ronald Brown that generalize the original van Kampen's theorem for fundamental groups (ordinary homotopy, \cite{kampen1-1933}) to fundamental groupoids (\cite{BR67}) double groupoids, and higher homotopy 
+(\cite{BR-HPJ-SR2k5}); please see also Ronald Brown's presentation of the original van Kampen's theorem at PlanetMath.org \cite{VanKampen-sTheorem}.
+
+ Related research areas are: algebraic topology, higher dimensional algebra (HDA) , higher dimensional homotopy, non-Abelian homology theory, supercategories, axiomatic theory of supercategories, n-categories, lextensive categories, topoi/toposes, double groupoids, omega-groupoids, crossed complexes of groupoids, double categories, double algebroids,
+categorical ontology, axiomatic foundations of Mathematics, and so on.
+
+ Its potential for applications in quantum algebraic topology (QAT), and especially in 
+non-Abelian quantum algebraic topology (NAQAT) related to QFT, HQFT, TQFT,
+quantum gravity and supergravity (quantum field) theories has also been recently
+pointed out and explored (\cite{BGB2k7b, BBGG1, Bgb2}).
+
+\subsection{Generalized van Kampen theorem (GvKT)} 
+
+   Consideration of a set of base points leads next to the following theorem for \emph{the fundamental groupoid}.
+
+\subsubsection{The van Kampen theorem for the fundamental groupoid, $\pi_1(X,X_0)$, \cite{BR67}}
+
+
+  \emph{Let the space $X$ be the union of open sets $U,V$ with intersection $W$, and let $X_0$ 
+be a subset of $X$ meeting each path component of $U,V,W$. Then:}
+
+\begin{itemize}
+\item (C) (connectivity)  {\em $X _0$ meets each path component of $X$, and}
+\item (I) (isomorphism)  {\em the diagram of groupoid morphisms induced by inclusions:}
+\end{itemize}
+
+$$\xymatrix{{\pi_1(W,X_0)}\ar [r]^{\pi_1(i)}\ar[d]_{\pi_1(j)}
+&\pi_1(U,X_0)\ar[d]^{\pi_1(l)} \\
+{\pi_1(V,X_0)}\ar [r]_{\pi_1(k)}& {\pi_1(X,X_0)} }
+$$
+
+\emph{is a pushout of groupoids}
+ 
+\subsubsection{Remarks}
+
+ When extended to the context of double groupoids this theorem leads to a higher dimensional
+generalization of the Van Kampen theorem, the \PMlinkexternal{HD-GVKT}{http://fs512.fshn.uiuc.edu/QAT.pdf},
+\cite{BHKP}. 
+
+ Note that this theorem is a generalization of an analogous Van Kampen theorem for the 
+\PMlinkname{fundamental group}{VanKampensTheorem}, \cite{BR67, kampen1-1933}. From this theorem, one can compute a particular fundamental group $\pi_1(X,x_0)$ using combinatorial information on the graph of intersections of path 
+components of $U,V,W$, but for this it is useful to develop the algebra of groupoids. Notice 
+two special features of this result:
+
+\begin{itemize}
+\item (i) The computation of the \emph{invariant} one wants to obtain, 
+\emph{the fundamental group}, is obtained from the computation of a larger structure, and so part of the 
+work is to give \emph{methods for computing the smaller structure from the larger one}. This 
+usually involves non canonical choices, such as that of a maximal tree in a connected graph. 
+The work on applying groupoids to groups gives many examples of such methods 
+\cite{HPJ2k5, BR-HPJ-SR2k5}.
+
+\item (ii) The fact that the computation can be done at all is surprising in two ways: 
+(a) The fundamental group is computed {\it precisely}, even though the information for it uses input in two
+dimensions, namely 0 and 1. This is contrary to the experience in homological algebra and algebraic topology, where the interaction of several dimensions involves exact sequences or spectral sequences, which give information only up to extension,  and (b) the result is a \emph{non commutative invariant}, which is usually even more difficult to 
+compute precisely.
+\end{itemize}
+
+\subsubsection{Essential data from ref. \cite{BHKP}}
+The reason for this success seems to be that the fundamental groupoid $\pi_1(X,X_0)$ contains 
+information in \emph{dimensions 0 and 1}, and therefore it can adequately reflect the geometry 
+of the intersections of the path components of $U,V,W$ and the morphisms induced by the 
+inclusions of $W$ in $U$ and $V$. This fact also suggested the question of whether such 
+methods could be extended successfully to \emph{higher dimensions}.
+
+\begin{thebibliography}{9}
+
+\bibitem{BR67}
+R. Brown, Groupoids and Van Kampen's theorem., {\em Proc. London Math. Soc.} (3) 17 (1967) 385-401. 
+
+\bibitem{RBROWN2k6}
+R. Brown, {\em Topology and Groupoids.}, Booksurge PLC (2006).
+
+\bibitem{BHKP}
+R. Brown, K.A. Hardie, K.H. Kamps  and T. Porter, A homotopy double groupoid of a Hausdorff
+space, {\em Theory and Applications of Categories.} \textbf{10} (2002) 71-93.
+ 
+\bibitem{BR-AR71-2k5}
+R. Brown and A. Razak, A Van Kampen theorem for unions of non-connected spaces, {\em Archiv. Math.} \textbf{42} (1984) 85-88. 
+
+\bibitem{brownjan:vkt}
+R.~Brown and G.~Janelidze.:1997, {\em Van {K}ampen theorems for categories of covering morphisms in lextensive categories\/}, \emph{J. Pure Appl. Algebra}, \textbf{119}:  255--263, ISSN 0022-4049.
+
+\bibitem{HPJ2k5}
+P.J. Higgins, {\em Categories and Groupoids}, van Nostrand: New York, 1971; also {\em Reprints of Theory and Applications of Categories}, No. 7 (2005) pp 1-195.
+
+\bibitem{BR-HPJ-SR2k5}
+Brown R., Higgins P.J., Sivera, R. (2008), Non-Abelian algebraic topology, (in preparation).,
+\PMlinkexternal{available here as a PDF}{http://www.bangor.ac.uk/~mas010/nonab-t/partI010604.pdf};
+\PMlinkexternal{PDFs of other relevant HDA papers }{http://www.bangor.ac.uk/~mas010/nonab-a-t.html}.
+
+\bibitem{VanKampen-sTheorem}
+R. Brown: \PMlinkexternal{VanKampen-sTheorem}{http://planetmath.org/encyclopedia/VanKampensTheorem.html}
+
+\bibitem{BGB2k7b}
+Brown, R., Glazebrook, J. F. and I.C. Baianu.(2007), A Conceptual, Categorical and Higher Dimensional Algebra Framework of Universal Ontology and the Theory of Levels for Highly Complex Structures and Dynamics., \emph{Axiomathes} (17): 321--379.
+
+\bibitem{kampen1-1933}
+van Kampen, E. H. (1933), On the Connection Between the Fundamental
+Groups of some Related Spaces, \emph{Amer. J. Math.} \textbf{55}: 261--267.
+
+\bibitem{BBGG1}
+Baianu I. C., Brown R., Georgescu G. and J. F. Glazebrook.(2006), Complex Nonlinear Biodynamics in Categories, Higher Dimensional Algebra and \L{}ukasiewicz--Moisil Topos: Transformations of Neuronal, Genetic and Neoplastic Networks., \emph{Axiomathes}, \textbf{16} Nos. 1--2: 65--122.
+
+\bibitem{Bggb4}
+Baianu, I.C.,  R. Brown and J. F. Glazebrook.(2007), A Non-Abelian, Categorical Ontology of Spacetimes and Quantum Gravity, {\em Axiomathes}, \textbf{17}: 169-225.
+
+\bibitem{Bgb2}
+Baianu, I. C., Brown, R. and J. F. Glazebrook.(2008), Quantum Algebraic Topology and Field Theories., pp.145,
+\PMlinkexternal{the Monograph's PDF is here available}{http://aux.planetmath.org/files/papers/410/ANAQAT20b.pdf}(\em Preprint).
+ 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

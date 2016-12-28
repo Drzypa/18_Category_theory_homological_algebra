@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Topos}
+\pmcreated{2013-03-22 16:36:02}
+\pmmodified{2013-03-22 16:36:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{topos}
+\pmrecord{18}{38796}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18B25}
+\pmclassification{msc}{14F20}
+\pmclassification{msc}{03G30}
+\pmsynonym{toposes}{Topos}
+\pmsynonym{topoi}{Topos}
+\pmsynonym{Grothendieck topos}{Topos}
+\pmsynonym{elementary topos}{Topos}
+\pmrelated{PowerObject}
+\pmrelated{QuantumLogicsTopoi}
+\pmdefines{Boolean topos}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{categorical}
+\PMlinkescapeword{Boolean}
+
+There are two related kinds of categories which are called \emph{topoi} (or alternatively \emph{toposes}).  First, there is the Grothendieck topos, which was developed by Grothendieck as part of his general reconstruction of algebraic geometry.  Second, there is the elementary topos, which was introduced by Lawvere as a setting for work in categorical logic.  We give a brief overview of each kind of topos.
+
+A \emph{Grothendieck topos} is a category naturally equivalent to the category of sheaves on some site. %(Stub definition...)
+
+An \emph{elementary topos} is a category $\mathcal{T}$ which:
+\begin{itemize}
+\item
+is a Cartesian closed category; and
+
+\item
+has a \PMlinkname{representable subobject functor}{SubobjectClassifier}.
+\end{itemize}
+The first assumption guarantees the existence of finite limits and colimits as well as power objects.  This allows $\mathcal{T}$ to model basic constructions of set theory such as products, disjoint unions, intersections, and powersets.  It also guarantees that $\mathcal{T}$ has a terminal object $1$, which corresponds to a singleton set in $\mathbf{Set}$.  We can model elements of an object $A$ by morphisms $1\to A$.
+
+The second assumption means that $\mathcal{T}$ has a notion of ``truth''.  In particular, $\mathcal{T}$ must have a \emph{truth object} $\Omega$ and a morphism $\top\colon 1\to\Omega$ such that if $m\colon A\to B$ is any monomorphism of $\mathcal{T}$, then there is a unique associated \emph{characteristic morphism} $\chi\colon B\to\Omega$ such that the diagram
+\[\xymatrix{
+A\ar[d]_{m}\ar[r] & 1\ar[d]^{\top} \\
+B\ar[r]^{\chi}    & \Omega
+}\]
+is a pullback square.  Speaking loosely, this says that a subobject of $B$ arises as a collection of elements of $B$ satisfying a particular predicate $\chi$.  The converse of this assumption corresponds to the comprehension axiom of set theory and follows from Cartesian closedness. 
+
+An elementary topos is a \emph{Boolean topos} if its truth object has exactly two elements, ``true'' $\top\colon 1\to\Omega$ and ``false'' $\bot\colon 1\to\Omega$.  It \emph{has choice} (admits the axiom of choice) if every epimorphism is split.  It is a fact that every elementary topos with choice is Boolean.  Note that not every elementary topos has choice.  So elementary topoi can be used to model intuitionistic logic.
+
+The category of sets is the canonical example of a Boolean topos.
+
+\textbf{Remarks.}  
+\begin{itemize}
+\item
+A category $\mathcal{T}$ is a topos iff it is finitely complete and has power objects.
+\item
+If $\mathcal{T}_1$ and $\mathcal{T}_2$ are topoi, so is $\mathcal{T}_1\times \mathcal{T}_2$.
+\item
+If $\mathcal{T}$ is a topos and $A$ is an object of $\mathcal{T}$, then the comma category $\mathcal{T}\downarrow A$ is a topos.
+\item
+Every Grothendieck topos is also an elementary topos.
+\end{itemize}
+
+\begin{thebibliography}{99}
+\bibitem{BaWe} 
+M.~Barr and C.~Wells. {\it Toposes, Triples and Theories}. Montreal: McGill University, 2000.
+
+\bibitem{LaSc}
+J.~Lambek and P.~J.~Scott. {\it Introduction to higher order categorical logic}.  Cambridge University Press, 1986.
+
+\bibitem{Ma}
+S.~Mac~Lane. {\it Categories for the Working Mathematician}, 2nd ed.  Springer-Verlag, 1997
+
+\bibitem{MaMo}
+S.~Mac~Lane and I.~Moerdijk. {\it Sheaves and Geometry in Logic: A First Introduction to Topos Theory}, Springer-Verlag, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

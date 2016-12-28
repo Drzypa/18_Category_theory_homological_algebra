@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdjointFunctor}
+\pmcreated{2013-03-22 12:28:50}
+\pmmodified{2013-03-22 12:28:50}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{adjoint functor}
+\pmrecord{37}{32691}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A40}
+\pmsynonym{left adjoint}{AdjointFunctor}
+\pmsynonym{right adjoint}{AdjointFunctor}
+%\pmkeywords{adjoint functor pairs}
+%\pmkeywords{adjointness}
+%\pmkeywords{adjunction}
+%\pmkeywords{adjoint dynamical systems}
+%\pmkeywords{natural equivalence}
+%\pmkeywords{natural isomorphism}
+%\pmkeywords{adjointness theorems}
+%\pmkeywords{limit and colimit preserving functors}
+\pmrelated{ForgetfulFunctor}
+\pmrelated{UniversalProperty}
+\pmrelated{SimilarityAndAnalogousSystemsDynamicAdjointness2}
+\pmrelated{GaloisConnection}
+\pmrelated{SectionFunctor}
+\pmrelated{NaturalEquivalence}
+\pmrelated{FOUNDATIONSOFMATHEMATICSOVERVIEW}
+\pmdefines{adjoint}
+\pmdefines{adjoint pair}
+\pmdefines{adjunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Hom}{Hom}
+\begin{document}
+\PMlinkescapeword{properties}
+
+Let $\mathcal{C}$ and $\mathcal{D}$ be (small) categories, and let $T:\mathcal{C} \to \mathcal{D}$ and $S:\mathcal{D} \to \mathcal{C}$ be covariant functors. $T$ is said to be a \emph{left adjoint functor} to $S$ (equivalently, $S$ is a \emph{right adjoint functor} to $T$) if there is a natural equivalence
+\[
+\nu\colon \Hom_{\mathcal{D}}(T(-),-) \overset{\cdot}{\longrightarrow} \Hom_{\mathcal{C}}(-,S(-)).
+\]
+Here the functor $\Hom_{\mathcal{D}}(T(-),-)$ is a bifunctor $\mathcal{C}\times\mathcal{D}\to\mathbf{Set}$ which is contravariant in the first variable, is covariant in the second variable, and sends an object $(C,D)$ to $\Hom_{\mathcal{D}}(T(C),D)$.  The functor $\Hom_{\mathcal{C}}(-,S(-))$ is defined analogously.
+
+This definition needs additional explanation.  Essentially, it says that for every object $C$ in $\cal{C}$ and every object $D$ in $\cal{D}$ there is a function 
+\[
+\nu_{C,D} \colon \Hom_{\mathcal{D}}(T(C),D) \overset{\sim}{\longrightarrow} \Hom_{\mathcal{C}}(C,S(D)) 
+\]
+which is a natural bijection of hom-sets.  Naturality means that if $f\colon C'\to C$ is a morphism in $\mathcal{C}$ and $g\colon D\to D'$ is a morphism in $\mathcal{D}$, then the diagram
+\[\xymatrix{
+\Hom_{\mathcal{D}}(T(C),D)\ar[dd]_{(Tf,g)}\ar[rr]^{\nu_{C,D}} &&
+\Hom_{\mathcal{C}}(C,S(D))\ar[dd]^{(f,Sg)} \\ && \\
+\Hom_{\mathcal{D}}(T(C'),D')\ar[rr]^{\nu_{C',D'}} &&
+\Hom_{\mathcal{C}}(C',S(D')) \\
+}\] 
+is a commutative diagram.  If we pick any $h:T(C)\to D$, then we have the equation $$Sg\circ \nu_{C,D}(h)\circ f= \nu_{C',D'}(g\circ h\circ Tf).$$
+%
+%
+% I'm commenting the following out because I moved the mention of the
+% natural transformation before the mention of the naturality of the 
+% bijection.  This allows me to give the functors F_1 and F_2 the more 
+% natural names Hom_D(T(-),-) and Hom_C(-,S(-)).
+%
+%
+%The word ``natural'' in this definition needs some explanation.  We can construct a functor 
+%\begin{align*}
+%\mathcal{F}_1\colon\mathcal{C}\times\mathcal{D}&\to\mathbf{Set} \\
+% (C,D)&\mapsto \Hom_{\mathcal{D}}(T(C),D)
+%\end{align*}
+%and a second functor
+%\begin{align*}
+%\mathcal{F}_2\colon\mathcal{C}\times\mathcal{D}&\to\mathbf{Set} \\
+% (C,D)&\mapsto \Hom_{\mathcal{C}}(C,S(D)).
+%\end{align*}
+%Then the family of bijections $\nu_{C,D}$ should form a natural transformation from $\mathcal{F}_1$ to $\mathcal{F}_2$.
+%
+
+If $T:\mathcal{C}\to\mathcal{D}$ is a left adjoint of $S:\mathcal{D}\to \mathcal{C}$, then we say that the ordered pair $(T,S)$ is an \emph{adjoint pair}, and the ordered triple $(T,S,\nu)$ an \emph{adjunction} from $\mathcal{C}$ to $\mathcal{D}$, written $$(T,S,\nu):\mathcal{C}\to \mathcal{D},$$ where $\nu$ is the natural equivalence defined above.  
+
+An adjoint to a functor is in some ways like an inverse (as in the case of an adjoint matrix); often formal properties about a functor lead to formal properties of its adjoint (for example the right adjoint to a left-exact functor takes \PMlinkescapetext{injectives} to \PMlinkescapetext{injectives}).  An adjoint to any functor is unique up to natural isomorphism.
+
+\textbf{Examples}:
+\begin{enumerate}
+
+\item Let $R$ be a commutative ring, and fix an $R$-module $N$.  Let 
+\[
+{-\otimes N}\colon {R\! -\!\mathbf{mod}}\to {R\! -\!\mathbf{mod}}
+\] 
+be the functor 
+\[
+M\mapsto N\otimes M,
+\] 
+and let
+\[
+{\Hom(N,-)}:{R\! -\!\mathbf{mod}}\to {R\! -\!\mathbf{mod}}
+\] 
+given by 
+\[
+L\mapsto\mathrm{Hom}_R(N,L).
+\]   
+Then one can show that ${-\otimes N}$ is the left adjoint to ${\Hom(N,-)}$.  This pair of adjoint functors is the most commonly used and studied, and astonishingly deep facts spring from this adjoint relationship. 
+
+\item Let $U:\mathbf{Top}\to \mathbf{Set}$ be the forgetful functor (i.e. $U$ takes topological spaces to their underlying sets, and continuous maps to set functions). Then $U$ is right adjoint to the functor $F:\mathbf{Set} \to \mathbf{Top}$ which gives each set the discrete topology.
+
+\item If $U:\mathbf{Grp} \to \mathbf{Set}$ is again the forgetful functor, this time on the category of groups, the functor $F: \mathbf{Set} \to \mathbf{Grp}$ which takes a set $A$ to the free group generated by $A$ is left adjoint to $U$.
+\end{enumerate}
+
+\textbf{Remarks on Adjointness:}
+\begin{enumerate}
+\item There are several theorems that link limit and colimit preserving properties
+of functors to adjointness (e.g., ref. \cite{NP75}). Thus, a left adjoint functor preserves colimits or acts naturally 
+on the colimit functor (if the latter exists); dually, a right adjoint preserves limits.  
+
+\item According to William F. Lawvere, Adjointness is closely involved with the Foundation of Mathematics.
+
+\item Adjoint functors define dynamic similarities between general systems in categorical dynamics.
+
+\end{enumerate}
+
+
+\begin{thebibliography}{9}
+\bibitem{K}
+Daniel~M.~Kan. Adjoint functors.  {\it Transactions of the American Mathematical Society}, Vol. 87, No. 2, (1958), 294--329.
+\bibitem{Ma}
+S. Mac Lane, \emph{Categories for the Working Mathematician} (2nd edition), Springer-Verlag, 1997.
+
+\bibitem{NP75}
+N. Popescu.1975., \emph{Abelian Categories with Applications to Rings and Modules.}
+Academic Press: New York and London.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

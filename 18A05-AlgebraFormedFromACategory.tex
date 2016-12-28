@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraFormedFromACategory}
+\pmcreated{2013-03-22 16:30:34}
+\pmmodified{2013-03-22 16:30:34}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{algebra formed from a category}
+\pmrecord{6}{38686}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a category $\mathcal{C}$ and a ring $R$, one can construct an
+algebra $\mathcal{A}$ as follows. Let $\mathcal{A}$ be the set of
+all formal finite linear combinations of the form
+\[\sum_i c_i e_{a_i, b_i, \mu_i},\]
+where the coefficients $c_i$ lie in $R$ and, to every pair of objects
+$a$ and $b$ of $\mathcal{C}$ and every morphism $\mu$ from $a$ to $b$,
+there corresponds a basis element $e_{a,b,\mu}$. Addition and scalar
+multiplication are defined in the usual way. Multiplication of
+elements of $\mathcal{A}$ may be defined by specifying how to multiply
+basis elements. If $b \not= c$, then set $e_{a, b, \phi} \cdot
+e_{c, d, \psi} = 0$; otherwise set $e_{a, b, \phi} \cdot e_{b, c, \psi}
+= e_{a, c, \psi \circ \phi}$. Because of the associativity of
+composition of morphisms, $\mathcal{A}$ will be an associative algebra
+over $R$.
+
+Two instances of this construction are worth noting.  If $G$ is a group,
+we may regard $G$ as a category with one object.  Then this construction 
+gives us the group algebra of $G$.  If $P$ is a partially ordered set,
+we may view $P$ as a category with at most one morphism between any
+two objects.  Then this construction provides us with the incidence 
+algebra of $P$.
+%%%%%
+%%%%%
+\end{document}

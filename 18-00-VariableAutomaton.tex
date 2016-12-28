@@ -1,0 +1,237 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariableAutomaton}
+\pmcreated{2013-03-22 19:36:35}
+\pmmodified{2013-03-22 19:36:35}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Variable automaton}
+\pmrecord{32}{42603}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{00-02}
+\pmclassification{msc}{00-01}
+\pmdefines{categorical automaton}
+\pmdefines{automaton state space homomorphism}
+\pmdefines{$\mathbb{S}^T$}
+\pmdefines{variable Turing machine}
+\pmdefines{variable UTS}
+\pmdefines{VUTS}
+\pmdefines{variable automaton supercategory}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Introduction}
+ The question of a variable `automaton', or an automaton with {\em varying} internal structure goes back to Norbert Wiener's suggestion in his book on \PMlinkexternal{\em ``The Human Use of Human Beings" (Cybernetics and Society, 1954)}{http://en.wikipedia.org/wiki/The_Human_Use_of_Human_Beings}. 
+
+ A \PMlinkname{classical automaton}{CategoryOfAutomata}, {\em s-automaton} $\A$, or `sequential machine', is defined as a quintuple of three sets: $I$,$O$ and $S$, and two set-theoretical mappings:
+
+$$(I, O, S, \delta: I \times S \rightarrow S; \lambda: S \times S \rightarrow O),$$,
+
+where $I$ is the set of s-automaton inputs, $S$ is the set of states (or the state space of the s-automaton), $O$ is the set of s-automaton outputs, $\delta$ is the {\em transition function} that maps a s-automaton state $s_j$ onto its next state $s_{j+1}$ in response to a specific s-automaton input $j \in I$, and $\lambda$ is the {\em output function} that maps couples of consecutive (or sequential) s-automaton states $(s_i, s_{i+1})$ onto s-automaton outputs 
+$o_{i+1}$  ($(s_i, s_{i+1}) \mapsto o_{i+1}$, hence the older name of `sequential machine' for the s-automaton).
+
+\bigbreak
+
+\begin{definition} {\em An alternative definition} of an automaton is also in use:
+as a five-tuple $(S, \Sigma, \delta, I, F)$, where $\Sigma$ is a non-empty set of symbols
+$\alpha$ such that one can define a {\em configuration} of the automaton as a couple
+$(s,\alpha)$ of a state $s \in S $ and a symbol $\alpha \in \Sigma $. Then $\delta$
+defines a ``next-state relation, or a transition relation'' which associates to each configuration
+$(s, \alpha)$ a subset $\delta (s,\alpha)$ of S- the state space of the automaton.
+
+\bigbreak
+
+With this formal automaton definition, the \emph{category of abstract automata} can be defined by specifying automata homomorphisms in terms of the morphisms between five-tuples representing such abstract automata.
+\end{definition}
+
+\bigbreak
+
+\begin{example} A special case of automaton is that of a {\em stable automaton} when all its state transitions are {\em reversible}; then its state space can be seen to possess a groupoid (algebraic) structure. The {\em category of reversible automata} is then a 2-category, and also a subcategory of the 2-category of groupoids, or the groupoid category. \end{example}
+
+\bigbreak
+
+\begin{definition}
+ {\em A categorical automaton} can also be defined by a commutative square diagram containing all of the above components. \end{definition}
+
+ With the above automaton definition(s) one can now also define morphisms between automata and their composition.
+
+\bigbreak
+
+\begin{definition} A \emph{homomorphism of automata} or {\em automaton homomorphism} is a morphism of automata quintuples that preserves commutativity of the set-theoretical mapping compositions of both the transition
+function $\delta$ and the output function $\lambda$. 
+\end{definition}
+
+\bigbreak
+
+ With the previous two definitions one has now sufficient data to be able to define the category of automata 
+and automata homomorphisms, $C_A$.
+
+\section{Categories of Automata and Variable Automata Definitions}
+
+\begin{definition}
+ A {\em category of automata} {\bf $C_A$} is defined as a category of quintuples
+$(I, O, X, \delta: I \times X \rightarrow X; \lambda: X \times S \rightarrow O)$ and
+automata homomorphisms $h:{\A}_i \rightarrow {\A}_j$,
+such that these homomorphisms commute with both the transition and the output functions of any automata ${\A}_i$ and ${\A}_j$.
+\end{definition}
+
+ \bigbreak
+
+ A formal definition of an {\bf `automaton with a {\em varying} internal structure'} is here proposed, and then extended by means of categorical concepts in the context of \PMlinkname{supercategories}{ETAS} $\mathbb{S}_2$ of automata state spaces $S_X$ and automata state space homomorphisms $h_{XY}: S_X \to S_Y$.
+
+
+ As a relatively simple example consider the case of the category of sequential, or Turing machines, {\bf $T_a$}, which is a subcategory of the category of automata {\bf $C_A$}. 
+
+\begin{definition}
+A `variable Turing machine' is a supercategory $\mathbb{S}^T$ of Turing machine topological semigroup (or monoid) categories {\bf $S_{TX}$} and topological semigroup (monoid) functors $F_{T_{XY}}: S_{TX} \to S_{TY}$  between pairs of such semigroup (or monoid) categories. 
+
+\end{definition}
+
+\begin{definition}
+In the general case of {\em universal Turing machines} ($UTS$) one simply replaces `Turing machine' with $UTS$ in the previous definition to obtain a formal representation of {\em {\bf variable} universal Turing machines}, $V_{UTS}$.
+\end{definition}
+
+
+\bigbreak
+\subsection{Remarks:} 
+\begin{enumerate}
+\item {\em Automaton homomorphisms} can be considered also as  transformations of automata, or as semigroup homomorphisms, when the state space, $X$, of the automaton is defined as a {\em semigroup} $S_X$. 
+\item Abstract automata have numerous realizations in the real world as : machines, robots, devices,
+computers, supercomputers, always considered as \emph{discrete} state space sequential machines.
+\item Fuzzy or analog devices are not included as standard automata.
+\item Similarly, \emph{variable (transition function)} automata, and especially $V_{UTM}$s, are not included, but rigid Universal Turing machines are included.
+\item Such variable automata as $V_{UTM}$s may be practically constructed for both industrial, agricultural and Biotechnology/medical applications, and perhaps also as {\em `nanobots'}, by employing as part of their logical operation design MV-logics, such as the {\em $LM_N$-algebraic logic}, with $N$ being finite. 
+\item Other definitions of automata, sequential machines, semigroup automata or cellular automata lead to subcategories of the category of automata defined above. 
+\item On the other hand, the category of \PMlinkname{quantum automata}{http://planetmath.org/encyclopedia/QuantumAutomataAndQuantumComputation2.html} is not a subcategory of the automata category defined here.
+\end{enumerate}.
+
+
+
+
+{\bf More to come...}
+
+\section{References Cited}
+
+ Wiener, Norbert. 1988. ``{\em The Human Use of Human Beings: Cybernetics and Society}". Da Capo Press, 1954 (first edition).
+
+%%%%%
+%%%%%
+\end{document}

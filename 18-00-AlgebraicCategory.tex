@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicCategory}
+\pmcreated{2013-03-22 19:19:43}
+\pmmodified{2013-03-22 19:19:43}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{algebraic category}
+\pmrecord{14}{42271}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18-00}
+\pmdefines{monadic functor}
+\pmdefines{adjoint functor}
+\pmdefines{T-algebra}
+\pmdefines{monad on a category}
+\pmdefines{structure map}
+\pmdefines{monadic adjunction}
+\pmdefines{adjoint functor pair}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Algebraic Category}
+
+\subsection{Introduction}
+Classes of algebras can be categorized at least in two types: either classes of \emph{specific
+algebras}, such as: group algebras, K-algebras, groupoid algebras, logic algebras, and so on,
+or \emph{general} ones, such as general classes of: categorical algebras, higher dimensional algebra
+(HDA), supercategorical algebras, universal algebras, and so on.
+\subsubsection{Equivalence classes}
+Although all classes can be regarded as equivalence, weak equivalence, relations etc., classes of
+algebras (either specific or general ones), these classes do not define identical, or even isomorphic structures, as the notion of `equivalence' can have more than one meaning even in the algebraic case.
+
+\subsubsection{Basic concepts and definitions}
+
+{\bf Monad on a category $\mathcal{C}$, and a T-algebra in $\mathcal{C}$}
+
+\begin{definition}
+Let us consider a category $\mathcal{C}$, two functors: $T: \mathcal{C} \to \mathcal{C}$ (called the monad functor) and $T^2: \mathcal{C} \to \mathcal{C} = T \circ T$, and two natural transformations:
+$\eta: 1_ \mathcal{C} \to T$ and $\mu: T^2 \to T$. The triplet $(\mathcal{C},\eta,\mu)$
+is called a {\em monad on the category $\mathcal{C}$}. Then, a {\em T-algebra} $(Y,h)$ is defined as an object $Y$ of a category $\mathcal{C}$ together with an arrow $h: TY \to Y $ called the {\em structure map} in $\mathcal{C}$ such that:
+
+\begin{enumerate}
+\item $$Th: T^2 \to TY,$$
+
+\item $$h \circ Th = h \circ \mu_Y,$$
+where: $\mu_Y: T^2 Y \to TY;$ and
+
+\item $$ h \circ \eta_Y = 1_Y.$$
+\end{enumerate}
+
+\end{definition}
+
+{\bf Category of Eilenberg-Moore algebras of a monad $T$}
+
+An important definition related to abstract classes of algebras and universal algebras is that of the category of Eilenberg-Moore algebras of a monad $T$:
+
+\begin{definition}
+The category $\mathcal{C}^T$ of $T$-algebras and their morphisms is called the {\em Eilenberg-Moore category} or {\em category of Eilenberg-Moore algebras} of the monad T.
+\end{definition}
+
+
+\subsection{Algebraic Category Definition}
+
+With the above definition, one can also define a \emph{category of classes of algebras and their
+associated groupoid homomorphisms} which is then an algebraic category.
+
+Another example of algebraic category is that of the category of C*-algebras.
+
+Generally, a category $\mathcal{A}_C$ is called \emph{algebraic} if it is monadic over the category of sets and set-theoretical mappings, $Set$; thus, a functor $G: \mathcal{D} \to \mathcal{C}$ is called \emph{monadic} if it has a left adjoint
+$F: \mathcal{C}\to \mathcal{D}$ forming a {\em monadic adjunction} $(F,G,\eta,\epsilon)$ with $G$ and $\eta, \epsilon$
+being, respectively, the unit and counit; such a {\em monadic adjunction} between categories
+$\mathcal{C}$ and $\mathcal{D}$ is defined by the condition that category $\mathcal{D}$ is equivalent to the to the Eilenberg-Moore category $\mathcal{C} ^T$ for the monad
+$$T = GF.$$
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Precategory}
+\pmcreated{2013-03-22 16:16:39}
+\pmmodified{2013-03-22 16:16:39}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{precategory}
+\pmrecord{6}{38389}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A10}
+\pmsynonym{diagram scheme}{Precategory}
+\pmrelated{Category}
+\pmdefines{free category}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A \emph{precategory} $\mathcal{B}$ consists of the following 
+
+\begin{enumerate}
+\item a class of objects, called objects of $\mathcal{B}$, written $Ob(\mathcal{B})$
+\item a set of elements, called arrows or morphisms, for \emph{each} ordered pair $(A,B)$ of objects in $\mathcal{B}$, usually written $\hom(A,B)$.  For any arrow $f\in\hom(A,B)$, $A$ is called the \emph{domain} of $f$ and $B$ is the \emph{codomain} of $f$.  It is required that $\hom(A,B)\cap\hom(C,D)=\varnothing$ if $(A,B)\neq(C,D)$.
+\end{enumerate}
+
+If $Ob(\mathcal{B})$ is a set, then we say that $\mathcal{B}$ is \emph{small}.  A small precategory is just a directed pseudograph (a digraph allowing multiple edges between pairs of vertices), indeed, for the collection of all arrows in $\mathcal{B}$ is a set, written $Mor(\mathcal{B})$.  In addition, there are two functions 
+$$\operatorname{dom},\operatorname{codom}:Mor(\mathcal{B})\to Obj(\mathcal{B})$$
+such that $\operatorname{dom}(f)$ is the domain of $f$ and $\operatorname{codom}(f)$ is the codomain of $f$.  Note that both $\operatorname{dom}$ and $\operatorname{codom}$ are well-defined functions because if $f\in \hom(A,B)\cap \hom(C,D)$, then $A=B$ and $C=D$, so that both $\operatorname{dom}$ and $\operatorname{codom}$ map $f$ to unique objects $A$ and $B$ respectively.
+
+With the realization that a precategory is essentially a directed graph, we may use the language of graph theory to define concepts such as paths and loops in a precategory.  This will allow us to enlarge any precategory to a category.  We will carry out the construction below.
+
+\subsubsection*{Paths Defined}
+Let $\mathcal{B}$ be a precategory.  A \emph{path} $p$ (in $\mathcal{B}$) is a finite sequence of arrows $f_1,\ldots,f_n$ such that the codomain of $f_i$ is the domain of $f_{i+1}$.  Note that the definition here does not parallel the one given for a graph (as in graph theory), since we allow vertices (domains and codomains), as well as edges (arrows or morphisms) to coincide.  The \emph{length} of a path $p=(p_1,\ldots,p_n)$ is defined to be the non-negative integer $n$.
+
+Given a path $p = (f_1,\ldots, f_n)$, we may set the domain of $p$, written $\operatorname{dom}(p)$, to be $\operatorname{dom}(f_1)$, and codomain of $p$, written $\operatorname{codom}(p)$, to be $\operatorname{codom}(f_n)$.  A \emph{loop} is a path $p$ where $\operatorname{dom}(p)=\operatorname{codom}(p)$.
+
+Next, for each ordered pair of objects $(A,B)$ in a precategory $\mathcal{B}$, the collection of paths with with domain $A$ and codomain $B$ is a set, and we denote it by $\operatorname{Hom}(A,B)$.
+
+\subsubsection*{Composition of Paths Defined}
+Now, let $f\in \operatorname{Hom}(A,B)$ and $g\in \operatorname{Hom}(B,C)$.  So $f=(f_1,\ldots,f_n)$ and $g=(g_1,\ldots,g_m)$.  Since $\operatorname{codom}(f_n)=B=\operatorname{dom}(g_1)$, we can ``concatenate'' the two paths and form a new path $$(f_1,\ldots,f_n,g_1,\ldots,g_m),$$ and we write $g\circ f$ for this new path.  It is clear that $g\circ f\in \operatorname{Hom}(A,C)$.  It is also easy to see that $\circ$ is a function from $\operatorname{Hom}(A,B)\times \operatorname{Hom}(B,C)$ to $\operatorname{Hom}(A,C)$, if we set $\circ(f,g):= g\circ f$.  As the ``concatenation'' operation is evidently associative, $(h\circ g)\circ f=h\circ (g\circ f)$.
+
+\subsubsection*{Empty Paths Defined}
+Finally, for each object $A$ in $Ob(\mathcal{B})$, we can artificially associate an \emph{empty path} $1_A$ with $A$, with the following properties
+\begin{itemize}
+\item $1_A$ is a path with length $0$
+\item $\operatorname{dom}(1_A)=\operatorname{codom}(1_A):=A$; in other words, $1_A\in \operatorname{Hom}(A,A)$
+\item for any $f\in\operatorname{Hom}(A,B)$ and $g\in\operatorname{Hom}(C,A)$, $f\circ 1_A:=f$ and $1_A\circ g:=g$.
+\end{itemize}
+The class of all paths, including every empty path for each object, in $\mathcal{B}$ is written $Path(\mathcal{B})$.
+
+\subsubsection*{Precategory Enlarged to a Category}
+So if we start out with a precategory $\mathcal{B}$, we end up with a category $\mathcal{\overline{B}}$ such that 
+\begin{enumerate}
+\item $Ob(\mathcal{\overline{B}})=Ob(\mathcal{B})$
+\item $Mor(\mathcal{\overline{B}})=Path(\mathcal{B})$, such that
+\begin{itemize}
+\item domain and codomain of each morphism are defined to be the domain and codomain of the underlying path
+\item for each ordered pair $(A,B)$ of objects in $\mathcal{\overline{B}}$, the collection of morphisms with domain $A$ and codomain $B$ is a set, and is denoted by $\operatorname{Hom}(A,B)$
+\item for every triple of objects $A,B,C$, a function $\circ$ is defined to be the ``concatenation'' of a path from $A$ to $B$ and a path from $B$ to $C$
+\item the identity morphism $1_A$ each object $A$ is just the empty path associated with $A$.
+\end{itemize}
+\end{enumerate}
+We may embed $\mathcal{B}$ in $\mathcal{\overline{B}}$ so that $\mathcal{B}$ is just a diagram of $\mathcal{\overline{B}}$.  Because of this, $\mathcal{B}$ is also known as a \emph{diagram scheme}.  $\mathcal{\overline{B}}$, also written $F(\mathcal{B})$, is known as the \emph{free category} freely generated by $\mathcal{B}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSnakeLemmaUsingSpectralSequences}
+\pmcreated{2013-03-22 19:03:38}
+\pmmodified{2013-03-22 19:03:38}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of snake lemma using spectral sequences}
+\pmrecord{5}{41944}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+
+\theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+
+\begin{document}
+\PMlinkescapeword{point}
+\PMlinkescapeword{power}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{order}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{number}
+This article proves the Snake Lemma purely by appealing to the machinery of spectral sequences. The point of this article is not really to provide a proof of the Snake Lemma, but rather to show some of the power and utility of spectral sequences. We work inside some abelian category, such as modules over a ring. This article draws heavily from \PMlinkexternal{here}{http://math.stanford.edu/~vakil/0708-216/216ss.pdf}, which is an excellent introduction to spectral sequences (beware, however; it contains a number of significant and less significant errors).
+
+\begin{lem} (Snake Lemma) Consider the commuting diagram
+\[\xymatrix {
+  0 \ar[r] & A \ar[r] & B \ar[r] &C \ar[r] & 0 \\
+  0 \ar[r] & A' \ar[r]\ar[u]^{\alpha} & B' \ar[r]\ar[u]^{\beta} & C' \ar[r]\ar[u]^{\gamma} & 0
+ }
+\]
+in which the rows are exact. Then there is an exact sequence
+\[
+  0 \to \ker\alpha \to \ker\beta \to \ker\gamma \to \coker\alpha \to \coker\beta \to \coker\gamma \to 0
+\]
+\end{lem}
+
+\begin{proof}
+Consider the first-quadrant double complex $E^{p,q}$ as follows:
+\[\xymatrix {
+  0 \ar[r]  & E^{1,0} = A \ar[r]^a & E^{1,1} = B \ar[r]^b & E^{1,2} = C \ar[r]^c & 0 \\
+  0 \ar[r]  & E^{0,0}=A' \ar[r]^{a'}\ar[u]^{\alpha} &
+    E^{0,1} = B' \ar[r]^{b'}\ar[u]^{\beta} & E^{0,2} = C' \ar[r]^{c'}\ar[u]^{\gamma} & 0
+ }
+\]
+where all other $E^{p,q}=0$. Let this be page $0$ of a spectral sequence.
+
+Computing page $1$ by using the differentials in the horizontal direction, we get
+\[\xymatrix{
+  E_1^{1,0} = 0 \ar[r] & E_1^{1,1} = 0 \ar[r] & E_1^{1,2} = 0 \ar[r] & 0 \\
+  E_1^{0,0} = 0 \ar[r]\ar[u] & E_1^{0,1} = 0 \ar[r]\ar[u] & E_1^{0,2} = 0 \ar[r]\ar[u] & 0
+ }
+\]
+since the rows are exact.
+
+Now compute page $1$ by using the differentials in the vertical direction. The result is
+\[\xymatrix{
+  E_1^{1,0} = \coker\alpha \ar[r] & E_1^{1,1} = \coker\beta \ar[r] & E_1^{1,2} = \coker\gamma \ar[r] & 0 \\
+  E_1^{0,0} = \ker\alpha \ar[r]   & E_1^{0,1} = \ker\beta \ar[r]   & E_1^{0,2} = \ker\gamma\ar[r]    & 0
+ }
+\]
+Page $2$ of this diagram, obtained by using the maps given as the differentials, looks like this (the arrows are the resulting differential maps on page $2$):
+\[\xymatrix{
+0 \ar[rrd] & 0 \ar[rrd] & 0 \ar[rrd] \\
+0 \ar[rrd] & 0 \ar[rrd] & \ast\ast\ar[rrd] & \ast \ar[rrd] & \ast\ar[rrd]  & 0 \\
+           &            & \ast\ar[rrd]  & \ast \ar[rrd] & \ast\ast\ar[rrd] & 0 & 0\\
+           &            &            &            & 0          & 0 & 0
+}
+\] 
+Note now that the entries marked as $\ast$ have stabilized, and thus must be zero (since the cohomology of the double complex is zero, as shown at the beginning of the proof). Also, the map between the entries marked as $\ast\ast$ must be an isomorphism in order that they should vanish at the next stage, for the same reason.
+ 
+The fact that the entries $\ast$ are all zero means that the sequences
+\begin{gather*}
+ \coker\alpha \to \coker\beta \to \coker\gamma \to 0\\
+            \text{ and}\\
+ 0 \to \ker\alpha \to \ker\beta \to \ker\gamma
+\end{gather*}
+are exact. The isomorphism of the entries labeled $\ast\ast$ gives an isomorphism between $\coker(\ker\beta \to\ker\gamma)$ and $\ker(\coker\alpha \to \coker\beta)$. By the splicing lemma, we get a map from $\ker\gamma\to \coker\alpha$, and
+\[
+  0 \to \ker\alpha \to \ker\beta \to \ker\gamma \to \coker\alpha \to \coker\beta \to \coker\gamma \to 0
+\]
+is exact.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

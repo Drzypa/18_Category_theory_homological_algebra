@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualityPrinciple}
+\pmcreated{2013-03-22 12:28:42}
+\pmmodified{2013-03-22 12:28:42}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{duality principle}
+\pmrecord{8}{32688}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+\pmdefines{self-dual statement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\Sigma$ be any statement of the elementary theory of an abstract category. We form the dual of $\Sigma$ as follows:
+\begin{enumerate}
+\item Replace each occurrence of ``domain'' in $\Sigma$ with ``codomain'' and conversely.
+\item Replace each occurrence of $g \circ f =h$ with $f \circ g = h$
+\end{enumerate} 
+Informally, these conditions state that the dual of a statement is formed by reversing arrows and compositions. For example, consider the following statements about a category $\mathcal{C}$:
+\begin{itemize}
+\item $f:A \to B$
+\item $f$ is monic, i.e. for all morphisms $g,h$ for which composition makes sense, $f \circ g = f \circ h$ implies $g=h$.
+\end{itemize}
+The respective dual statements are
+\begin{itemize}
+\item $f:B \to A$
+\item $f$ is epi, i.e. for all morphisms $g,h$ for which composition makes sense, $g \circ f = h \circ f$ implies $g=h$.
+\end{itemize}
+The \emph{duality principle} asserts that if a statement is a theorem, then the dual statment is also a theorem. We take "theorem" here to mean provable from the axioms of the elementary theory of an abstract category. In practice, for a valid statement about a particular category $\mathcal{C}$, the dual statement is valid in the dual category $\mathcal{C}^{*}$ ($\mathcal{C}^{op}$).
+
+If the property $\Sigma$ is the same as its dual, then it is called \emph{self-dual}.
+%%%%%
+%%%%%
+\end{document}

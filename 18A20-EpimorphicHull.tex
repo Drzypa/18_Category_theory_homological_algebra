@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EpimorphicHull}
+\pmcreated{2013-03-22 18:28:33}
+\pmmodified{2013-03-22 18:28:33}
+\pmowner{jocaps}{12118}
+\pmmodifier{jocaps}{12118}
+\pmtitle{epimorphic hull}
+\pmrecord{5}{41148}
+\pmprivacy{1}
+\pmauthor{jocaps}{12118}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A20}
+\pmrelated{epimorphicextension}
+\pmrelated{essentialextension}
+\pmrelated{completeringofquotients}
+\pmdefines{epimorphic hull}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\begin{document}
+Let $\mathcal C$ be a category and $A$ be an object in this category. \underline{The} \emph{epimorphic hull} of $A$ is an 
+object $E\in\mathrm{Ob}(C)$ such that there is an $f:A\rightarrow E$ that has the following property :
+
+\begin{enumerate}
+\item $f$ is an epimorphic extension
+\item $f$ is an essential extension
+\item $f$ is (roughly put "maximal epimorphic and essential extension") has the property that for any 
+epimorphic and essential extension $g:A\rightarrow B$, there exists a morphism $g:B\rightarrow E$ such that
+$$f=g\circ h$$
+\end{enumerate}
+
+\begin{remark}
+We used "the epimorphic hull", because it can be proven that if an epimorphic hull exists for an object of the category,
+it is unique upto isomorphism.
+\end{remark}
+
+In the category of semiprime commutative ring the epimorphic hull for every semiprime ring exist. The epimorphic hull of a reduced ring is the intersection of all the von Neumann regular rings that lie between the ring and its complete ring of quotient.
+%%%%%
+%%%%%
+\end{document}

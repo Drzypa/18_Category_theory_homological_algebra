@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EtaleSpace}
+\pmcreated{2013-03-22 15:40:09}
+\pmmodified{2013-03-22 15:40:09}
+\pmowner{guffin}{12505}
+\pmmodifier{guffin}{12505}
+\pmtitle{\'Etal\'e space}
+\pmrecord{6}{37608}
+\pmprivacy{1}
+\pmauthor{guffin}{12505}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18F20}
+\pmclassification{msc}{54B40}
+\pmclassification{msc}{14F05}
+\pmsynonym{Espace Etale}{EtaleSpace}
+\pmsynonym{Etale space}{EtaleSpace}
+\pmsynonym{Espace \'Etal\'e}{EtaleSpace}
+%\pmkeywords{Sheaf}
+%\pmkeywords{Stalk}
+%\pmkeywords{Etale Space}
+%\pmkeywords{Sheafification}
+\pmrelated{Stalk}
+\pmrelated{Sheaf}
+\pmdefines{\'Etal\'e Space}
+\pmdefines{Etale Space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\sheaf}[1]{\mathcal{#1}}
+\newcommand{\Etale}[0]{\'Etal\'e}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \Etale~space (Espace \Etale) is a topological space associated to a presheaf $\sheaf F$ on a space $X$.  The \'Etal\'e space is defined to be the disjoint union of stalks of the sheaf $\sheaf F$. 
+
+\[\sheaf E_{\sheaf F} \equiv \coprod_{x\in X} \sheaf F_x\]
+
+
+Over each open set $U\subset X$, there is a set of sections $\Gamma(U,\sheaf F)$.  A basis for the topology on the \Etale~space is formed by taking the open sets to be of the form $\sheaf U_s = \{s_x, x\in U\}$, for $s\in \Gamma(U,\sheaf F)$ and $s_x$ the germ of $s$ at $x$. There is a natural map $\pi\!:\!\sheaf E_{\sheaf F} \rightarrow X$ which takes germs $s_x$ in the stalk $\sheaf F_x$ over $x$ to $x$.
+
+
+Let $s\in \Gamma(U,\sheaf F)$ and $s^\prime \in \Gamma(U^\prime,\sheaf F)$ with $U\cap U^\prime \ne \emptyset$. At each point $x\in U \cap U^\prime$ where $s_x = s^\prime_x$, by the definition of germs there exists an open set $V\subset U\cap U^\prime$ containing $x$ such that $s$ and $s^\prime$ restrict to the same section on $V$ ($s|_V = s^\prime|_V$).  This verifies that $\{\sheaf U_s\}$ form a basis for $\sheaf E_{\sheaf F}$.
+
+Then there is another presheaf, $\widetilde{\sheaf F}$, whose sections are the continuous functions from $X$ to $\sheaf E_{\sheaf F}$ assigning an element $s(x)\in \sheaf F_x$ to each point $x \in X$.  This presheaf forms a sheaf equivalent to the sheafification of the presheaf $\sheaf F$.
+%%%%%
+%%%%%
+\end{document}

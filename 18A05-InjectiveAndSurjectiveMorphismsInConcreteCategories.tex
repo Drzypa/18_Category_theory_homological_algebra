@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InjectiveAndSurjectiveMorphismsInConcreteCategories}
+\pmcreated{2013-03-22 18:47:32}
+\pmmodified{2013-03-22 18:47:32}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{injective and surjective morphisms in concrete categories}
+\pmrecord{4}{41590}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $(\mathcal{C},U)$ be concrete category over $\mathcal{SET}$ and let $\alpha:X\to Y$ be a morphism in $\mathcal{C}$.
+
+\textbf{Definition.} Morphism $\alpha$ is called \textit{injective} (resp. \textit{surjective}) if $U(\alpha)$ is an injection (resp. surjection).
+
+Some properties of injective and surjective morphisms:
+
+\textbf{Proposition.} Assume that $\alpha:X\to Y$ is a morphism in $\mathcal{C}$.\\
+$\mathrm{i)}$ If $\alpha$ is injective (resp. surjective), then $\alpha$ is a monomorphism (resp. epimorphism);\\
+$\mathrm{ii)}$ If $\alpha$ is a section (resp. retraction), then $\alpha$ is injective (resp. surjective).
+
+\textit{Proof.} $\mathrm{i)}$ Assume that $\alpha$ is injective and let $\beta_1,\beta_2:Z\to X$ be morphisms in $\mathcal{C}$ such that $\alpha\circ\beta_1=\alpha\circ\beta_2$. Then $$U(\alpha\circ\beta_1)=U(\alpha\circ\beta_2)$$ and this implies that $$U(\alpha)\circ U(\beta_1)=U(\alpha)\circ U(\beta_1).$$
+Since $U(\alpha)$ is injective, we obtain that $U(\beta_1)=U(\beta_2)$ and since $U$ is faithful, we get that $$\beta_1=\beta_2.$$
+Analogously we prove, that surjective morphism is an epimorphism.\\
+
+$\mathrm{ii)}$. Assume that $\alpha:X\to Y$ is a section. Then there exists $\beta:Y\to X$ such that $\beta\circ\alpha=\mathrm{id}_{X}$. Thus we have
+$$U(\beta)\circ U(\alpha)=\mathrm{id}_{U(X)},$$
+so $U(\alpha)$ is injective. Analogously retractions are surjective. $\square$
+%%%%%
+%%%%%
+\end{document}

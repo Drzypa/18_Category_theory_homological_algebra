@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfUniverse}
+\pmcreated{2013-03-22 14:09:06}
+\pmmodified{2013-03-22 14:09:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of universe}
+\pmrecord{8}{35569}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{03E30}
+\pmrelated{CumulativeHierarchy}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The simplest example of a universe consists of all sets gotten by starting with the empty set and repeatedly aggregating sets already known to lie in the universe.  That is to say, starting with $\emptyset$, we first form $\{\emptyset\}$.  Given these two elements of our universe, we can then form 
+$\{\{\emptyset\}\}$ and $\{\emptyset,\{\emptyset\}\}$.  Given these four elements,
+we then can form $\{\{\{\emptyset\}\}\}$, $\{\emptyset,\{\{\emptyset\}\}\}$, 
+$\{\{\emptyset,\{\emptyset\}\}\}$ and several other sets.  We can repeat this process to obtain an infinite collection of finite sets. 
+
+The set considered here also happens to be the set $V_\omega$ in the cumulative hierarchy.
+%%%%%
+%%%%%
+\end{document}

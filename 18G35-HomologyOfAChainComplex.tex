@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomologyOfAChainComplex}
+\pmcreated{2013-03-22 13:14:45}
+\pmmodified{2013-03-22 13:14:45}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{homology of a chain complex}
+\pmrecord{16}{33721}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{18G35}
+\pmsynonym{homology of a complex}{HomologyOfAChainComplex}
+\pmsynonym{homology}{HomologyOfAChainComplex}
+\pmrelated{ChainComplex}
+\pmrelated{HomologyTopologicalSpace}
+\pmrelated{Tor}
+\pmdefines{homology group}
+\pmdefines{homology module}
+
+\usepackage{amsmath}
+\usepackage{amscd}
+
+\newcommand{\im}{\operatorname{im}}
+\begin{document}
+\PMlinkescapeword{exact}
+\PMlinkescapeword{objects}
+
+If $(\mathbf{A},d)$ is a chain complex 
+$$\begin{CD}
+\cdots@<{d_{n-1}}<<A_{n-1} @<{d_{n}}<< A_n@<{d_{n+1}}<< A_{n+1} @<{d_{n+2}}<<\cdots
+\end{CD}$$
+then the $n$-th \emph{homology group} (or \emph{homology module})
+$H_n(\mathbf{A},d)$ of $(\mathbf{A},d)$
+is the quotient module
+\[
+H_n(\mathbf{A},d)=\frac{\ker d_n}{\im d_{n+1}}.
+\]
+
+The chain complex is an \PMlinkname{exact sequence}{ExactSequence} if and only if
+all of the homology groups are trivial.
+The homology groups can therefore be thought of
+as measuring the extent to which the chain complex fails to be exact.
+
+Homology groups of other objects are defined as the homology groups of an associated chain complex. (In particular, see the entry on the \PMlinkname{homology of topological spaces}{HomologyTopologicalSpace}.)
+
+%%%%%
+%%%%%
+\end{document}
