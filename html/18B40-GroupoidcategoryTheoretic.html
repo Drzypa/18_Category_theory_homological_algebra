@@ -1,0 +1,184 @@
+<!DOCTYPE html><html>
+<head>
+<title>groupoid (category theoretic)</title>
+<!--Generated on Fri Feb  9 19:28:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">groupoid (category theoretic)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">groupoid</em>, also known as a <em class="ltx_emph ltx_font_italic">virtual group</em>, is a small category where every morphism is invertible. We can give a more explicit, algebraic definition: start with a set <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and a partial binary operation <math id="p1.m2" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> on <math id="p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Call a pair <math id="p1.m4" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> of elements of <math id="p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> a <em class="ltx_emph ltx_font_italic">composable pair</em> if <math id="p1.m6" class="ltx_Math" alttext="(x,y)\in\operatorname{dom}(\circ)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mo>∘</mo><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. A <em class="ltx_emph ltx_font_italic">groupoid</em> is the pair <math id="p1.m7" class="ltx_Math" alttext="(G,\circ)" display="inline"><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mo>∘</mo><mo stretchy="false">)</mo></mrow></math>, together with two unary operations <math id="p1.m8" class="ltx_Math" alttext="e_{L}" display="inline"><msub><mi>e</mi><mi>L</mi></msub></math> and <math id="p1.m9" class="ltx_Math" alttext="e_{R}" display="inline"><msub><mi>e</mi><mi>R</mi></msub></math> on it, satisfying the following conditions:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> is a composable pair iff <math id="I1.i1.p1.m2" class="ltx_Math" alttext="e_{R}(x)=e_{L}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="(x\circ y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> are composable pairs iff <math id="I1.i2.p1.m3" class="ltx_Math" alttext="(y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="(x,y\circ z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>y</mi><mo>∘</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></math> are, and if one of these is true, then <math id="I1.i2.p1.m5" class="ltx_Math" alttext="(x\circ y)\circ z=x\circ(y\circ z)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>z</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∘</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="(e_{L}(x),x)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="(x,e_{R}(x))" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> are composable pairs and <math id="I1.i3.p1.m3" class="ltx_Math" alttext="x=e_{L}(x)\circ x=x\circ e_{R}(x)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo>∘</mo><msub><mi>e</mi><mi>R</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">for each <math id="I1.i4.p1.m1" class="ltx_Math" alttext="x\in G" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow></math>, there exists <math id="I1.i4.p1.m2" class="ltx_Math" alttext="y\in G" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>G</mi></mrow></math> such that <math id="I1.i4.p1.m3" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> and <math id="I1.i4.p1.m4" class="ltx_Math" alttext="(y,x)" display="inline"><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> are composable pairs, and <math id="I1.i4.p1.m5" class="ltx_Math" alttext="e_{L}(x)=x\circ y" display="inline"><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow></mrow></math> and <math id="I1.i4.p1.m6" class="ltx_Math" alttext="e_{R}(x)=y\circ x" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>y</mi><mo>∘</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Below are some properties:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">In condition 4 above, <math id="I2.i1.p1.m1" class="ltx_Math" alttext="e_{L}(x)=e_{R}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I2.i1.p1.m2" class="ltx_Math" alttext="e_{R}(x)=e_{L}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This is true by condition 1, since both <math id="I2.i1.p1.m3" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> and <math id="I2.i1.p1.m4" class="ltx_Math" alttext="(y,x)" display="inline"><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> are composable pairs.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Again, in condition 4, <math id="I2.i2.p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is unique. To see this, suppose <math id="I2.i2.p1.m2" class="ltx_Math" alttext="z\in G" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>G</mi></mrow></math> satisfies condition 4 (in place of <math id="I2.i2.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>). Then <math id="I2.i2.p1.m4" class="ltx_Math" alttext="y=y\circ e_{R}(y)=y\circ e_{L}(x)=y\circ(x\circ y)=y\circ(x\circ z)=(y\circ x)%
+\circ z=(z\circ x)\circ z=e_{R}(x)\circ z=e_{L}(z)\circ z=z" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mi>y</mi><mo>∘</mo><msub><mi>e</mi><mi>R</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>y</mi><mo>∘</mo><msub><mi>e</mi><mi>L</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>y</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>y</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>z</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>z</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>z</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>z</mi></mrow><mo>=</mo><mi>z</mi></mrow></math>. Notice property 1 is used in the proof. We call <math id="I2.i2.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> the <em class="ltx_emph ltx_font_italic">inverse</em> of <math id="I2.i2.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and write <math id="I2.i2.p1.m7" class="ltx_Math" alttext="x^{-1}" display="inline"><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">In view of condition 4, both <math id="I2.i3.p1.m1" class="ltx_Math" alttext="e_{L}" display="inline"><msub><mi>e</mi><mi>L</mi></msub></math> and <math id="I2.i3.p1.m2" class="ltx_Math" alttext="e_{R}" display="inline"><msub><mi>e</mi><mi>R</mi></msub></math> are unique. In other words, if <math id="I2.i3.p1.m3" class="ltx_Math" alttext="f_{L},f_{R}:G\to G" display="inline"><mrow><mrow><msub><mi>f</mi><mi>L</mi></msub><mo>,</mo><msub><mi>f</mi><mi>R</mi></msub></mrow><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> are unary operators on <math id="I2.i3.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> satisfying conditions 3 and 4 above (in place of <math id="I2.i3.p1.m5" class="ltx_Math" alttext="e_{L}" display="inline"><msub><mi>e</mi><mi>L</mi></msub></math> and <math id="I2.i3.p1.m6" class="ltx_Math" alttext="e_{R}" display="inline"><msub><mi>e</mi><mi>R</mi></msub></math>), then <math id="I2.i3.p1.m7" class="ltx_Math" alttext="f_{L}=e_{L}" display="inline"><mrow><msub><mi>f</mi><mi>L</mi></msub><mo>=</mo><msub><mi>e</mi><mi>L</mi></msub></mrow></math> and <math id="I2.i3.p1.m8" class="ltx_Math" alttext="f_{R}=e_{R}" display="inline"><mrow><msub><mi>f</mi><mi>R</mi></msub><mo>=</mo><msub><mi>e</mi><mi>R</mi></msub></mrow></math>. In fact, <math id="I2.i3.p1.m9" class="ltx_Math" alttext="e_{L}(x)=x\circ x^{-1}" display="inline"><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>∘</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and <math id="I2.i3.p1.m10" class="ltx_Math" alttext="e_{R}(x)=x^{-1}\circ x" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i4.p1.m1" class="ltx_Math" alttext="x=e_{L}(x)\circ x=e_{L}(x)\circ(e_{L}(x)\circ x)=(e_{L}(x)\circ e_{L}(x))\circ
+x" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><msub><mi>e</mi><mi>L</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>x</mi></mrow></mrow></math>, we see that <math id="I2.i4.p1.m2" class="ltx_Math" alttext="e_{L}(x)" display="inline"><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is composable with itself, and that <math id="I2.i4.p1.m3" class="ltx_Math" alttext="e_{L}(x)\circ e_{L}(x)=e_{L}(x)" display="inline"><mrow><mrow><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><msub><mi>e</mi><mi>L</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> by the previous property. Similarly, <math id="I2.i4.p1.m4" class="ltx_Math" alttext="e_{R}(x)\circ e_{R}(x)=e_{R}(x)" display="inline"><mrow><mrow><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><msub><mi>e</mi><mi>R</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This shows that <math id="I2.i4.p1.m5" class="ltx_Math" alttext="e_{R}(x)" display="inline"><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I2.i4.p1.m6" class="ltx_Math" alttext="e_{L}(x)" display="inline"><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> are idempotent with respect to <math id="I2.i4.p1.m7" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> for every <math id="I2.i4.p1.m8" class="ltx_Math" alttext="x\in G" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i5.p1.m1" class="ltx_Math" alttext="(e_{L}(x),x)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> is a composable pair, <math id="I2.i5.p1.m2" class="ltx_Math" alttext="e_{R}(e_{L}(x))=e_{L}(x)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for any <math id="I2.i5.p1.m3" class="ltx_Math" alttext="x\in G" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow></math>. Similarly, <math id="I2.i5.p1.m4" class="ltx_Math" alttext="e_{L}(e_{R}(x))=e_{R}(x)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence <math id="I2.i5.p1.m5" class="ltx_Math" alttext="e_{R}(e_{R}(x))=e_{R}(e_{L}(e_{R}(x)))=e_{L}(e_{R}(x))=e_{R}(x)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Similarly, <math id="I2.i5.p1.m6" class="ltx_Math" alttext="e_{L}(e_{L}(x))=e_{L}(x)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This shows that <math id="I2.i5.p1.m7" class="ltx_Math" alttext="e_{R}" display="inline"><msub><mi>e</mi><mi>R</mi></msub></math> and <math id="I2.i5.p1.m8" class="ltx_Math" alttext="e_{L}" display="inline"><msub><mi>e</mi><mi>L</mi></msub></math> are idempotent with respect to functional compositions.
+</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p">(Cancellation property): if <math id="I2.i6.p1.m1" class="ltx_Math" alttext="x\circ y=x\circ z" display="inline"><mrow><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>∘</mo><mi>z</mi></mrow></mrow></math>, then <math id="I2.i6.p1.m2" class="ltx_Math" alttext="y=z" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>z</mi></mrow></math>; if <math id="I2.i6.p1.m3" class="ltx_Math" alttext="y\circ x=z\circ x" display="inline"><mrow><mrow><mi>y</mi><mo>∘</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>z</mi><mo>∘</mo><mi>x</mi></mrow></mrow></math>, then <math id="I2.i6.p1.m4" class="ltx_Math" alttext="y=z" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>z</mi></mrow></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="I2.i6.p2" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i6.p2.m1" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> is a composable pair, <math id="I2.i6.p2.m2" class="ltx_Math" alttext="e_{R}(x)=e_{L}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. But <math id="I2.i6.p2.m3" class="ltx_Math" alttext="e_{R}(e_{R}(x))=e_{R}(x)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have <math id="I2.i6.p2.m4" class="ltx_Math" alttext="e_{R}(e_{R}(x))=e_{L}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> so that <math id="I2.i6.p2.m5" class="ltx_Math" alttext="(e_{R}(x),y)=(x^{-1}\circ x,y)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a composable pair, hence <math id="I2.i6.p2.m6" class="ltx_Math" alttext="(x^{-1},x\circ y)" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></math> is a composable pair and <math id="I2.i6.p2.m7" class="ltx_Math" alttext="x^{-1}\circ(x\circ y)=(x^{-1}\circ x)\circ y=e_{R}(x)\circ y" display="inline"><mrow><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>y</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>y</mi></mrow></mrow></math>. Since <math id="I2.i6.p2.m8" class="ltx_Math" alttext="(e_{R}(x),y)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> is a composable pair, <math id="I2.i6.p2.m9" class="ltx_Math" alttext="e_{R}(x)=e_{R}(e_{R}(x))=e_{L}(y)" display="inline"><mrow><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. As a result, <math id="I2.i6.p2.m10" class="ltx_Math" alttext="x^{-1}\circ(x\circ y)=e_{L}(y)\circ y=y" display="inline"><mrow><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>e</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi>y</mi></mrow><mo>=</mo><mi>y</mi></mrow></math>. Similarly <math id="I2.i6.p2.m11" class="ltx_Math" alttext="x^{-1}\circ(x\circ z)=z" display="inline"><mrow><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∘</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math>. By assumption, we deduce that <math id="I2.i6.p2.m12" class="ltx_Math" alttext="y=z" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>z</mi></mrow></math>. The other statement is proved similarly.
+∎</p>
+</div>
+</div>
+</li>
+<li id="I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p">The algebraic definition given can be easily turned into a categorical definition (using objects and morphisms). The details are left for the reader.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="e_{R}" display="inline"><msub><mi>e</mi><mi>R</mi></msub></math> and <math id="p3.m2" class="ltx_Math" alttext="e_{L}" display="inline"><msub><mi>e</mi><mi>L</mi></msub></math> are constant functions, then <math id="p3.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a group.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. There is also a group-theoretic concept (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Groupoid</span>) with the same name.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">groupoid (category theoretic)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupoidcategoryTheoretic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:08:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:08:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18B40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20L05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">groupoid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">virtual group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BrandtGroupoid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">composable pair</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:28:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

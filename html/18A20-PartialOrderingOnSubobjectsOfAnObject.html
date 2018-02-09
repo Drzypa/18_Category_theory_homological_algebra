@@ -1,0 +1,200 @@
+<!DOCTYPE html><html>
+<head>
+<title>partial ordering on subobjects of an object</title>
+<!--Generated on Fri Feb  9 19:02:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">partial ordering on subobjects of an object</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a category and <math id="p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> an object <math id="p1.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Recall that a subobject of <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is just an equivalent class of equivalent monomorphisms into <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. A subobject is denoted by <math id="p1.m6" class="ltx_Math" alttext="[f:B\to A]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow><mo stretchy="false">]</mo></mrow></math>, where <math id="p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is monomorphic, or simply <math id="p1.m8" class="ltx_Math" alttext="[B]" display="inline"><mrow><mo stretchy="false">[</mo><mi>B</mi><mo stretchy="false">]</mo></mrow></math>, whenever there is no confusion. Furthermore, we write <math id="p1.m9" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math> to mean that <math id="p1.m10" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a subobject of <math id="p1.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and write <math id="p1.m12" class="ltx_Math" alttext="B\cong C" display="inline"><mrow><mi>B</mi><mo>≅</mo><mi>C</mi></mrow></math> whenever <math id="p1.m13" class="ltx_Math" alttext="[B]=[C]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>C</mi><mo stretchy="false">]</mo></mrow></mrow></math>. The class of all subobjects of <math id="p1.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is denoted by <math id="p1.m15" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We wish to put a partial order on <math id="p1.m16" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given any two monomorphisms <math id="p2.m1" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="p2.m2" class="ltx_Math" alttext="g:C\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>, define <math id="p2.m3" class="ltx_Math" alttext="g\leq f" display="inline"><mrow><mi>g</mi><mo>≤</mo><mi>f</mi></mrow></math> iff there is a morphism <math id="p2.m4" class="ltx_Math" alttext="h:C\to B" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> such that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\xymatrix{C\ar[dr]^{g}\ar[dd]_{h}\\
+&amp;A\\
+B\ar[ur]_{f}}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi>C</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>g</mi></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mi>h</mi></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>u</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>f</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, if <math id="p2.m5" class="ltx_Math" alttext="f^{\prime}:B^{\prime}\to A" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>:</mo><mrow><msup><mi>B</mi><mo>′</mo></msup><mo>→</mo><mi>A</mi></mrow></mrow></math> is equivalent to <math id="p2.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p2.m7" class="ltx_Math" alttext="g^{\prime}:C\to A" display="inline"><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> is equivalent to <math id="p2.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, then we have morphisms <math id="p2.m9" class="ltx_Math" alttext="x:C\to C^{\prime}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><msup><mi>C</mi><mo>′</mo></msup></mrow></mrow></math> and <math id="p2.m10" class="ltx_Math" alttext="x^{\prime}:C^{\prime}\to C" display="inline"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>:</mo><mrow><msup><mi>C</mi><mo>′</mo></msup><mo>→</mo><mi>C</mi></mrow></mrow></math> and <math id="p2.m11" class="ltx_Math" alttext="y:B\to B^{\prime}" display="inline"><mrow><mi>y</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><msup><mi>B</mi><mo>′</mo></msup></mrow></mrow></math> and <math id="p2.m12" class="ltx_Math" alttext="y^{\prime}:B^{\prime}\to B" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>:</mo><mrow><msup><mi>B</mi><mo>′</mo></msup><mo>→</mo><mi>B</mi></mrow></mrow></math> such that the diagram below consisting of only the solid lines is commutative:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\xymatrix{C\ar[dr]_{g}\ar[dd]_{h}\ar[rr]_{x}&amp;&amp;C^{\prime}\ar[dl]^{g^{\prime}}%
+\ar[ll]_{x^{\prime}}\ar@{.&gt;}[dd]^{h^{\prime}}\\
+&amp;A&amp;\\
+B\ar[ur]^{f}\ar[rr]_{y}&amp;&amp;B^{\prime}\ar[ul]_{f^{\prime}}\ar[ll]_{y^{\prime}}}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mi>C</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>g</mi></msub><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>h</mi></msub><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>r</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>x</mi></msub><mi mathvariant="normal">&amp;</mi><mi mathvariant="normal">&amp;</mi><msup><mi>C</mi><mo>′</mo></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>l</mi><mo stretchy="false">]</mo></mrow><msup><mi>g</mi><mo>′</mo></msup></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mi>l</mi><mo stretchy="false">]</mo></mrow><msup><mi>x</mi><mo>′</mo></msup></msub><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>.</mo><mo>&gt;</mo><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>d</mi><mo stretchy="false">]</mo></mrow><msup><mi>h</mi><mo>′</mo></msup></msup><mi mathvariant="normal">&amp;</mi><mi>A</mi><mi mathvariant="normal">&amp;</mi><mi>B</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msup><mrow><mo stretchy="false">[</mo><mi>u</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>f</mi></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>r</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>y</mi></msub><mi mathvariant="normal">&amp;</mi><mi mathvariant="normal">&amp;</mi><msup><mi>B</mi><mo>′</mo></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>u</mi><mi>l</mi><mo stretchy="false">]</mo></mrow><msup><mi>f</mi><mo>′</mo></msup></msub><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mi>l</mi><mo stretchy="false">]</mo></mrow><msup><mi>y</mi><mo>′</mo></msup></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We define <math id="p2.m13" class="ltx_Math" alttext="h^{\prime}=y\circ h\circ x^{\prime}" display="inline"><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>y</mi><mo>∘</mo><mi>h</mi><mo>∘</mo><msup><mi>x</mi><mo>′</mo></msup></mrow></mrow></math> (the dotted line above). Then the diagram above including the dotted line is commutative: as <math id="p2.m14" class="ltx_Math" alttext="f^{\prime}\circ h^{\prime}=f^{\prime}\circ(y\circ h\circ x^{\prime})=f\circ(h%
+\circ x^{\prime})=g\circ x^{\prime}=g^{\prime}" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>∘</mo><msup><mi>h</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>∘</mo><mi>h</mi><mo>∘</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>∘</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><mo>=</mo><msup><mi>g</mi><mo>′</mo></msup></mrow></math>. Hence <math id="p2.m15" class="ltx_Math" alttext="g^{\prime}\leq f^{\prime}" display="inline"><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>≤</mo><msup><mi>f</mi><mo>′</mo></msup></mrow></math>. As a result, <math id="p2.m16" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> induces a binary relation on <math id="p2.m17" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="C\leq B" display="block"><mrow><mi>C</mi><mo>≤</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">iff there are representing monomorphisms <math id="p2.m18" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="p2.m19" class="ltx_Math" alttext="g:C\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> such that <math id="p2.m20" class="ltx_Math" alttext="g\leq f" display="inline"><mrow><mi>g</mi><mo>≤</mo><mi>f</mi></mrow></math>. Let us use the same notation <math id="p2.m21" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> for the induced relation. Then <math id="p2.m22" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> on <math id="p2.m23" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a partial ordering on <math id="p2.m24" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+</div>
+<div id="p3" class="ltx_para">
+<dl id="I1" class="ltx_description">
+<dt id="I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description">reflexivity:</span></dt>
+<dd class="ltx_item">
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.ix1.p1.m1" class="ltx_Math" alttext="B\leq B" display="inline"><mrow><mi>B</mi><mo>≤</mo><mi>B</mi></mrow></math>, because the composition of the identity morphism <math id="I1.ix1.p1.m2" class="ltx_Math" alttext="1_{B}" display="inline"><msub><mn>1</mn><mi>B</mi></msub></math> with any representing monomorphism <math id="I1.ix1.p1.m3" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> is <math id="I1.ix1.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> itself.</p>
+</div>
+</dd>
+<dt id="I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description">anti-symmetry:</span></dt>
+<dd class="ltx_item">
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.ix2.p1.m1" class="ltx_Math" alttext="B\leq C" display="inline"><mrow><mi>B</mi><mo>≤</mo><mi>C</mi></mrow></math> and <math id="I1.ix2.p1.m2" class="ltx_Math" alttext="C\leq B" display="inline"><mrow><mi>C</mi><mo>≤</mo><mi>B</mi></mrow></math>, then there are representing monomorphisms <math id="I1.ix2.p1.m3" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="I1.ix2.p1.m4" class="ltx_Math" alttext="g:C\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> such that <math id="I1.ix2.p1.m5" class="ltx_Math" alttext="f\leq g" display="inline"><mrow><mi>f</mi><mo>≤</mo><mi>g</mi></mrow></math> and <math id="I1.ix2.p1.m6" class="ltx_Math" alttext="g\leq f" display="inline"><mrow><mi>g</mi><mo>≤</mo><mi>f</mi></mrow></math>. So there are morphisms <math id="I1.ix2.p1.m7" class="ltx_Math" alttext="h:B\to C" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> and <math id="I1.ix2.p1.m8" class="ltx_Math" alttext="h^{\prime}:C\to B" display="inline"><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> such that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\xymatrix{C\ar@&lt;0.5ex&gt;[dr]^{g}\ar@&lt;0.5ex&gt;[dd]^{h^{\prime}}\\
+&amp;A\\
+B\ar@&lt;-0.5ex&gt;[ur]_{f}\ar@&lt;0.5ex&gt;[uu]^{h}}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi>C</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mrow><mo>&lt;</mo><mrow><mn>0.5</mn><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>g</mi></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mrow><mo>&lt;</mo><mrow><mn>0.5</mn><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><msup><mi>h</mi><mo>′</mo></msup></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mrow><mo>&lt;</mo><mrow><mo>-</mo><mrow><mn>0.5</mn><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>&gt;</mo></mrow><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>u</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>f</mi></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mrow><mo>&lt;</mo><mrow><mn>0.5</mn><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>u</mi><mo>⁢</mo><mi>u</mi></mrow><mo stretchy="false">]</mo></mrow><mi>h</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is commutative. But this just means that <math id="I1.ix2.p1.m9" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> and <math id="I1.ix2.p1.m10" class="ltx_Math" alttext="h^{\prime}" display="inline"><msup><mi>h</mi><mo>′</mo></msup></math> are inverses of one other, or <math id="I1.ix2.p1.m11" class="ltx_Math" alttext="B\cong C" display="inline"><mrow><mi>B</mi><mo>≅</mo><mi>C</mi></mrow></math>, so that they are the same subobject of <math id="I1.ix2.p1.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</dd>
+<dt id="I1.ix3" class="ltx_item"><span class="ltx_tag ltx_tag_description">transitivity:</span></dt>
+<dd class="ltx_item">
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.ix3.p1.m1" class="ltx_Math" alttext="D\leq C" display="inline"><mrow><mi>D</mi><mo>≤</mo><mi>C</mi></mrow></math> and <math id="I1.ix3.p1.m2" class="ltx_Math" alttext="C\leq B" display="inline"><mrow><mi>C</mi><mo>≤</mo><mi>B</mi></mrow></math>, then there are representing monomorphisms <math id="I1.ix3.p1.m3" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>, <math id="I1.ix3.p1.m4" class="ltx_Math" alttext="g:C\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="I1.ix3.p1.m5" class="ltx_Math" alttext="h:D\to A" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> such that <math id="I1.ix3.p1.m6" class="ltx_Math" alttext="h\leq g" display="inline"><mrow><mi>h</mi><mo>≤</mo><mi>g</mi></mrow></math> and <math id="I1.ix3.p1.m7" class="ltx_Math" alttext="g\leq f" display="inline"><mrow><mi>g</mi><mo>≤</mo><mi>f</mi></mrow></math>. This means there are morphisms <math id="I1.ix3.p1.m8" class="ltx_Math" alttext="r:D\to C" display="inline"><mrow><mi>r</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> and <math id="I1.ix3.p1.m9" class="ltx_Math" alttext="s:C\to B" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> such that <math id="I1.ix3.p1.m10" class="ltx_Math" alttext="g\circ r=h" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>r</mi></mrow><mo>=</mo><mi>h</mi></mrow></math> and <math id="I1.ix3.p1.m11" class="ltx_Math" alttext="f\circ s=g" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>s</mi></mrow><mo>=</mo><mi>g</mi></mrow></math>. Since <math id="I1.ix3.p1.m12" class="ltx_Math" alttext="f\circ(s\circ r)=g\circ r=h" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>∘</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><mi>r</mi></mrow><mo>=</mo><mi>h</mi></mrow></math>, <math id="I1.ix3.p1.m13" class="ltx_Math" alttext="h\leq f" display="inline"><mrow><mi>h</mi><mo>≤</mo><mi>f</mi></mrow></math>, and as a result, <math id="I1.ix3.p1.m14" class="ltx_Math" alttext="D\leq B" display="inline"><mrow><mi>D</mi><mo>≤</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Thus, <math id="p4.m1" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> turns <math id="p4.m2" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> into a partially ordered class, with top element <math id="p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. With this, we may form the notions of unions and intersections of subobjects. Formally, let <math id="p4.m4" class="ltx_Math" alttext="\{B_{i}\mid i\in I\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>B</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></math> be a collection of subobjects of <math id="p4.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, indexed by a set <math id="p4.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">union</em> <math id="I2.i1.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> of <math id="I2.i1.p1.m2" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math> is the supremum of the <math id="I2.i1.p1.m3" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math>’s with respect to <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>, provided that it exists. In notation, we write</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="C=\bigvee_{i\in I}B_{i}." display="block"><mrow><mrow><mi>C</mi><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><msub><mi>B</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">intersection</em> <math id="I2.i2.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math> is the infimum of the <math id="I2.i2.p1.m3" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math>’s with respect to <math id="I2.i2.p1.m4" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>, provided that it exists. In notation, we write</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="D=\bigwedge_{i\in I}B_{i}." display="block"><mrow><mrow><mi>D</mi><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋀</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><msub><mi>B</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For example, let <math id="p5.m1" class="ltx_Math" alttext="f:B\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="p5.m2" class="ltx_Math" alttext="g:C\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> be subobjects of <math id="p5.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then the pullback of <math id="p5.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, if it exists, is the intersection of <math id="p5.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="p5.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. It can be shown that in any Abelian category, <math id="p6.m1" class="ltx_Math" alttext="{\mathrm{Sub}}(A)" display="inline"><mrow><mi>Sub</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> under <math id="p6.m2" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> is a lattice for any object <math id="p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">partial ordering on subobjects of an object</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialOrderingOnSubobjectsOfAnObject</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:20:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:20:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">union</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">intersection</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">union of subobjects</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">intersection of subobjects</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:02:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

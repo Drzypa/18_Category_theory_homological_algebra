@@ -1,0 +1,310 @@
+<!DOCTYPE html><html>
+<head>
+<title>category theory</title>
+<!--Generated on Fri Feb  9 19:20:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">category theory</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Introduction</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Much of contemporary mathematics studies algebraic structures of one sort or another: rings, groups, vector spaces and many others. More generally, the idea of a set with some structure is very general: topological spaces, differentiable manifolds, graphs and so on. Each of these kinds of things has a notion of a function that respects the structure: group and ring homomorphisms, linear transformations, continuous functions, differentiable functions, graph homomorphisms, and so on. In order to mathematically capture the notion of “kind of thing”, as well as “function which preserves the structure”, the notion of a category was introduced.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">A category has two parts: a collection of objects, and a notion of morphism between two objects. These morphisms are required to have an associative composition law, and there are a few other conditions, but a category is a very general notion. Each of the examples listed above forms a category. Some very simple objects can form categories; the objects need not have meaningful elements, and the morphisms need not be functions.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">As a tool, category theory allows mathematicians to focus on the morphisms between objects rather than their elements. In many cases, these morphisms are precisely the objects of interest; in others, the objects are. In either case, the usual tools of set theory force the mathematician to worry about individual elements.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">What can you do with categories?</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">A category serves to formalize the notion of “function preserving structure”, and often it turns out that if one knows enough about the functions preserving the structure, one can forget the structure entirely.
+</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">Many concepts that turn up in similar forms in many different categories can in fact be defined naturally for any category. For example, one can define an <em class="ltx_emph ltx_font_italic">isomorphism</em> in any category: it is a morphism from <math id="Sx2.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to <math id="Sx2.p2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> for which there exists a morphism from <math id="Sx2.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to <math id="Sx2.p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> such that the composition on both sides yields the identity. With one stroke, we have defined isomorphism for every category; it corresponds exactly to the familiar notion and is defined in complete generality. Similarly, one can define finite and infinite direct sums and direct products in complete generality. Proving their existence is a task one must do for each category in turn, but their properties can be concisely defined in categorical language.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">Isomorphism is in fact a central notion in category theory: most categorical constructions cannot distinguish between isomorphic objects. Frequently, this is exactly what is desired, since equality of objects is in general a tricky concept: if we take a group and replace each element with a pair, that element and a “tag”, do we have the same group? Strictly speaking, no, but they are certainly isomorphic. Of course, sometimes one wants to distinguish between isomorphic objects: the different Sylow <math id="Sx2.p3.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-subgroups of a finite group, for example. In such a case, the category-theoretic solution is to work in a different category (called an arrow category) where the objects are now morphisms of the original category (in the example of subgroups of a given group, the objects would be injections of a subgroup into a larger group). This allows one to describe exactly the difference between the isomorphic objects: they are embedded in a larger group in different ways. Sure enough, in the arrow category they are no longer isomorphic. This process also allows one to distinguish, for example, automorphisms of a scheme over the complex numbers that fix the complex numbers, and automorphisms that come from some (usually non-continuous and non-constructible) automorphism of the complex numbers.</p>
+</div>
+<section id="Sx2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Examples of Categories:</h3>
+
+<div id="Sx2.SS1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Group</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Groupoid</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Monoid</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Abelian Categories</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Category of groups and group homomorphisms</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Category of groupoids and groupoid homomorphisms</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p">Category of groups and group homomorphisms</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">8.</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p">Category of automata and automaton homomorphisms</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Functors</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">It sometimes happens that we construct a mechanism for converting objects from one category into objects of another category. The simplest is perhaps the forgetful functor that simply “forgets” some of the structure on an object: one can convert a group into a set by simply forgetting the group law. A more interesting example is the fundamental group: it takes topological spaces to groups. In both these cases, we also have a way to convert a morphism of one category into a morphism of another: a group homomorphism is a map of points with some extra properties, and a continuous function takes a path class to a path class in a way that preserves concatenation. Such a rule we call a <em class="ltx_emph ltx_font_italic">functor</em>. There are two different kinds: covariant functors convert arrows <math id="Sx3.p1.m1" class="ltx_Math" alttext="A\to B" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></math> into arrows <math id="Sx3.p1.m2" class="ltx_Math" alttext="F(A)\to F(B)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, while contravariant reverse arrows: <math id="Sx3.p1.m3" class="ltx_Math" alttext="A\to B" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></math> becomes <math id="Sx3.p1.m4" class="ltx_Math" alttext="F(B)\to F(A)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The fundamental theorem of Galois theory describes a contravariant functor from extensions of a given field to subgroups of its Galois group.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">Category theory gives us tools for analyzing such functors: we can talk about natural transformations of functors, and in fact we can use these to assemble the category of functors from one category to another into a category, provided certain set-theoretic constraints are met (universes are a tool used to address these set-theoretic difficulties).</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">Under certain circumstances, a functor will be one-to-one and onto on isomorphism classes and morphisms. Such a functor is called an equivalence of categories and is very powerful: it allows one to completely convert a problem in one category into a problem in another category. The fundamental theorem of Galois theory is that the functor from a subgroup of the Galois group of a field to its fixed field is an equivalence of categories. Since it is a contravariant functor, it reverses arrows.</p>
+</div>
+<div id="Sx3.p4" class="ltx_para">
+<p class="ltx_p">Analyzing functors is valuable since, like the fundamental group, many of the invariants of an object are actually functors. Since categories are able to deal with isomorphisms and functors are compatible with the category structure, functors are generally a good way of attacking the problem “are these two objects isomorphic?”. One finds a functor from the category the objects are in to some simpler category; if the images are not isomorphic, then the objects were not isomorphic. Many such functors come from homological algebra.</p>
+</div>
+<section id="Sx3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Limits and Colimits defined as Functors</h3>
+
+</section>
+<section id="Sx3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Adjoint Functor Pairs</h3>
+
+<div id="Sx3.SS3.p1" class="ltx_para">
+<p class="ltx_p">For any pair of equivalent categories <math id="Sx3.SS3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Sx3.SS3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> there is a pair of adjoint functors (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AdjointFunctor</span>)
+<math id="Sx3.SS3.p1.m3" class="ltx_Math" alttext="F:A\to B" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> (left-adjoint) and <math id="Sx3.SS3.p1.m4" class="ltx_Math" alttext="G:B\to A" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> (right-adjoint) going in opposite directions between <math id="Sx3.SS3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Sx3.SS3.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> which define the equivalence of the two categories (if it exists). Such adjoint functor pairs play fundamental roles in
+the theory of categories.</p>
+</div>
+</section>
+<section id="Sx3.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Limits and Colimits defined as Functors</h3>
+
+<div id="Sx3.SS4.p1" class="ltx_para">
+<p class="ltx_p">Equivalence of Categories (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EquivalenceOfCategories2</span>)
+when it exists is defined by a functor, <math id="Sx3.SS4.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> with special properties that are completely specified under
+‘equivalence of categories’ (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EquivalenceOfCategories2</span>).</p>
+</div>
+</section>
+</section>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Natural Transformations (Functorial Morphisms) and Natural Equivalence</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">If functors provide the means to ‘map’ or compare categories, natural transformations
+are the means for comparing two functors between the same two categories by mapping their actions both on objects and morphisms subject to naturality conditions for the diagrams that link the image objects and morphisms
+of the two functors that are being compared.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Reversing arrows/Duality</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a category, we can make another category <math id="S2.p1.m2" class="ltx_Math" alttext="C^{\operatorname{op}}" display="inline"><msup><mi>C</mi><mi>op</mi></msup></math>, calld the opposite category, by simply formally reversing the direction of the arrows of <math id="S2.p1.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. This seems unnatural in many cases (for example, in the category of sets, it seems very odd for a function from <math id="S2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to <math id="S2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to be described by an arrow from <math id="S2.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to <math id="S2.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>) but does not violate any axioms of category theory.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The opposite category is useful because one often finds that two concepts (for example, direct product and direct sum) are defined in almost exactly the same way, with the arrows reversed. Noticing this allows one to apply the general category theory describing one to the other with no extra work. Of course, any properties that depend on the particular category in question will differ, but many properties of (for example) the sum and product are independent of the particular category chosen.
+</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Moreover, especially when dealing with contravariant functors, one often finds oneself dealing with a familiar object with the arrows reversed. In this situation, the prefix “co” is used: a categorical direct sum is also called a categorical direct coproduct. A nontrivial example of this is the definition of a Hopf algebra: it is a cogroup object in the category of algebras over a field <math id="S2.p3.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. That is to say, its defining axioms are precisely those of a group object with the arrows reversed. Hopf algebras arise from affine group schemes by way of the contravariant functor taking a <math id="S2.p3.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-algebra to its prime spectrum.</p>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Homological algebra</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">The fundamental group is an extremely powerful tool for studying topological spaces: it allows relatively straightforward proofs of the hairy ball theorem and several other topological results. So many mathematicians have looked for generalizations of various sorts. Tools such as singular homology, de Rham cohomology, cellular homology, sheaf cohomology, étale cohomology, and others all address similar problems. As their names suggest, they use similar techniques at some level. Describing what that level is and extracting the similarities led to the field of homological algebra.</p>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">Central to the field is the notion of an abelian category. This is a category which satisfies a lengthy list of categorical axioms, which together ensure that it behaves like the category of abelian groups<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>In fact, there is a (nontrivial) theorem that asserts that any small abelian category is equivalent to a full subcategory of the category of abelian groups.</span></span></span>: morphisms have kernels and cokernels, finite direct sums exist, and so on. Within this category, one has the notion of a complex, a sequence of objects with a “differential” map. One can extract the homology of such objects. This process is exactly what is going on in each of the cases above.</p>
+</div>
+<div id="Sx4.p3" class="ltx_para">
+<p class="ltx_p">Homological algebra is a very large and important field, which deserves an entry of its own, but the notion of category is essential to its study.</p>
+</div>
+</section>
+<section id="Sx5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Categories as objects</h2>
+
+<div id="Sx5.p1" class="ltx_para">
+<p class="ltx_p">Since category theory is so widely applicable, a large number of tools have been developed for studying categories. Partially as a result, a number of fields use categories as basic tools. For example, in geometry, a site is a generalization of a topological space. One can view a topological space as a category with an object for each open set and an arrow <math id="Sx5.p1.m1" class="ltx_Math" alttext="U\to V" display="inline"><mrow><mi>U</mi><mo>→</mo><mi>V</mi></mrow></math> whenever <math id="Sx5.p1.m2" class="ltx_Math" alttext="U\subseteq V" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>V</mi></mrow></math>. Then presheaves become contravariant functors, and sheaves are presheaves for which a particular diagram commutes. One can generalize this by allowing other categories than the category of open sets, such as the category of finite coverings of a particular topological space. Thus every site is a category with some additional properties.</p>
+</div>
+</section>
+<section id="Sx6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Blue sky</h2>
+
+<div id="Sx6.p1" class="ltx_para">
+<p class="ltx_p">Categories are a useful tool in studying many kinds of objects. In fact, for some kinds of object, their study becomes easiest when cast entirely in categorical language. This has led various people to argue that category theory is a more valuable tool for looking at mathematics than set theory; some have continued on to argue that the foundations of mathematics should be shifted from set theory over to category theory. This is not as large a revolution as it may seem at first, since the foundations of mathematics have already been recast onto an axiomatic foundation within the last two hundred years.</p>
+</div>
+<div id="Sx6.p2" class="ltx_para">
+<p class="ltx_p">Bibliography for Category Theory and Algebraic Topology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CategoricalOntologyABibliographyOfCategoryTheory</span>)
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">category theory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:11:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:11:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">archibal (4430)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">archibal (4430)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">archibal (4430)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Endomorphism2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalDiagramsAsFunctors</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAC</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2Category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2Category2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupoidCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrassmannHopfAlgebroidCategoriesAndGrassmannCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrothendieckCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctorCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2Category2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">CategoricalOntologyABib</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:20:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

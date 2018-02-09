@@ -1,0 +1,347 @@
+<!DOCTYPE html><html>
+<head>
+<title>gauge fields and gauge group</title>
+<!--Generated on Fri Feb  9 18:56:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">gauge fields and gauge group</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Gauge and Gauge Fields</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">gauge</em> <math id="S1.p1.m1" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> is a function which assigns to every real number <math id="S1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> an interval <math id="S1.p1.m3" class="ltx_Math" alttext="\delta(x)" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S1.p1.m4" class="ltx_Math" alttext="x\in\delta(x)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">’Physical’ <span class="ltx_text ltx_font_italic">gauge <math id="S1.p2.m1" class="ltx_Math" alttext="fields" display="inline"><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mi>i</mi><mo mathvariant="italic">⁢</mo><mi>e</mi><mo mathvariant="italic">⁢</mo><mi>l</mi><mo mathvariant="italic">⁢</mo><mi>d</mi><mo mathvariant="italic">⁢</mo><mi>s</mi></mrow></math></span> are certain ‘virtual fields’ that are described by a gauge, as defined above,
+and that play important roles in certain physical theories such as the Non-Abelian Gauge Theory.
+Thus, an <span class="ltx_text ltx_font_italic">ordinary gauge theory</span> is a quantum field theory whose field configurations are <span class="ltx_text ltx_font_italic">vector bundles with connection</span>.</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Additional Examples of Gauge Fields:</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">Most notably, the <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="fields" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></math> that carry the three fundamental forces of the standard model of particle physics are <math id="S1.SS1.p1.m2" class="ltx_Math" alttext="gauge~{}fields" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mpadded width="+3.3pt"><mi>e</mi></mpadded><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></math>:</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p">1. Ordinary electromagnetism–considered without any magnetic charges– is a gauge theory of <math id="S1.SS1.p2.m1" class="ltx_Math" alttext="U(1)" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>-symmetry-principal bundles with connection.</p>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">2. The <math id="S1.SS1.p3.m1" class="ltx_Math" alttext="fields" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></math> in the Yang-Mills theory-as stated in the standard model of particle physics (<math id="S1.SS1.p3.m2" class="ltx_Math" alttext="SUSY" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>Y</mi></mrow></math> and in <math id="S1.SS1.p3.m3" class="ltx_Math" alttext="GUT" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mi>T</mi></mrow></math>s) are also <span class="ltx_text ltx_font_italic">vector bundles with connection</span>.</p>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<p class="ltx_p">3. <span class="ltx_text ltx_font_italic">Dijkgraaf-Witten theory</span> is a gauge theory whose <math id="S1.SS1.p4.m1" class="ltx_Math" alttext="field" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>d</mi></mrow></math> configurations are <math id="S1.SS1.p4.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-principal bundles with <math id="S1.SS1.p4.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> being a finite group (these configurations come with a <span class="ltx_text ltx_font_bold">unique connection</span>, so that in this case the connection does not require any additional specification). The group <math id="S1.SS1.p4.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> in such examples is called the <span class="ltx_text ltx_font_italic">gauge group</span> of the theory.</p>
+</div>
+<div id="S1.SS1.p5" class="ltx_para">
+<p class="ltx_p">4. Other examples such as #3 above include formal physical models.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Generalized Riemann Integral</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Given a gauge <math id="S1.SS2.p1.m1" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>, a partition <math id="S1.SS2.p1.m2" class="ltx_Math" alttext="{U_{i}}_{i=1}^{n}" display="inline"><mmultiscripts><mi>U</mi><mi>i</mi><none></none><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></mmultiscripts></math> of an interval <math id="S1.SS2.p1.m3" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> is said to be <math id="S1.SS2.p1.m4" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>-fine if, for every point <math id="S1.SS2.p1.m5" class="ltx_Math" alttext="x\in[a,b]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, the set <math id="S1.SS2.p1.m6" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math> containing <math id="S1.SS2.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a subset of <math id="S1.SS2.p1.m8" class="ltx_Math" alttext="\delta(x)" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">A function <math id="S1.SS2.p2.m1" class="ltx_Math" alttext="f:[a,b]\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_bold">generalized Riemann integrable</span> on <math id="S1.SS2.p2.m2" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> if there exists a number <math id="S1.SS2.p2.m3" class="ltx_Math" alttext="L\in\mathbb{R}" display="inline"><mrow><mi>L</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that for every <math id="S1.SS2.p2.m4" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there exists a gauge <math id="S1.SS2.p2.m5" class="ltx_Math" alttext="\delta_{\epsilon}" display="inline"><msub><mi>δ</mi><mi>ϵ</mi></msub></math> on <math id="S1.SS2.p2.m6" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> such that if <math id="S1.SS2.p2.m7" class="ltx_Math" alttext="\dot{\mathcal{P}}" display="inline"><mover accent="true"><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>˙</mo></mover></math> is any <math id="S1.SS2.p2.m8" class="ltx_Math" alttext="\delta_{\epsilon}" display="inline"><msub><mi>δ</mi><mi>ϵ</mi></msub></math>-fine partition of <math id="S1.SS2.p2.m9" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>, then</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="|S(f;\dot{\mathcal{P}})-L|&lt;\epsilon," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>;</mo><mover accent="true"><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>L</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.SS2.p2.m10" class="ltx_Math" alttext="S(f;\dot{\mathcal{P}})" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>;</mo><mover accent="true"><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> is any Riemann sum for <math id="S1.SS2.p2.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> using the partition <math id="S1.SS2.p2.m12" class="ltx_Math" alttext="\dot{\mathcal{P}}" display="inline"><mover accent="true"><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>˙</mo></mover></math>. The collection of all generalized Riemann integrable functions is usually denoted by <math id="S1.SS2.p2.m13" class="ltx_Math" alttext="\mathcal{R}^{*}[a,b]" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S1.SS2.p3.m1" class="ltx_Math" alttext="f\in\mathcal{R}^{*}[a,b]" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> then the number <math id="S1.SS2.p3.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is uniquely determined, and is called the <span class="ltx_text ltx_font_bold">generalized Riemann integral</span> of <math id="S1.SS2.p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> over <math id="S1.SS2.p3.m4" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p4" class="ltx_para">
+<p class="ltx_p">The reason that this is called a generalized Riemann integral is that, in the special case where <math id="S1.SS2.p4.m1" class="ltx_Math" alttext="\delta(x)=[x-y,x+y]" display="inline"><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></math> for some number <math id="S1.SS2.p4.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, we recover the Riemann integral as a special case.</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><span class="ltx_ERROR ltx_centering undefined">\includegraphics</span>
+<p class="ltx_p ltx_align_center">riemann.eps</p>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Riemann sum over a <math id="S1.F1.m2" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>-fine partition</figcaption>
+</figure>
+</section>
+<section id="S1.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Acknowledgement:</h3>
+
+<div id="S1.SS3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The PM entry on the ‘generalized Riemann integral’ is owned by Raymond Puzio, Oscar Randal-Williams, Steve Cheng.</span></p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Gauge Group</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let us start with two vector bundles <math id="S2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and <math id="S2.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> over a space <math id="S2.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="E=\Bigl{(}\coprod_{\alpha}U_{\alpha}\times\mathbb{R}^{n}\Bigr{)}/\{g_{\alpha%
+\beta}\}" display="block"><mrow><mi>E</mi><mo>=</mo><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mi>α</mi></munder><mrow><msub><mi>U</mi><mi>α</mi></msub><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">{</mo><msub><mi>g</mi><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="F=\Bigl{(}\coprod_{\alpha}U_{\alpha}\times\mathbb{R}^{m}\Bigr{)}/\{h_{\alpha%
+\beta}\}" display="block"><mrow><mi>F</mi><mo>=</mo><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mi>α</mi></munder><mrow><msub><mi>U</mi><mi>α</mi></msub><mo>×</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">{</mo><msub><mi>h</mi><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The first objective is to show how to create a bundle called <math id="S2.p2.m1" class="ltx_Math" alttext="{\rm Hom}(E,F)" display="inline"><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math>. There are two different ways to do this. The first way is to observe that since for vector spaces <math id="S2.p2.m2" class="ltx_Math" alttext="V,W" display="inline"><mrow><mi>V</mi><mo>,</mo><mi>W</mi></mrow></math> that <math id="S2.p2.m3" class="ltx_Math" alttext="{\rm Hom}(V,W)\cong W\otimes V^{\ast}" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><mi>W</mi><mo>⊗</mo><msup><mi>V</mi><mo>∗</mo></msup></mrow></mrow></math> (here just meaning the module of homomorphisms from <math id="S2.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> to <math id="S2.p2.m5" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>) thus if we take the bundle <math id="S2.p2.m6" class="ltx_Math" alttext="{\rm Hom}(E,F):=F\otimes E^{\ast}" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>F</mi><mo>⊗</mo><msup><mi>E</mi><mo>∗</mo></msup></mrow></mrow></math> then we have that since the fibers <math id="S2.p2.m7" class="ltx_Math" alttext="(F\otimes E^{\ast})_{b}=F_{b}\otimes E^{\ast}_{b}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⊗</mo><msup><mi>E</mi><mo>∗</mo></msup></mrow><mo stretchy="false">)</mo></mrow><mi>b</mi></msub><mo>=</mo><mrow><msub><mi>F</mi><mi>b</mi></msub><mo>⊗</mo><msubsup><mi>E</mi><mi>b</mi><mo>∗</mo></msubsup></mrow></mrow></math> we have what we want.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Another way of looking at the creation of the bundle <math id="S2.p3.m1" class="ltx_Math" alttext="{\rm Hom}(E,F)" display="inline"><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> is to look at representations and what we would ideally like our bundle to look like. If we have that the bundle that represents <math id="S2.p3.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is given by taking the principle <math id="S2.p3.m3" class="ltx_Math" alttext="\Gl(m,\mathbb{R})" display="inline"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math> bundle</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="P_{F}=\Bigl{(}\coprod_{\alpha}U_{\alpha}\times\Gl(m,\mathbb{R})\Bigl{)}/\{h_{%
+\alpha\beta}\}" display="block"><mrow><msub><mi>P</mi><mi>F</mi></msub><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mi>α</mi></munder><msub><mi>U</mi><mi>α</mi></msub><mo>×</mo><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow><mrow><mo maxsize="160%" minsize="160%">)</mo><mo>/</mo><mrow><mo stretchy="false">{</mo><msub><mi>h</mi><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and a trivial representation then the bundle afforded by the trivial representation is simply <math id="S2.p3.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. The same thing is true with the bundle <math id="S2.p3.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. We then have that if we look at the structure group of our proposed new bundle it should be <math id="S2.p3.m6" class="ltx_Math" alttext="\Gl(m,\mathbb{R})\times\Gl(n,\mathbb{R})" display="inline"><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The fibers of our proposed new bundle definitely should be <math id="S2.p3.m7" class="ltx_Math" alttext="{\rm Hom}(\mathbb{R}^{n},\mathbb{R}^{m})" display="inline"><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>,</mo><msup><mi>ℝ</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> thus we have that the representation we are looking for should take something in our structure group and something in the fiber and give us something new in the fiber. The proposed representation is <math id="S2.p3.m8" class="ltx_Math" alttext="\rho(A,B)(U)=A\circ U\circ B^{-1}" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>∘</mo><mi>U</mi><mo>∘</mo><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. Then looking at the bundle associated to the representation of <math id="S2.p3.m9" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> gives us that if</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="P=P_{F}\times P_{E}=\Bigl{(}\coprod_{\alpha}U_{\alpha}\times\Gl(m,\mathbb{R})%
+\times\Gl(n,\mathbb{R})\Bigr{)}/\{h_{\alpha\beta}\times g_{\alpha\beta}\}" display="block"><mrow><mi>P</mi><mo>=</mo><mrow><msub><mi>P</mi><mi>F</mi></msub><mo>×</mo><msub><mi>P</mi><mi>E</mi></msub></mrow><mo>=</mo><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mi>α</mi></munder><mrow><mrow><mrow><mrow><msub><mi>U</mi><mi>α</mi></msub><mo>×</mo><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">{</mo><mrow><msub><mi>h</mi><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></msub><mo>×</mo><msub><mi>g</mi><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then
+</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="{\rm Hom}(E,F)\equiv P\times_{\rho}{\rm Hom}(\mathbb{R}^{n},\mathbb{R}^{m})" display="block"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mi>P</mi><msub><mo>×</mo><mi>ρ</mi></msub><mi>Hom</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>,</mo><msup><mi>ℝ</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we can similarly define</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="{\rm Aut}(E)=P_{E}\times_{\rho}\Gl(n,\mathbb{R})" display="block"><mrow><mrow><mi>Aut</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>P</mi><mi>E</mi></msub><msub><mo>×</mo><mi>ρ</mi></msub><merror class="ltx_ERROR undefined undefined"><mtext>\Gl</mtext></merror></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">The group of sections of <math id="S2.p4.m1" class="ltx_Math" alttext="{\rm Aut}(E)" display="inline"><mrow><mi>Aut</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is called the <em class="ltx_emph ltx_font_italic">gauge group</em>. It is a group since we have that if <math id="S2.p4.m2" class="ltx_Math" alttext="(f,f^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></math> is a section of <math id="S2.p4.m3" class="ltx_Math" alttext="{\rm Aut}(E)" display="inline"><mrow><mi>Aut</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S2.p4.m4" class="ltx_Math" alttext="(\tau,\tau^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><msup><mi>τ</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></math> is also a section of <math id="S2.p4.m5" class="ltx_Math" alttext="{\rm Aut}(E)" display="inline"><mrow><mi>Aut</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> then we have a group operation given by composition:</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="\xymatrix{E\ar[r]^{\tau}\ar[d]^{\pi}&amp;E\ar[r]^{f}\ar[d]^{\pi}&amp;E\ar[d]^{\pi}\\
+B\ar[r]^{\tau^{\prime}}&amp;B\ar[r]^{f^{\prime}}&amp;B}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi>E</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>τ</mi></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>π</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>f</mi></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>π</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>π</mi></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><msup><mi>τ</mi><mo>′</mo></msup></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><msup><mi>f</mi><mo>′</mo></msup></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The fact that these bundle maps are isomorphisms of bundles gives the existence of an inverse. The reason for this is that for each section <math id="S2.p4.m6" class="ltx_Math" alttext="(f,f^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></math>, <math id="S2.p4.m7" class="ltx_Math" alttext="E_{b}\cong E_{f^{\prime}(b)}" display="inline"><mrow><msub><mi>E</mi><mi>b</mi></msub><mo>≅</mo><msub><mi>E</mi><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math> since <math id="S2.p4.m8" class="ltx_Math" alttext="f_{b}" display="inline"><msub><mi>f</mi><mi>b</mi></msub></math> is a vector space isomorphism. Thus we now have that if we look at the bundle map given by taking <math id="S2.p4.m9" class="ltx_Math" alttext="\Bigl{(}f^{-1},(f^{\prime})^{-1})\Bigr{)}" display="inline"><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></math> (where <math id="S2.p4.m10" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> means <math id="S2.p4.m11" class="ltx_Math" alttext="(f_{b})^{-1}" display="inline"><msup><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>b</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> for each <math id="S2.p4.m12" class="ltx_Math" alttext="b\in B" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></math>). Associativity is clear by composition of functions being associative and the identity map acts as the identity element.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The PM entry on the gauge group is owned by Stephen Maguire, Warren Buck.</span></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Nicolai Reshitikhin, Lectures on quantization of gauge systems (pdf). Quantized gauge system <math id="bib.bib1.m1" class="ltx_Math" alttext="http://staff.science.uva.nl/~{}nresheti/Holb-Quant-Gauge.pdf" display="inline"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>s</mi><mi>t</mi><mi>a</mi><mi>f</mi><mi>f</mi><mo>.</mo><mi>s</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mo>.</mo><mi>u</mi><mi>v</mi><mi>a</mi><mo>.</mo><mi>n</mi><mi>l</mi><mo rspace="5.8pt">/</mo><mi>n</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>h</mi><mi>e</mi><mi>t</mi><mi>i</mi><mo>/</mo><mi>H</mi><mi>o</mi><mi>l</mi><mi>b</mi><mo>-</mo><mi>Q</mi><mi>u</mi><mi>a</mi><mi>n</mi><mi>t</mi><mo>-</mo><mi>G</mi><mi>a</mi><mi>u</mi><mi>g</mi><mi>e</mi><mo>.</mo><mi>p</mi><mi>d</mi><mi>f</mi></mrow></math>
+(An introduction to concepts in the quantization of gauge theories
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Marc Henneaux, Claudio Teitelboim, Quantization of gauge systems. Princeton University Press.
+(A standard textbook on the BV-BRST formalism for the quantization of gauge systems.)
+<math id="bib.bib2.m1" class="ltx_Math" alttext="http://www.ulb.ac.be/sciences/ptm/pmif/membres/henneaux.html" display="inline"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>w</mi><mi>w</mi><mi>w</mi><mo>.</mo><mi>u</mi><mi>l</mi><mi>b</mi><mo>.</mo><mi>a</mi><mi>c</mi><mo>.</mo><mi>b</mi><mi>e</mi><mo>/</mo><mi>s</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mo>/</mo><mi>p</mi><mi>t</mi><mi>m</mi><mo>/</mo><mi>p</mi><mi>m</mi><mi>i</mi><mi>f</mi><mo>/</mo><mi>m</mi><mi>e</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mi>s</mi><mo>/</mo><mi>h</mi><mi>e</mi><mi>n</mi><mi>n</mi><mi>e</mi><mi>a</mi><mi>u</mi><mi>x</mi><mo>.</mo><mi>h</mi><mi>t</mi><mi>m</mi><mi>l</mi></mrow></math> and <math id="bib.bib2.m2" class="ltx_Math" alttext="http://arXiv.org/ps/hep-th/9405109" display="inline"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>a</mi><mi>r</mi><mi>X</mi><mi>i</mi><mi>v</mi><mo>.</mo><mi>o</mi><mi>r</mi><mi>g</mi><mo>/</mo><mi>p</mi><mi>s</mi><mo>/</mo><mi>h</mi><mi>e</mi><mi>p</mi><mo>-</mo><mi>t</mi><mi>h</mi><mo>/</mo><mn>9405109</mn></mrow></math>
+Commun.Math.Phys.174:57-92,1995
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+G. Barnich, F. Brandt, M. Henneaux.. 1994. Local BRST cohomology in the antifield formalism: I. General theorems
+Commun.Math.Phys.174:57-92,1995
+(Submitted to arXiv on 17 May 1994 (v1), last revised 13 Jun 1994 (this version, v2))
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+M. Henneaux. 1985. Hamiltonian Form of the Path Integral for Theories with a Gauge Freedom. Physics Reports, 126:1-66 (1985).
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+Dan Freed. Dirac charge quantization and generalized differential cohomology. (A discussion of Abelian higher-gauge theory in terms of <span class="ltx_text ltx_font_italic">differential cohomology</span>)
+<span class="ltx_ERROR undefined">\bibitemAV</span>
+Alessandro Valentino. Differential cohomology and quantum gauge fields (pdf)
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">USnlab)
+See also: <span class="ltx_text ltx_font_typewriter">http://ncatlab.org/nlab/show/gauge+theory</span>USnLab (Revised and published on December 21, 2011 01:08:09 by Urs Schreiber (83.91.122.110)-<math id="bib.bib6.m1" class="ltx_Math" alttext="http://ncatlab.org/nlab/show/gauge+theory" display="inline"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>n</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>l</mi><mi>a</mi><mi>b</mi><mo>.</mo><mi>o</mi><mi>r</mi><mi>g</mi><mo>/</mo><mi>n</mi><mi>l</mi><mi>a</mi><mi>b</mi><mo>/</mo><mi>s</mi><mi>h</mi><mi>o</mi><mi>w</mi><mo>/</mo><mi>g</mi><mi>a</mi><mi>u</mi><mi>g</mi><mi>e</mi><mo>+</mo><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>y</mi></mrow></math>);
+
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>References</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">MARC HENNEAUX - Selected publications
+E10, BE10 and arithmetical chaos in superstring cosmology.
+T. Damour and M. Henneaux.
+Phys. Rev. Lett. 86, 4749-4752 (2001), e-Print Archive: hep-th/0012172.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">Local BRST Cohomology in the Antifield Formalism : I. General Theorems.
+G. Barnich, F. Brandt and M. Henneaux. Commun. Math. Phys. 174, 57-92 (1995), e-Print Archive: <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="http://arXiv.org/abs/hep-th/9405109" display="inline"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>a</mi><mi>r</mi><mi>X</mi><mi>i</mi><mi>v</mi><mo>.</mo><mi>o</mi><mi>r</mi><mi>g</mi><mo>/</mo><mi>a</mi><mi>b</mi><mi>s</mi><mo>/</mo><mi>h</mi><mi>e</mi><mi>p</mi><mo>-</mo><mi>t</mi><mi>h</mi><mo>/</mo><mn>9405109</mn></mrow></math>.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">Geometry of the 2+1 Black Hole.
+M. Barboux, M. Henneaux, C. Teitelboim and J. Zanelli.
+Phys.Rev. D48 (1993) 1506-1525, e-Print Archive: gr-qc/9302012.</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">Central Charges in the Canonical Realization of Asymptotic Symmetries : An example from Three-Dimensional Gravity.
+J. D. Brown and M. Henneaux.
+Commun. Math. Phys. 104, 207-226 (1986).</p>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p">Hamiltonian Form of the Path Integral for Theories with a Gauge Freedom.
+M. Henneaux, Physics Reports 126, 1-66 (1985).</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Abstracts</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Establishes “general theorems on the cohomology <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="H^{*}(s|d)" display="inline"><mrow><msup><mi>H</mi><mo mathvariant="normal">*</mo></msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>s</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> of the BRST differential modulo the spacetime exterior derivative, acting in the algebra of local <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-forms depending on the fields and the antifields (=sources for the BRST variations). It is shown that <math id="S2.SS2.p1.m3" class="ltx_Math" alttext="H^{-k}(s|d)" display="inline"><mrow><msup><mi>H</mi><mrow><mo mathvariant="normal">-</mo><mi>k</mi></mrow></msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>s</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is isomorphic to <math id="S2.SS2.p1.m4" class="ltx_Math" alttext="H_{k}(\delta|d)" display="inline"><mrow><msub><mi>H</mi><mi>k</mi></msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>δ</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> in negative ghost degree <math id="S2.SS2.p1.m5" class="ltx_Math" alttext="-k\ (k&gt;0)" display="inline"><mrow><mo mathvariant="normal">-</mo><mpadded width="+5pt"><mi>k</mi></mpadded><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>k</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, where <math id="S2.SS2.p1.m6" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> is the Koszul-Tate differential associated with the stationary surface. The cohomological group <math id="S2.SS2.p1.m7" class="ltx_Math" alttext="H_{1}(\delta|d)" display="inline"><mrow><msub><mi>H</mi><mn mathvariant="normal">1</mn></msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>δ</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> in form degree <math id="S2.SS2.p1.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is proved to be isomorphic to the space of constants of the motion, thereby providing a cohomological reformulation of Noether theorem. More generally, the group <math id="S2.SS2.p1.m9" class="ltx_Math" alttext="H_{k}(\delta|d)" display="inline"><mrow><msub><mi>H</mi><mi>k</mi></msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>δ</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> in form degree <math id="S2.SS2.p1.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is isomorphic to the space of <math id="S2.SS2.p1.m11" class="ltx_Math" alttext="n-k" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>k</mi></mrow></math> forms that are closed when the equations of motion hold. The groups <math id="S2.SS2.p1.m12" class="ltx_Math" alttext="H_{k}(\delta|d)" display="inline"><mrow><msub><mi>H</mi><mi>k</mi></msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>δ</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> <math id="S2.SS2.p1.m13" class="ltx_Math" alttext="(k&gt;2)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>k</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">2</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> are shown to vanish for standard irreducible gauge theories. The group <math id="S2.SS2.p1.m14" class="ltx_Math" alttext="H_{2}(\delta|d)" display="inline"><mrow><msub><mi>H</mi><mn mathvariant="normal">2</mn></msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>δ</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is then calculated explicitly for electromagnetism, Yang-Mills models and Einstein gravity. The invariance of the groups <math id="S2.SS2.p1.m15" class="ltx_Math" alttext="H^{k}(s|d)" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>s</mi><mo mathvariant="normal" stretchy="false">|</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> under the introduction of non minimal variables and of auxiliary.”</span>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">Comments: 48 pages LaTeX file, ULB-PMIF-94/06 NIKEF-H 94-13 (minor changes in section 10)
+Subjects: High Energy Physics - Theory (hep-th)
+Journal reference: Commun.Math.Phys.174:57-92,1995
+DOI: 10.1007/BF02099464
+Cite as: arXiv:hep-th/9405109v2</p>
+</div>
+<div id="S2.SS2.p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">gauge fields and gauge group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GaugeFieldsAndGaugeGroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:31:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:31:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:56:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

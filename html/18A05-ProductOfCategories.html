@@ -1,0 +1,228 @@
+<!DOCTYPE html><html>
+<head>
+<title>product of categories</title>
+<!--Generated on Fri Feb  9 19:22:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">product of categories</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">There are occasions when we need to consider objects from different categories being paired up. For example, if <math id="p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a category, then <math id="p1.m2" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="p1.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> are objects of <math id="p1.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a set, and we can think of <math id="p1.m5" class="ltx_Math" alttext="\hom" display="inline"><mi>hom</mi></math> as a functor from <math id="p1.m6" class="ltx_Math" alttext="\mathcal{C}^{\operatorname{op}}\times\mathcal{C}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>op</mi></msup><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> to the category of sets. But what is <math id="p1.m7" class="ltx_Math" alttext="\mathcal{C}^{\operatorname{op}}\times\mathcal{C}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>op</mi></msup><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> exactly? We will give this a formal definition presently.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> be categories. Define the <em class="ltx_emph ltx_font_italic">Cartesian product</em> <math id="p2.m3" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math> of <math id="p2.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="p2.m5" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> as the following pair <math id="p2.m6" class="ltx_Math" alttext="(O,M)" display="inline"><mrow><mo stretchy="false">(</mo><mi>O</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></math>, where</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> is the class consisting of ordered pairs <math id="I1.i1.p1.m2" class="ltx_Math" alttext="(X,Y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="I1.i1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is an object in <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="I1.i1.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is an object in <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the class consisting of ordered pairs <math id="I1.i2.p1.m2" class="ltx_Math" alttext="(f,g)" display="inline"><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="I1.i2.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a morphism in <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="I1.i2.p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a morphism in <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">There is a category structure on <math id="p2.m7" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>. But several things need to be defined first.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Elements of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> are called the <em class="ltx_emph ltx_font_italic">objects</em> of <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math> and elements of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> are called the <em class="ltx_emph ltx_font_italic">morphisms</em> of <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>. For each morphism <math id="I2.i1.p1.m5" class="ltx_Math" alttext="(f,g)\in M" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>M</mi></mrow></math>, we define the domain and codomain operations</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{dom}(f,g):=(\operatorname{dom}(f),\operatorname{dom}(g))\quad%
+\mbox{ and }\quad\operatorname{cod}(f,g):=(\operatorname{cod}(f),\operatorname%
+{cod}(g))." display="block"><mrow><mrow><mrow><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mtext> and </mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mi>cod</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>cod</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>cod</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that for simplicity, we have used the same symbol <math id="I2.i1.p1.m6" class="ltx_Math" alttext="\operatorname{dom}" display="inline"><mi>dom</mi></math> and <math id="I2.i1.p1.m7" class="ltx_Math" alttext="\operatorname{cod}" display="inline"><mi>cod</mi></math> for <math id="I2.i1.p1.m8" class="ltx_Math" alttext="\mathcal{C},\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>, and <math id="I2.i1.p1.m9" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Next, for each pair of objects <math id="I2.i2.p1.m1" class="ltx_Math" alttext="A,B\in\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>, we have a set <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> consisting of all morphisms in <math id="I2.i2.p1.m3" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math> whose domain is <math id="I2.i2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and codomain is <math id="I2.i2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Note that <math id="I2.i2.p1.m6" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a set because it is <math id="I2.i2.p1.m7" class="ltx_Math" alttext="\hom(X,Z)\times\hom(Y,T)" display="inline"><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="I2.i2.p1.m8" class="ltx_Math" alttext="A=(X,Y)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I2.i2.p1.m9" class="ltx_Math" alttext="B=(Z,T)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> and each component in the product is assumed to be a set.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Finally, for objects <math id="I2.i3.p1.m1" class="ltx_Math" alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math> in <math id="I2.i3.p1.m2" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>, we have a function <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> called composition:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\circ:\hom(A,B)\times\hom(B,C)\to\hom(A,C)." display="block"><mrow><mo>∘</mo><mo>:</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To define <math id="I2.i3.p1.m4" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math>, write each object <math id="I2.i3.p1.m5" class="ltx_Math" alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math> as ordered pairs: <math id="I2.i3.p1.m6" class="ltx_Math" alttext="A=(X,Y)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I2.i3.p1.m7" class="ltx_Math" alttext="B=(Z,T)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I2.i3.p1.m8" class="ltx_Math" alttext="C=(U,V)" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>. In addition, let <math id="I2.i3.p1.m9" class="ltx_Math" alttext="\alpha=(f,g)\in\hom(A,B)" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I2.i3.p1.m10" class="ltx_Math" alttext="\beta=(p,q)\in\hom(B,C)" display="inline"><mrow><mi>β</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\circ(\alpha,\beta):=(\circ_{1}(f,p),\circ_{2}(g,q))," display="block"><mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mrow><mo stretchy="false">(</mo><msub><mo>∘</mo><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><msub><mo>∘</mo><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I2.i3.p1.m11" class="ltx_Math" alttext="\circ_{1}" display="inline"><msub><mo>∘</mo><mn>1</mn></msub></math> and <math id="I2.i3.p1.m12" class="ltx_Math" alttext="\circ_{2}" display="inline"><msub><mo>∘</mo><mn>2</mn></msub></math> are compositions defined in <math id="I2.i3.p1.m13" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="I2.i3.p1.m14" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> respectively, such that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\circ_{1}:\hom(X,Z)\times\hom(Z,U)\to\hom(X,U)\mbox{ and }\circ_{2}:\hom(Y,T)%
+\times\hom(T,V)\to\hom(Y,V)." display="block"><mrow><msub><mo>∘</mo><mn>1</mn></msub><mo>:</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><mi>U</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>U</mi><mo stretchy="false">)</mo></mrow><mtext> and </mtext><msub><mo>∘</mo><mn>2</mn></msub><mo>:</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As usual, we write <math id="I2.i3.p1.m15" class="ltx_Math" alttext="\beta\circ\alpha" display="inline"><mrow><mi>β</mi><mo>∘</mo><mi>α</mi></mrow></math> for <math id="I2.i3.p1.m16" class="ltx_Math" alttext="\circ(\alpha,\beta)" display="inline"><mrow><mi></mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Now, it is not hard to see that <math id="I2.i4.p1.m1" class="ltx_Math" alttext="\mathcal{C}\times\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math> with <math id="I2.i4.p1.m2" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> is a category. For example, let us verify that <math id="I2.i4.p1.m3" class="ltx_Math" alttext="(A,B)\neq(C,D)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></math> implies <math id="I2.i4.p1.m4" class="ltx_Math" alttext="\hom(A,B)\cap\hom(C,D)=\varnothing" display="inline"><mrow><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. Write <math id="I2.i4.p1.m5" class="ltx_Math" alttext="A=(X,Y)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I2.i4.p1.m6" class="ltx_Math" alttext="B=(Z,S)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I2.i4.p1.m7" class="ltx_Math" alttext="C=(T,U)" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I2.i4.p1.m8" class="ltx_Math" alttext="D=(V,W)" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Suppose <math id="I2.i4.p1.m9" class="ltx_Math" alttext="\alpha=(f,g)\in\hom(A,B)\cap\hom(C,D)" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Then <math id="I2.i4.p1.m10" class="ltx_Math" alttext="f\in\hom(X,Z)\cap\hom(T,V)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="I2.i4.p1.m11" class="ltx_Math" alttext="g\in\hom(Y,S)\cap\hom(U,W)" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. But this implies <math id="I2.i4.p1.m12" class="ltx_Math" alttext="X=T" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>T</mi></mrow></math>, <math id="I2.i4.p1.m13" class="ltx_Math" alttext="Z=V" display="inline"><mrow><mi>Z</mi><mo>=</mo><mi>V</mi></mrow></math>, <math id="I2.i4.p1.m14" class="ltx_Math" alttext="Y=U" display="inline"><mrow><mi>Y</mi><mo>=</mo><mi>U</mi></mrow></math>, and <math id="I2.i4.p1.m15" class="ltx_Math" alttext="S=W" display="inline"><mrow><mi>S</mi><mo>=</mo><mi>W</mi></mrow></math>. So <math id="I2.i4.p1.m16" class="ltx_Math" alttext="A=(X,Y)=(T,U)=C" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>U</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>C</mi></mrow></math> and <math id="I2.i4.p1.m17" class="ltx_Math" alttext="B=(Z,S)=(V,W)=D" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>D</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">The above construction can be generalized to <math id="I3.i1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-fold Cartesian products. If <math id="I3.i1.p1.m2" class="ltx_Math" alttext="\mathcal{C}_{1},\ldots,\mathcal{C}_{n}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>n</mi></msub></mrow></math> be categories. Then <math id="I3.i1.p1.m3" class="ltx_Math" alttext="\mathcal{C}:=\mathcal{C}_{1}\times\cdots\mathcal{C}_{n}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>:=</mo><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi></mrow><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>n</mi></msub></mrow></mrow></math> can be defined much the same way as in the case <math id="I3.i1.p1.m4" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>. <math id="I3.i1.p1.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a category and is sometimes written <math id="I3.i1.p1.m6" class="ltx_Math" alttext="\prod_{i=1}^{n}\mathcal{C}_{i}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Associated with this product, we can form <math id="I3.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (covariant) functors called <em class="ltx_emph ltx_font_italic">projection functors</em> <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\Pi_{i}:\mathcal{C}\to\mathcal{C}_{i}" display="inline"><mrow><msub><mi mathvariant="normal">Π</mi><mi>i</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></mrow></mrow></math>, given by <math id="I3.i2.p1.m3" class="ltx_Math" alttext="\Pi_{i}(A)=A_{i}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Π</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math> and <math id="I3.i2.p1.m4" class="ltx_Math" alttext="\Pi_{i}(\alpha)=\alpha_{i}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Π</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>α</mi><mi>i</mi></msub></mrow></math>, where <math id="I3.i2.p1.m5" class="ltx_Math" alttext="A=(A_{1},\ldots,A_{n})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I3.i2.p1.m6" class="ltx_Math" alttext="\alpha=(\alpha_{1},\ldots,\alpha_{n})" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">The product <math id="I3.i3.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\mathcal{C}_{i}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></math> also enjoys the universal property that for every category <math id="I3.i3.p1.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> and functors <math id="I3.i3.p1.m4" class="ltx_Math" alttext="F_{i}:\mathcal{D}\to\mathcal{C}_{i}" display="inline"><mrow><msub><mi>F</mi><mi>i</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></mrow></mrow></math>, there is a unique functor <math id="I3.i3.p1.m5" class="ltx_Math" alttext="F:\mathcal{D}\to\mathcal{C}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> such that <math id="I3.i3.p1.m6" class="ltx_Math" alttext="\Pi_{i}\circ F=F_{i}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Π</mi><mi>i</mi></msub><mo>∘</mo><mi>F</mi></mrow><mo>=</mo><msub><mi>F</mi><mi>i</mi></msub></mrow></math> (in other words, <math id="I3.i3.p1.m7" class="ltx_Math" alttext="F_{i}" display="inline"><msub><mi>F</mi><mi>i</mi></msub></math> factors through <math id="I3.i3.p1.m8" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>).</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">If fact, any category that enjoys the universal property described above is naturally equivalent to the product of <math id="I3.i4.p1.m1" class="ltx_Math" alttext="\mathcal{C}_{i}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></math>. We may actually define product category this way, and then prove its existence using the construction that is given as the definition at the beginning of this article.</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p">More generally, we can define arbitrary (direct) product of categories. The definition is completely similar to the one above. If <math id="I3.i5.p1.m1" class="ltx_Math" alttext="\{\mathcal{C}_{i}\mid i\in I\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></math> is a family of categories indexed by a set <math id="I3.i5.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, we often write <math id="I3.i5.p1.m3" class="ltx_Math" alttext="\prod_{i\in I}\mathcal{C}_{i}" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></mrow></math> as the product category. Objects and morphisms are written <math id="I3.i5.p1.m4" class="ltx_Math" alttext="(A_{i})_{i\in I}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub></math> and <math id="I3.i5.p1.m5" class="ltx_Math" alttext="(\alpha_{i})_{i\in I}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub></math> respectively. When all the <math id="I3.i5.p1.m6" class="ltx_Math" alttext="\mathcal{C}_{i}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>i</mi></msub></math> are identical, say, equal to <math id="I3.i5.p1.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, we also write the product as <math id="I3.i5.p1.m8" class="ltx_Math" alttext="\mathcal{C}^{I}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>I</mi></msup></math>, and call it the <em class="ltx_emph ltx_font_italic"><math id="I3.i5.p1.m9" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>-fold direct product of</em> <math id="I3.i5.p1.m10" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i6.p1" class="ltx_para">
+<p class="ltx_p">The existence of the product of categories indexed by an arbitrary set shows that the category of (small) categories <span class="ltx_text ltx_font_bold">Cat</span> has products.
+</p>
+</div>
+</li>
+<li id="I3.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i7.p1.m1" class="ltx_Math" alttext="\mathcal{C}=\mathcal{D}\times\mathcal{E}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">ℰ</mi></mrow></mrow></math>. Then we may identify <math id="I3.i7.p1.m2" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> as a subcategory of <math id="I3.i7.p1.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>: for each object <math id="I3.i7.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> in <math id="I3.i7.p1.m5" class="ltx_Math" alttext="\mathcal{E}" display="inline"><mi class="ltx_font_mathcaligraphic">ℰ</mi></math>, define <math id="I3.i7.p1.m6" class="ltx_Math" alttext="F_{E}:\mathcal{D}\to\mathcal{C}" display="inline"><mrow><msub><mi>F</mi><mi>E</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math>, by <math id="I3.i7.p1.m7" class="ltx_Math" alttext="F_{E}(A):=(A,E)" display="inline"><mrow><mrow><msub><mi>F</mi><mi>E</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I3.i7.p1.m8" class="ltx_Math" alttext="F(\alpha)=(\alpha,1_{E})" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><msub><mn>1</mn><mi>E</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. Then <math id="I3.i7.p1.m9" class="ltx_Math" alttext="F_{E}" display="inline"><msub><mi>F</mi><mi>E</mi></msub></math> is a faithful functor. The image <math id="I3.i7.p1.m10" class="ltx_Math" alttext="\mathcal{C}_{E}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>E</mi></msub></math> of <math id="I3.i7.p1.m11" class="ltx_Math" alttext="F_{E}" display="inline"><msub><mi>F</mi><mi>E</mi></msub></math> (with objects <math id="I3.i7.p1.m12" class="ltx_Math" alttext="(A,E)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></math> and morphisms <math id="I3.i7.p1.m13" class="ltx_Math" alttext="(\alpha,1_{E})" display="inline"><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><msub><mn>1</mn><mi>E</mi></msub><mo stretchy="false">)</mo></mrow></math>) is a subcategory of <math id="I3.i7.p1.m14" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. It is not hard to see that <math id="I3.i7.p1.m15" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> and <math id="I3.i7.p1.m16" class="ltx_Math" alttext="\mathcal{C}_{E}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>E</mi></msub></math> are isomorphic as categories (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CategoryIsomorphism</span>).</p>
+</div>
+</li>
+<li id="I3.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i8.p1" class="ltx_para">
+<p class="ltx_p">The above also shows that for any objects <math id="I3.i8.p1.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> in <math id="I3.i8.p1.m2" class="ltx_Math" alttext="\mathcal{E}" display="inline"><mi class="ltx_font_mathcaligraphic">ℰ</mi></math>, <math id="I3.i8.p1.m3" class="ltx_Math" alttext="\mathcal{C}_{A}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>A</mi></msub></math> and <math id="I3.i8.p1.m4" class="ltx_Math" alttext="\mathcal{C}_{B}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>B</mi></msub></math> are isomorphic.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">product of categories</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProductOfCategories</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:37:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:37:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalDirectProduct</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DisjointUnionOfCategories</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">product category</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">projection functor</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:22:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

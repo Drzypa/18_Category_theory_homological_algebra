@@ -1,0 +1,176 @@
+<!DOCTYPE html><html>
+<head>
+<title>preadditive category</title>
+<!--Generated on Fri Feb  9 19:31:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">preadditive category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Ab-Category</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">A category <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is an <em class="ltx_emph ltx_font_italic">ab-category</em> or <em class="ltx_emph ltx_font_italic"><span class="ltx_text ltx_font_bold ltx_font_upright">ab</span>-category</em> if</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">for every pair of objects <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, there is a binary operation called addition, written <math id="I1.i1.p1.m3" class="ltx_Math" alttext="+_{(A,B)}" display="inline"><msub><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub></math> or simply <math id="I1.i1.p1.m4" class="ltx_Math" alttext="+" display="inline"><mo>+</mo></math>, defined on <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\operatorname{hom}(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">the set <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>, together with <math id="I1.i2.p1.m2" class="ltx_Math" alttext="+" display="inline"><mo>+</mo></math> is an abelian group,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">(left distributivity) if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="f,g\in\hom(A,B)" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="h\in\hom(B,C)" display="inline"><mrow><mi>h</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I1.i3.p1.m3" class="ltx_Math" alttext="h(f+g)=hf+hg" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mi>f</mi></mrow><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>g</mi></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">(right distributivity) if <math id="I1.i4.p1.m1" class="ltx_Math" alttext="f,g\in\hom(A,B)" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I1.i4.p1.m2" class="ltx_Math" alttext="h\in\hom(C,A)" display="inline"><mrow><mi>h</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I1.i4.p1.m3" class="ltx_Math" alttext="(f+g)h=fh+gh" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>h</mi></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mi>h</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">In a nutshell, an <em class="ltx_emph ltx_font_italic">ab-category</em> is a category in which every hom set in <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is an abelian group such that morphism composition distributes over addition. Ab in the name stands for abelian, clearly indicative of the second condition above.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">Since a group has a multiplicative (or additive if abelian) identity, <math id="S0.SS1.p2.m1" class="ltx_Math" alttext="\hom(A,B)\neq\varnothing" display="inline"><mrow><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> for every pair of objects <math id="S0.SS1.p2.m2" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> in <math id="S0.SS1.p2.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Furthermore, each <math id="S0.SS1.p2.m4" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> contains a unique morphism, written <math id="S0.SS1.p2.m5" class="ltx_Math" alttext="0_{(A,B)}" display="inline"><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub></math>, as the additive identity of <math id="S0.SS1.p2.m6" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Because the subset</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\{f\cdot 0_{(A,B)}\mid f\in\hom(B,C)\}" display="block"><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⋅</mo><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo>∣</mo><mrow><mi>f</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of <math id="S0.SS1.p2.m7" class="ltx_Math" alttext="\hom(A,C)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also a subgroup by right distributivity, and the additive identity of a subgroup coincides with the additive identity of the group, we have the following identity</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="0_{(B,C)}0_{(A,B)}=0_{(A,C)}." display="block"><mrow><mrow><mrow><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo>=</mo><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS1.p3" class="ltx_para">
+<p class="ltx_p">There are many examples of ab-categories, including the category of abelian groups, the category of <math id="S0.SS1.p3.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-modules (<math id="S0.SS1.p3.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> a ring), the category of chain complexes, and the category of rings (not necessarily containing a multiplicative identity). However, the category of rings with 1 is not an ab-category (see below for more detail). Nevertheless, a unital ring <math id="S0.SS1.p3.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> itself considered as a category is an ab-category, as the ring of endomorphisms clearly forms an abelian group. It is in fact a ring! This can be seen as a special case of the fact that, in an ab-category, <math id="S0.SS1.p3.m4" class="ltx_Math" alttext="\operatorname{End}(A)=\hom(A,A)" display="inline"><mrow><mrow><mi>End</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is always a ring (with 1). So, conversely, an ab-category with one object is a ring with 1, whose morphisms are elements of the ring.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Preadditive Category</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">If an ab-category has an initial object, that object is also a terminal object. By duality, the converse is also true. Therefore, in an ab-category, initial object, terminal object, and zero object are synonymous. In the category <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> of unital rings, <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is an initial object, but it has no terminal object, therefore <math id="S0.SS2.p1.m3" class="ltx_Math" alttext="\mathcal{R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> is not an ab-category.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">An ab-category with a zero object <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> is called a <em class="ltx_emph ltx_font_italic">preadditive category</em>.</p>
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">In a preadditive category, the groups <math id="S0.SS2.p3.m1" class="ltx_Math" alttext="\hom(A,O)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>O</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S0.SS2.p3.m2" class="ltx_Math" alttext="\hom(O,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>O</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> are trivial groups by the definition of the zero object <math id="S0.SS2.p3.m3" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>. Therefore, the zero morphism in <math id="S0.SS2.p3.m4" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also the additive identity of <math id="S0.SS2.p3.m5" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="0_{(A,B)}=0_{(O,B)}0_{(A,O)}=A\longrightarrow O\longrightarrow B." display="block"><mrow><mrow><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><mrow><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>O</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><msub><mn>0</mn><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>O</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo>=</mo><mi>A</mi><mo>⟶</mo><mi>O</mi><mo>⟶</mo><mi>B</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">Most of the examples of ab-categories are readily seen to be preadditive. If a preadditive category <math id="S0.SS2.p4.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> has only one object, we see from above that it must be a ring. But this object must also be a zero object, so that <math id="S0.SS2.p4.m2" class="ltx_Math" alttext="\operatorname{End}(R)" display="inline"><mrow><mi>End</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> must be trivial, which means <math id="S0.SS2.p4.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> itself must be trivial too, <math id="S0.SS2.p4.m4" class="ltx_Math" alttext="R=0" display="inline"><mrow><mi>R</mi><mo>=</mo><mn>0</mn></mrow></math>!</p>
+</div>
+<div id="S0.SS2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. In some literature, a preadditive category is an ab-category, and some do not insist that a preadditive category contains a zero object. Here, we choose to differentiate the two.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">preadditive category</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PreadditiveCategory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:54:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:54:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AdditiveCategory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PreAdditiveFunctors</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfAdditiveFractions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ab-category</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:31:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

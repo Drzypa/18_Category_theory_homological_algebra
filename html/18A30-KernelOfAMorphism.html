@@ -1,0 +1,198 @@
+<!DOCTYPE html><html>
+<head>
+<title>kernel of a morphism</title>
+<!--Generated on Fri Feb  9 19:05:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">kernel of a morphism</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a category with zero object <math id="p1.m2" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>. Given objects <math id="p1.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>, we can define a <em class="ltx_emph ltx_font_italic">zero morphism</em>, or <em class="ltx_emph ltx_font_italic">null morphism</em> to be the morphism <math id="p1.m4" class="ltx_Math" alttext="o_{A,B}" display="inline"><msub><mi>o</mi><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></msub></math> of the composition of the two unique morphisms <math id="p1.m5" class="ltx_Math" alttext="A\to O" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>O</mi></mrow></math> and <math id="p1.m6" class="ltx_Math" alttext="O\to B" display="inline"><mrow><mi>O</mi><mo>→</mo><mi>B</mi></mrow></math> in <math id="p1.m7" class="ltx_Math" alttext="\operatorname{Hom}(A,B)" display="inline"><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\xymatrix@+=4pc{A\ar[r]^{o_{A,B}}&amp;B}=\xymatrix@1{A\ar[r]&amp;O\ar[r]&amp;B}." display="block"><mrow><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>+</mo></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><msub><mi>o</mi><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></msub></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mn>1</mn><mo>⁢</mo><mi>A</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This morphism is unique with respect to <math id="p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p1.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, because <math id="p1.m10" class="ltx_Math" alttext="A\to O" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>O</mi></mrow></math> and <math id="p1.m11" class="ltx_Math" alttext="O\to B" display="inline"><mrow><mi>O</mi><mo>→</mo><mi>B</mi></mrow></math> are both unique, and any two zero objects are isomorphic. Instead of writing <math id="p1.m12" class="ltx_Math" alttext="o_{A,B}" display="inline"><msub><mi>o</mi><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></msub></math>, we may drop the subscript and write <math id="p1.m13" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> if there is no confusion. It is easy to see that a composition of a morphism with a zero morphism is a zero morphism.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">With the zero morphism, we define the <em class="ltx_emph ltx_font_italic">kernel</em> of a morphism <math id="p2.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> to be the equalizer of <math id="p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and the corresponding zero morphism <math id="p2.m3" class="ltx_Math" alttext="o:A\to B" display="inline"><mrow><mi>o</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>. This means that, if <math id="p2.m4" class="ltx_Math" alttext="k:K\to A" display="inline"><mrow><mi>k</mi><mo>:</mo><mrow><mi>K</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> is the kernel of <math id="p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, then <math id="p2.m6" class="ltx_Math" alttext="f\circ k=o" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>k</mi></mrow><mo>=</mo><mi>o</mi></mrow></math>, and if <math id="p2.m7" class="ltx_Math" alttext="f\circ g=o" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><mi>o</mi></mrow></math> for some morphism <math id="p2.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, there is a unique morphism <math id="p2.m9" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> such that <math id="p2.m10" class="ltx_Math" alttext="g=k\circ h" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mi>k</mi><mo>∘</mo><mi>h</mi></mrow></mrow></math>. Diagrammatically, this means that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\xymatrix@+=3pc{K\ar[r]^{k}&amp;A\ar[r]^{f}&amp;B}=0," display="block"><mrow><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>+</mo></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>K</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>k</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>f</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and if</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\xymatrix@+=3pc{C\ar[r]^{g}&amp;A\ar[r]^{f}&amp;B}=0," display="block"><mrow><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>+</mo></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>g</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>f</mi></msup><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then there is a unique <math id="p2.m11" class="ltx_Math" alttext="h:C\to K" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>K</mi></mrow></mrow></math> such that</p>
+<p class="ltx_p ltx_align_center"><math id="p2.m12" class="ltx_Math" alttext="\xymatrix@R-=1pc{C\ar[dr]^{g}\ar[dd]_{h}\inner@par&amp;A\inner@par K\ar[ur]_{k}}" display="inline"><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi><mo>⁢</mo><mi>R</mi></mrow><mo>-</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>g</mi></msup><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">]</mo></mrow><mi>h</mi></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>K</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mrow><mi>u</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mi>k</mi></msub></mrow></mrow></math></p>
+<p class="ltx_p">is a commutative diagram.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">By the universality of equalizers, <math id="p3.m1" class="ltx_Math" alttext="(K,k)" display="inline"><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></math> is unique up to isomorphism, if it exists. We usually call <math id="p3.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> the kernel of <math id="p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, and denote it by <math id="p3.m4" class="ltx_Math" alttext="\ker(f)" display="inline"><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></math>, since <math id="p3.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is determined by <math id="p3.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, up to isomorphism. A <em class="ltx_emph ltx_font_italic">kernel</em> is the kernel of some morphism. A kernel is always a monomorphism:</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p4.m1" class="ltx_Math" alttext="k:K\to A" display="inline"><mrow><mi>k</mi><mo>:</mo><mrow><mi>K</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> is the kernel of <math id="p4.m2" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>, and <math id="p4.m3" class="ltx_Math" alttext="g,h:D\to K" display="inline"><mrow><mrow><mi>g</mi><mo>,</mo><mi>h</mi></mrow><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>K</mi></mrow></mrow></math> are morphisms such that <math id="p4.m4" class="ltx_Math" alttext="r:=k\circ g=k\circ h:D\to A" display="inline"><mrow><mrow><mi>r</mi><mo>:=</mo><mrow><mi>k</mi><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>∘</mo><mi>h</mi></mrow></mrow><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>. Then <math id="p4.m5" class="ltx_Math" alttext="f\circ r=f\circ(k\circ g)=(f\circ k)\circ h=0" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>r</mi></mrow><mo>=</mo><mrow><mi>f</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>∘</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>h</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, so that there is a unique morphism <math id="p4.m6" class="ltx_Math" alttext="s:D\to K" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>K</mi></mrow></mrow></math> such that <math id="p4.m7" class="ltx_Math" alttext="k\circ s=r" display="inline"><mrow><mrow><mi>k</mi><mo>∘</mo><mi>s</mi></mrow><mo>=</mo><mi>r</mi></mrow></math>. But then <math id="p4.m8" class="ltx_Math" alttext="k\circ s=k\circ g=k\circ h" display="inline"><mrow><mrow><mi>k</mi><mo>∘</mo><mi>s</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>∘</mo><mi>h</mi></mrow></mrow></math> also. Since <math id="p4.m9" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> is unique, <math id="p4.m10" class="ltx_Math" alttext="g=h" display="inline"><mrow><mi>g</mi><mo>=</mo><mi>h</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Dually, we can define the cokernel of a morphism <math id="p5.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, <math id="p5.m2" class="ltx_Math" alttext="\operatorname{coker}(g)" display="inline"><mrow><mi>coker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math>, to be the coequalizer of <math id="p5.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="p5.m4" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math>. A <em class="ltx_emph ltx_font_italic">cokernel</em> is the cokernel of a morphism. A cokernel is always an epimorphism.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. A category with zero object is said to <em class="ltx_emph ltx_font_italic">have kernels</em> if every morphism has a kernel. Dually, it is said to <em class="ltx_emph ltx_font_italic">have cokernels</em> if every morphism has a cokernel.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The category <span class="ltx_text ltx_font_bold">Grp</span> of groups has the trivial group as the zero object, and any trivial group homomorphism, mapping every element in the domain to the identity in the range, as a zero morphism.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The category <span class="ltx_text ltx_font_bold">Grp</span> of groups has kernels. For any group homomorphism <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\phi:G\to H" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>H</mi></mrow></mrow></math>, let <math id="I1.i2.p1.m2" class="ltx_Math" alttext="K=\ker(\phi)" display="inline"><mrow><mi>K</mi><mo>=</mo><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the kernel of <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> (in the sense of group theory), and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="k:K\to G" display="inline"><mrow><mi>k</mi><mo>:</mo><mrow><mi>K</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> be the canonical injection. We shall see presently that <math id="I1.i2.p1.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is the kernel of <math id="I1.i2.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, in the sense of category theory. First, <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\phi\circ k(a)=\phi(a)=e" display="inline"><mrow><mrow><mrow><mi>ϕ</mi><mo>∘</mo><mi>k</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>e</mi></mrow></math> for every <math id="I1.i2.p1.m8" class="ltx_Math" alttext="a\in K=\ker(\phi)" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>K</mi><mo>=</mo><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Let <math id="I1.i2.p1.m9" class="ltx_Math" alttext="\sigma:S\to G" display="inline"><mrow><mi>σ</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> be another group homomorphism with <math id="I1.i2.p1.m10" class="ltx_Math" alttext="\phi\circ\sigma=1" display="inline"><mrow><mrow><mi>ϕ</mi><mo>∘</mo><mi>σ</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>, the trivial map from <math id="I1.i2.p1.m11" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> to <math id="I1.i2.p1.m12" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. Define <math id="I1.i2.p1.m13" class="ltx_Math" alttext="\psi:S\to K" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>K</mi></mrow></mrow></math> by <math id="I1.i2.p1.m14" class="ltx_Math" alttext="\psi(s)=\sigma(s)" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is a well-defined, because <math id="I1.i2.p1.m15" class="ltx_Math" alttext="\phi(\sigma(s))=e" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>e</mi></mrow></math>, or <math id="I1.i2.p1.m16" class="ltx_Math" alttext="\sigma(s)\in\ker(\phi)=K" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>K</mi></mrow></math>. Furthermore, <math id="I1.i2.p1.m17" class="ltx_Math" alttext="\sigma(s)=\psi(s)=k(\psi(s))" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. It is easy to see that <math id="I1.i2.p1.m18" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> is unique. Thus, <math id="I1.i2.p1.m19" class="ltx_Math" alttext="\ker(\phi)" display="inline"><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the kernel of <math id="I1.i2.p1.m20" class="ltx_Math" alttext="\phi:G\to H" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>H</mi></mrow></mrow></math> in <span class="ltx_text ltx_markedasmath ltx_font_bold">Grp</span>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In addition, <span class="ltx_text ltx_markedasmath ltx_font_bold">Grp</span> has cokernels. Let <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\phi:G\to H" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>H</mi></mrow></mrow></math> be as above, and <math id="I1.i3.p1.m3" class="ltx_Math" alttext="C:=\phi(G)^{H}" display="inline"><mrow><mi>C</mi><mo>:=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><mi>H</mi></msup></mrow></mrow></math> the normal closure (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/NormalClosure2</span>) of <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\phi(G)" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> in <math id="I1.i3.p1.m5" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. Form <math id="I1.i3.p1.m6" class="ltx_Math" alttext="Q=H/C" display="inline"><mrow><mi>Q</mi><mo>=</mo><mrow><mi>H</mi><mo>/</mo><mi>C</mi></mrow></mrow></math> and let <math id="I1.i3.p1.m7" class="ltx_Math" alttext="p:H\to Q" display="inline"><mrow><mi>p</mi><mo>:</mo><mrow><mi>H</mi><mo>→</mo><mi>Q</mi></mrow></mrow></math> be the canonical projection. For any <math id="I1.i3.p1.m8" class="ltx_Math" alttext="a\in G" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>G</mi></mrow></math>, we have <math id="I1.i3.p1.m9" class="ltx_Math" alttext="p\circ\phi(a)=\phi(a)C=C" display="inline"><mrow><mrow><mrow><mi>p</mi><mo>∘</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi></mrow><mo>=</mo><mi>C</mi></mrow></math>, since <math id="I1.i3.p1.m10" class="ltx_Math" alttext="\phi(a)\in\phi(G)\subseteq C" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>C</mi></mrow></math>. Let <math id="I1.i3.p1.m11" class="ltx_Math" alttext="q:H\to T" display="inline"><mrow><mi>q</mi><mo>:</mo><mrow><mi>H</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> be a group homomorphism with <math id="I1.i3.p1.m12" class="ltx_Math" alttext="q\circ\phi=1" display="inline"><mrow><mrow><mi>q</mi><mo>∘</mo><mi>ϕ</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>. Define <math id="I1.i3.p1.m13" class="ltx_Math" alttext="\mu:Q\to T" display="inline"><mrow><mi>μ</mi><mo>:</mo><mrow><mi>Q</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> by <math id="I1.i3.p1.m14" class="ltx_Math" alttext="\mu(bC)=q(b)" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This is well-defined, for if <math id="I1.i3.p1.m15" class="ltx_Math" alttext="cC=bC" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>C</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mi>C</mi></mrow></mrow></math>, then <math id="I1.i3.p1.m16" class="ltx_Math" alttext="cb^{-1}\in C" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>∈</mo><mi>C</mi></mrow></math>, which means that <math id="I1.i3.p1.m17" class="ltx_Math" alttext="cb^{-1}" display="inline"><mrow><mi>c</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> is a finite product of elements of the form <math id="I1.i3.p1.m18" class="ltx_Math" alttext="d\phi(a)d^{-1}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>d</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> where <math id="I1.i3.p1.m19" class="ltx_Math" alttext="a\in G" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>G</mi></mrow></math> and <math id="I1.i3.p1.m20" class="ltx_Math" alttext="d\in H" display="inline"><mrow><mi>d</mi><mo>∈</mo><mi>H</mi></mrow></math>. Since <math id="I1.i3.p1.m21" class="ltx_Math" alttext="q(d\phi(a)d^{-1})=q(d)q(d^{-1})=e\in T" display="inline"><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>d</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>d</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>e</mi><mo>∈</mo><mi>T</mi></mrow></math>, we have that <math id="I1.i3.p1.m22" class="ltx_Math" alttext="q(c)q(b)^{-1}=e" display="inline"><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>q</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mi>e</mi></mrow></math>. Again, <math id="I1.i3.p1.m23" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is easily seen to be unique. This shows that <math id="I1.i3.p1.m24" class="ltx_Math" alttext="H/C" display="inline"><mrow><mi>H</mi><mo>/</mo><mi>C</mi></mrow></math> is the cokernel of <math id="I1.i3.p1.m25" class="ltx_Math" alttext="\phi:G\to H" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>H</mi></mrow></mrow></math> in <span class="ltx_text ltx_font_bold">Grp</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. A category is said to be <em class="ltx_emph ltx_font_italic">Ab1</em>, a la Grothendieck, if it satisifes the <em class="ltx_emph ltx_font_italic">Ab1 Axiom</em>: it has kernels and cokernels. From the examples above, <span class="ltx_text ltx_font_bold">Grp</span> is Ab1.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">kernel of a morphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">KernelOfAMorphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:20:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:20:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">null morphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">has kernels</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">has cokernels</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Ab1 axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">KernelIsAnInverseLimit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">kernel</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">cokernel</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">zero morphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">have kernels</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">have cokernels</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Ab1</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:05:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

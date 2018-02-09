@@ -1,0 +1,203 @@
+<!DOCTYPE html><html>
+<head>
+<title>functor category</title>
+<!--Generated on Fri Feb  9 19:19:09 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">functor category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\mathcal{C},\mathcal{D}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math> be categories. Consider the class <math id="p2.m2" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> of all covariant functors <math id="p2.m3" class="ltx_Math" alttext="T:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>, and the class <math id="p2.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> of all natural transformations <math id="p2.m5" class="ltx_Math" alttext="\tau:S\dot{\to}T" display="inline"><mrow><mi>τ</mi><mo>:</mo><mrow><mi>S</mi><mo>⁢</mo><mover accent="true"><mo>→</mo><mo>˙</mo></mover><mo>⁢</mo><mi>T</mi></mrow></mrow></math> for every pair <math id="p2.m6" class="ltx_Math" alttext="S,T:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math> of functors. Write <math id="p2.m7" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> for the pair <math id="p2.m8" class="ltx_Math" alttext="(O,M)" display="inline"><mrow><mo stretchy="false">(</mo><mi>O</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For each pair of functors <math id="p3.m1" class="ltx_Math" alttext="S,T:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>, write <math id="p3.m2" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> the class of all natural transformations from <math id="p3.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> to <math id="p3.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. If <math id="p3.m5" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is in both <math id="p3.m6" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p3.m7" class="ltx_Math" alttext="\hom(U,V)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="p3.m8" class="ltx_Math" alttext="S=U" display="inline"><mrow><mi>S</mi><mo>=</mo><mi>U</mi></mrow></math> and <math id="p3.m9" class="ltx_Math" alttext="T=V" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>V</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Using the composition of natural transformations, we have a mapping</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\bullet:\hom(R,S)\times\hom(S,T)\to\hom(R,T)," display="block"><mrow><mo>∙</mo><mo>:</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>hom</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every triple <math id="p4.m1" class="ltx_Math" alttext="R,S,T:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mrow><mi>R</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>T</mi></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>. Since composition of natural transformations is associative, the associativity of <math id="p4.m2" class="ltx_Math" alttext="\bullet" display="inline"><mo>∙</mo></math> applies.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">In addition, for each <math id="p5.m1" class="ltx_Math" alttext="S:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>, we have the identity natural transformation <math id="p5.m2" class="ltx_Math" alttext="1_{S}\in\hom(S,S)" display="inline"><mrow><msub><mn>1</mn><mi>S</mi></msub><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For every <math id="p5.m3" class="ltx_Math" alttext="\tau\in\hom(S,T)" display="inline"><mrow><mi>τ</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and every <math id="p5.m4" class="ltx_Math" alttext="\eta\in\hom(T,S)" display="inline"><mrow><mi>η</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have <math id="p5.m5" class="ltx_Math" alttext="\tau\bullet 1_{S}=\tau" display="inline"><mrow><mrow><mi>τ</mi><mo>∙</mo><msub><mn>1</mn><mi>S</mi></msub></mrow><mo>=</mo><mi>τ</mi></mrow></math> and <math id="p5.m6" class="ltx_Math" alttext="1_{S}\bullet\eta=\eta" display="inline"><mrow><mrow><msub><mn>1</mn><mi>S</mi></msub><mo>∙</mo><mi>η</mi></mrow><mo>=</mo><mi>η</mi></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">From the discussion above, we are ready to call <math id="p6.m1" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> a category. However, unless <math id="p6.m2" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a set for every pair of functors in <math id="p6.m3" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math>, <math id="p6.m4" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> is not a category. When <math id="p6.m5" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> is a category, we call it the <em class="ltx_emph ltx_font_italic">category of functors</em> from <math id="p6.m6" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> to <math id="p6.m7" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>, or simply a <em class="ltx_emph ltx_font_italic">functor category</em>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">That <math id="p7.m1" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> is a functor category depends on various restrictions being placed on the “sizes” of <math id="p7.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="p7.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>:</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmprop1.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math> is <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></math>-small (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SmallCategory</span>), then <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></msup></math> is a category.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p8.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is <math id="p8.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small. Consider the class <math id="p8.m3" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Each <math id="p8.m4" class="ltx_Math" alttext="\tau\in\hom(S,T)" display="inline"><mrow><mi>τ</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is determined by the collection of morphisms <math id="p8.m5" class="ltx_Math" alttext="S(A)\to T(A)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for each object <math id="p8.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="p8.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. This means that, for each <math id="p8.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="p8.m9" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, <math id="p8.m10" class="ltx_Math" alttext="\hom(S(A),T(A))" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> contains the image of every <math id="p8.m11" class="ltx_Math" alttext="\tau\in\hom(S,T)" display="inline"><mrow><mi>τ</mi><mo>∈</mo><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> under <math id="p8.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. So the class of all these natural transformations is a subclass of the product</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\prod_{A\in\operatorname{Ob}(\mathcal{C})}\hom(S(A),T(A))" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>A</mi><mo>∈</mo><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p8.m13" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math>, as well as each <math id="p8.m14" class="ltx_Math" alttext="\hom(S(A),T(A))" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is a set, so is the product (1). Hence <math id="p8.m15" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>, being a subclass of (1), is a set, or that <math id="p8.m16" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> is a category.
+∎</p>
+</div>
+</div>
+<div id="Thmprop2" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmprop2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If in addition <math id="Thmprop2.p1.m1" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi></math> is a <math id="Thmprop2.p1.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></math>-category (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SmallCategory</span>), then so is <math id="Thmprop2.p1.m3" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><math id="p9.m1" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> being a <math id="p9.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-category means that <math id="p9.m3" class="ltx_Math" alttext="\hom(S(A),T(A))" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="p9.m4" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small, for every object <math id="p9.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="p9.m6" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Since <math id="p9.m7" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also <math id="p9.m8" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small (assumption in Proposition 1), the product (1) above is <math id="p9.m9" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small. Consequently, <math id="p9.m10" class="ltx_Math" alttext="\hom(S,T)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>, being a subclass of (1), is <math id="p9.m11" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small. This shows that <math id="p9.m12" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒟</mi><mi class="ltx_font_mathcaligraphic">𝒞</mi></msup></math> is a <math id="p9.m13" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-category.
+∎</p>
+</div>
+</div>
+<div id="Thmprop3" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmprop3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmprop3.p1.m1" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi></math> is furthermore <math id="Thmprop3.p1.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></math>-small, so is <math id="Thmprop3.p1.m3" class="ltx_Math" alttext="\mathcal{D}^{\mathcal{C}}" display="inline"><msup><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">We want to show that the class <math id="p10.m1" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> of all functors from <math id="p10.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> to <math id="p10.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> is <math id="p10.m4" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small. A functor <math id="p10.m5" class="ltx_Math" alttext="S:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math> can be broken up into two components: a function <math id="p10.m6" class="ltx_Math" alttext="S_{1}:\operatorname{Ob}(\mathcal{C})\to\operatorname{Ob}(\mathcal{D})" display="inline"><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>:</mo><mrow><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and a function <math id="p10.m7" class="ltx_Math" alttext="S_{2}:\operatorname{Mor}(\mathcal{C})\to\operatorname{Mor}(\mathcal{D})" display="inline"><mrow><msub><mi>S</mi><mn>2</mn></msub><mo>:</mo><mrow><mrow><mi>Mor</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>Mor</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, so that <math id="p10.m8" class="ltx_Math" alttext="S_{2}(A\to B)=S_{1}(A)\to S_{1}(B)" display="inline"><mrow><msub><mi>S</mi><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>→</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>S</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><msub><mi>S</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Define a binary relation <math id="p11.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="p11.m2" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> so that <math id="p11.m3" class="ltx_Math" alttext="S\sim T" display="inline"><mrow><mi>S</mi><mo>∼</mo><mi>T</mi></mrow></math> iff they have the same first component: <math id="p11.m4" class="ltx_Math" alttext="S_{1}=T_{1}" display="inline"><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>=</mo><msub><mi>T</mi><mn>1</mn></msub></mrow></math>. It is easy to see that <math id="p11.m5" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> is an equivalence relation on <math id="p11.m6" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>. Let <math id="p11.m7" class="ltx_Math" alttext="[S]" display="inline"><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow></math> be the equivalence class containing the functor <math id="p11.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. For every morphism <math id="p11.m9" class="ltx_Math" alttext="A\to B" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></math>, its image under the second component of every functor in <math id="p11.m10" class="ltx_Math" alttext="[S]" display="inline"><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow></math> lies in <math id="p11.m11" class="ltx_Math" alttext="\hom(S_{1}(A),S_{1}(B))" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. So the size of <math id="p11.m12" class="ltx_Math" alttext="[S]" display="inline"><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow></math> can not exceed the size of</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\prod_{A,B\in\operatorname{Ob}(\mathcal{C})}\hom(S_{1}(A),S_{1}(B))" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p11.m13" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="p11.m14" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small (assumption in Prop 1), so is <math id="p11.m15" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})\times\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Furthermore, since each <math id="p11.m16" class="ltx_Math" alttext="\hom(S_{1}(A),S_{1}(B))" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="p11.m17" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small (assumption in Prop 2), <math id="p11.m18" class="ltx_Math" alttext="[S]" display="inline"><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow></math> is <math id="p11.m19" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small as well.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Next, let us estimate the size of the class <math id="p12.m1" class="ltx_Math" alttext="\mathcal{M}/\sim" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>/</mo><mo>∼</mo></mrow></math> of equivalence classes in <math id="p12.m2" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>. First, note that for every functor <math id="p12.m3" class="ltx_Math" alttext="S:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math>, its first component is a function from the <em class="ltx_emph ltx_font_italic">set</em> <math id="p12.m4" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math> to the <em class="ltx_emph ltx_font_italic">set</em> <math id="p12.m5" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{D})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow></mrow></math> by assumption. As <math id="p12.m6" class="ltx_Math" alttext="[S]\neq[T]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow></mrow></math> iff <math id="p12.m7" class="ltx_Math" alttext="S_{1}\neq T_{1}" display="inline"><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>T</mi><mn>1</mn></msub></mrow></math>, the size can not exceed</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="|\operatorname{Ob}(\mathcal{D})^{\operatorname{Ob}(\mathcal{C})}|" display="block"><mrow><mo stretchy="false">|</mo><mi>Ob</mi><msup><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the cardinality of the set of all functions from <math id="p12.m8" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{C})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math> to <math id="p12.m9" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{D})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow></mrow></math>. By assumption, <math id="p12.m10" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{D})" display="inline"><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="p12.m11" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small, so is <math id="p12.m12" class="ltx_Math" alttext="\operatorname{Ob}(\mathcal{D})^{\operatorname{Ob}(\mathcal{C})}" display="inline"><mrow><mi>Ob</mi><msup><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Ob</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></math>. As a result, <math id="p12.m13" class="ltx_Math" alttext="\mathcal{M}/\sim" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>/</mo><mo>∼</mo></mrow></math> is <math id="p12.m14" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small. Together with the fact that <math id="p12.m15" class="ltx_Math" alttext="[S]" display="inline"><mrow><mo stretchy="false">[</mo><mi>S</mi><mo stretchy="false">]</mo></mrow></math> is <math id="p12.m16" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small for each functor <math id="p12.m17" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, we have that <math id="p12.m18" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> itself must be <math id="p12.m19" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>-small, which completes the proof.
+∎</p>
+</div>
+</div>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">functor category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctorCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:25:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:25:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SmallCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ConcreteCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Supercategories3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">category of functors</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:19:09 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

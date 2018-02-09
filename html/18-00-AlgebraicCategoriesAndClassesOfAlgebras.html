@@ -1,0 +1,312 @@
+<!DOCTYPE html><html>
+<head>
+<title>algebraic categories and classes of algebras</title>
+<!--Generated on Fri Feb  9 19:18:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">algebraic categories and classes of algebras</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Classes of algebras can be categorized at least in two types: either classes of <em class="ltx_emph ltx_font_italic">specific
+algebras</em>, such as: group algebras, K-algebras, groupoid algebras, logic algebras, and so on,
+or <em class="ltx_emph ltx_font_italic">general</em> ones, such as general classes of: categorical algebras, higher dimensional algebra
+(HDA), supercategorical algebras, universal algebras, and so on.
+</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Basic concepts and definitions</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Class of algebras</span></p>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">class of algebras</em> is defined in a precise sense as an algebraic object in the
+<em class="ltx_emph ltx_font_italic">groupoid category</em>.</p>
+</div>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Monad on a category <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math>, and a T-algebra in <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math></span></p>
+</div>
+<div id="S0.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.2</span>.</h6>
+<div id="S0.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">Let us consider a category <math id="S0.Thmdefinition2.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, two functors: <math id="S0.Thmdefinition2.p1.m2" class="ltx_Math" alttext="T:\mathcal{C}\to\mathcal{C}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> (called the monad functor) and <math id="S0.Thmdefinition2.p1.m3" class="ltx_Math" alttext="T^{2}:\mathcal{C}\to\mathcal{C}=T\circ T" display="inline"><mrow><msup><mi>T</mi><mn>2</mn></msup><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mi>T</mi><mo>∘</mo><mi>T</mi></mrow></mrow></mrow></math>, and two natural transformations:
+<math id="S0.Thmdefinition2.p1.m4" class="ltx_Math" alttext="\eta:1_{\mathcal{C}}\to T" display="inline"><mrow><mi>η</mi><mo>:</mo><mrow><msub><mn>1</mn><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mo>→</mo><mi>T</mi></mrow></mrow></math> and <math id="S0.Thmdefinition2.p1.m5" class="ltx_Math" alttext="\mu:T^{2}\to T" display="inline"><mrow><mi>μ</mi><mo>:</mo><mrow><msup><mi>T</mi><mn>2</mn></msup><mo>→</mo><mi>T</mi></mrow></mrow></math>. The triplet <math id="S0.Thmdefinition2.p1.m6" class="ltx_Math" alttext="(\mathcal{C},\eta,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math>
+is called a <span class="ltx_text ltx_font_italic">monad on the category <math id="S0.Thmdefinition2.p1.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math></span>. Then, a <span class="ltx_text ltx_font_italic">T-algebra</span> <math id="S0.Thmdefinition2.p1.m8" class="ltx_Math" alttext="(Y,h)" display="inline"><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></math> is defined as an object <math id="S0.Thmdefinition2.p1.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> of a category <math id="S0.Thmdefinition2.p1.m10" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> together with an arrow <math id="S0.Thmdefinition2.p1.m11" class="ltx_Math" alttext="h:TY\to Y" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>Y</mi></mrow><mo>→</mo><mi>Y</mi></mrow></mrow></math> called the <span class="ltx_text ltx_font_italic">structure map</span> in <math id="S0.Thmdefinition2.p1.m12" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> such that:</p>
+</div>
+<div id="S0.Thmdefinition2.p2" class="ltx_para">
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="Th:T^{2}\to TY," display="block"><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>h</mi></mrow><mo>:</mo><mrow><msup><mi>T</mi><mn>2</mn></msup><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="h\circ Th=h\circ\mu_{Y}," display="block"><mrow><mrow><mrow><mrow><mi>h</mi><mo>∘</mo><mi>T</mi></mrow><mo>⁢</mo><mi>h</mi></mrow><mo>=</mo><mrow><mi>h</mi><mo>∘</mo><msub><mi>μ</mi><mi>Y</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where: <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="\mu_{Y}:T^{2}Y\to TY;" display="inline"><mrow><mrow><msub><mi>μ</mi><mi>Y</mi></msub><mo>:</mo><mrow><mrow><msup><mi>T</mi><mn>2</mn></msup><mo>⁢</mo><mi>Y</mi></mrow><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow></mrow><mo>;</mo></mrow></math> and</p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="h\circ\eta_{Y}=1_{Y}." display="block"><mrow><mrow><mrow><mi>h</mi><mo>∘</mo><msub><mi>η</mi><mi>Y</mi></msub></mrow><mo>=</mo><msub><mn>1</mn><mi>Y</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Category of Eilenberg-Moore algebras of a monad <math id="I1.i3.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math></span>
+An important definition related to abstract classes of algebras and universal algebras is that of the category of Eilenberg-Moore algebras of a monad <math id="I1.i3.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>:</p>
+</div>
+<div id="S0.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.3</span>.</h6>
+<div id="S0.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">The category <math id="S0.Thmdefinition3.p1.m1" class="ltx_Math" alttext="\mathcal{C}^{T}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>T</mi></msup></math> of <math id="S0.Thmdefinition3.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>-algebras and their morphisms is called the <span class="ltx_text ltx_font_italic">Eilenberg-Moore category</span> or <span class="ltx_text ltx_font_italic">category of Eilenberg-Moore algebras</span> of the monad T.</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Remarks</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">a. Algebraic category definition</span></p>
+</div>
+<div id="S0.Thmremark1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.1</span>.</h6>
+<div id="S0.Thmremark1.p1" class="ltx_para">
+<p class="ltx_p">With the above definition, one can also define a <em class="ltx_emph ltx_font_italic">category of classes of algebras and their
+associated groupoid homomorphisms</em> which is then an algebraic category.</p>
+</div>
+<div id="S0.Thmremark1.p2" class="ltx_para">
+<p class="ltx_p">Another example of algebraic category is that of the category of C*-algebras.</p>
+</div>
+<div id="S0.Thmremark1.p3" class="ltx_para">
+<p class="ltx_p">Generally, a category <math id="S0.Thmremark1.p3.m1" class="ltx_Math" alttext="\mathcal{A}_{C}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒜</mi><mi>C</mi></msub></math> is called <em class="ltx_emph ltx_font_italic">algebraic</em> if it is monadic over the category of sets and set-theoretical mappings, <math id="S0.Thmremark1.p3.m2" class="ltx_Math" alttext="Set" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></math>; thus, a functor <math id="S0.Thmremark1.p3.m3" class="ltx_Math" alttext="G:\mathcal{D}\to\mathcal{C}" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> is called <em class="ltx_emph ltx_font_italic">monadic</em> if it has a left adjoint
+<math id="S0.Thmremark1.p3.m4" class="ltx_Math" alttext="F:\mathcal{C}\to\mathcal{D}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math> forming a <span class="ltx_text ltx_font_italic">monadic adjunction</span> <math id="S0.Thmremark1.p3.m5" class="ltx_Math" alttext="(F,G,\eta,\epsilon)" display="inline"><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></math> with <math id="S0.Thmremark1.p3.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="S0.Thmremark1.p3.m7" class="ltx_Math" alttext="\eta,\epsilon" display="inline"><mrow><mi>η</mi><mo>,</mo><mi>ϵ</mi></mrow></math>
+being, respectively, the unit and counit; such a <span class="ltx_text ltx_font_italic">monadic adjunction</span> between categories
+<math id="S0.Thmremark1.p3.m8" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="S0.Thmremark1.p3.m9" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> is defined by the condition that category <math id="S0.Thmremark1.p3.m10" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> is equivalent to the to the Eilenberg-Moore category <math id="S0.Thmremark1.p3.m11" class="ltx_Math" alttext="\mathcal{C}^{T}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>T</mi></msup></math> for the monad</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="T=GF." display="block"><mrow><mrow><mi>T</mi><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>F</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">b. Equivalence classes</p>
+</div>
+<div id="S0.Thmremark2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.2</span>.</h6>
+<div id="S0.Thmremark2.p1" class="ltx_para">
+<p class="ltx_p">Although all classes can be regarded as equivalence, weak equivalence, etc., classes of
+algebras (either specific or general ones), do not define identical, or even isomorphic structures, as the notion of ‘equivalence’ can have more than one meaning even in the algebraic case.</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Note:</h2>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">See also the entry about abstract and concrete algebras in Expositions.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">algebraic categories and classes of algebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicCategoriesAndClassesOfAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:15:29</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:15:29</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18E05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 08A70</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">algebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">class of specific algebraic structures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algebras2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CAlgebra3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HigherDimensionalAlgebraHDA</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OmegaSpectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicTopology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">algebraic category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">monadic functor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">monad on a category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">T-algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">structure map</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">category of Eilenberg-Moore algebras</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:18:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

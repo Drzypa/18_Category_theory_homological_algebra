@@ -1,0 +1,194 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Leray’s Theorem (via spectral sequences)</title>
+<!--Generated on Fri Feb  9 19:33:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Leray’s Theorem (via spectral sequences)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let’s consider an  resolution (i.e. a resolution (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ResolutionOfASheaf</span>) by acyclic sheaves (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AcyclicSheaf</span>)) <math id="p1.m1" class="ltx_Math" alttext="\mathcal{F}^{\bullet}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup></math> of <math id="p1.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> and the double complex <math id="p1.m3" class="ltx_Math" alttext="K^{\bullet,\bullet}=\check{C}^{\bullet}(\mathcal{U},\mathcal{F}^{\bullet})" display="inline"><mrow><msup><mi>K</mi><mrow><mo>∙</mo><mo>,</mo><mo>∙</mo></mrow></msup><mo>=</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> endowed with the differentials</p>
+<table id="S0.Ex1" class="ltx_equationgroup ltx_eqn_table">
+
+<tr id="S0.Ex1X" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1X.m2" class="ltx_Math" alttext="\displaystyle\partial\colon\check{C}^{p}(\mathcal{U},\mathcal{F}^{\bullet})\to%
+\check{C}^{p+1}(\mathcal{U},\mathcal{F}^{\bullet})," display="inline"><mrow><mrow><mo>∂</mo><mo>:</mo><mrow><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex1Xa" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1Xa.m2" class="ltx_Math" alttext="\displaystyle\bar{\partial}\colon\check{C}^{\bullet}(\mathcal{U},\mathcal{F}^{%
+q})\to\check{C}^{\bullet}(\mathcal{U},\mathcal{F}^{q+1})," display="inline"><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>:</mo><mrow><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>q</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which are respectively the Cech (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CechCohomologyGroup2</span>) one and the one  by the resolution.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The first filtration of this complex gives rise to a spectral sequence whose  of the first generation are:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{{}^{\prime}\!E^{p,q}_{r}}=H^{q}_{\bar{\partial}}(\check{C}^{p}(\mathcal{U},%
+\mathcal{F}^{\bullet}))=\prod_{i_{0},\dots,i_{p}\in I}H^{q}(U_{i_{0}\cdots i_{%
+p}},\mathcal{F})," display="block"><mrow><mrow><mmultiscripts><mi>E</mi><mi>r</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts><mo>=</mo><mrow><msubsup><mi>H</mi><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mi>q</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mrow><msub><mi>i</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>p</mi></msub></mrow><mo>∈</mo><mi>I</mi></mrow></munder><mrow><msup><mi>H</mi><mi>q</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>U</mi><mrow><msub><mi>i</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msub><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the set indexing the covering and the last equality is obtained in virtue of the De Rham-Weil theorem.
+Thanks to the hypothesis on <math id="p2.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="{{}^{\prime}\!E^{p,q}_{1}}=\begin{cases}\check{C}^{p}(\mathcal{U},\mathcal{F})%
+&amp;\text{if $q=0$}\\
+0&amp;\text{if $q\geq 1$}.\end{cases}" display="block"><mrow><mmultiscripts><mi>E</mi><mn>1</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>≥</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S0.Ex4" class="ltx_equationgroup ltx_eqn_table">
+
+<tr id="S0.Ex4X" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4X.m2" class="ltx_Math" alttext="\displaystyle{{}^{\prime}\!E^{p,q}_{2}}" display="inline"><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4X.m3" class="ltx_Math" alttext="\displaystyle=H^{p}_{\partial}(H^{q}_{\bar{\partial}}(\check{C}^{\bullet}(%
+\mathcal{U},\mathcal{F}^{\bullet})))" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>H</mi><mo>∂</mo><mi>p</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>H</mi><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mi>q</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4Xa" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4Xa.m2" class="ltx_Math" alttext="\displaystyle=\begin{cases}H^{p}_{\partial}(\check{C}^{\bullet}(\mathcal{U},%
+\mathcal{F}))&amp;\text{if $q=0$}\\
+0&amp;\text{if $q\geq 1$}.\end{cases}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msubsup><mi>H</mi><mo>∂</mo><mi>p</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>≥</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So <math id="p2.m3" class="ltx_Math" alttext="{{}^{\prime}\!E^{p,0}_{2}}=\check{H}^{p}(\mathcal{U},\mathcal{F})" display="inline"><mrow><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mn>0</mn></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts><mo>=</mo><mrow><msup><mover accent="true"><mi>H</mi><mo stretchy="false">ˇ</mo></mover><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and
+<math id="p2.m4" class="ltx_Math" alttext="{{}^{\prime}\!E^{p,q}_{2}}=0" display="inline"><mrow><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts><mo>=</mo><mn>0</mn></mrow></math> if <math id="p2.m5" class="ltx_Math" alttext="q\neq 0" display="inline"><mrow><mi>q</mi><mo>≠</mo><mn>0</mn></mrow></math>. The general  of spectral sequences of a double complex now yields:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="H^{l}(K^{\bullet})={{}^{\prime}\!E^{l,0}_{2}}=\check{H}^{l}(\mathcal{U},%
+\mathcal{F})." display="block"><mrow><mrow><mrow><msup><mi>H</mi><mi>l</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>K</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>l</mi><mo>,</mo><mn>0</mn></mrow><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts><mo>=</mo><mrow><msup><mover accent="true"><mi>H</mi><mo stretchy="false">ˇ</mo></mover><mi>l</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now we consider the second filtration to obtain a spectral sequence whose  of the first generations are:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="{{}^{\prime\prime}\!E^{p,q}_{1}}=H^{q}_{\partial}(\check{C}^{\bullet}(\mathcal%
+{U},\mathcal{F}^{p}))=\check{H}^{q}(\mathcal{U},\mathcal{F}^{p})." display="block"><mrow><mrow><mmultiscripts><mi>E</mi><mn>1</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts><mo>=</mo><mrow><msubsup><mi>H</mi><mo>∂</mo><mi>q</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>p</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>H</mi><mo stretchy="false">ˇ</mo></mover><mi>q</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>p</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The resolution being , we obtain:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="{{}^{\prime\prime}\!E^{p,q}_{1}}=\begin{cases}\mathcal{F}^{p}(X)&amp;\text{if $q=0%
+$}\\
+0&amp;\text{if $q\geq 1$},\end{cases}" display="block"><mrow><mmultiscripts><mi>E</mi><mn>1</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>≥</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so
+</p>
+<table id="S0.Ex8" class="ltx_equationgroup ltx_eqn_table">
+
+<tr id="S0.Ex8X" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8X.m2" class="ltx_Math" alttext="\displaystyle{{}^{\prime\prime}\!E^{p,q}_{2}}" display="inline"><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8X.m3" class="ltx_Math" alttext="\displaystyle=H^{p}_{\bar{\partial}}(H^{q}_{\partial}(\check{C}^{\bullet}(%
+\mathcal{U},\mathcal{F}^{\bullet})))" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>H</mi><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mi>p</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>H</mi><mo>∂</mo><mi>q</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>C</mi><mo stretchy="false">ˇ</mo></mover><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8X.m5" class="ltx_Math" alttext="\displaystyle\hskip 10.0pt=\begin{cases}H^{p}(\mathcal{F}^{\bullet}(X))&amp;\text{%
+if $q=0$}\\
+0&amp;\text{if $q\geq 1$}.\end{cases}" display="inline"><mrow><mi></mi><mo lspace="12.5pt">=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mi>H</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>∙</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mrow><mi>q</mi><mo>≥</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But then <math id="p2.m6" class="ltx_Math" alttext="{{}^{\prime\prime}\!E^{p,0}_{2}}=H^{p}(X,\mathcal{F})" display="inline"><mrow><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mn>0</mn></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts><mo>=</mo><mrow><msup><mi>H</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> thanks to the De Rham-Weil theorem and <math id="p2.m7" class="ltx_Math" alttext="{{}^{\prime\prime}\!E^{p,q}_{2}}=0" display="inline"><mrow><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts><mo>=</mo><mn>0</mn></mrow></math> if <math id="p2.m8" class="ltx_Math" alttext="q\neq 0" display="inline"><mrow><mi>q</mi><mo>≠</mo><mn>0</mn></mrow></math> and so we get:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="H^{l}(K^{\bullet})={{}^{\prime\prime}\!E^{l,0}_{2}}=H^{l}(X,\mathcal{F})," display="block"><mrow><mrow><mrow><msup><mi>H</mi><mi>l</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>K</mi><mo>∙</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mmultiscripts><mi>E</mi><mn>2</mn><mrow><mi>l</mi><mo>,</mo><mn>0</mn></mrow><mprescripts></mprescripts><none></none><mo>′′</mo></mmultiscripts><mo>=</mo><mrow><msup><mi>H</mi><mi>l</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which leads to the claim.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Leray’s Theorem (via spectral sequences)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfLeraysTheoremviaSpectralSequences</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:42:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:42:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18G60</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:33:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

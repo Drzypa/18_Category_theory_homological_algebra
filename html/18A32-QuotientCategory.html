@@ -1,0 +1,217 @@
+<!DOCTYPE html><html>
+<head>
+<title>quotient category</title>
+<!--Generated on Fri Feb  9 19:26:35 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">quotient category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Quotient categories are a generalization of quotient structures found in many mathematical systems, such as sets and groups. For example, if we have a set <math id="p1.m1" class="ltx_Math" alttext="S=\{a,b,c\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></mrow></math>, by identifying <math id="p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m3" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> as being the “same”, we obtain a two-element set <math id="p1.m4" class="ltx_Math" alttext="\{\{a,c\},b\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></math>, called the quotient set of <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> by identifying <math id="p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. Here is a more useful example: take the set <math id="p1.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> of integers. Identify integers <math id="p1.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p1.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> if their difference is divisible by <math id="p1.m11" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>. Then we obtain a quotient of <math id="p1.m12" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> consisting of two elements: the set of odd numbers and the set of even numbers.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In both of the examples above, we start with a set <math id="p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and a binary relation <math id="p2.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (in the first example, <math id="p2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the singleton <math id="p2.m4" class="ltx_Math" alttext="\{(a,b)\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math>, and in the second, <math id="p2.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> consists of pairs of integers <math id="p2.m6" class="ltx_Math" alttext="(m,m\!+\!2n)" display="inline"><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mrow><mpadded width="-1.7pt"><mi>m</mi></mpadded><mo rspace="0.8pt">+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, where <math id="p2.m7" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math> are integers) on <math id="p2.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. The quotient <math id="p2.m9" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> of <math id="p2.m10" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> by <math id="p2.m11" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> then satisfies the following functional properties:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">there is an onto map <math id="I1.i1.p1.m1" class="ltx_Math" alttext="p:S\to Q" display="inline"><mrow><mi>p</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>Q</mi></mrow></mrow></math> such that <math id="I1.i1.p1.m2" class="ltx_Math" alttext="aRb" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>b</mi></mrow></math> implies <math id="I1.i1.p1.m3" class="ltx_Math" alttext="p(a)=p(b)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">if we have another onto map <math id="I1.i2.p1.m1" class="ltx_Math" alttext="q:S\to T" display="inline"><mrow><mi>q</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> satisfying 1 above, then there is a unique map <math id="I1.i2.p1.m2" class="ltx_Math" alttext="f:Q\to T" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>Q</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> such that <math id="I1.i2.p1.m3" class="ltx_Math" alttext="f\circ p=q" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>p</mi></mrow><mo>=</mo><mi>q</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The two properties above are exactly what we need to define the quotient of a category <math id="p3.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> by a binary relation <math id="p3.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> on <math id="p3.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. But what is <math id="p3.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> precisely? We define a binary relation on a category <math id="p3.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> to be a binary relation <math id="p3.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> on <math id="p3.m7" class="ltx_Math" alttext="\operatorname{Mor}(\mathcal{C})" display="inline"><mrow><mi>Mor</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the class of morphisms of <math id="p3.m8" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. In other words, <math id="p3.m9" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a class consisting of pairs <math id="p3.m10" class="ltx_Math" alttext="(f,g)" display="inline"><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></math> where <math id="p3.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p3.m12" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are morphisms in <math id="p3.m13" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. If <math id="p3.m14" class="ltx_Math" alttext="(f,g)" display="inline"><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></math> is in <math id="p3.m15" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, we write <math id="p3.m16" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="p4.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a category and <math id="p4.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> a binary relation on <math id="p4.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Then a <em class="ltx_emph ltx_font_italic">quotient</em> of <math id="p4.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> by <math id="p4.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a pair <math id="p4.m6" class="ltx_Math" alttext="(\mathcal{Q},P)" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒬</mi><mo>,</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></math> where <math id="p4.m7" class="ltx_Math" alttext="\mathcal{Q}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒬</mi></math> is a category and <math id="p4.m8" class="ltx_Math" alttext="P:\mathcal{C}\to\mathcal{Q}" display="inline"><mrow><mi>P</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒬</mi></mrow></mrow></math> is a functor, satisfying the following two conditions:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a surjection on objects; that is, for every object <math id="I2.i1.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> in <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mathcal{Q}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒬</mi></math>, there is a object <math id="I2.i1.p1.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in <math id="I2.i1.p1.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, such that <math id="I2.i1.p1.m6" class="ltx_Math" alttext="P(C)=Q" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>Q</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i2.p1.m1" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math>, then <math id="I2.i2.p1.m2" class="ltx_Math" alttext="P(f)=P(g)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i3.p1.m1" class="ltx_Math" alttext="(\mathcal{D},F)" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></math> is another pair satisfying conditions 1 and 2 above, then there is a unique functor <math id="I2.i3.p1.m2" class="ltx_Math" alttext="G:\mathcal{Q}\to\mathcal{D}" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒬</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></mrow></math> such that <math id="I2.i3.p1.m3" class="ltx_Math" alttext="G\circ P=F" display="inline"><mrow><mrow><mi>G</mi><mo>∘</mo><mi>P</mi></mrow><mo>=</mo><mi>F</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">It is easy to see that <math id="p4.m9" class="ltx_Math" alttext="\mathcal{Q}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒬</mi></math> is unique up to natural isomorphism, if it exists. The category <math id="p4.m10" class="ltx_Math" alttext="\mathcal{Q}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒬</mi></math> is called the <em class="ltx_emph ltx_font_italic">quotient category</em> of <math id="p4.m11" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> by <math id="p4.m12" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, written <math id="p4.m13" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">To see how <math id="p5.m1" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> may possibly be constructed, we make the following few observations:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">First, if we take the reflexive, symmetric, and transitive closure <math id="I3.i1.p1.m1" class="ltx_Math" alttext="R^{*}" display="inline"><msup><mi>R</mi><mo>*</mo></msup></math> of <math id="I3.i1.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (so that <math id="I3.i1.p1.m3" class="ltx_Math" alttext="R^{*}" display="inline"><msup><mi>R</mi><mo>*</mo></msup></math> is the smallest equivalence relation containing <math id="I3.i1.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>), then <math id="I3.i1.p1.m5" class="ltx_Math" alttext="fR^{*}g" display="inline"><mrow><mi>f</mi><mo>⁢</mo><msup><mi>R</mi><mo>*</mo></msup><mo>⁢</mo><mi>g</mi></mrow></math> implies <math id="I3.i1.p1.m6" class="ltx_Math" alttext="P(f)=P(g)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">In addition, if <math id="I3.i2.p1.m1" class="ltx_Math" alttext="f_{1}R^{*}g_{1}" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>R</mi><mo>*</mo></msup><mo>⁢</mo><msub><mi>g</mi><mn>1</mn></msub></mrow></math> and <math id="I3.i2.p1.m2" class="ltx_Math" alttext="f_{2}R^{*}g_{2}" display="inline"><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>R</mi><mo>*</mo></msup><mo>⁢</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></math> such that <math id="I3.i2.p1.m3" class="ltx_Math" alttext="f_{1}\circ f_{2}" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>f</mi><mn>2</mn></msub></mrow></math> and <math id="I3.i2.p1.m4" class="ltx_Math" alttext="g_{1}\circ g_{2}" display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></math> are both defined, then <math id="I3.i2.p1.m5" class="ltx_Math" alttext="P(f_{1}\circ f_{2})=P(g_{1}\circ g_{2})" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>g</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This means that we may reduce <math id="I3.i2.p1.m6" class="ltx_Math" alttext="R^{*}" display="inline"><msup><mi>R</mi><mo>*</mo></msup></math> to a congruence relation <math id="I3.i2.p1.m7" class="ltx_Math" alttext="R^{\prime}" display="inline"><msup><mi>R</mi><mo>′</mo></msup></math> with respect to morphism composition. Once again, <math id="I3.i2.p1.m8" class="ltx_Math" alttext="fR^{\prime}g" display="inline"><mrow><mi>f</mi><mo>⁢</mo><msup><mi>R</mi><mo>′</mo></msup><mo>⁢</mo><mi>g</mi></mrow></math> implies <math id="I3.i2.p1.m9" class="ltx_Math" alttext="P(f)=P(g)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Furthermore, if <math id="I3.i3.p1.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> and <math id="I3.i3.p1.m2" class="ltx_Math" alttext="g:C\to D" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>D</mi></mrow></mrow></math> and <math id="I3.i3.p1.m3" class="ltx_Math" alttext="fR^{\prime}g" display="inline"><mrow><mi>f</mi><mo>⁢</mo><msup><mi>R</mi><mo>′</mo></msup><mo>⁢</mo><mi>g</mi></mrow></math>, then <math id="I3.i3.p1.m4" class="ltx_Math" alttext="P(f)=P(g)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> forces <math id="I3.i3.p1.m5" class="ltx_Math" alttext="P(A)=P(C)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I3.i3.p1.m6" class="ltx_Math" alttext="P(B)=P(D)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In other words, the domains of <math id="I3.i3.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I3.i3.p1.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are identified under <math id="I3.i3.p1.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. The same is true for the corresponding codomains. This implies that, if <math id="I3.i3.p1.m10" class="ltx_Math" alttext="[f]" display="inline"><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></math> denotes the equivalence class of <math id="I3.i3.p1.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> under <math id="I3.i3.p1.m12" class="ltx_Math" alttext="R^{\prime}" display="inline"><msup><mi>R</mi><mo>′</mo></msup></math>, then the domains (codomains) of all <math id="I3.i3.p1.m13" class="ltx_Math" alttext="g\in[f]" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></mrow></math> are identified as one object in <math id="I3.i3.p1.m14" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math>, if it exists.</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">As a result, all the corresponding identity morphisms are identified as well, for if <math id="I3.i4.p1.m1" class="ltx_Math" alttext="P(A)=P(B)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I3.i4.p1.m2" class="ltx_Math" alttext="P(1_{A})=1_{P(A)}=1_{P(B)}=P(1_{B})" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>A</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>=</mo><msub><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>B</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This means we can further reduce <math id="I3.i4.p1.m3" class="ltx_Math" alttext="R^{\prime}" display="inline"><msup><mi>R</mi><mo>′</mo></msup></math> to <math id="I3.i4.p1.m4" class="ltx_Math" alttext="R^{\prime\prime}" display="inline"><msup><mi>R</mi><mo>′′</mo></msup></math> by such identifications. Note that <math id="I3.i4.p1.m5" class="ltx_Math" alttext="R^{\prime\prime}" display="inline"><msup><mi>R</mi><mo>′′</mo></msup></math> is still a congruence relation.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Note, however, the construction above does not guarantee that <math id="p5.m2" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> in fact exists. This is mainly due to the identification of objects in <math id="p5.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, which may result in blowing up some hom sets into proper classes. However, if</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a set, or</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I4.i2.p1.m1" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math> implies that <math id="I4.i2.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I4.i2.p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are parallel (they have the same domain and codomain),</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">then <math id="p5.m4" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> exists. In the first case, every equivalence class with respect to <math id="p5.m5" class="ltx_Math" alttext="R^{\prime\prime}" display="inline"><msup><mi>R</mi><mo>′′</mo></msup></math> is a set, so that hom sets remain sets. In the second, <math id="p5.m6" class="ltx_Math" alttext="R^{\prime\prime}" display="inline"><msup><mi>R</mi><mo>′′</mo></msup></math> is not even needed, so that no two objects are identified, and there is no danger in hom sets being blown up into classes. In fact, the second condition is how <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite> defines a quotient category. Note that in this case, <math id="p5.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a bijection on objects between <math id="p5.m8" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and <math id="p5.m9" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">In the following discussion, we denote objects and morphisms in <math id="p6.m1" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> by <math id="p6.m2" class="ltx_Math" alttext="[A]_{R}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>R</mi></msub></math> and <math id="p6.m3" class="ltx_Math" alttext="[f]_{R}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow><mi>R</mi></msub></math> (images of <math id="p6.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p6.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> under <math id="p6.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>), or simply <math id="p6.m7" class="ltx_Math" alttext="[A]" display="inline"><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></math> and <math id="p6.m8" class="ltx_Math" alttext="[f]" display="inline"><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></math> when there is no confusion.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p7.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is a category with a binary relation <math id="p7.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> on its morphisms. Below are some examples, as well as a non-example:</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I5.i1.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is generated by four objects <math id="I5.i1.p1.m2" class="ltx_Math" alttext="A,B,C,D" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi></mrow></math> and three morphisms <math id="I5.i1.p1.m3" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>, <math id="I5.i1.p1.m4" class="ltx_Math" alttext="g:C\to D" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>D</mi></mrow></mrow></math>, and <math id="I5.i1.p1.m5" class="ltx_Math" alttext="h:B\to C" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>C</mi></mrow></mrow></math>. Furthermore, suppose <math id="I5.i1.p1.m6" class="ltx_Math" alttext="R=\{(f,g)\}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="I5.i1.p1.m7" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> exists and is generated by objects <math id="I5.i1.p1.m8" class="ltx_Math" alttext="X=[A]=[C]" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>C</mi><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="I5.i1.p1.m9" class="ltx_Math" alttext="Y=[B]=[D]" display="inline"><mrow><mi>Y</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>D</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and morphisms <math id="I5.i1.p1.m10" class="ltx_Math" alttext="\alpha=[f]:X\to Y" display="inline"><mrow><mrow><mi>α</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> and <math id="I5.i1.p1.m11" class="ltx_Math" alttext="\beta=[h]:Y\to X" display="inline"><mrow><mrow><mi>β</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>h</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:</mo><mrow><mi>Y</mi><mo>→</mo><mi>X</mi></mrow></mrow></math>. Note that whereas <math id="I5.i1.p1.m12" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> has only a finite number of morphisms (<math id="I5.i1.p1.m13" class="ltx_Math" alttext="f,g,h" display="inline"><mrow><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi></mrow></math> and four identities), the quotient <math id="I5.i1.p1.m14" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> has infinitely many. For example, on <math id="I5.i1.p1.m15" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, the morphisms are <math id="I5.i1.p1.m16" class="ltx_Math" alttext="(\beta\alpha)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>, for any non-negative integer <math id="I5.i1.p1.m17" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I5.i2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is defined so that <math id="I5.i2.p1.m2" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math> iff <math id="I5.i2.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is parallel to <math id="I5.i2.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, then <math id="I5.i2.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is easily seen to be a congruence relation. Then <math id="I5.i2.p1.m6" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> is the category whose objects are objects of <math id="I5.i2.p1.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, such that each hom set has at most one element. As a result, if both <math id="I5.i2.p1.m8" class="ltx_Math" alttext="\hom(A,B)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I5.i2.p1.m9" class="ltx_Math" alttext="\hom(B,A)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> are non-empty, then <math id="I5.i2.p1.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is isomorphic to <math id="I5.i2.p1.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+<li id="I5.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I5.i3.p1" class="ltx_para">
+<p class="ltx_p">The two examples above are artificial, here’s a concrete one: let <math id="I5.i3.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be the category of topological spaces and continuous maps, define <math id="I5.i3.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> so that <math id="I5.i3.p1.m3" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math> whenever <math id="I5.i3.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is homotopic to <math id="I5.i3.p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. Then <math id="I5.i3.p1.m6" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> is the category of topological spaces with homotopic classes of continuous maps.</p>
+</div>
+</li>
+<li id="I5.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I5.i4.p1" class="ltx_para">
+<p class="ltx_p">Here’s an example where <math id="I5.i4.p1.m1" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> does not exist. Let <math id="I5.i4.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a category whose collection of objects is a proper class, and there is a non-identity morphism <math id="I5.i4.p1.m3" class="ltx_Math" alttext="h_{A}" display="inline"><msub><mi>h</mi><mi>A</mi></msub></math> on each object <math id="I5.i4.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Define <math id="I5.i4.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> so that <math id="I5.i4.p1.m6" class="ltx_Math" alttext="fRg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>g</mi></mrow></math> iff there are objects <math id="I5.i4.p1.m7" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> with <math id="I5.i4.p1.m8" class="ltx_Math" alttext="f=1_{A}" display="inline"><mrow><mi>f</mi><mo>=</mo><msub><mn>1</mn><mi>A</mi></msub></mrow></math> and <math id="I5.i4.p1.m9" class="ltx_Math" alttext="g=1_{B}" display="inline"><mrow><mi>g</mi><mo>=</mo><msub><mn>1</mn><mi>B</mi></msub></mrow></math>. Then if <math id="I5.i4.p1.m10" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> were to exist, it would have only one object, say <math id="I5.i4.p1.m11" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Furthermore, <math id="I5.i4.p1.m12" class="ltx_Math" alttext="\hom(X,X)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> contains a morphism <math id="I5.i4.p1.m13" class="ltx_Math" alttext="[h_{A}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>h</mi><mi>A</mi></msub><mo stretchy="false">]</mo></mrow></math> for every <math id="I5.i4.p1.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="I5.i4.p1.m15" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Since <math id="I5.i4.p1.m16" class="ltx_Math" alttext="[h_{A}]=[h_{B}]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><msub><mi>h</mi><mi>A</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>h</mi><mi>B</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> iff <math id="I5.i4.p1.m17" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>, <math id="I5.i4.p1.m18" class="ltx_Math" alttext="\hom(X,X)" display="inline"><mrow><mi>hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is not a set. Therefore, <math id="I5.i4.p1.m19" class="ltx_Math" alttext="\mathcal{C}/R" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>/</mo><mi>R</mi></mrow></math> is not well-defined.</p>
+</div>
+</li>
+</ol>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> S. Mac Lane. <span class="ltx_text ltx_font_italic">Categories for the Working Mathematician</span>, 2nd ed. Springer-Verlag, 1997
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">quotient category</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">QuotientCategory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:31:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:31:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">QuotientCategory</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:26:35 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

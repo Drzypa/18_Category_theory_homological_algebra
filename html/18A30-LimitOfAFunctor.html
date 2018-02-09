@@ -1,0 +1,256 @@
+<!DOCTYPE html><html>
+<head>
+<title>limit of a functor</title>
+<!--Generated on Fri Feb  9 19:05:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">limit of a functor</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a functor from categories <math id="p2.m2" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math> to <math id="p2.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. A <em class="ltx_emph ltx_font_italic">limit</em> of <math id="p2.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a pair <math id="p2.m5" class="ltx_Math" alttext="(L,\tau)" display="inline"><mrow><mo stretchy="false">(</mo><mi>L</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math> where</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="L:\mathcal{I}\to\mathcal{C}" display="inline"><mrow><mi>L</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> is a constant functor,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\tau:L\to G" display="inline"><mrow><mi>τ</mi><mo>:</mo><mrow><mi>L</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is a natural transformation,</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">such that it is universal among all pairs satisfying (1) and (2). In other words, for any pair <math id="p2.m6" class="ltx_Math" alttext="(M,\varphi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>φ</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="p2.m7" class="ltx_Math" alttext="M:\mathcal{I}\to\mathcal{C}" display="inline"><mrow><mi>M</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> is a constant functor, and <math id="p2.m8" class="ltx_Math" alttext="\varphi:M\to G" display="inline"><mrow><mi>φ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is a natural transformation, there is a unique natural transformation <math id="p2.m9" class="ltx_Math" alttext="\phi:M\to L" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>L</mi></mrow></mrow></math> with the following commutative diagram:</p>
+<p class="ltx_p ltx_align_center"><math id="p2.m10" class="ltx_Math" alttext="\xymatrix@C+=64pt{M\ar[dr]^{\varphi}\ar@{.&gt;}[dd]_{\phi}\inner@par&amp;G\inner@par L%
+\ar[ur]_{\tau}}" display="inline"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mi mathvariant="normal">@</mi><mi>C</mi><mo>+</mo><mo>=</mo><mn>64</mn><mi>p</mi><mi>t</mi><mi>M</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>φ</mi></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>.</mo><mo>&gt;</mo><msub><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>ϕ</mi></msub><mi mathvariant="normal">&amp;</mi><mi>G</mi><mi>L</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>u</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>τ</mi></msub></mrow></math></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Since we may identify a constant functor with its value, say an object <math id="p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, in <math id="p3.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, a limit of <math id="p3.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> may be viewed as an object <math id="p3.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="p3.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, together with a collection of morphisms <math id="p3.m6" class="ltx_Math" alttext="A\to G(I)" display="inline"><mrow><mi>A</mi><mo>→</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, or <math id="p3.m7" class="ltx_Math" alttext="G_{I}" display="inline"><msub><mi>G</mi><mi>I</mi></msub></math>, for each object <math id="p3.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> in <math id="p3.m9" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math> such that</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\mbox{if }I\to J\mbox{ is a morphism, then }A\to G_{I}\to G_{J}=A%
+\to G_{J}." display="inline"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>I</mi></mrow><mo>→</mo><mrow><mi>J</mi><mo>⁢</mo><mtext> is a morphism, then </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>→</mo><msub><mi>G</mi><mi>I</mi></msub><mo>→</mo><msub><mi>G</mi><mi>J</mi></msub><mo>=</mo><mi>A</mi><mo>→</mo><msub><mi>G</mi><mi>J</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle\qquad(*)" display="inline"><mrow><mi>  </mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>*</mo><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, if another object <math id="p3.m10" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> in <math id="p3.m11" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> satisfies <math id="p3.m12" class="ltx_Math" alttext="(*)" display="inline"><mrow><mo stretchy="false">(</mo><mo>*</mo><mo stretchy="false">)</mo></mrow></math>, then there is a unique morphism <math id="p3.m13" class="ltx_Math" alttext="B\to A" display="inline"><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></math> such that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="B\to A\to G_{I}=B\to G_{I}" display="block"><mrow><mi>B</mi><mo>→</mo><mi>A</mi><mo>→</mo><msub><mi>G</mi><mi>I</mi></msub><mo>=</mo><mi>B</mi><mo>→</mo><msub><mi>G</mi><mi>I</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all objects <math id="p3.m14" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> in <math id="p3.m15" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">A limit of a functor may or may not exist. If it exists, then it is unique up to natural equivalence. In other words, we may call it <em class="ltx_emph ltx_font_italic">the</em> limit of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">In the literature, the limit of <math id="I2.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is variously known as the <em class="ltx_emph ltx_font_italic">inverse limit</em>, <em class="ltx_emph ltx_font_italic">left limit</em>, <em class="ltx_emph ltx_font_italic">projective limit</em>, <em class="ltx_emph ltx_font_italic">root</em>, or <em class="ltx_emph ltx_font_italic">left root</em> of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. and is generally written <math id="I2.i2.p1.m3" class="ltx_Math" alttext="\operatorname{\varprojlim}G" display="inline"><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><mi>G</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The category <math id="I2.i3.p1.m1" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math> above is usually called the <em class="ltx_emph ltx_font_italic">index category</em>, and the functor <math id="I2.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> a <em class="ltx_emph ltx_font_italic">diagram</em> in <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">The most common index categories are finite categories, discrete categories, partially ordered categories, and more specifically, directed categories.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">On the other hand, it turns out that if, in a category, if equalizers of any pairs of morphisms, and arbitrary products of any collections of objects exist, then it can be shown that every functor into this category has a limit.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">By reversing all the arrows in <math id="p5.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, we arrive at the dual concept of a limit, that of a <em class="ltx_emph ltx_font_italic">colimit</em>. Precisely, the <em class="ltx_emph ltx_font_italic">colimit</em> of <math id="p5.m2" class="ltx_Math" alttext="G:\mathcal{I}\to\mathcal{C}" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> is a pair <math id="p5.m3" class="ltx_Math" alttext="(R,\tau)" display="inline"><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math> where <math id="p5.m4" class="ltx_Math" alttext="R:\mathcal{I}\to\mathcal{C}" display="inline"><mrow><mi>R</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> is a constant functor and <math id="p5.m5" class="ltx_Math" alttext="\tau:G\to R" display="inline"><mrow><mi>τ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>R</mi></mrow></mrow></math> is a natural transformation, such that for any pair <math id="p5.m6" class="ltx_Math" alttext="(M,\varphi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>φ</mi><mo stretchy="false">)</mo></mrow></math> of constant functor <math id="p5.m7" class="ltx_Math" alttext="M:\mathcal{I}\to\mathcal{C}" display="inline"><mrow><mi>M</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> and natural transformation <math id="p5.m8" class="ltx_Math" alttext="\varphi:G\to M" display="inline"><mrow><mi>φ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>M</mi></mrow></mrow></math>, there is a unique natural transformation <math id="p5.m9" class="ltx_Math" alttext="\phi:R\to M" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>R</mi><mo>→</mo><mi>M</mi></mrow></mrow></math> such that the following diagram</p>
+<p class="ltx_p ltx_align_center"><math id="p5.m10" class="ltx_Math" alttext="\xymatrix@C+=64pt{&amp;R\ar@{.&gt;}[dd]^{\phi}\inner@par G\ar[ur]^{\tau}\ar[dr]_{%
+\varphi}\inner@par&amp;M}" display="inline"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mi mathvariant="normal">@</mi><mi>C</mi><mo>+</mo><mo>=</mo><mn>64</mn><mi>p</mi><mi>t</mi><mi mathvariant="normal">&amp;</mi><mi>R</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>.</mo><mo>&gt;</mo><msup><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>d</mi><mo stretchy="false">]</mo></mrow><mi>ϕ</mi></msup><mi>G</mi><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msup><mrow><mo stretchy="false">[</mo><mi>u</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>τ</mi></msup><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><msub><mrow><mo stretchy="false">[</mo><mi>d</mi><mi>r</mi><mo stretchy="false">]</mo></mrow><mi>φ</mi></msub><mi mathvariant="normal">&amp;</mi><mi>M</mi></mrow></math></p>
+<p class="ltx_p">The colimit is also known as the <em class="ltx_emph ltx_font_italic">direct limit</em>, <em class="ltx_emph ltx_font_italic">right limit</em>, <em class="ltx_emph ltx_font_italic">inductive limit</em>, <em class="ltx_emph ltx_font_italic">coroot</em>, or <em class="ltx_emph ltx_font_italic">right root</em>, and is written <math id="p5.m11" class="ltx_Math" alttext="\operatorname{\varinjlim}" display="inline"><munder accentunder="true"><mi>lim</mi><mo>→</mo></munder></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>. Some common examples of limits (inverse limits) are products, terminal objects, pullbacks, equalizers, kernels, and kernel pairs. These examples can be readily verified. Let us verify that a terminal object is a limit:</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let <math id="p7.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be the empty functor (from the empty category) into an arbitrary category <math id="p7.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. So the limit of <math id="p7.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is just an object <math id="p7.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in <math id="p7.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, and that’s it, as there are no objects in the empty category, there are no morphisms from <math id="p7.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in the limit of <math id="p7.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. If <math id="p7.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is any object in <math id="p7.m9" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, then there is a unique morphism <math id="p7.m10" class="ltx_Math" alttext="A\to C" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>C</mi></mrow></math>, and that’s it. But this means that <math id="p7.m11" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is just a terminal object of <math id="p7.m12" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Please see the verification of some of these examples in the attachments below.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Some examples of colimits (direct limits) are coproducts, initial objects, pushouts, coequalizers, cokernels, and cokernel pairs.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">limit of a functor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LimitOfAFunctor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:11:23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:11:23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projective limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">left limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">left root</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">root</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">direct limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inductive limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">right limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">right root</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">coroot</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">InverseLimit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryAssociatedToAPartialOrder</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RepresentableFunctor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Small</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrothendieckCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LimitingCone</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">colimit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">index category</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:05:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

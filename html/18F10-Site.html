@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<title>site</title>
+<!--Generated on Fri Feb  9 19:32:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">site</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Definition</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">site</em> is a generalization of a topology, designed to address the problem that in the algebraic category, the only reasonable topology is the Zariski topology, in which the open sets are much too large. In order to obtain a well-behaved cohomology theory (and an algebraic version of the fundamental group) one needs to find open sets that are “finer” than the Zariski open sets.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">Using the machinery of sites, one can construct étale (or <math id="Sx1.p2.m1" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>-adic) cohomology, and one can construct crystalline cohomology, both of which can be used to prove the Weil conjectures, and both of which serve as generalizations of the familiar cohomology from topology and complex analysis.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">Fix a universe <math id="Sx1.p3.m1" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>.
+</p>
+</div>
+<div id="Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdefn1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A <em class="ltx_emph ltx_font_upright">site</em> is a <math id="Thmdefn1.p1.m1" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></math>-category <math id="Thmdefn1.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math> whose objects we call
+“open sets” and a set <math id="Thmdefn1.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> of collections of maps we call
+“coverings”. A covering of an object <math id="Thmdefn1.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="Thmdefn1.p1.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math> is a small (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Small</span>) set of morphisms
+<math id="Thmdefn1.p1.m6" class="ltx_Math" alttext="\left\{{p_{\alpha}:U_{\alpha}\to U}\right\}" display="inline"><mrow><mo mathvariant="normal">{</mo><msub><mi>p</mi><mi>α</mi></msub><mo mathvariant="normal">:</mo><mrow><msub><mi>U</mi><mi>α</mi></msub><mo mathvariant="normal">→</mo><mi>U</mi></mrow><mo mathvariant="normal">}</mo></mrow></math> in <math id="Thmdefn1.p1.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">C</mi></math>. These objects
+must satisfy the following:</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i1.p1.m1" class="ltx_Math" alttext="p:U^{\prime}\to U" display="inline"><mrow><mi>p</mi><mo>:</mo><mrow><msup><mi>U</mi><mo>′</mo></msup><mo>→</mo><mi>U</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is an isomorphism, then </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="\left\{{U^{\prime}\overset{p}{\to}U}\right\}" display="inline"><mrow><mo>{</mo><mrow><msup><mi>U</mi><mo>′</mo></msup><mo>⁢</mo><mover accent="true"><mo>→</mo><mo>𝑝</mo></mover><mo>⁢</mo><mi>U</mi></mrow><mo>}</mo></mrow></math><span class="ltx_text ltx_font_italic"> is a covering.</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If</span></p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\left\{{U_{\alpha}\overset{p_{\alpha}}{\to}U}\right\}" display="block"><mrow><mo>{</mo><mrow><msub><mi>U</mi><mi>α</mi></msub><mo>⁢</mo><mover accent="true"><mo>→</mo><msub><mi>p</mi><mi>α</mi></msub></mover><mo>⁢</mo><mi>U</mi></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is a covering, and for all </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math><span class="ltx_text ltx_font_italic"></span></p>
+<table id="Sx1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\left\{{U_{\alpha,\beta}\overset{q_{\alpha,\beta}}{\to}U_{\alpha}}\right\}" display="block"><mrow><mo>{</mo><mrow><msub><mi>U</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>⁢</mo><mover accent="true"><mo>→</mo><msub><mi>q</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub></mover><mo>⁢</mo><msub><mi>U</mi><mi>α</mi></msub></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is also a covering, then</span></p>
+<table id="Sx1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\left\{{U_{\alpha,\beta}\overset{p_{\alpha}\circ q_{\alpha,\beta}}{%
+\longrightarrow}U}\right\}" display="block"><mrow><mo>{</mo><mrow><msub><mi>U</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>⁢</mo><mover accent="true"><mo>⟶</mo><mrow><msub><mi>p</mi><mi>α</mi></msub><mo>∘</mo><msub><mi>q</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub></mrow></mover><mo>⁢</mo><mi>U</mi></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is a covering.</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\left\{{U_{\alpha}\overset{p_{\alpha}}{\to}U}\right\}" display="inline"><mrow><mo>{</mo><mrow><msub><mi>U</mi><mi>α</mi></msub><mo>⁢</mo><mover accent="true"><mo>→</mo><msub><mi>p</mi><mi>α</mi></msub></mover><mo>⁢</mo><mi>U</mi></mrow><mo>}</mo></mrow></math><span class="ltx_text ltx_font_italic"> is a covering,
+and </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="V\to U" display="inline"><mrow><mi>V</mi><mo>→</mo><mi>U</mi></mrow></math><span class="ltx_text ltx_font_italic"> is a morphism, then the fibred products </span><math id="I1.i3.p1.m3" class="ltx_Math" alttext="U_{\alpha}\times_{U}V" display="inline"><mrow><msub><mi>U</mi><mi>α</mi></msub><msub><mo>×</mo><mi>U</mi></msub><mi>V</mi></mrow></math><span class="ltx_text ltx_font_italic"> exist for all </span><math id="I1.i3.p1.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math><span class="ltx_text ltx_font_italic">, and we can produce a covering of
+</span><math id="I1.i3.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math><span class="ltx_text ltx_font_italic">:</span></p>
+<table id="Sx1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex4.m1" class="ltx_Math" alttext="\left\{{V\times_{U}U_{\alpha}\overset{q_{\alpha}}{\to}V}\right\}" display="block"><mrow><mo>{</mo><mrow><mrow><mi>V</mi><msub><mo>×</mo><mi>U</mi></msub><msub><mi>U</mi><mi>α</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mo>→</mo><msub><mi>q</mi><mi>α</mi></msub></mover><mo>⁢</mo><mi>V</mi></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where </span><math id="I1.i3.p1.m6" class="ltx_Math" alttext="q_{\alpha}" display="inline"><msub><mi>q</mi><mi>α</mi></msub></math><span class="ltx_text ltx_font_italic"> is the projection onto the first factor of the fibre
+product.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Given a site, it is very natural to construct presheaves and sheaves on it; the category of sheaves on a site is called a topos. This category is (under some technical assumptions) rich enough to allow a cohomology theory.</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">The reference to universes and small sets in the definition may be safely ignored for most purposes; they exist to deal with set-theoretic difficulties one can encounter when dealing with certain sites (such as the crystalline site or the big étale site).</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">Grothendieck et al., <em class="ltx_emph ltx_font_italic">Séminaires en Gèometrie Algèbrique 4</em>, tomes 1, 2, and 3, available on the web at
+<span class="ltx_text ltx_font_typewriter">http://www.math.mcgill.ca/ archibal/SGA/SGA.html</span>http://www.math.mcgill.ca/ archibal/SGA/SGA.html
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">site</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Site</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:16:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:16:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">19</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18F10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14F20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18F20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Grothendieck topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EtaleMorphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Cover</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TopologicalSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Sheaf2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Sheafification2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EtaleCohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CoveringSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SomethingRelatedToSheaf</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">cover</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">covering</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">morphism of sites</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:32:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

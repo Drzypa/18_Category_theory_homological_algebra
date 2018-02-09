@@ -1,0 +1,112 @@
+<!DOCTYPE html><html>
+<head>
+<title>representable functor</title>
+<!--Generated on Fri Feb  9 19:20:08 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">representable functor</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A contravariant functor <math id="p2.m1" class="ltx_Math" alttext="F\colon C\to{\bf Sets}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>𝐒𝐞𝐭𝐬</mi></mrow></mrow></math> between a category <math id="p2.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and the category of sets is <span class="ltx_text ltx_font_italic">representable</span> if there is an object <math id="p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> of <math id="p2.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> such that <math id="p2.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is isomorphic to the functor <math id="p2.m6" class="ltx_Math" alttext="{\rm Hom}(-,X)" display="inline"><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>-</mo><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Similarly, a covariant functor is <math id="p3.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> called <span class="ltx_text ltx_font_italic">representable</span> if it is isomorphic to <math id="p3.m2" class="ltx_Math" alttext="{\rm Hom}(X,-)" display="inline"><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mo>-</mo><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We say that the object <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> <span class="ltx_text ltx_font_italic">represents</span> <math id="p4.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. The object <math id="p4.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is then determined uniquely up to unique isomorphism (by the Yoneda lemma).</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">A vast number of important objects in mathematics are defined as representing functors. For example, if <math id="p5.m1" class="ltx_Math" alttext="F\colon C\to D" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>C</mi><mo>→</mo><mi>D</mi></mrow></mrow></math> is any functor, then the adjoint <math id="p5.m2" class="ltx_Math" alttext="G\colon D\to C" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> (if it exists) can be defined as follows. For <math id="p5.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> in <math id="p5.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>, <math id="p5.m5" class="ltx_Math" alttext="G(Y)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the object of <math id="p5.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> representing the functor <math id="p5.m7" class="ltx_Math" alttext="X\mapsto{\rm Hom}(F(X),Y)" display="inline"><mrow><mi>X</mi><mo>↦</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if <math id="p5.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is right adjoint to <math id="p5.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> or <math id="p5.m10" class="ltx_Math" alttext="X\mapsto{\rm Hom}(Y,F(X))" display="inline"><mrow><mi>X</mi><mo>↦</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if <math id="p5.m11" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is left adjoint.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Thus, for example, if <math id="p6.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a ring, then <math id="p6.m2" class="ltx_Math" alttext="N\otimes M" display="inline"><mrow><mi>N</mi><mo>⊗</mo><mi>M</mi></mrow></math> represents the functor <math id="p6.m3" class="ltx_Math" alttext="L\mapsto{\rm Hom}_{R}(N,{\rm Hom}_{R}(M,L))" display="inline"><mrow><mi>L</mi><mo>↦</mo><mrow><msub><mi>Hom</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>N</mi><mo>,</mo><mrow><msub><mi>Hom</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Much of the motivation for this way of thinking about objects comes from a philosophy of A. Grothendieck which says that we <em class="ltx_emph ltx_font_italic">define</em> certain objects by having the characterizing property that they <em class="ltx_emph ltx_font_italic">represent</em> certain functors. In other words, we can take a category in which we’re interested (e.g. the category of schemes, to address one of Grothendieck’s primary interests) and embed it into a category of functors (as above). We can then apply abstract theorem about functors and natural transformations to elements of our category. The strongegst possible statement from this approach will result if we can further <em class="ltx_emph ltx_font_italic">characterize</em> our objects inside this larger category of functors, i.e. decide which functors represent an object in our category. This should at least in part be viewed as the motivation for determining representability.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">representable functor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RepresentableFunctor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:02:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:02:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DirectLimit</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EilenbergMacLaneSpace</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">represents</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">representable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:20:08 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

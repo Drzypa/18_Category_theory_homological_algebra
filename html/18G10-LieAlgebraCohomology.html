@@ -1,0 +1,337 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lie algebra cohomology</title>
+<!--Generated on Fri Feb  9 19:32:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Lie algebra cohomology</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definition.</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> be a finite-dimensional Lie algebra over a field <math id="S1.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, and
+let <math id="S1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a <math id="S1.p1.m4" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>-module (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RepresentationLieAlgebra</span>). Our goal is to define a cochain complex
+<math id="S1.p1.m5" class="ltx_Math" alttext="C^{k}(\mathfrak{g},M)" display="inline"><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>, whose cohomology is known as the Lie algebra cohomology
+of <math id="S1.p1.m6" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> with coefficients in <math id="S1.p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. We define the space of <math id="S1.p1.m8" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-cochains to be</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="C^{k}(\mathfrak{g},M)=\operatorname{Hom}_{K}(\Lambda^{k}\mathfrak{g},M),\quad k%
+=0,1,\dots,\dim\mathfrak{g}," display="block"><mrow><mrow><mrow><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mi>𝔤</mi></mrow><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>k</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>dim</mo><mo>⁡</mo><mi>𝔤</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the vector space of multilinear, alternating mappings from
+<math id="S1.p1.m9" class="ltx_Math" alttext="\overbrace{\mathfrak{g}\times\cdots\times\mathfrak{g}}^{k\text{ times}}" display="inline"><mover><mover accent="true"><mrow><mi>𝔤</mi><mo movablelimits="false">×</mo><mi mathvariant="normal">⋯</mi><mo movablelimits="false">×</mo><mi>𝔤</mi></mrow><mo movablelimits="false">⏞</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mtext> times</mtext></mrow></mover></math> to <math id="S1.p1.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.
+<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>It should be understood that <math id="S1.p1.m11" class="ltx_Math" alttext="C^{0}(\mathfrak{g},M)\cong M" display="inline"><mrow><mrow><msup><mi>C</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mi>M</mi></mrow></math>.</span></span></span>
+The coboundary operator
+<math id="S1.p1.m12" class="ltx_Math" alttext="\delta:C^{k}(\mathfrak{g},M)\to C^{k+1}(\mathfrak{g},M)" display="inline"><mrow><mi>δ</mi><mo>:</mo><mrow><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>C</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is defined to be</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\displaystyle(\delta\omega)(a_{0},a_{1},\dots,a_{k})=" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m2" class="ltx_Math" alttext="\displaystyle\sum_{0\leq i\leq k}(-1)^{k}a_{i}\cdot\omega(\dots,\widehat{a_{i}%
+},\dots)+" display="inline"><mrow><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>0</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder></mstyle><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>⁢</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo>⋅</mo><mi>ω</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>a</mi><mi>i</mi></msub><mo>^</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex3.m2" class="ltx_Math" alttext="\displaystyle\ +\sum_{0\leq i&lt;j\leq k}(-1)^{i+j}\omega([a_{i},a_{j}],\dots,%
+\widehat{a_{i}},\dots\widehat{a_{j}},\dots),\quad\omega\in C^{k}(\mathfrak{g},%
+M)," display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>0</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi><mo>≤</mo><mi>k</mi></mrow></munder></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>a</mi><mi>j</mi></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><msub><mi>a</mi><mi>i</mi></msub><mo>^</mo></mover><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><mover accent="true"><msub><mi>a</mi><mi>j</mi></msub><mo>^</mo></mover></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mi>ω</mi></mrow><mo>∈</mo><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p1.m13" class="ltx_Math" alttext="\widehat{a_{i}}" display="inline"><mover accent="true"><msub><mi>a</mi><mi>i</mi></msub><mo>^</mo></mover></math> indicates the omission of the argument <math id="S1.p1.m14" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math>.
+We leave it as an exercise for the reader to check that <math id="S1.p1.m15" class="ltx_Math" alttext="\delta\omega" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>ω</mi></mrow></math>, as defined above, is multi-linear, and alternating. Another,
+only slightly more challenging exercise, is to prove that <math id="S1.p1.m16" class="ltx_Math" alttext="\delta^{2}=0" display="inline"><mrow><msup><mi>δ</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow></math>. The proof involves, in an essential way, the Jacobi identity,
+and the commutator identity for the action of <math id="S1.p1.m17" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> on <math id="S1.p1.m18" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, namely</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="a\cdot(b\cdot u)-b\cdot(a\cdot u)=[a,b]\cdot u,\quad a,b\in\mathfrak{g},\;u\in
+M." display="block"><mrow><mrow><mrow><mrow><mrow><mi>a</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⋅</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>b</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⋅</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⋅</mo><mi>u</mi></mrow><mo rspace="12.5pt">,</mo><mi>a</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>b</mi><mo>∈</mo><mi>𝔤</mi></mrow><mo rspace="5.3pt">,</mo><mrow><mi>u</mi><mo>∈</mo><mi>M</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p2.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> is the tangent space of a Lie group, and <math id="S1.p2.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the reals with <math id="S1.p2.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> <math id="S1.p2.m4" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>- action, then any alternating map on <math id="S1.p2.m5" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> extends to a smooth alternating form on the Lie group, via (left)- translation by the group action. The above formula for the coboundary gives the exterior derivative with respect to this extension.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Infinite-dimensional generalizations.</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The above definition generalizes readily to infinite-dimensional Lie
+algebras. The notion of a linear mapping with an infinite-dimensional
+domain is quite tricky, and so the key requirement of any such
+generalization is some kind of restriction on the space of cochains.
+Thus, de Rham cohomology of a manifold <math id="S2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> can be regarded as
+<math id="S2.p1.m2" class="ltx_Math" alttext="H^{k}(V(X),C^{\infty}(X))" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, the cohomology of the Lie algebra of vector
+fields with coefficients that are smooth functions, with the caveat
+that the cochain spaces <math id="S2.p1.m3" class="ltx_Math" alttext="C^{k}(V(X),C^{\infty}(X))" display="inline"><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> are restricted to
+<math id="S2.p1.m4" class="ltx_Math" alttext="\Omega^{k}(X)" display="inline"><mrow><msup><mi mathvariant="normal">Ω</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the smooth differential forms<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>The
+evaluation of a cochain on a list of vector fields is given by
+contraction.</span></span></span>. Another interesting infinite-dimensional
+generalization is the Gelfand-Fuchs cohomology of <math id="S2.p1.m5" class="ltx_Math" alttext="V(X)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Here we are
+allowed cochains that are not simply linear combinations of the
+components of a vector field, but that also include the derivatives of
+these components.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Applications.</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Owing to numerous and useful various applications, it’s useful to list
+the formulas for the first few coboundary operators:</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex5.m1" class="ltx_Math" alttext="\displaystyle(\delta\alpha)(a)=" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex5.m2" class="ltx_Math" alttext="\displaystyle a\cdot\alpha;" display="inline"><mrow><mrow><mi>a</mi><mo>⋅</mo><mi>α</mi></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex6.m1" class="ltx_Math" alttext="\displaystyle(\delta\beta)(a,b)=" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex6.m2" class="ltx_Math" alttext="\displaystyle a\cdot\beta(b)-b\cdot\beta(a)-\beta([a,b]);" display="inline"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⋅</mo><mi>β</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mi>b</mi><mo>⋅</mo><mi>β</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex7.m1" class="ltx_Math" alttext="\displaystyle(\delta\gamma)(a,b,c)=" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex7.m2" class="ltx_Math" alttext="\displaystyle a\cdot\gamma(b,c)+b\cdot\gamma(c,a)+c\cdot\gamma(a,b)-\gamma([a,%
+b],c)-\gamma([b,c],a)-\gamma([c,a],b)," display="inline"><mrow><mrow><mrow><mrow><mrow><mi>a</mi><mo>⋅</mo><mi>γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mi>b</mi><mo>⋅</mo><mi>γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mi>c</mi><mo>⋅</mo><mi>γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>c</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p1.m1" class="ltx_Math" alttext="a,b,c\in\mathfrak{g}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>𝔤</mi></mrow></math>, and where <math id="S3.p1.m2" class="ltx_Math" alttext="\alpha,\beta,\gamma" display="inline"><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow></math> are <math id="S3.p1.m3" class="ltx_Math" alttext="0,1" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></math>, and
+<math id="S3.p1.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>-cochains, respectively. In particular, for small <math id="S3.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, the
+cohomology groups <math id="S3.p1.m6" class="ltx_Math" alttext="H^{k}(\mathfrak{g},M)" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> have certain interesting
+interpretations.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">The first cohomology space, <math id="S3.p2.m1" class="ltx_Math" alttext="H^{1}(\mathfrak{g},K)" display="inline"><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math> is isomorphic as a vector
+space to <math id="S3.p2.m2" class="ltx_Math" alttext="\mathfrak{g}/[\mathfrak{g},\mathfrak{g}]" display="inline"><mrow><mi>𝔤</mi><mo>/</mo><mrow><mo stretchy="false">[</mo><mi>𝔤</mi><mo>,</mo><mi>𝔤</mi><mo stretchy="false">]</mo></mrow></mrow></math>, the abelianization of <math id="S3.p2.m3" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>. More generally
+<math id="S3.p2.m4" class="ltx_Math" alttext="H^{1}(\mathfrak{g},M)" display="inline"><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> classifies, up to natural equivalence, Lie algebras
+consisting of inhomogeneous operators</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" alttext="a+\beta(a),\quad a\in\mathfrak{g},\;\beta\in C^{1}(\mathfrak{g},M)." display="block"><mrow><mrow><mrow><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mi>a</mi></mrow><mo>∈</mo><mi>𝔤</mi></mrow><mo rspace="5.3pt">,</mo><mrow><mi>β</mi><mo>∈</mo><mrow><msup><mi>C</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In more fancy
+language, such operators are called derivations of <math id="S3.p2.m5" class="ltx_Math" alttext="T(M)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the tensor
+algebra of <math id="S3.p2.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">The second cohomology space, <math id="S3.p3.m1" class="ltx_Math" alttext="H^{2}(\mathfrak{g},M)" display="inline"><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is naturally isomorphic to
+the vector space of abelian extensions of <math id="S3.p3.m2" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> by <math id="S3.p3.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Thinking of
+<math id="S3.p3.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> as an abelian Lie algebra, such an extension is a Lie algebra
+<math id="S3.p3.m5" class="ltx_Math" alttext="\hat{\mathfrak{g}}" display="inline"><mover accent="true"><mi>𝔤</mi><mo stretchy="false">^</mo></mover></math> that occurs in the short-exact sequence</p>
+<table id="S3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex9.m1" class="ltx_Math" alttext="0\to M\to\hat{\mathfrak{g}}\to\mathfrak{g}\to 0." display="block"><mrow><mrow><mn>0</mn><mo>→</mo><mi>M</mi><mo>→</mo><mover accent="true"><mi>𝔤</mi><mo stretchy="false">^</mo></mover><mo>→</mo><mi>𝔤</mi><mo>→</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">The third cohomology space has an interesting interpretation in terms
+of deformations of something or other. This is due to Murray
+Gerstenhaber of U. Penn, but I’ve forgotten the details.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Homological algebra.</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Generalizing a bit, Lie algebra cohomology is just the cohomology of a
+particular kind of algebraic theory. There are analogous cohomology
+theories for groups, associative algebras, and commutative rings. All
+these theories can be unified by employing the notion of an injective
+resolution.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Broadening the scope even further, we can employ category theory and
+re-conceptualize Lie algebra cohomology as a functor from the category
+of <math id="S4.p2.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>-modules to the category of cochain complexes. One begins with
+the covariant, left-exact functor</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" alttext="(-)^{\mathfrak{g}}:M\mapsto M^{\mathfrak{g}}=\{u\in M:\mathfrak{g}\cdot u=0\}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mo>-</mo><mo stretchy="false">)</mo></mrow><mi>𝔤</mi></msup><mo>:</mo><mrow><mi>M</mi><mo>↦</mo><msup><mi>M</mi><mi>𝔤</mi></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>M</mi></mrow><mo>:</mo><mrow><mrow><mi>𝔤</mi><mo>⋅</mo><mi>u</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from
+the category of <math id="S4.p2.m2" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>-modules to the category of <math id="S4.p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-vector spaces.
+One then defines <math id="S4.p2.m4" class="ltx_Math" alttext="H^{k}(\mathfrak{g},-)" display="inline"><mrow><msup><mi>H</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo>,</mo><mo>-</mo><mo stretchy="false">)</mo></mrow></mrow></math> to be the right-derived functors
+<math id="S4.p2.m5" class="ltx_Math" alttext="R^{k}((-)^{\mathfrak{g}})" display="inline"><mrow><msup><mi>R</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">(</mo><mo>-</mo><mo stretchy="false">)</mo></mrow><mi>𝔤</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Historical notes.</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Lie algebra cohomology was first formalized in an influential 1948
+paper by C. Chevalley and S. Eilenberg<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. The aim was to
+calculate the cohomology, in the topological sense, of a compact Lie
+group by using the finite-dimensional data of the corresponding Lie
+algebra. In this they were inspired by an even earlier idea of Elie
+Cartan, who was the first to announce that there was a connection
+between the topology of a Lie group and the algebraic structure of the
+underlying Lie algebra <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>. What makes this story particularly
+interesting is that Homological Algebra, as a subject, was launched by
+the remarkable 1956 book<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite> by Cartan and Eilenberg called,
+oddly enough “Homological Algebra”. However the Cartan involved
+this time is not Elie, but Henri, the equally remarkable son of the
+very remarkable Elie. A survey of the history of homological algebra
+by Charles Weibel is available at the K-theory archive<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> E. Cartan, Sur les nombres de Betti des espaces de
+groupes clos, <span class="ltx_text ltx_font_italic">C. R. Acad. Sci. (Paris)</span> <span class="ltx_text ltx_font_bold">187</span> (1928),
+196–198.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> C. Chevalley and S. Eilenberg, Cohomology theory of Lie
+groups and Lie algebras, <span class="ltx_text ltx_font_italic">Trans. Amer. Math. Soc.</span> <span class="ltx_text ltx_font_bold">63</span>
+(1948), 85-124.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">H. Cartan and S. Eilenberg, <span class="ltx_text ltx_font_italic">Homological
+Algebra</span>, Princeton U. Press, 1956.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> C. Weibel, History of homological algebra, in
+<span class="ltx_text ltx_font_italic">History of topology</span>, 797–836, North-Holland, Amsterdam,
+1999. Available online at
+<span class="ltx_text ltx_font_typewriter">http://www.math.uiuc.edu/K-theory/0245/</span>http://www.math.uiuc.edu/K-theory/0245/
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Lie algebra cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LieAlgebraCohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:51:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:51:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18G10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 17B56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">LieAlgebra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:32:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

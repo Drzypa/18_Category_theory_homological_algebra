@@ -1,0 +1,190 @@
+<!DOCTYPE html><html>
+<head>
+<title>algebraic category of quantum automata</title>
+<!--Generated on Fri Feb  9 19:23:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">algebraic category of quantum automata</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>The Algebraic Category of Quantum Automata</h2>
+
+<div id="S1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.1</span>.</h6>
+<div id="S1.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let us recall that a <em class="ltx_emph ltx_font_italic">quantum automaton</em> is defined as a quantum algebraic topology object– the <em class="ltx_emph ltx_font_italic">quantum
+triple</em> <math id="S1.Thmdefinition1.p1.m1" class="ltx_Math" alttext="Q_{A}=(\mathcal{G},\mathcal{H}-\Re_{G},Aut(\mathcal{G})" display="inline"><mrow><msub><mi>Q</mi><mi>A</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>-</mo><msub><mi mathvariant="normal">ℜ</mi><mi>G</mi></msub><mo>,</mo><mi>A</mi><mi>u</mi><mi>t</mi><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>), where <math id="S1.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> is a (locally compact) quantum groupoid, <math id="S1.Thmdefinition1.p1.m3" class="ltx_Math" alttext="\mathcal{H}-\Re_{G}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>-</mo><msub><mi mathvariant="normal">ℜ</mi><mi>G</mi></msub></mrow></math> are the unitary representations of <math id="S1.Thmdefinition1.p1.m4" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> on rigged Hilbert spaces <math id="S1.Thmdefinition1.p1.m5" class="ltx_Math" alttext="\Re_{G}" display="inline"><msub><mi mathvariant="normal">ℜ</mi><mi>G</mi></msub></math> of quantum states and quantum operators on the Hilbert space <math id="S1.Thmdefinition1.p1.m6" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>, and <math id="S1.Thmdefinition1.p1.m7" class="ltx_Math" alttext="Aut(\mathcal{G})" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the transformation, or <em class="ltx_emph ltx_font_italic">automorphism groupoid of quantum transitions</em> that represents all flip-flop quantum transitions of one cubit each between the permitted quantum states of the quantum automaton.</p>
+</div>
+</div>
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">With the data from above definition we can now define also the category of quantum automata as follows.</p>
+</div>
+<div id="S1.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.2</span>.</h6>
+<div id="S1.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">category of quantum automata</em> <math id="S1.Thmdefinition2.p1.m1" class="ltx_Math" alttext="\mathcal{\mathcal{Q}}_{A}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒬</mi><mi>A</mi></msub></math>
+is defined as an algebraic category whose objects are triples <math id="S1.Thmdefinition2.p1.m2" class="ltx_Math" alttext="(\mathcal{H},\Delta:\mathcal{H}\rightarrow\mathcal{H},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>,</mo><mi mathvariant="normal">Δ</mi></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>,</mo><mi>μ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></math> (where <math id="S1.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is either a Hilbert space or a rigged Hilbert space of quantum states and operators acting on
+<math id="S1.Thmdefinition2.p1.m4" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>, and <math id="S1.Thmdefinition2.p1.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a measure related to the quantum logic, <math id="S1.Thmdefinition2.p1.m6" class="ltx_Math" alttext="LM" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mi>M</mi></mrow></math>, and (quantum) transition probabilities of this quantum system), and whose morphisms are defined between such triples by homomorphisms of Hilbert spaces,
+<math id="S1.Thmdefinition2.p1.m7" class="ltx_Math" alttext="\Omega:\mathcal{H}\rightarrow\mathcal{H}" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi></mrow></mrow></math>, naturally compatible with the operators <math id="S1.Thmdefinition2.p1.m8" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math>, and by homomorphisms between the associated Haar measure systems.</p>
+</div>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">An alternative definition is also possible based on Quantum Algebraic Topology (QAT).</p>
+</div>
+<div id="S1.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.3</span>.</h6>
+<div id="S1.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">A quantum algebraic topology definition of the <span class="ltx_text ltx_font_italic">category of quantum algebraic automata</span> is in terms of the objects specified above in <span class="ltx_text ltx_font_bold">Definition 0.1</span> as quantum automaton triples <math id="S1.Thmdefinition3.p1.m1" class="ltx_Math" alttext="(Q_{A})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>Q</mi><mi>A</mi></msub><mo stretchy="false">)</mo></mrow></math>,
+and quantum automata homomorphisms defined between such triples; these <math id="S1.Thmdefinition3.p1.m2" class="ltx_Math" alttext="Q_{A}" display="inline"><msub><mi>Q</mi><mi>A</mi></msub></math> morphisms are defined by
+groupoid homomorphisms <math id="S1.Thmdefinition3.p1.m3" class="ltx_Math" alttext="h:\mathcal{G}\rightarrow\mathcal{G}^{*}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>→</mo><msup><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>*</mo></msup></mrow></mrow></math> and <math id="S1.Thmdefinition3.p1.m4" class="ltx_Math" alttext="\alpha:Aut(\mathcal{G})\rightarrow Aut(\mathcal{G}^{*})" display="inline"><mrow><mi>α</mi><mo>:</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>A</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, together
+with <span class="ltx_text ltx_font_italic">unitarity preserving mappings</span> <math id="S1.Thmdefinition3.p1.m5" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> that are defined between unitary representations of <math id="S1.Thmdefinition3.p1.m6" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> on rigged Hilbert spaces (or Hilbert space bundles).</p>
+</div>
+</div>
+<div id="S1.p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">algebraic category of quantum automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicCategoryOfQuantumAutomata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18C10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03D10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03D05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum computer</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum algebraic topology object</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumAutomataAndQuantumComputation2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumAlgebraicTopology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TopicEntryOnFoundationsOfMathematics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAS</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SomeExamplesOfUniversalBundles</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TopicEntryOnAppliedMathematics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SystemDefinitions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IndexOfCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PhysicalMathematicsAndEngineeringTopicOnApplie</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum automaton</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">algebraic category of quantum automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automorphism groupoid of quantum transitions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum triple</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">unitarity preserving mappings</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:23:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

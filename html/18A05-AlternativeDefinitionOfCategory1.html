@@ -1,0 +1,332 @@
+<!DOCTYPE html><html>
+<head>
+<title>alternative definition of category</title>
+<!--Generated on Fri Feb  9 19:20:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">alternative definition of category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The notion of category may be defined in a form which only
+involves morphisms and does not mention objects. This
+definition shows that categories are a generalization of
+semigroups in which the closure axiom has been weakened;
+rather than requiring that the product of two arbitrary
+elements of the system be defined as an element of the
+system, we only require the product to be defined in
+certain cases.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We define a <em class="ltx_emph ltx_font_italic">category</em> to be a set<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>For
+simplicity, we will only consider small categories here,
+avoiding logical complications related to proper classes.</span></span></span>
+<math id="p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (whose elements we shall term <em class="ltx_emph ltx_font_italic">morphisms</em>) and a
+function <math id="p2.m2" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> (which we shall term <em class="ltx_emph ltx_font_italic">composition</em>)
+from a subset <math id="p2.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> of <math id="p2.m4" class="ltx_Math" alttext="M\times M" display="inline"><mrow><mi>M</mi><mo>×</mo><mi>M</mi></mrow></math> to <math id="p2.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> which satisfies the
+following properties:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">1.</span> If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> are elements of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> such that
+<math id="I1.i1.p1.m3" class="ltx_Math" alttext="(a,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="(a,d)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>
+and <math id="I1.i1.p1.m5" class="ltx_Math" alttext="(b,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, then <math id="I1.i1.p1.m6" class="ltx_Math" alttext="(b,d)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">2</span> If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> are elements of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> such that
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="(a,b)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="(b,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>,
+then <math id="I1.i2.p1.m5" class="ltx_Math" alttext="(a\circ b,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∘</mo><mi>b</mi></mrow><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and
+<math id="I1.i2.p1.m6" class="ltx_Math" alttext="(a,b\circ c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mrow><mi>b</mi><mo>∘</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and
+<math id="I1.i2.p1.m7" class="ltx_Math" alttext="(a\circ b)\circ c=a\circ(b\circ c)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>∘</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>c</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>∘</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3a</span> For every <math id="I1.i3.p1.m1" class="ltx_Math" alttext="a\in M" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow></math>, there exists an element
+<math id="I1.i3.p1.m2" class="ltx_Math" alttext="e\in M" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>M</mi></mrow></math> such that</p>
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="(e,e)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>e</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="e\circ e=e" display="inline"><mrow><mrow><mi>e</mi><mo>∘</mo><mi>e</mi></mrow><mo>=</mo><mi>e</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="(a,e)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="a\circ e=a" display="inline"><mrow><mrow><mi>a</mi><mo>∘</mo><mi>e</mi></mrow><mo>=</mo><mi>a</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="I1.I1.i3.p1.m1" class="ltx_Math" alttext="x\in M" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow></math> such that <math id="I1.I1.i3.p1.m2" class="ltx_Math" alttext="(x,e)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>,
+we have <math id="I1.I1.i3.p1.m3" class="ltx_Math" alttext="x\circ e=x" display="inline"><mrow><mrow><mi>x</mi><mo>∘</mo><mi>e</mi></mrow><mo>=</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3a</span> For every <math id="I1.i4.p1.m1" class="ltx_Math" alttext="a\in M" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow></math>, there exists an element
+<math id="I1.i4.p1.m2" class="ltx_Math" alttext="e\in M" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>M</mi></mrow></math> such that</p>
+<ol id="I1.I2" class="ltx_enumerate">
+<li id="I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i1.p1.m1" class="ltx_Math" alttext="(e,e)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>e</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.I2.i1.p1.m2" class="ltx_Math" alttext="e\circ e=e" display="inline"><mrow><mrow><mi>e</mi><mo>∘</mo><mi>e</mi></mrow><mo>=</mo><mi>e</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i2.p1.m1" class="ltx_Math" alttext="(e,a)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>e</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="I1.I2.i2.p1.m2" class="ltx_Math" alttext="e\circ a=a" display="inline"><mrow><mrow><mi>e</mi><mo>∘</mo><mi>a</mi></mrow><mo>=</mo><mi>a</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="I1.I2.i3.p1.m1" class="ltx_Math" alttext="x\in M" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow></math> such that <math id="I1.I2.i3.p1.m2" class="ltx_Math" alttext="(x,e)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>,
+we have <math id="I1.I2.i3.p1.m3" class="ltx_Math" alttext="e\circ a=x" display="inline"><mrow><mrow><mi>e</mi><mo>∘</mo><mi>a</mi></mrow><mo>=</mo><mi>x</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+<p class="ltx_p">This definition may also be stated in terms of predicate calculus.
+Defining the three place predicate <math id="p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> by <math id="p2.m7" class="ltx_Math" alttext="P(a,b,c)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> if and only if
+<math id="p2.m8" class="ltx_Math" alttext="(a,b)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="p2.m9" class="ltx_Math" alttext="a\circ b=c" display="inline"><mrow><mrow><mi>a</mi><mo>∘</mo><mi>b</mi></mrow><mo>=</mo><mi>c</mi></mrow></math>, our axioms look
+as follows:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">0.</span> <math id="I2.i1.p1.m1" class="ltx_Math" alttext="(\forall a,b,c,d)~{}P(a,b,c)\land P(a,b,d)\Rightarrow c=d" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∀</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⇒</mo><mi>c</mi><mo>=</mo><mi>d</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">1.</span> <math id="I2.i2.p1.m1" class="ltx_Math" alttext="(\forall a,b,c,d)~{}((\exists e)~{}P(a,c,e))\land((\exists e)~{}P(a,d,e))\land%
+((\exists e)~{}P(b,c,e))z\Rightarrow((\exists e)~{}P(b,d,e))" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∀</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∃</mo><mi>e</mi></mrow><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∃</mo><mi>e</mi></mrow><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∃</mo><mi>e</mi></mrow><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>⇒</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∃</mo><mi>e</mi></mrow><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">2.</span> <math id="I2.i3.p1.m1" class="ltx_Math" alttext="(\forall a,b,c,d,e)~{}P(a,b,d)\land P(b,c,e)\Rightarrow(\exists f)~{}P(d,c,f)%
+\land P(a,e,f)" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∀</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⇒</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∃</mo><mi>f</mi></mrow><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3a.</span> <math id="I2.i4.p1.m1" class="ltx_Math" alttext="(\forall a)(\exists b)~{}P(b,b,b)\land P(b,a,a)\land((\forall c,d)~{}P(b,c,d)%
+\Rightarrow c=d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mo>∀</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mo>∃</mo><mi>b</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mo>∀</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>⇒</mo><mi>c</mi><mo>=</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3b.</span> <math id="I2.i5.p1.m1" class="ltx_Math" alttext="(\forall a)(\exists b)~{}P(b,b,b)\land P(a,b,a)\land((\forall c,d)~{}P(c,b,d)%
+\Rightarrow c=d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mo>∀</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mo>∃</mo><mi>b</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mo>∀</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>⇒</mo><mi>c</mi><mo>=</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">That a category defined in the usual way satisfies these properties
+is easily enough established. Given two morphisms <math id="p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p3.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>,
+the composition <math id="p3.m3" class="ltx_Math" alttext="f\circ g" display="inline"><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow></math> is only defined if <math id="p3.m4" class="ltx_Math" alttext="f\in{\rm Hom}(B,C)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+and <math id="p3.m5" class="ltx_Math" alttext="g\in{\rm Hom}(A,B)" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for suitable objects <math id="p3.m6" class="ltx_Math" alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math>, i.e if the
+final object of <math id="p3.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> equals the initial object of <math id="p3.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. The three
+hypotheses of axiom 1 state that the initial object of <math id="p3.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> equals the
+final objects of <math id="p3.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> and <math id="p3.m11" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and that the initial object of <math id="p3.m12" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> also
+equals the final object of <math id="p3.m13" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>; hence the initial object of <math id="p3.m14" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> equals
+the final object of <math id="p3.m15" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> so we may compose <math id="p3.m16" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> with <math id="p3.m17" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>.
+Axiom 2 states associativity of composition whilst axioms 3a and 3b
+follow from existence of identity elements.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">To show that the new definition implies the old one is not so easy
+because we must first recover the objects of the category somehow.
+The observation which makes this possible is that to each object <math id="p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+we may associate two sets: the set <math id="p4.m2" class="ltx_Math" alttext="{\bf L}" display="inline"><mi>𝐋</mi></math> of morphisms which have
+<math id="p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> as initial object, <math id="p4.m4" class="ltx_Math" alttext="{\bf L}=\cup_{B\in{\rm Ob}}{\rm Hom}(A,B)" display="inline"><mrow><mi>𝐋</mi><mo>=</mo><mrow><msub><mo>∪</mo><mrow><mi>B</mi><mo>∈</mo><mi>Ob</mi></mrow></msub><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+and the set <math id="p4.m5" class="ltx_Math" alttext="{\bf R}" display="inline"><mi>𝐑</mi></math> of morphisms which have <math id="p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> as final object,
+<math id="p4.m7" class="ltx_Math" alttext="{\bf R}=\cup_{B\in{\rm Ob}}{\rm Hom}(B,A)" display="inline"><mrow><mi>𝐑</mi><mo>=</mo><mrow><msub><mo>∪</mo><mrow><mi>B</mi><mo>∈</mo><mi>Ob</mi></mrow></msub><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Moreover, this
+pair of sets <math id="p4.m8" class="ltx_Math" alttext="({\bf L},{\bf R})" display="inline"><mrow><mo stretchy="false">(</mo><mi>𝐋</mi><mo>,</mo><mi>𝐑</mi><mo stretchy="false">)</mo></mrow></math> determines <math id="p4.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> uniquely. In order
+for this observation to be useful for our purposes, we must somehow
+characterize these pairs of sets without reference to objects, which
+may be done by the further observation that, if we have two sets <math id="p4.m10" class="ltx_Math" alttext="{\bf L}" display="inline"><mi>𝐋</mi></math>
+and <math id="p4.m11" class="ltx_Math" alttext="{\bf R}" display="inline"><mi>𝐑</mi></math> of morphisms such that <math id="p4.m12" class="ltx_Math" alttext="x\in{\bf L}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝐋</mi></mrow></math> if and only if
+<math id="p4.m13" class="ltx_Math" alttext="x\circ y" display="inline"><mrow><mi>x</mi><mo>∘</mo><mi>y</mi></mrow></math> is defined for all <math id="p4.m14" class="ltx_Math" alttext="y\in{\bf R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>𝐑</mi></mrow></math> and <math id="p4.m15" class="ltx_Math" alttext="x\in{\bf R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝐑</mi></mrow></math> if
+and only if <math id="p4.m16" class="ltx_Math" alttext="y\circ x" display="inline"><mrow><mi>y</mi><mo>∘</mo><mi>x</mi></mrow></math> is defined for all <math id="p4.m17" class="ltx_Math" alttext="y\in{\bf L}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>𝐋</mi></mrow></math>, then there
+exists an object <math id="p4.m18" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> which gives rise to <math id="p4.m19" class="ltx_Math" alttext="{\bf L}" display="inline"><mi>𝐋</mi></math> and <math id="p4.m20" class="ltx_Math" alttext="{\bf R}" display="inline"><mi>𝐑</mi></math> as above.
+This fact may be demonstrated easily enough from the usual definition of
+category. We will now reverse the procedure, using our axioms to show
+that such pairs behave as objects should, justifying defining objects
+as such pairs.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Returning to our new definition, let us now define <math id="p5.m1" class="ltx_Math" alttext="\ell\colon M\to{\cal P}(M)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+<math id="p5.m2" class="ltx_Math" alttext="r\colon m\to{\cal P}(M)" display="inline"><mrow><mi>r</mi><mo>:</mo><mrow><mi>m</mi><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, <math id="p5.m3" class="ltx_Math" alttext="{\cal L}\subseteq{\cal P}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo>⊆</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and
+<math id="p5.m4" class="ltx_Math" alttext="{\cal R}\subseteq{\cal P}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℛ</mi><mo>⊆</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> as follows:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\ell(a)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\{b\in M\mid(b,a)\in D\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mi>M</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle r(a)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\{b\in M\mid(a,b)\in D\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>b</mi><mo>∈</mo><mi>M</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\{\ell(a)\mid a\in M\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\{r(a)\mid a\in M\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We now show that, if <math id="p6.m1" class="ltx_Math" alttext="U,V\in{\cal L}" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>V</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math> then either <math id="p6.m2" class="ltx_Math" alttext="U\cap V=\emptyset" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>
+or <math id="p6.m3" class="ltx_Math" alttext="U=V" display="inline"><mrow><mi>U</mi><mo>=</mo><mi>V</mi></mrow></math>. Suppose that <math id="p6.m4" class="ltx_Math" alttext="U,V\in{\cal L}" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>V</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math> and <math id="p6.m5" class="ltx_Math" alttext="U\cap V\neq\emptyset" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>.
+Then there exists a morphism <math id="p6.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> such that <math id="p6.m7" class="ltx_Math" alttext="a\in U" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="p6.m8" class="ltx_Math" alttext="a\in V" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>V</mi></mrow></math>. By the
+definition of <math id="p6.m9" class="ltx_Math" alttext="{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>, there exist morphisms <math id="p6.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="p6.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that
+<math id="p6.m12" class="ltx_Math" alttext="U=\ell(b)" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p6.m13" class="ltx_Math" alttext="V=\ell(c)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By definition of <math id="p6.m14" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, we have <math id="p6.m15" class="ltx_Math" alttext="(a,b)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="p6.m16" class="ltx_Math" alttext="(a,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. If <math id="p6.m17" class="ltx_Math" alttext="d\in U" display="inline"><mrow><mi>d</mi><mo>∈</mo><mi>U</mi></mrow></math>, then <math id="p6.m18" class="ltx_Math" alttext="(d,b)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> so, by axiom 1,
+<math id="p6.m19" class="ltx_Math" alttext="(d,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, i.e. <math id="p6.m20" class="ltx_Math" alttext="d\in\ell(c)=V" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>V</mi></mrow></math>. Likewise, switching the roles of
+<math id="p6.m21" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="p6.m22" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> we conclude that, if <math id="p6.m23" class="ltx_Math" alttext="d\in V" display="inline"><mrow><mi>d</mi><mo>∈</mo><mi>V</mi></mrow></math>, then <math id="p6.m24" class="ltx_Math" alttext="d\in U" display="inline"><mrow><mi>d</mi><mo>∈</mo><mi>U</mi></mrow></math>. Hence <math id="p6.m25" class="ltx_Math" alttext="U=V" display="inline"><mrow><mi>U</mi><mo>=</mo><mi>V</mi></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Making an argument similar to that of last paragraph, but with <math id="p7.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> instead
+of <math id="p7.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and <math id="p7.m3" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> instead of <math id="p7.m4" class="ltx_Math" alttext="{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>, we also conclude that, if
+<math id="p7.m5" class="ltx_Math" alttext="U,V\in{\cal R}" display="inline"><mrow><mrow><mi>U</mi><mo>,</mo><mi>V</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math> then either
+<math id="p7.m6" class="ltx_Math" alttext="U\cap V=\emptyset" display="inline"><mrow><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> or <math id="p7.m7" class="ltx_Math" alttext="U=V" display="inline"><mrow><mi>U</mi><mo>=</mo><mi>V</mi></mrow></math>. Because of axiom 3a, we know that, for
+every <math id="p7.m8" class="ltx_Math" alttext="a\in M" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>M</mi></mrow></math>, there exists <math id="p7.m9" class="ltx_Math" alttext="b\in M" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi>M</mi></mrow></math> such that <math id="p7.m10" class="ltx_Math" alttext="a\in\ell(b)" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and, by
+axiom 3b, there exists <math id="p7.m11" class="ltx_Math" alttext="c\in M" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>M</mi></mrow></math> such that <math id="p7.m12" class="ltx_Math" alttext="a\in r(c)" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence, the sets
+<math id="p7.m13" class="ltx_Math" alttext="{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math> and <math id="p7.m14" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> are each partitions of <math id="p7.m15" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Next, we show that, if <math id="p8.m1" class="ltx_Math" alttext="S\in{\cal L}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math> and <math id="p8.m2" class="ltx_Math" alttext="a,b\in S" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math>, then <math id="p8.m3" class="ltx_Math" alttext="r(a)=r(b)" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+By definition, there exists a morphism <math id="p8.m4" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that <math id="p8.m5" class="ltx_Math" alttext="S=\ell(c)" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so
+<math id="p8.m6" class="ltx_Math" alttext="(a,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> and <math id="p8.m7" class="ltx_Math" alttext="(b,c)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Now suppose that <math id="p8.m8" class="ltx_Math" alttext="d\in r(a)" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This means
+that <math id="p8.m9" class="ltx_Math" alttext="(a,d)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. By axiom 1, we conclude that <math id="p8.m10" class="ltx_Math" alttext="(b,d)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, so <math id="p8.m11" class="ltx_Math" alttext="d\in r(b)" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Likewise, switching the roles of <math id="p8.m12" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p8.m13" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> in the foregoing argument,
+we conclude that, if <math id="p8.m14" class="ltx_Math" alttext="d\in r(b)" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="p8.m15" class="ltx_Math" alttext="d\in r(a)" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus, <math id="p8.m16" class="ltx_Math" alttext="r(a)=r(b)" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">By a similar argument to that of the last paragraph, we may also show that,
+if <math id="p9.m1" class="ltx_Math" alttext="S\in{\cal R}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math> and <math id="p9.m2" class="ltx_Math" alttext="a,b\in S" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math>, then <math id="p9.m3" class="ltx_Math" alttext="\ell(a)=\ell(b)" display="inline"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Taken together,
+these results tell us that there is a one-to-one correspondence between
+of <math id="p9.m4" class="ltx_Math" alttext="{\cal L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math> and <math id="p9.m5" class="ltx_Math" alttext="{\cal R}" display="inline"><mi class="ltx_font_mathcaligraphic">ℛ</mi></math> — to each <math id="p9.m6" class="ltx_Math" alttext="S\in{\cal L}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math>, there exists exactly
+one <math id="p9.m7" class="ltx_Math" alttext="T\in{\cal R}" display="inline"><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℛ</mi></mrow></math> such that <math id="p9.m8" class="ltx_Math" alttext="S\times T\in D" display="inline"><mrow><mrow><mi>S</mi><mo>×</mo><mi>T</mi></mrow><mo>∈</mo><mi>D</mi></mrow></math> and vice-versa. In light
+of this fact, we shall define and object of our category to be a pair <math id="p9.m9" class="ltx_Math" alttext="(P,Q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></math>
+of subsets of <math id="p9.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> such that <math id="p9.m11" class="ltx_Math" alttext="x\in P" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>P</mi></mrow></math> if and only if <math id="p9.m12" class="ltx_Math" alttext="(x,y)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> for all
+<math id="p9.m13" class="ltx_Math" alttext="y\in Q" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Q</mi></mrow></math> and <math id="p9.m14" class="ltx_Math" alttext="y\in Q" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Q</mi></mrow></math> if and only if <math id="p9.m15" class="ltx_Math" alttext="(x,y)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> for all <math id="p9.m16" class="ltx_Math" alttext="x\in Q" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>Q</mi></mrow></math>. Given
+two objects <math id="p9.m17" class="ltx_Math" alttext="A=(P,Q)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p9.m18" class="ltx_Math" alttext="B=(R,S)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we define <math id="p9.m19" class="ltx_Math" alttext="{\rm Hom}(A,B)=P\cap S" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>∩</mo><mi>S</mi></mrow></mrow></math>.
+We now will verify that, with these definitions, our axioms reproduce the
+defining properties of the standard definition of category.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p10.m1" class="ltx_Math" alttext="A=(P,Q)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p10.m2" class="ltx_Math" alttext="B=(R,S)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p10.m3" class="ltx_Math" alttext="C=(U,V)" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> are objects according
+to the above definition and that <math id="p10.m4" class="ltx_Math" alttext="f\in{\rm Hom}(A,B)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p10.m5" class="ltx_Math" alttext="g\in{\rm Hom}(B,C)" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then <math id="p10.m6" class="ltx_Math" alttext="f\in S" display="inline"><mrow><mi>f</mi><mo>∈</mo><mi>S</mi></mrow></math> and <math id="p10.m7" class="ltx_Math" alttext="g\in R" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>R</mi></mrow></math>. By the way we defined our pairs, <math id="p10.m8" class="ltx_Math" alttext="(g,f)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, so <math id="p10.m9" class="ltx_Math" alttext="g\circ f" display="inline"><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow></math> is defined. Let <math id="p10.m10" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> be any element of <math id="p10.m11" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>. Since
+<math id="p10.m12" class="ltx_Math" alttext="f\in P" display="inline"><mrow><mi>f</mi><mo>∈</mo><mi>P</mi></mrow></math>, it follows that <math id="p10.m13" class="ltx_Math" alttext="(f,h)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Since <math id="p10.m14" class="ltx_Math" alttext="(g,f)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> as well, it follows
+from axiom 2 that <math id="p10.m15" class="ltx_Math" alttext="(g\cdot f,h)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⋅</mo><mi>f</mi></mrow><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, so <math id="p10.m16" class="ltx_Math" alttext="g\circ f\in P" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math>. Let <math id="p10.m17" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> be any
+element of <math id="p10.m18" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. Since <math id="p10.m19" class="ltx_Math" alttext="g\in V" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>V</mi></mrow></math>, it follows that <math id="p10.m20" class="ltx_Math" alttext="(k,g)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Since <math id="p10.m21" class="ltx_Math" alttext="(g,f)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> as well, it follows from axiom 2 that <math id="p10.m22" class="ltx_Math" alttext="(k,g\circ f)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, so <math id="p10.m23" class="ltx_Math" alttext="g\circ f\in V" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. Hence, <math id="p10.m24" class="ltx_Math" alttext="g\circ f\in P\cap V={\rm Hom}(A,C)" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>∈</mo><mrow><mi>P</mi><mo>∩</mo><mi>V</mi></mrow><mo>=</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus, <math id="p10.m25" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> is
+defined as a function from <math id="p10.m26" class="ltx_Math" alttext="{\rm Hom}(A,B)\times{\rm Hom}(B,C)\to{\rm Hom}(A,C)" display="inline"><mrow><mrow><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi>Hom</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Next, suppose that <math id="p11.m1" class="ltx_Math" alttext="A=(P,Q)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p11.m2" class="ltx_Math" alttext="B=(R,S)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> are distinct objects. By the
+properties described earlier, <math id="p11.m3" class="ltx_Math" alttext="P\cap R=\emptyset" display="inline"><mrow><mrow><mi>P</mi><mo>∩</mo><mi>R</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> and <math id="p11.m4" class="ltx_Math" alttext="Q\cap S=\emptyset" display="inline"><mrow><mrow><mi>Q</mi><mo>∩</mo><mi>S</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.
+Let <math id="p11.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and <math id="p11.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> be two objects. Since <math id="p11.m7" class="ltx_Math" alttext="{\rm Hom}(A,E)\subset P" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mi>P</mi></mrow></math> and
+<math id="p11.m8" class="ltx_Math" alttext="{\rm Hom}(B,F)\subset R" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mi>R</mi></mrow></math>, it follows that <math id="p11.m9" class="ltx_Math" alttext="{\rm Hom}(A,E)\cap{\rm Hom}(B,F)=\emptyset" display="inline"><mrow><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. Likewise, since <math id="p11.m10" class="ltx_Math" alttext="{\rm Hom}(E,A)\subset Q" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mi>Q</mi></mrow></math> and <math id="p11.m11" class="ltx_Math" alttext="{\rm Hom}(F,B)\subset S" display="inline"><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mi>S</mi></mrow></math>, it follows that <math id="p11.m12" class="ltx_Math" alttext="{\rm Hom}(E.A)\cap{\rm Hom}(F,B)=\emptyset" display="inline"><mrow><mi>Hom</mi><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>.</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>Hom</mi><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.
+Hence, it follows that, given four objects <math id="p11.m13" class="ltx_Math" alttext="A,B,E,F" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi></mrow></math>, we have
+<math id="p11.m14" class="ltx_Math" alttext="{\rm Hom}(A,E)\cap{\rm Hom}(B,F)=\emptyset" display="inline"><mrow><mrow><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> unless <math id="p11.m15" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math> and <math id="p11.m16" class="ltx_Math" alttext="E=F" display="inline"><mrow><mi>E</mi><mo>=</mo><mi>F</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">[more to come]
+</p>
+</div>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">alternative definition of category</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AlternativeDefinitionOfCategory1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:53:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:53:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18A05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:20:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

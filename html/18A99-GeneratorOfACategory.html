@@ -1,0 +1,131 @@
+<!DOCTYPE html><html>
+<head>
+<title>generator of a category</title>
+<!--Generated on Fri Feb  9 19:27:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">generator of a category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be a category, and <math id="p1.m2" class="ltx_Math" alttext="f,g:A\to B" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> a pair of distinct morphisms. A morphism <math id="p1.m3" class="ltx_Math" alttext="h:X\to A" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> is said to <em class="ltx_emph ltx_font_italic">distinguish</em> or <em class="ltx_emph ltx_font_italic">separate</em> <math id="p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> if <math id="p1.m6" class="ltx_Math" alttext="f\circ h\neq g\circ h" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>h</mi></mrow><mo>≠</mo><mrow><mi>g</mi><mo>∘</mo><mi>h</mi></mrow></mrow></math>. For example, if <math id="p1.m7" class="ltx_Math" alttext="f\neq g:A\to B" display="inline"><mrow><mrow><mi>f</mi><mo>≠</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>, then <math id="p1.m8" class="ltx_Math" alttext="1_{A}" display="inline"><msub><mn>1</mn><mi>A</mi></msub></math> on <math id="p1.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> distinguishes <math id="p1.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p1.m11" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A set <math id="p2.m1" class="ltx_Math" alttext="S=\{X_{i}\mid i\in I\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>i</mi></msub><mo>∣</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> of objects (indexed by a set <math id="p2.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>) is called a <em class="ltx_emph ltx_font_italic">generating set</em> of <math id="p2.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> if any pair of distinct morphisms <math id="p2.m4" class="ltx_Math" alttext="f,g:A\to B" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> can be distinguished by a morphism with domain in <math id="p2.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and codomain <math id="p2.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. In other words, there is <math id="p2.m7" class="ltx_Math" alttext="h:X_{i}\to A" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>→</mo><mi>A</mi></mrow></mrow></math> for some <math id="p2.m8" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math>, such that <math id="p2.m9" class="ltx_Math" alttext="f\circ h\neq g\circ h" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>h</mi></mrow><mo>≠</mo><mrow><mi>g</mi><mo>∘</mo><mi>h</mi></mrow></mrow></math>. If <math id="p2.m10" class="ltx_Math" alttext="\{X\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>X</mi><mo stretchy="false">}</mo></mrow></math> is a generating family of <math id="p2.m11" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, then <math id="p2.m12" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is called a <em class="ltx_emph ltx_font_italic">generator</em> of <math id="p2.m13" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Any set of morphisms containing a generator is a generating set.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In <span class="ltx_text ltx_font_bold">Set</span>, the category of sets, any singleton is a generator. Suppose <math id="I1.i1.p1.m1" class="ltx_Math" alttext="f,g:A\to B" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> are distinct functions, so that <math id="I1.i1.p1.m2" class="ltx_Math" alttext="f(x)\neq g(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for some <math id="I1.i1.p1.m3" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>. Let <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\{y\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></math> be any singleton. Then <math id="I1.i1.p1.m5" class="ltx_Math" alttext="h:\{y\}\to A" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><mo>→</mo><mi>A</mi></mrow></mrow></math> defined by <math id="I1.i1.p1.m6" class="ltx_Math" alttext="h(y)=x" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> is the function distinguishing <math id="I1.i1.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I1.i1.p1.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>: for <math id="I1.i1.p1.m9" class="ltx_Math" alttext="f\circ h(y)=f(x)\neq g(x)=g\circ h(y)" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>∘</mo><mi>h</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>∘</mo><mi>h</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">In <span class="ltx_text ltx_font_bold">Rng</span>, the category of rings, the ring <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is a generator. If <math id="I1.i2.p1.m2" class="ltx_Math" alttext="f,g:R\to S" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>R</mi><mo>→</mo><mi>S</mi></mrow></mrow></math> are distinct ring homomorphisms, say, <math id="I1.i2.p1.m3" class="ltx_Math" alttext="f(r)\neq g(r)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for some <math id="I1.i2.p1.m4" class="ltx_Math" alttext="r\in R" display="inline"><mrow><mi>r</mi><mo>∈</mo><mi>R</mi></mrow></math>. Then the ring homomorphism <math id="I1.i2.p1.m5" class="ltx_Math" alttext="h:\mathbb{Z}\to R" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>ℤ</mi><mo>→</mo><mi>R</mi></mrow></mrow></math> given by <math id="I1.i2.p1.m6" class="ltx_Math" alttext="h(1)=r" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>r</mi></mrow></math> distinguishes <math id="I1.i2.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I1.i2.p1.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. A projective object that is also a generator is called a <em class="ltx_emph ltx_font_italic">progenerator</em>.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> F. Borceux <em class="ltx_emph ltx_font_italic">Basic Category Theory, Handbook of Categorical Algebra I</em>, Cambridge University Press, Cambridge (1994)
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">generator of a category</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneratorOfACategory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:21:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:21:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GrothendieckCategory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">generator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">generating set</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">progenerator</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:27:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

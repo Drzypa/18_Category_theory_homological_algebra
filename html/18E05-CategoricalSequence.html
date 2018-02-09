@@ -1,0 +1,215 @@
+<!DOCTYPE html><html>
+<head>
+<title>categorical sequence</title>
+<!--Generated on Fri Feb  9 19:31:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">categorical sequence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">categorical sequence</em> is a <em class="ltx_emph ltx_font_italic">linear ‘diagram’ of morphisms, or arrows, in an abstract category</em>.
+In a concrete category, such as the category of sets, the categorical sequence consists of sets joined by set-theoretical mappings in linear fashion, such as:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\cdots\rightarrow A\buildrel f\over{\longrightarrow}B\buildrel\phi\over{%
+\longrightarrow}Hom_{Set}(A,B)," display="block"><mrow><mrow><mi mathvariant="normal">⋯</mi><mo>→</mo><mi>A</mi><mover><mo movablelimits="false">⟶</mo><mi mathsize="142%">f</mi></mover><mi>B</mi><mover><mo movablelimits="false">⟶</mo><mi mathsize="142%">ϕ</mi></mover><mrow><mi>H</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><msub><mi>m</mi><mrow><mi>S</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="Hom_{Set}(A,B)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><msub><mi>m</mi><mrow><mi>S</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the set of functions from set <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to set <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Examples</h2>
+
+<section id="S0.SS1.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.1 </span>The chain complex is a categorical sequence example:</h3>
+
+<div id="S0.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Consider a ring <math id="S0.SS1.SSS1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> and the <em class="ltx_emph ltx_font_italic">chain complex</em> consisting of
+a sequence of <math id="S0.SS1.SSS1.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-modules (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Module</span>) and homomorphisms:</p>
+</div>
+<div id="S0.SS1.SSS1.p2" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\cdots\rightarrow A_{n+1}\buildrel{d_{n+1}}\over{\longrightarrow}A_{n}%
+\buildrel{d_{n}}\over{\longrightarrow}A_{n-1}\rightarrow\cdots" display="block"><mrow><mi mathvariant="normal">⋯</mi><mo>→</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mover><mo movablelimits="false">⟶</mo><msub><mi mathsize="142%">d</mi><mrow><mi mathsize="140%">n</mi><mo mathsize="140%" stretchy="false">+</mo><mn mathsize="140%">1</mn></mrow></msub></mover><msub><mi>A</mi><mi>n</mi></msub><mover><mo movablelimits="false">⟶</mo><msub><mi mathsize="142%">d</mi><mi mathsize="140%">n</mi></msub></mover><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>→</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(with the additional condition imposed by <math id="S0.SS1.SSS1.p2.m1" class="ltx_Math" alttext="d_{n}\circ d_{n+1}=0" display="inline"><mrow><mrow><msub><mi>d</mi><mi>n</mi></msub><mo>∘</mo><msub><mi>d</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mn>0</mn></mrow></math> for each pair of adjacent homomorphisms <math id="S0.SS1.SSS1.p2.m2" class="ltx_Math" alttext="(d_{n+1},d_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>d</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>d</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>; this is equivalent to the condition <math id="S0.SS1.SSS1.p2.m3" class="ltx_Math" alttext="\operatorname{im}d_{n+1}\subseteq\operatorname{ker}d_{n}" display="inline"><mrow><mrow><mi>im</mi><mo>⁡</mo><msub><mi>d</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>⊆</mo><mrow><mi>ker</mi><mo>⁡</mo><msub><mi>d</mi><mi>n</mi></msub></mrow></mrow></math> that needs to be satisfied in order to define this categorical sequence completely as a <em class="ltx_emph ltx_font_italic">chain complex</em>). Furthermore, a sequence of homomorphisms</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\cdots\rightarrow A_{n+1}\buildrel{f_{n+1}}\over{\longrightarrow}A_{n}%
+\buildrel{f_{n}}\over{\longrightarrow}A_{n-1}\rightarrow\cdots" display="block"><mrow><mi mathvariant="normal">⋯</mi><mo>→</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mover><mo movablelimits="false">⟶</mo><msub><mi mathsize="142%">f</mi><mrow><mi mathsize="140%">n</mi><mo mathsize="140%" stretchy="false">+</mo><mn mathsize="140%">1</mn></mrow></msub></mover><msub><mi>A</mi><mi>n</mi></msub><mover><mo movablelimits="false">⟶</mo><msub><mi mathsize="142%">f</mi><mi mathsize="140%">n</mi></msub></mover><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>→</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is said to be <span class="ltx_text ltx_font_italic">exact</span> if each pair of adjacent homomorphisms <math id="S0.SS1.SSS1.p2.m4" class="ltx_Math" alttext="(f_{n+1},f_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> is <em class="ltx_emph ltx_font_italic">exact</em>, that is,
+if <math id="S0.SS1.SSS1.p2.m5" class="ltx_Math" alttext="{\rm im}f_{n+1}={\rm ker}f_{n}" display="inline"><mrow><mrow><mi>im</mi><mo>⁢</mo><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mi>ker</mi><mo>⁢</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></mrow></math> for all <math id="S0.SS1.SSS1.p2.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This concept can be then generalized to
+morphisms in a categorical exact sequence (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ExactSequence2</span>), thus leading to the corresponding
+definition of an exact sequence (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ExactSequence2</span>) in an Abelian category.</p>
+</div>
+<div id="S0.Thmremark1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.1</span>.</h6>
+<div id="S0.Thmremark1.p1" class="ltx_para">
+<p class="ltx_p">Inasmuch as categorical diagrams can be defined as functors, exact sequences of special types of morphisms
+can also be regarded as the corresponding, special functors. Thus, exact sequences in Abelian categories
+can be regarded as certain functors of Abelian categories; the details of such functorial (abelian) constructions
+are left to the reader as an exercise. Moreover, in (commutative or Abelian) homological algebra, an
+exact functor (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ExactFunctor</span>) is simply defined as a functor <math id="S0.Thmremark1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> between two Abelian categories, <math id="S0.Thmremark1.p1.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> and <math id="S0.Thmremark1.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>, <math id="S0.Thmremark1.p1.m4" class="ltx_Math" alttext="F:\mathcal{A}\to\mathcal{B}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></mrow></math>, which preserves categorical exact sequences, that is, if <math id="S0.Thmremark1.p1.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> carries a short exact sequence <math id="S0.Thmremark1.p1.m6" class="ltx_Math" alttext="0\to C\to D\to E\to 0" display="inline"><mrow><mn>0</mn><mo>→</mo><mi>C</mi><mo>→</mo><mi>D</mi><mo>→</mo><mi>E</mi><mo>→</mo><mn>0</mn></mrow></math> (with <math id="S0.Thmremark1.p1.m7" class="ltx_Math" alttext="0,C,D" display="inline"><mrow><mn>0</mn><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi></mrow></math> and <math id="S0.Thmremark1.p1.m8" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> objects in <math id="S0.Thmremark1.p1.m9" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>) into the corresponding sequence in the Abelian category <math id="S0.Thmremark1.p1.m10" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>, (<math id="S0.Thmremark1.p1.m11" class="ltx_Math" alttext="0\to F(C)\to F(D)\to F(E)\to 0" display="inline"><mrow><mn>0</mn><mo>→</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math>), which is also exact (in <math id="S0.Thmremark1.p1.m12" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>).</p>
+</div>
+</div>
+<div id="S0.SS1.SSS1.p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">categorical sequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:19:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:19:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">33</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18E05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">linear diagrams</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">sequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ChainComplex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExactSequence2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CommutativeDiagram</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AbelianCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ShortExactSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExactFunctor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExactSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TangentialCauchyRiemannComplexOfCinftySmoothForms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlternativeDefinitionOfAnAbelianCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SuperdiagramsAsHeterofunctors</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">linear diagram</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">(linear) sequence of morphisms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">exact functor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">short exact sequence</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:31:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html><html>
+<head>
+<title>category of automata</title>
+<!--Generated on Fri Feb  9 19:29:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">category of automata</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>The Category of Automata</h2>
+
+<div id="S1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.1</span>.</h6>
+<div id="S1.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">classical automaton, s-automaton</span> <math id="S1.Thmdefinition1.p1.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>, or sequential machine, is defined as a quintuple of three sets: <math id="S1.Thmdefinition1.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>,<math id="S1.Thmdefinition1.p1.m3" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> and <math id="S1.Thmdefinition1.p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, and two set-theoretical mappings:</p>
+</div>
+<div id="S1.Thmdefinition1.p2" class="ltx_para">
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="(I,O,S,\delta:I\times S\rightarrow S;\lambda:S\times S\rightarrow O)," display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>I</mi><mo>,</mo><mi>O</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>δ</mi></mrow><mo>:</mo><mrow><mrow><mi>I</mi><mo>×</mo><mi>S</mi></mrow><mo>→</mo><mrow><mi>S</mi><mo>;</mo><mi>λ</mi></mrow></mrow><mo>:</mo><mrow><mrow><mi>S</mi><mo>×</mo><mi>S</mi></mrow><mo>→</mo><mi>O</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.Thmdefinition1.p3" class="ltx_para">
+<p class="ltx_p">where <math id="S1.Thmdefinition1.p3.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the set of s-automaton inputs, <math id="S1.Thmdefinition1.p3.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is the set of states (or the state space of the s-automaton), <math id="S1.Thmdefinition1.p3.m3" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> is the set of s-automaton outputs, <math id="S1.Thmdefinition1.p3.m4" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> is the <span class="ltx_text ltx_font_italic">transition function</span> that maps a s-automaton state <math id="S1.Thmdefinition1.p3.m5" class="ltx_Math" alttext="s_{j}" display="inline"><msub><mi>s</mi><mi>j</mi></msub></math> onto its next state <math id="S1.Thmdefinition1.p3.m6" class="ltx_Math" alttext="s_{j+1}" display="inline"><msub><mi>s</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math> in response to a specific s-automaton input <math id="S1.Thmdefinition1.p3.m7" class="ltx_Math" alttext="j\in I" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>I</mi></mrow></math>, and <math id="S1.Thmdefinition1.p3.m8" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is the <em class="ltx_emph ltx_font_italic">output function</em> that maps couples of consecutive (or sequential) s-automaton states <math id="S1.Thmdefinition1.p3.m9" class="ltx_Math" alttext="(s_{i},s_{i+1})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mi>i</mi></msub><mo>,</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></math> onto s-automaton outputs <math id="S1.Thmdefinition1.p3.m10" class="ltx_Math" alttext="o_{i+1}" display="inline"><msub><mi>o</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></math>
+(<math id="S1.Thmdefinition1.p3.m11" class="ltx_Math" alttext="(s_{i},s_{i+1})\mapsto o_{i+1}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mi>i</mi></msub><mo>,</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><mo>↦</mo><msub><mi>o</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>, hence the older name of sequential machine for an s-automaton).</p>
+</div>
+</div>
+<div id="S1.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.2</span>.</h6>
+<div id="S1.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">A categorical automaton can also be defined by a commutative square diagram containing all of the above components.</p>
+</div>
+</div>
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">With the above automaton definition(s) one can now also define morphisms between automata and their composition.</p>
+</div>
+<div id="S1.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.3</span>.</h6>
+<div id="S1.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">homomorphism of automata</em> or <span class="ltx_text ltx_font_italic">automaton homomorphism</span> is a morphism of automata quintuples that preserves commutativity of the set-theoretical mapping compositions of both the transition
+function <math id="S1.Thmdefinition3.p1.m1" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> and the output function <math id="S1.Thmdefinition3.p1.m2" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>.</p>
+</div>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">With the above two definitions one now has sufficient data to define the category of automata
+and automata homomorphisms.</p>
+</div>
+<div id="S1.Thmdefinition4" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.4</span>.</h6>
+<div id="S1.Thmdefinition4.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">category of automata</em> is defined as a category of quintuples
+<math id="S1.Thmdefinition4.p1.m1" class="ltx_Math" alttext="(I,O,X,\delta:I\times X\rightarrow X;\lambda:X\times S\rightarrow O)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>I</mi><mo>,</mo><mi>O</mi><mo>,</mo><mi>X</mi><mo>,</mo><mi>δ</mi></mrow><mo>:</mo><mrow><mrow><mi>I</mi><mo>×</mo><mi>X</mi></mrow><mo>→</mo><mrow><mi>X</mi><mo>;</mo><mi>λ</mi></mrow></mrow><mo>:</mo><mrow><mrow><mi>X</mi><mo>×</mo><mi>S</mi></mrow><mo>→</mo><mi>O</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> and
+automata homomorphisms <math id="S1.Thmdefinition4.p1.m2" class="ltx_Math" alttext="h:{\mathcal{A}}_{i}\rightarrow{\mathcal{A}}_{j}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒜</mi><mi>i</mi></msub><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒜</mi><mi>j</mi></msub></mrow></mrow></math>,
+such that these homomorphisms commute with both the transition and the output functions of any automata <math id="S1.Thmdefinition4.p1.m3" class="ltx_Math" alttext="{\mathcal{A}}_{i}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒜</mi><mi>i</mi></msub></math> and <math id="S1.Thmdefinition4.p1.m4" class="ltx_Math" alttext="{\mathcal{A}}_{j}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒜</mi><mi>j</mi></msub></math>.</p>
+</div>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Remarks:</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Automata homomorphisms</em> can be considered also as automata transformations
+or as semigroup homomorphisms, when the state space, <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, of the automaton is defined
+as a <em class="ltx_emph ltx_font_italic">semigroup</em> <math id="I1.i1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Abstract automata have numerous realizations in the real world as : machines, robots, devices,
+computers, supercomputers, always considered as <em class="ltx_emph ltx_font_italic">discrete</em> state space sequential machines.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Fuzzy or analog devices are not included as standard automata.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Similarly, <em class="ltx_emph ltx_font_italic">variable (transition function)</em> automata are not included, but Universal Turing machines are.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.Thmdefinition5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.5</span>.</h6>
+<div id="S1.Thmdefinition5.p1" class="ltx_para">
+<p class="ltx_p">An alternative definition of an automaton is also in use:
+as a five-tuple <math id="S1.Thmdefinition5.p1.m1" class="ltx_Math" alttext="(S,\Sigma,\delta,I,F)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>δ</mi><mo>,</mo><mi>I</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="S1.Thmdefinition5.p1.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> is a non-empty set of symbols
+<math id="S1.Thmdefinition5.p1.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> such that one can define a <span class="ltx_text ltx_font_italic">configuration</span> of the automaton as a couple
+<math id="S1.Thmdefinition5.p1.m4" class="ltx_Math" alttext="(s,\alpha)" display="inline"><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></math> of a state <math id="S1.Thmdefinition5.p1.m5" class="ltx_Math" alttext="s\in S" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>S</mi></mrow></math> and a symbol <math id="S1.Thmdefinition5.p1.m6" class="ltx_Math" alttext="\alpha\in\Sigma" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>. Then <math id="S1.Thmdefinition5.p1.m7" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>
+defines a “next-state relation, or a transition relation” which associates to each configuration
+<math id="S1.Thmdefinition5.p1.m8" class="ltx_Math" alttext="(s,\alpha)" display="inline"><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></math> a subset <math id="S1.Thmdefinition5.p1.m9" class="ltx_Math" alttext="\delta(s,\alpha)" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></math> of S- the state space of the automaton.
+With this formal automaton definition, the <em class="ltx_emph ltx_font_italic">category of abstract automata</em> can be defined by specifying automata homomorphisms in terms of the morphisms between five-tuples representing such abstract automata.</p>
+</div>
+</div>
+<div id="S1.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.1</span>.</h6>
+<div id="S1.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">A special case of automaton is that of a <span class="ltx_text ltx_font_italic">stable automaton</span> when all its state transitions are <span class="ltx_text ltx_font_italic">reversible</span>; then its state space can be seen to possess a groupoid (algebraic) structure. The <span class="ltx_text ltx_font_italic">category of reversible automata</span> is then a 2-category, and also a subcategory of the 2-category of groupoids, or the groupoid category.</p>
+</div>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Note:</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Other definitions of automata, sequential machines, semigroup automata or cellular automata lead to subcategories of the category of automata defined above. On the other hand, the category of quantum automata is not a subcategory of the automata category defined here.</p>
+</div>
+<div id="S1.SS2.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">category of automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfAutomata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">57</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18C10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03D10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03D05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18B20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automata category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of sequential machines</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automata category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">abstract automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">robots</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">machines</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of sequential machines or automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfQuantumAutomata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumAutomataAndQuantumComputation2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SystemDefinitions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IndexOfCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automaton homomorphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automata category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">s-automaton</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stable automaton</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">categorical automaton</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">state semigroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">state space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of reversible automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of abstract automata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">automata homomorphisms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">semigroup transformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">semigroup homom</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:29:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

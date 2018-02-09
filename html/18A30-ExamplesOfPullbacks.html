@@ -1,0 +1,133 @@
+<!DOCTYPE html><html>
+<head>
+<title>examples of pullbacks</title>
+<!--Generated on Fri Feb  9 19:25:55 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">examples of pullbacks</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This entry shows some examples of categorical pullbacks.</p>
+</div>
+<div id="p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In the category of sets, the pullback of a pair of functions <math id="I1.i1.p1.m1" class="ltx_Math" alttext="f:A\to C" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="g:B\to C" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> is given by the set <math id="I1.i1.p1.m3" class="ltx_Math" alttext="D:=\{(a,b)\in A\times B\mid f(a)=g(b)\}" display="inline"><mrow><mi>D</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow><mo>∣</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, along with the projections <math id="I1.i1.p1.m4" class="ltx_Math" alttext="r:D\to A" display="inline"><mrow><mi>r</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="I1.i1.p1.m5" class="ltx_Math" alttext="s:D\to B" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>B</mi></mrow></mrow></math>. Here’s a sketch of the proof: first, <math id="I1.i1.p1.m6" class="ltx_Math" alttext="f\circ r=g\circ s" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>r</mi></mrow><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><mi>s</mi></mrow></mrow></math>, and if there are functions <math id="I1.i1.p1.m7" class="ltx_Math" alttext="u:E\to A" display="inline"><mrow><mi>u</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> and <math id="I1.i1.p1.m8" class="ltx_Math" alttext="v:E\to B" display="inline"><mrow><mi>v</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> with <math id="I1.i1.p1.m9" class="ltx_Math" alttext="f\circ u=g\circ v" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>u</mi></mrow><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><mi>v</mi></mrow></mrow></math>, then define a function <math id="I1.i1.p1.m10" class="ltx_Math" alttext="w:E\to D" display="inline"><mrow><mi>w</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>D</mi></mrow></mrow></math> by <math id="I1.i1.p1.m11" class="ltx_Math" alttext="w(e)=(u(e),v(e))" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. As <math id="I1.i1.p1.m12" class="ltx_Math" alttext="f(u(e))=g(v(e))" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have that <math id="I1.i1.p1.m13" class="ltx_Math" alttext="(u(e),v(e))\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, so that <math id="I1.i1.p1.m14" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is a well-defined function. Furthermore, <math id="I1.i1.p1.m15" class="ltx_Math" alttext="r\circ w(e)=r(u(e),v(e))=u(e)" display="inline"><mrow><mrow><mrow><mi>r</mi><mo>∘</mo><mi>w</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I1.i1.p1.m16" class="ltx_Math" alttext="s\circ w(e)=s(u(e),v(e))=v(e)" display="inline"><mrow><mrow><mrow><mi>s</mi><mo>∘</mo><mi>w</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Finally, this <math id="I1.i1.p1.m17" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is easily seen to be unique. Therefore, <math id="I1.i1.p1.m18" class="ltx_Math" alttext="(D,r:D\to A,s:D\to B)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>D</mi><mo>,</mo><mi>r</mi></mrow><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mrow><mi>A</mi><mo>,</mo><mi>s</mi></mrow></mrow><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>B</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is the pullback of <math id="I1.i1.p1.m19" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I1.i1.p1.m20" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">In the category of groups, the pullback of a pair of group homomorphisms <math id="I1.i2.p1.m1" class="ltx_Math" alttext="f:A\to C" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="g:B\to C" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> is again the group <math id="I1.i2.p1.m3" class="ltx_Math" alttext="D=\{(a,b)\in A\times B\mid f(a)=g(b)\}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></mrow><mo>∣</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, where the product is defined componentwise, along with the usual projections. The verification that this is indeed the pullback of <math id="I1.i2.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="I1.i2.p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is almost like the one above. The only thing that needs to be verified is that <math id="I1.i2.p1.m6" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is indeed a group. If <math id="I1.i2.p1.m7" class="ltx_Math" alttext="(a,b),(c,d)\in D" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>D</mi></mrow></math>, then <math id="I1.i2.p1.m8" class="ltx_Math" alttext="f(ac)=f(a)f(c)=g(b)g(d)=g(bd)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so that <math id="I1.i2.p1.m9" class="ltx_Math" alttext="(ac,bd)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Also, <math id="I1.i2.p1.m10" class="ltx_Math" alttext="f(1_{A})=1_{C}=g(1_{B})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>A</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mn>1</mn><mi>C</mi></msub><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>B</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so that <math id="I1.i2.p1.m11" class="ltx_Math" alttext="(1_{A},1_{B})\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>A</mi></msub><mo>,</mo><msub><mn>1</mn><mi>B</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Finally, if <math id="I1.i2.p1.m12" class="ltx_Math" alttext="(x,y)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>, then <math id="I1.i2.p1.m13" class="ltx_Math" alttext="f(x^{-1})=f(x)^{-1}=g(y)^{-1}=g(y^{-1})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>y</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, or <math id="I1.i2.p1.m14" class="ltx_Math" alttext="(x^{-1},y^{-1})\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mi>y</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math>. Therefore, <math id="I1.i2.p1.m15" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is a group (a subgroup of <math id="I1.i2.p1.m16" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math>).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In fact, both of the examples above can be obtained by finding the equalizer of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="f\circ p_{A}" display="inline"><mrow><mi>f</mi><mo>∘</mo><msub><mi>p</mi><mi>A</mi></msub></mrow></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="g\circ p_{B}" display="inline"><mrow><mi>g</mi><mo>∘</mo><msub><mi>p</mi><mi>B</mi></msub></mrow></math>, where <math id="I1.i3.p1.m3" class="ltx_Math" alttext="p_{A}" display="inline"><msub><mi>p</mi><mi>A</mi></msub></math> and <math id="I1.i3.p1.m4" class="ltx_Math" alttext="p_{B}" display="inline"><msub><mi>p</mi><mi>B</mi></msub></math> are projections from <math id="I1.i3.p1.m5" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math> to <math id="I1.i3.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i3.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> respectively. This is the consequence of the fact that a category with finite products and equalizers also has pullbacks, and the pullbacks are obtained in the manner just described (see proof here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PropertiesOfPullback</span>)).</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The category of small categories has pullbacks. Given small categories <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\mathcal{A},\mathcal{B}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math>, and <math id="I1.i4.p1.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, and functors <math id="I1.i4.p1.m3" class="ltx_Math" alttext="F:\mathcal{A}\to\mathcal{C}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math> and <math id="I1.i4.p1.m4" class="ltx_Math" alttext="G:\mathcal{B}\to\mathcal{C}" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></mrow></math>, consider the subcategory <math id="I1.i4.p1.m5" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> of the comma category <math id="I1.i4.p1.m6" class="ltx_Math" alttext="(F\downarrow G)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>↓</mo><mi>G</mi></mrow><mo stretchy="false">)</mo></mrow></math>, where</p>
+<ul id="I1.I1" class="ltx_itemize">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">objects are <math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="(A,B,f)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></math> where <math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="F(A)=G(B)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="I1.I1.i1.p1.m3" class="ltx_Math" alttext="f=1_{F(A)}" display="inline"><mrow><mi>f</mi><mo>=</mo><msub><mn>1</mn><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">morphisms are <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="(x,y):(A,B,1_{F(A)})\to(C,D,1_{F(C)})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><msub><mn>1</mn><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow><mo>→</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><msub><mn>1</mn><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="F(x)=G(y)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Then it can be shown that <math id="I1.i4.p1.m7" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>, along with the the functors</p>
+<ul id="I1.I2" class="ltx_itemize">
+<li id="I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i1.p1.m1" class="ltx_Math" alttext="H_{\mathcal{A}}:\mathcal{D}\to\mathcal{A}" display="inline"><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow></math> with <math id="I1.I2.i1.p1.m2" class="ltx_Math" alttext="H_{\mathcal{A}}(A,B,f)=A" display="inline"><mrow><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math> and <math id="I1.I2.i1.p1.m3" class="ltx_Math" alttext="H_{\mathcal{A}}(x,y)=x" display="inline"><mrow><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.I2.i2.p1.m1" class="ltx_Math" alttext="H_{\mathcal{B}}:\mathcal{D}\to\mathcal{B}" display="inline"><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">ℬ</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></mrow></math> with <math id="I1.I2.i2.p1.m2" class="ltx_Math" alttext="H_{\mathcal{B}}(A,B,f)=B" display="inline"><mrow><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">ℬ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>B</mi></mrow></math> and <math id="I1.I2.i2.p1.m3" class="ltx_Math" alttext="H_{\mathcal{B}}(x,y)=y" display="inline"><mrow><mrow><msub><mi>H</mi><mi class="ltx_font_mathcaligraphic">ℬ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">is the pullback of <math id="I1.i4.p1.m8" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="I1.i4.p1.m9" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. The proof is similar to the proof on the universal property of a comma category (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PropertiesOfACommaCategory</span>).</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">examples of pullbacks</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExamplesOfPullbacks</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:28:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:28:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18A30</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:25:55 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
